@@ -61,13 +61,13 @@ public class RSInterface {
 	}
 
 	public static void unpack(StreamLoader streamLoader, TextDrawingArea textDrawingAreas[],
-			StreamLoader streamLoader_1, RSFont[] newFontSystem) {
-		aMRUNodes_238 = new MRUNodes(50000);
+							  StreamLoader streamLoader_1, RSFont[] newFontSystem) {
+		aMRUNodes_238 = new MRUNodes(200000);
 		Buffer stream = new Buffer(streamLoader.getArchiveData("data"));
 		newFonts = newFontSystem;
 		int i = -1;
 		int j = stream.readUShort();
-		interfaceCache = new RSInterface[j + 80000];
+		interfaceCache = new RSInterface[200000];
 		while (stream.currentOffset < stream.buffer.length) {
 			int k = stream.readUShort();
 			if (k == 65535) {
@@ -149,8 +149,12 @@ public class RSInterface {
 						String s1 = stream.readString();
 						if (streamLoader_1 != null && s1.length() > 0) {
 							int i5 = s1.lastIndexOf(",");
-							rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1,
-									s1.substring(0, i5));
+							if(s1.substring(0, i5).toLowerCase().equals("mige")){
+								int id = Integer.parseInt(s1.substring(i5 + 1));
+								rsInterface.sprites[j2] = Client.cacheSprite474[id];
+							} else
+								rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1, s1.substring(0, i5));
+
 						}
 					}
 				}
@@ -161,7 +165,7 @@ public class RSInterface {
 						rsInterface.actions[l3] = null;
 					if (rsInterface.parentID == 3822)
 						rsInterface.actions[4] = "Sell X";
-					 if(rsInterface.parentID == 3822)
+					if(rsInterface.parentID == 3822)
 						rsInterface.actions[4] = "Sell All";
 					if (rsInterface.parentID == 3824)
 						rsInterface.actions[4] = "Buy X";
@@ -198,14 +202,20 @@ public class RSInterface {
 				String s = stream.readString();
 				if (streamLoader_1 != null && s.length() > 0) {
 					int i4 = s.lastIndexOf(",");
-					rsInterface.sprite1 = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1,
-							s.substring(0, i4));
+					if(s.substring(0, i4).toLowerCase().equals("mige")){
+						int id = Integer.parseInt(s.substring(i4 + 1));
+						rsInterface.sprite1 = Client.cacheSprite474[id];
+					} else
+						rsInterface.sprite1 = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1, s.substring(0, i4));
 				}
 				s = stream.readString();
 				if (streamLoader_1 != null && s.length() > 0) {
 					int j4 = s.lastIndexOf(",");
-					rsInterface.sprite2 = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1,
-							s.substring(0, j4));
+					if(s.substring(0, j4).toLowerCase().equals("mige")){
+						int id = Integer.parseInt(s.substring(j4 + 1));
+						rsInterface.sprite2 = Client.cacheSprite474[id];
+					} else
+						rsInterface.sprite2 = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1, s.substring(0, j4));
 				}
 			}
 			if (rsInterface.type == 6) {
@@ -293,7 +303,7 @@ public class RSInterface {
 		}
 		addInterface(emptyInterface);
 	}
-	
+
 	public static int findOpenConfigFrame(int amount) {
 		int start = 0;
 		int found = 0;
@@ -305,7 +315,7 @@ public class RSInterface {
 				}
 			}
 		}
-		
+
 		for(int i = 0; i < checker.length; i++) {
 			if (!checker[i]) {
 				start++;
@@ -319,22 +329,22 @@ public class RSInterface {
 		}
 		return found;
 	}
-	
+
 	public static int findAvailableInterfaceID(int interfaceCount) {
-        l:
-        for (int i = 0; i < RSInterface.interfaceCache.length - interfaceCount; i++) {
-            if (RSInterface.interfaceCache[i] == null) {
-                for (int i2 = 0; i2 < interfaceCount; i2++)
-                    if (RSInterface.interfaceCache[i + i2] != null)
-                        continue l;
-                return i;
-            }
-        }
-        return -1;
-    }
-	
+		l:
+		for (int i = 0; i < RSInterface.interfaceCache.length - interfaceCount; i++) {
+			if (RSInterface.interfaceCache[i] == null) {
+				for (int i2 = 0; i2 < interfaceCount; i2++)
+					if (RSInterface.interfaceCache[i + i2] != null)
+						continue l;
+				return i;
+			}
+		}
+		return -1;
+	}
+
 	public static void addHoverButtonLatest(String spriteName,int buttonId1, int buttonId2, int buttonId3, int spriteId1, int spriteId2,
-			int buttonWidth, int buttonHeight, String buttonHoverText) {
+											int buttonWidth, int buttonHeight, String buttonHoverText) {
 		addHoverButton(buttonId1, spriteName,spriteId1, buttonWidth, buttonHeight, buttonHoverText, -1, buttonId2, 1);
 		addHoveredButton(buttonId2, spriteName,spriteId2, buttonWidth, buttonHeight, buttonId3);
 	}
@@ -354,7 +364,7 @@ public class RSInterface {
 	public int msgX, msgY;
 
 	public boolean toggled = false;
-	
+
 	public static void hoverButton(int id, String tooltip) {
 		hoverButton(id, tooltip, 255);
 	}
@@ -376,7 +386,7 @@ public class RSInterface {
 	}
 
 	public static void adjustableConfig(int id, String tooltip, int sprite, int opacity, int enabledSpriteBehind,
-			int disabledSpriteBehind) {
+										int disabledSpriteBehind) {
 		RSInterface tab = addInterface(id);
 		tab.tooltip = tooltip;
 		tab.atActionType = OPTION_OK;
@@ -401,7 +411,7 @@ public class RSInterface {
 		tab.active = false;
 		tab.toggled = false;
 	}
-	
+
 	public static void hoverButton(int id, String tooltip, int sprite2, int sprite1, int opacity) {
 		RSInterface tab = addInterface(id);
 		tab.tooltip = tooltip;
@@ -415,9 +425,9 @@ public class RSInterface {
 		tab.toggled = false;
 		tab.spriteOpacity = opacity;
 	}
-	
+
 	public static void hoverButton(int id, String tooltip, int enabledSprite, int disabledSprite, String buttonText,
-			TextDrawingArea tda[], int idx, int colour, int hoveredColour, boolean centerText) {
+								   TextDrawingArea tda[], int idx, int colour, int hoveredColour, boolean centerText) {
 		RSInterface tab = addInterface(id);
 		tab.tooltip = tooltip;
 		tab.atActionType = 1;
@@ -439,7 +449,7 @@ public class RSInterface {
 	}
 
 	public static void hoverButton(int id, String tooltip, int enabledSprite, int disabledSprite, String buttonText,
-			RSFont tda, int colour, int hoveredColour, boolean centerText) {
+								   RSFont tda, int colour, int hoveredColour, boolean centerText) {
 		RSInterface tab = addInterface(id);
 		tab.tooltip = tooltip;
 		tab.atActionType = 1;
@@ -575,13 +585,13 @@ public class RSInterface {
 	}
 
 	public static void dropdownMenu(int id, int width, int defaultOption, String[] options, MenuItem menuItem,
-			TextDrawingArea tda[], int idx) {
+									TextDrawingArea tda[], int idx) {
 		dropdownMenu(id, width, defaultOption, options, menuItem,
 				new int[] { 0x0d0d0b, 0x464644, 0x473d32, 0x51483c, 0x787169 }, false, tda, idx);
 	}
 
 	public static void dropdownMenu(int id, int width, int defaultOption, String[] options, MenuItem menuItem,
-			int[] dropdownColours, boolean centerText, TextDrawingArea tda[], int idx) {
+									int[] dropdownColours, boolean centerText, TextDrawingArea tda[], int idx) {
 		RSInterface menu = addInterface(id);
 		menu.type = TYPE_DROPDOWN;
 		menu.textDrawingAreas = tda[idx];
@@ -625,21 +635,21 @@ public class RSInterface {
 	}
 
 	public static RSFont rsFont;
-	
+
 	public static void dropTable(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(59800);
 		String dir = "Interfaces/DropViewer/SPRITE";
 		addSprite(59801, 16, dir);
 		addHoverButton(59802, dir, 17, 17, anInt208, "Close", 250, 59803, 3);
 		addHoveredButton(59803, dir, 17, 17, 59804, anInt208);
-		addText(59805, "Monster Drop Guide", 0xff9933, true, true, -1, tda, 2);	
+		addText(59805, "Monster Drop Guide", 0xff9933, true, true, -1, tda, 2);
 		addText(59806, "Name:", 0xff9933, true, false, -1, tda, 0);
 		addText(59807, "Level:", 0xff9933, true, false, -1, tda, 0);
-		addText(59818, "", 0xff9933, true, false, -1, tda, 0);	
-		String[] table = { "Always", "Common", "Uncommon", "Rare", "Very Rare" };	
+		addText(59818, "", 0xff9933, true, false, -1, tda, 0);
+		String[] table = { "Always", "Common", "Uncommon", "Rare", "Very Rare" };
 		for (int i = 0; i < table.length; i++) {
-			addText(59808 + i, table[i], 0x000000, true, false, -1, tda, 0);			
-		}	
+			addText(59808 + i, table[i], 0x000000, true, false, -1, tda, 0);
+		}
 		itemContainer(59813, 30, 8, 5, 50, false, "Details");
 		addInputField(59800, 59814, 15, "NPC/Item Name..", 136, 25, false);
 
@@ -660,7 +670,7 @@ public class RSInterface {
 		tab.child(13, 59900, -230, 97);
 		tab.child(14, 59818, 334, 63);
 		tab.child(15, 59815, 24, 65);
-		
+
 		RSInterface scrollInterface = addTabInterface(59817);
 		scrollInterface.width = 305;
 		scrollInterface.height = 208;
@@ -669,7 +679,7 @@ public class RSInterface {
 		addSprite(59819, 458, dir);
 		setBounds(59819, 0, 0, 0, scrollInterface);
 		setBounds(59813, 13, 4, 1, scrollInterface);
-		
+
 		scrollInterface = addTabInterface(59900);
 		scrollInterface.width = 377;
 		scrollInterface.height = 231;
@@ -685,7 +695,7 @@ public class RSInterface {
 
 	private static void itemContainer(int i, int j, int k, int l, int m, boolean b, String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 
@@ -749,7 +759,7 @@ public class RSInterface {
 	}
 
 	public static void addConfigButton(int ID, int pID, int bID, int bID2, int width, int height, String tT,
-			int configID, int aT, int configFrame) {
+									   int configID, int aT, int configFrame) {
 		RSInterface Tab = addTabInterface(ID);
 		Tab.parentID = pID;
 		Tab.id = ID;
@@ -774,7 +784,7 @@ public class RSInterface {
 	}
 
 	public static void addConfigButton(int ID, int pID, int bID, int bID2, int width, int height, int configID, int aT,
-			int configFrame) {
+									   int configFrame) {
 		RSInterface Tab = addTabInterface(ID);
 		Tab.parentID = pID;
 		Tab.id = ID;
@@ -799,7 +809,7 @@ public class RSInterface {
 	}
 
 	public static void addHoverButton_sprite_loader2(int i, int spriteId, int width, int height, String text,
-			int contentType, int hoverOver, int aT) {// hoverable
+													 int contentType, int hoverOver, int aT) {// hoverable
 		// button
 		RSInterface tab = addTabInterface(i);
 		tab.id = i;
@@ -898,7 +908,7 @@ public class RSInterface {
 	}
 
 	public static void addPrayer(final int i, final int configId, final int configFrame, final int requiredValues,
-			final int prayerSpriteID, final String PrayerName, final int Hover, final String loca) {
+								 final int prayerSpriteID, final String PrayerName, final int Hover, final String loca) {
 		RSInterface Interface = addTabInterface(i);
 		Interface.id = i;
 		Interface.parentID = 22500;
@@ -945,7 +955,7 @@ public class RSInterface {
 
 	/**
 	 * Rune pouch
-	 * 
+	 *
 	 * @author Sky
 	 */
 	// public static RSInterface runePouch;
@@ -967,8 +977,8 @@ public class RSInterface {
 		addHoveredButton(id + 1, "/Interfaces/runepouch/CLOSE", 1, 21, 21, id + 2);
 		rsi.child(child++, id, WINDOW_X + 324, WINDOW_Y + 7); // CLOSE BUTTON
 		rsi.child(child++, id + 1, WINDOW_X + 324, WINDOW_Y + 7); // CLOSE
-																	// BUTTON
-																	// HOVER
+		// BUTTON
+		// HOVER
 		id += 3;
 
 		/**
@@ -1224,7 +1234,7 @@ public class RSInterface {
 	}
 
 	public static RSInterface addItemContainer(int childId, int width, int height, int invSpritePadX,
-                                            int invSpritePadY, boolean addPlaceholderItems, boolean smallInvSprites, String...options) {
+											   int invSpritePadY, boolean addPlaceholderItems, boolean smallInvSprites, String...options) {
 		RSInterface rsi = addInterface(childId);
 		rsi.smallInvSprites = smallInvSprites;
 		rsi.hideInvStackSizes = false;
@@ -1348,7 +1358,7 @@ public class RSInterface {
 	}
 
 	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height,
-			boolean asterisks, boolean updatesEveryInput, String regex) {
+									 boolean asterisks, boolean updatesEveryInput, String regex) {
 		RSInterface field = addFullScreenInterface(identity);
 		field.id = identity;
 		field.type = 16;
@@ -1366,7 +1376,7 @@ public class RSInterface {
 	}
 
 	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height,
-			boolean asterisks, boolean updatesEveryInput) {
+									 boolean asterisks, boolean updatesEveryInput) {
 		RSInterface field = addFullScreenInterface(identity);
 		field.id = identity;
 		field.type = 16;
@@ -1383,7 +1393,7 @@ public class RSInterface {
 	}
 
 	public static void addInputField(int identity, int characterLimit, int color, String text, int width, int height,
-			boolean asterisks) {
+									 boolean asterisks) {
 		RSInterface field = addFullScreenInterface(identity);
 		field.id = identity;
 		field.type = 16;
@@ -1420,9 +1430,9 @@ public class RSInterface {
 	public String[] tooltips;
 
 	public static void addBankHover(int interfaceID, int actionType, int hoverid, int spriteId, int spriteId2,
-			String NAME, int Width, int Height, int configFrame, int configId, String Tooltip, int hoverId2,
-			int hoverSpriteId, int hoverSpriteId2, String hoverSpriteName, int hoverId3, String hoverDisabledText,
-			String hoverEnabledText, int X, int Y) {
+									String NAME, int Width, int Height, int configFrame, int configId, String Tooltip, int hoverId2,
+									int hoverSpriteId, int hoverSpriteId2, String hoverSpriteName, int hoverId3, String hoverDisabledText,
+									String hoverEnabledText, int X, int Y) {
 		RSInterface hover = addTabInterface(interfaceID);
 		hover.id = interfaceID;
 		hover.parentID = interfaceID;
@@ -1485,7 +1495,7 @@ public class RSInterface {
 	}
 
 	public static void addToItemGroup(int id, int w, int h, int x, int y, boolean actions, String action1,
-			String action2, String action3, String action4, String action5, String action6) {
+									  String action2, String action3, String action4, String action5, String action6) {
 		RSInterface rsi = addInterface(id);
 		rsi.width = w;
 		rsi.height = h;
@@ -1512,7 +1522,7 @@ public class RSInterface {
 	}
 
 	public static void addToItemGroup(int id, int w, int h, int x, int y, boolean actions, String action1,
-			String action2, String action3) {
+									  String action2, String action3) {
 		RSInterface rsi = addInterface(id);
 		rsi.width = w;
 		rsi.height = h;
@@ -1559,7 +1569,7 @@ public class RSInterface {
 	}
 
 	public static void addConfigButton(int ID, int pID, int bID, int bID2, String bName, int width, int height,
-			String[] tooltips, int configID, int configFrame) {
+									   String[] tooltips, int configID, int configFrame) {
 		RSInterface Tab = addTabInterface(ID);
 		Tab.parentID = pID;
 		Tab.id = ID;
@@ -1665,7 +1675,7 @@ public class RSInterface {
 	}
 
 	public static void addButton(int interfaceId, int spriteId, String spriteLocation, int width, int height,
-			String[] tooltips) {
+								 String[] tooltips) {
 		RSInterface RSInterface = addInterface(interfaceId);
 		RSInterface.id = interfaceId;
 		RSInterface.parentID = interfaceId;
@@ -1684,8 +1694,8 @@ public class RSInterface {
 	public boolean newScroller;
 
 	public static void addBankHover1(int interfaceID, int actionType, int hoverid, int spriteId, String NAME, int Width,
-			int Height, String Tooltip, int hoverId2, int hoverSpriteId, String hoverSpriteName, int hoverId3,
-			String hoverDisabledText, int X, int Y) {
+									 int Height, String Tooltip, int hoverId2, int hoverSpriteId, String hoverSpriteName, int hoverId3,
+									 String hoverDisabledText, int X, int Y) {
 		RSInterface hover = addTabInterface(interfaceID);
 		hover.id = interfaceID;
 		hover.parentID = interfaceID;
@@ -1713,7 +1723,7 @@ public class RSInterface {
 	}
 
 	public static void addTextButton(int i, String s, String tooltip, int k, boolean l, boolean m,
-			TextDrawingArea[] TDA, int j, int w) {
+									 TextDrawingArea[] TDA, int j, int w) {
 		RSInterface rsinterface = addInterface(i);
 		rsinterface.parentID = i;
 		rsinterface.id = i;
@@ -1818,7 +1828,7 @@ public class RSInterface {
 	}
 
 	public static void addLunar3RunesSmallBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											  int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -1886,7 +1896,7 @@ public class RSInterface {
 	}
 
 	public static void addSpellSmall2(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+									  int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -1952,9 +1962,9 @@ public class RSInterface {
 		addRuneText(ID + 7, ra3, r3, TDA);
 		setBounds(ID + 7, 142, 66, 8, INT);
 	}
-	
+
 	public static void addSpellSmall(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+									 int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2020,9 +2030,9 @@ public class RSInterface {
 		addRuneText(ID + 7, ra3, r3, TDA);
 		setBounds(ID + 7, 145, 66, 8, INT);
 	}
-	
+
 	public static void addSpellSmaller(int ID, int r1, int r2, int ra1, int ra2, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+									   int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2078,9 +2088,9 @@ public class RSInterface {
 		addRuneText(ID + 6, ra2, r2, TDA);
 		setBounds(ID + 6, 124, 66, 6, INT);
 	}
-	
+
 	public static void addLunar2RunesSmallBox(int ID, int r1, int r2, int ra1, int ra2, int rune1, int lvl, String name,
-			String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											  String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2139,7 +2149,7 @@ public class RSInterface {
 	}
 
 	public static void addLunar3RunesBigBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2207,7 +2217,7 @@ public class RSInterface {
 	}
 
 	public static void addSpellBig2(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+									int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2275,7 +2285,7 @@ public class RSInterface {
 	}
 
 	public static void addLunar3RunesBigBox3(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											 int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2362,7 +2372,7 @@ public class RSInterface {
 	public int spriteOpacity;
 
 	public static void configHoverButton(int id, String tooltip, int sprite2, int sprite1, int enabledAltSprite,
-			int disabledAltSprite, boolean active, int... buttonsToDisable) {
+										 int disabledAltSprite, boolean active, int... buttonsToDisable) {
 		RSInterface tab = addInterface(id);
 		tab.tooltip = tooltip;
 		tab.atActionType = OPTION_OK;
@@ -2386,7 +2396,7 @@ public class RSInterface {
 	private static final int LUNAR_OFF_SPRITES_START = 246;
 	private static final int LUNAR_ON_SPRITES_START = 285;
 	public static void addLunar3RunesLargeBox0(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											   int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2454,7 +2464,7 @@ public class RSInterface {
 	}
 
 	public static void addLunar3RunesLargeBox(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											  int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2520,9 +2530,9 @@ public class RSInterface {
 		addRuneText(ID + 7, ra3, r3, TDA);
 		setBounds(ID + 7, 142, 92, 8, INT);
 	}
-	
+
 	public static void addSpellSmall2_3(int ID, int r1, int r2, int r3, int r4, int ra1, int ra2, int ra3, int ra4, int rune1,
-			int rune2, int rune3, int rune4, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+										int rune2, int rune3, int rune4, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2599,9 +2609,9 @@ public class RSInterface {
 		addRuneText(ID + 8, ra4, r4, TDA);
 		setBounds(ID + 8, 149, 66, 10, INT);
 	}
-	
+
 	public static void addSpellLarge2(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int spellUsableOn, int type) {
+									  int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int spellUsableOn, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2669,7 +2679,7 @@ public class RSInterface {
 	}
 
 	public static void addLunar3RunesLargeBox2(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
-			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
+											   int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
 		rsInterface.id = ID;
 		rsInterface.parentID = 1151;
@@ -2760,7 +2770,7 @@ public class RSInterface {
 	}
 
 	public static void addButton(int id, int sid, String spriteName, String tooltip, int mOver, int atAction, int width,
-			int height) {
+								 int height) {
 		RSInterface tab = interfaceCache[id] = new RSInterface();
 		tab.id = id;
 		tab.parentID = id;
@@ -2871,7 +2881,7 @@ public class RSInterface {
 	}
 
 	public static void addHoverText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color,
-			boolean center, boolean textShadowed, int width) {
+									boolean center, boolean textShadowed, int width) {
 		RSInterface rsinterface = addInterface(id);
 		rsinterface.id = id;
 		rsinterface.parentID = id;
@@ -2909,7 +2919,7 @@ public class RSInterface {
 	}
 
 	public static void addConfigButton2(int ID, int pID, int bID, int bID2, int width, int height, String tT,
-			int configID, int aT, int configFrame) {
+										int configID, int aT, int configFrame) {
 		RSInterface Tab = addTabInterface(ID);
 		Tab.parentID = pID;
 		Tab.id = ID;
@@ -2934,7 +2944,7 @@ public class RSInterface {
 	}
 
 	public static void addConfigButton(int ID, int pID, int bID, int bID2, String bName, int width, int height,
-			String tT, int configValueToActivate, int aT, int configId) {
+									   String tT, int configValueToActivate, int aT, int configId) {
 		RSInterface Tab = addTabInterface(ID);
 		Tab.parentID = pID;
 		Tab.id = ID;
@@ -2961,34 +2971,34 @@ public class RSInterface {
 	public static void drawBlackBox(int xPos, int yPos) {
 		// /Light Coloured Borders\\\
 		DrawingArea.drawPixels(71, yPos - 1, xPos - 2, 0x726451, 1); // Left
-																		// line
+		// line
 		DrawingArea.drawPixels(69, yPos, xPos + 174, 0x726451, 1); // Right line
 		DrawingArea.drawPixels(1, yPos - 2, xPos - 2, 0x726451, 178); // Top
-																		// Line
+		// Line
 		DrawingArea.drawPixels(1, yPos + 68, xPos, 0x726451, 174); // Bottom
-																	// Line
+		// Line
 
 		// /Dark Coloured Borders\\\
 		DrawingArea.drawPixels(71, yPos - 1, xPos - 1, 0x2E2B23, 1); // Left
-																		// line
+		// line
 		DrawingArea.drawPixels(71, yPos - 1, xPos + 175, 0x2E2B23, 1); // Right
-																		// line
+		// line
 		DrawingArea.drawPixels(1, yPos - 1, xPos, 0x2E2B23, 175); // Top line
 		DrawingArea.drawPixels(1, yPos + 69, xPos, 0x2E2B23, 175); // Top line
 
 		// /Black Box\\\
 		DrawingArea.method335(0x000000, yPos, 174, 68, 220, xPos); // Yes
-																	// method335
-																	// is
-																	// galkons
-																	// opacity
-																	// method
+		// method335
+		// is
+		// galkons
+		// opacity
+		// method
 	}
 
 	public Sprite disabledHover;
 
 	public static void addPrayer(int i, int configId, int configFrame, int requiredValues, int spriteID,
-			String prayerName) {
+								 String prayerName) {
 		RSInterface tab = addTabInterface(i);
 		tab.id = i;
 		tab.parentID = 5608;
@@ -3339,7 +3349,7 @@ public class RSInterface {
 	}
 
 	public static void addText(int id, String text, TextDrawingArea tda[], int idx, int color, boolean center,
-			boolean shadow) {
+							   boolean shadow) {
 		RSInterface tab = addTabInterface(id);
 		tab.parentID = id;
 		tab.id = id;
@@ -3446,7 +3456,7 @@ public class RSInterface {
 	}
 
 	public static void addButton(int id, int spriteId, String spriteName, String tooltip, int actionType,
-			int mouseOverTrigger) {
+								 int mouseOverTrigger) {
 		RSInterface tab = interfaceCache[id] = new RSInterface();
 		tab.id = id;
 		tab.parentID = id;
@@ -3561,7 +3571,7 @@ public class RSInterface {
 	}
 
 	public static void addHoverButton(int i, String imageName, int j, int width, int height, String text,
-			int contentType, int hoverOver, int aT) {// hoverable button
+									  int contentType, int hoverOver, int aT) {// hoverable button
 		RSInterface tab = addTabInterface(i);
 		tab.id = i;
 		tab.parentID = i;
@@ -3941,7 +3951,7 @@ public class RSInterface {
 	}
 
 	public static void addClickableText(int id, String text, String tooltip, TextDrawingArea tda[], int idx, int color,
-			boolean center, boolean shadow, int width) {
+										boolean center, boolean shadow, int width) {
 		RSInterface tab = addTabInterface(id);
 		tab.parentID = id;
 		tab.id = id;
@@ -3993,7 +4003,7 @@ public class RSInterface {
 	}
 
 	public static void drawRoundedRectangle(int identity, int width, int height, int color, byte transparency,
-			boolean filled, boolean shadowed) {
+											boolean filled, boolean shadowed) {
 		RSInterface component = addInterface(identity);
 		component.id = identity;
 		component.type = 18;
@@ -4039,7 +4049,7 @@ public class RSInterface {
 	/**
 	 * Retrieves the {@link RSMenuItem} object that is currently in focus by this
 	 * component
-	 * 
+	 *
 	 * @return the item in focus
 	 */
 	public RSMenuItem getMenuItem() {
@@ -4048,7 +4058,7 @@ public class RSInterface {
 
 	/**
 	 * Modifies the current {@link RSMenuItem} for this component
-	 * 
+	 *
 	 * @param menuItem
 	 *            the new item that will be replacing the previous item
 	 */
@@ -4063,7 +4073,7 @@ public class RSInterface {
 
 	/**
 	 * Determines if the menu of items is visible.
-	 * 
+	 *
 	 * @return will return true if the player has triggered the drop down button.
 	 */
 	public boolean isMenuVisible() {
@@ -4072,7 +4082,7 @@ public class RSInterface {
 
 	/**
 	 * Sets the menu to either a visible or invisible state.
-	 * 
+	 *
 	 * @param menuVisible
 	 *            true if the menu is to be visible, otherwise invisible.
 	 */

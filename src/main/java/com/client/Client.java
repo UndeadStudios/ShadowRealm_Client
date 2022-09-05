@@ -57,10 +57,7 @@ import com.client.graphics.interfaces.settings.Setting;
 import com.client.graphics.interfaces.settings.SettingsInterface;
 import com.client.graphics.interfaces.impl.SettingsTabWidget;
 import com.client.graphics.interfaces.impl.Slider;
-import com.client.graphics.loaders.SpriteLoader1;
-import com.client.graphics.loaders.SpriteLoader2;
-import com.client.graphics.loaders.SpriteLoader3;
-import com.client.graphics.loaders.SpriteLoader4;
+import com.client.graphics.loaders.*;
 import com.client.model.Items;
 import com.client.script.ClientScripts;
 import com.client.sign.Signlink;
@@ -490,6 +487,7 @@ public class Client extends RSApplet {
 	private long experienceCounter;
 	private Sprite mapBack;
 	private Sprite[] smallXpSprites = new Sprite[22];
+	public static Sprite[] cacheSprite474;
 	private static final long serialVersionUID = 1L;
 	private Sprite[] inputSprites = new Sprite[7];
 
@@ -10697,7 +10695,8 @@ public class Client extends RSApplet {
 		SpriteLoader4.loadSprites();
 		cacheSprite4 = SpriteLoader4.sprites;
 		SpriteLoader4.sprites = null;
-
+		SpriteLoader.load474Sprites();
+		cacheSprite474 = SpriteLoader.sprites474;
 		try {
 			ItemDef.load();
 			titleStreamLoader = streamLoaderForName(1, "title screen");
@@ -16414,7 +16413,7 @@ public class Client extends RSApplet {
 						mapRegionX = inStream.readUShort();
 						isDynamicRegion = true;
 					}
-					if (currentRegionX == mapRegionX && currentRegionY == mapRegionY && loadingStage == 2) {
+					if (incomingPacket != 241 && currentRegionX == mapRegionX && currentRegionY == mapRegionY && loadingStage == 2) {
 						incomingPacket = -1;
 						return true;
 					}
