@@ -13745,9 +13745,9 @@ public class Client extends RSApplet {
 	}
 
 	private void determineMenuSize() {
-		int i = chatTextDrawingArea.getTextWidth("Choose Option");
+		int i = newBoldFont.getTextWidth("Choose Option");
 		for (int j = 0; j < menuActionRow; j++) {
-			int k = chatTextDrawingArea.getTextWidth(menuActionName[j]);
+			int k = newBoldFont.getTextWidth(menuActionName[j]);
 			if (k > i)
 				i = k;
 		}
