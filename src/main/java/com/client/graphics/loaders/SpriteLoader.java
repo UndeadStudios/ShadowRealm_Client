@@ -135,7 +135,40 @@ public class SpriteLoader {
 		drawOffsetY = 0;
 		spriteData = null;
 	}
+	public static void load474Sprites() {
+		try {
+			Buffer index = new Buffer(FileOperations.readFile(Signlink.getCacheDirectory() + "474 sprites.idx"));
+			Buffer data = new Buffer(FileOperations.readFile(Signlink.getCacheDirectory() + "474 sprites.dat"));
+			DataInputStream indexFile = new DataInputStream(new GZIPInputStream(new ByteArrayInputStream(index.buffer)));
+			DataInputStream dataFile = new DataInputStream(new GZIPInputStream(new ByteArrayInputStream(data.buffer)));
+			int totalSprites = indexFile.readInt();
+			if (cache474 == null) {
+				cache474 = new SpriteLoader[totalSprites];
+				sprites474 = new Sprite[totalSprites];
+			}
+			for (int i = 0; i < totalSprites; i++) {
+				int id = indexFile.readInt();
+				if (cache474[id] == null) {
+					cache474[id] = new SpriteLoader();
+				}
+				cache474[id].readValues(indexFile, dataFile);
+				createSprite474(cache474[id]);
+			}
+			indexFile.close();
+			dataFile.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
+	public static void createSprite474(SpriteLoader sprite) {
+		sprites474[sprite.id] = new Sprite(sprite.spriteData);
+		sprites474[sprite.id].anInt1442 = sprite.drawOffsetX;
+		sprites474[sprite.id].anInt1443 = sprite.drawOffsetY;
+	}
+
+	public static SpriteLoader[] cache474;
+	public static Sprite[] sprites474 = null;
 	public static SpriteLoader[] cache;
 	public static Sprite[] sprites = null;
 	public static int totalSprites;

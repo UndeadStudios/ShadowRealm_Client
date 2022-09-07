@@ -510,12 +510,26 @@ public final class Buffer extends NodeSub {
         var1 += var2;
         return var1;
     }
-
+    public int readtSmart() {
+        int i = buffer[currentOffset] & 0xff;
+        if (i < 128)
+            return readUnsignedByte();
+        else
+            return readUShort() - 32768;
+    }
     public int readUSmart() {
         int peek = buffer[currentOffset] & 0xFF;
         return peek < 128 ? this.readUnsignedByte() : this.readUShort() - 0x8000;
     }
     public int readSmart() {
+        int i = buffer[currentOffset] & 0xff;
+        if (i < 128)
+            return readUnsignedByte();
+        else
+            return readUShort() - 32768;
+    }
+
+    public int readNewSmart() {
         int value = buffer[currentOffset] & 0xFF;
         if (value < 128) {
             return readUnsignedByte() - 64;

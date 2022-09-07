@@ -149,8 +149,12 @@ public class RSInterface {
 						String s1 = stream.readString();
 						if (streamLoader_1 != null && s1.length() > 0) {
 							int i5 = s1.lastIndexOf(",");
-							rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1,
-									s1.substring(0, i5));
+							if(s1.substring(0, i5).toLowerCase().equals("mige")){
+								int id = Integer.parseInt(s1.substring(i5 + 1));
+								rsInterface.sprites[j2] = Client.cacheSprite474[id];
+							} else
+								rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1, s1.substring(0, i5));
+
 						}
 					}
 				}
@@ -198,14 +202,20 @@ public class RSInterface {
 				String s = stream.readString();
 				if (streamLoader_1 != null && s.length() > 0) {
 					int i4 = s.lastIndexOf(",");
-					rsInterface.sprite1 = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1,
-							s.substring(0, i4));
+					if(s.substring(0, i4).toLowerCase().equals("mige")){
+						int id = Integer.parseInt(s.substring(i4 + 1));
+						rsInterface.sprite1 = Client.cacheSprite474[id];
+					} else
+						rsInterface.sprite1 = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1, s.substring(0, i4));
 				}
 				s = stream.readString();
 				if (streamLoader_1 != null && s.length() > 0) {
 					int j4 = s.lastIndexOf(",");
-					rsInterface.sprite2 = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1,
-							s.substring(0, j4));
+					if(s.substring(0, j4).toLowerCase().equals("mige")){
+						int id = Integer.parseInt(s.substring(j4 + 1));
+						rsInterface.sprite2 = Client.cacheSprite474[id];
+					} else
+						rsInterface.sprite2 = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1, s.substring(0, j4));
 				}
 			}
 			if (rsInterface.type == 6) {
@@ -293,7 +303,7 @@ public class RSInterface {
 		}
 		addInterface(emptyInterface);
 	}
-	
+
 	public static int findOpenConfigFrame(int amount) {
 		int start = 0;
 		int found = 0;
@@ -305,7 +315,7 @@ public class RSInterface {
 				}
 			}
 		}
-		
+
 		for(int i = 0; i < checker.length; i++) {
 			if (!checker[i]) {
 				start++;
@@ -319,7 +329,7 @@ public class RSInterface {
 		}
 		return found;
 	}
-	
+
 	public static int findAvailableInterfaceID(int interfaceCount) {
         l:
         for (int i = 0; i < RSInterface.interfaceCache.length - interfaceCount; i++) {
@@ -332,7 +342,7 @@ public class RSInterface {
         }
         return -1;
     }
-	
+
 	public static void addHoverButtonLatest(String spriteName,int buttonId1, int buttonId2, int buttonId3, int spriteId1, int spriteId2,
 			int buttonWidth, int buttonHeight, String buttonHoverText) {
 		addHoverButton(buttonId1, spriteName,spriteId1, buttonWidth, buttonHeight, buttonHoverText, -1, buttonId2, 1);
@@ -354,7 +364,7 @@ public class RSInterface {
 	public int msgX, msgY;
 
 	public boolean toggled = false;
-	
+
 	public static void hoverButton(int id, String tooltip) {
 		hoverButton(id, tooltip, 255);
 	}
@@ -401,7 +411,7 @@ public class RSInterface {
 		tab.active = false;
 		tab.toggled = false;
 	}
-	
+
 	public static void hoverButton(int id, String tooltip, int sprite2, int sprite1, int opacity) {
 		RSInterface tab = addInterface(id);
 		tab.tooltip = tooltip;
@@ -415,7 +425,7 @@ public class RSInterface {
 		tab.toggled = false;
 		tab.spriteOpacity = opacity;
 	}
-	
+
 	public static void hoverButton(int id, String tooltip, int enabledSprite, int disabledSprite, String buttonText,
 			TextDrawingArea tda[], int idx, int colour, int hoveredColour, boolean centerText) {
 		RSInterface tab = addInterface(id);
@@ -625,21 +635,21 @@ public class RSInterface {
 	}
 
 	public static RSFont rsFont;
-	
+
 	public static void dropTable(TextDrawingArea[] tda) {
 		RSInterface tab = addInterface(59800);
 		String dir = "Interfaces/DropViewer/SPRITE";
 		addSprite(59801, 16, dir);
 		addHoverButton(59802, dir, 17, 17, anInt208, "Close", 250, 59803, 3);
 		addHoveredButton(59803, dir, 17, 17, 59804, anInt208);
-		addText(59805, "Monster Drop Guide", 0xff9933, true, true, -1, tda, 2);	
+		addText(59805, "Monster Drop Guide", 0xff9933, true, true, -1, tda, 2);
 		addText(59806, "Name:", 0xff9933, true, false, -1, tda, 0);
 		addText(59807, "Level:", 0xff9933, true, false, -1, tda, 0);
-		addText(59818, "", 0xff9933, true, false, -1, tda, 0);	
-		String[] table = { "Always", "Common", "Uncommon", "Rare", "Very Rare" };	
+		addText(59818, "", 0xff9933, true, false, -1, tda, 0);
+		String[] table = { "Always", "Common", "Uncommon", "Rare", "Very Rare" };
 		for (int i = 0; i < table.length; i++) {
-			addText(59808 + i, table[i], 0x000000, true, false, -1, tda, 0);			
-		}	
+			addText(59808 + i, table[i], 0x000000, true, false, -1, tda, 0);
+		}
 		itemContainer(59813, 30, 8, 5, 50, false, "Details");
 		addInputField(59800, 59814, 15, "NPC/Item Name..", 136, 25, false);
 
@@ -660,7 +670,7 @@ public class RSInterface {
 		tab.child(13, 59900, -230, 97);
 		tab.child(14, 59818, 334, 63);
 		tab.child(15, 59815, 24, 65);
-		
+
 		RSInterface scrollInterface = addTabInterface(59817);
 		scrollInterface.width = 305;
 		scrollInterface.height = 208;
@@ -669,7 +679,7 @@ public class RSInterface {
 		addSprite(59819, 458, dir);
 		setBounds(59819, 0, 0, 0, scrollInterface);
 		setBounds(59813, 13, 4, 1, scrollInterface);
-		
+
 		scrollInterface = addTabInterface(59900);
 		scrollInterface.width = 377;
 		scrollInterface.height = 231;
@@ -685,7 +695,7 @@ public class RSInterface {
 
 	private static void itemContainer(int i, int j, int k, int l, int m, boolean b, String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 
@@ -945,7 +955,7 @@ public class RSInterface {
 
 	/**
 	 * Rune pouch
-	 * 
+	 *
 	 * @author Sky
 	 */
 	// public static RSInterface runePouch;
@@ -1952,7 +1962,7 @@ public class RSInterface {
 		addRuneText(ID + 7, ra3, r3, TDA);
 		setBounds(ID + 7, 142, 66, 8, INT);
 	}
-	
+
 	public static void addSpellSmall(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
 			int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
@@ -2020,7 +2030,7 @@ public class RSInterface {
 		addRuneText(ID + 7, ra3, r3, TDA);
 		setBounds(ID + 7, 145, 66, 8, INT);
 	}
-	
+
 	public static void addSpellSmaller(int ID, int r1, int r2, int ra1, int ra2, int rune1,
 			int rune2, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
@@ -2078,7 +2088,7 @@ public class RSInterface {
 		addRuneText(ID + 6, ra2, r2, TDA);
 		setBounds(ID + 6, 124, 66, 6, INT);
 	}
-	
+
 	public static void addLunar2RunesSmallBox(int ID, int r1, int r2, int ra1, int ra2, int rune1, int lvl, String name,
 			String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
@@ -2520,7 +2530,7 @@ public class RSInterface {
 		addRuneText(ID + 7, ra3, r3, TDA);
 		setBounds(ID + 7, 142, 92, 8, INT);
 	}
-	
+
 	public static void addSpellSmall2_3(int ID, int r1, int r2, int r3, int r4, int ra1, int ra2, int ra3, int ra4, int rune1,
 			int rune2, int rune3, int rune4, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int suo, int type) {
 		RSInterface rsInterface = addInterface(ID);
@@ -2599,7 +2609,7 @@ public class RSInterface {
 		addRuneText(ID + 8, ra4, r4, TDA);
 		setBounds(ID + 8, 149, 66, 10, INT);
 	}
-	
+
 	public static void addSpellLarge2(int ID, int r1, int r2, int r3, int ra1, int ra2, int ra3, int rune1,
 			int rune2, int rune3, int lvl, String name, String descr, TextDrawingArea[] TDA, int sid, int spellUsableOn, int type) {
 		RSInterface rsInterface = addInterface(ID);
@@ -4039,7 +4049,7 @@ public class RSInterface {
 	/**
 	 * Retrieves the {@link RSMenuItem} object that is currently in focus by this
 	 * component
-	 * 
+	 *
 	 * @return the item in focus
 	 */
 	public RSMenuItem getMenuItem() {
@@ -4048,7 +4058,7 @@ public class RSInterface {
 
 	/**
 	 * Modifies the current {@link RSMenuItem} for this component
-	 * 
+	 *
 	 * @param menuItem
 	 *            the new item that will be replacing the previous item
 	 */
@@ -4063,7 +4073,7 @@ public class RSInterface {
 
 	/**
 	 * Determines if the menu of items is visible.
-	 * 
+	 *
 	 * @return will return true if the player has triggered the drop down button.
 	 */
 	public boolean isMenuVisible() {
@@ -4072,7 +4082,7 @@ public class RSInterface {
 
 	/**
 	 * Sets the menu to either a visible or invisible state.
-	 * 
+	 *
 	 * @param menuVisible
 	 *            true if the menu is to be visible, otherwise invisible.
 	 */

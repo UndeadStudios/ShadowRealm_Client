@@ -998,7 +998,7 @@ final class ObjectManager {
 	}
 
 	public final void method183(CollisionMap aclass11[], WorldController worldController, int i, int j, int k, int l,
-			byte abyte0[], int i1, int j1, int k1) {
+								byte abyte0[], int i1, int j1, int k1) {
 		label0: {
 			Buffer stream = new Buffer(abyte0);
 			int l1 = -1;
@@ -1320,7 +1320,7 @@ final class ObjectManager {
 				l += i1;
 				int j1 = 0;
 				do {
-					int k1 = stream.readUShortSmart();
+					int k1 = stream.readUSmart();
 					if (k1 == 0)
 						break;
 					j1 += k1 - 1;
