@@ -202,19 +202,19 @@ public class ModelLoader {
             var53 = 0;
             if ((var52 & 1) != 0)
             {
-                var53 = var3.readSmart();
+                var53 = var3.readNewSmart();
             }
 
             var54 = 0;
             if ((var52 & 2) != 0)
             {
-                var54 = var4.readSmart();
+                var54 = var4.readNewSmart();
             }
 
             var55 = 0;
             if ((var52 & 4) != 0)
             {
-                var55 = var5.readSmart();
+                var55 = var5.readNewSmart();
             }
 
             def.verticesX[var51] = var48 + var53;
@@ -303,9 +303,9 @@ public class ModelLoader {
             var56 = var3.readUnsignedByte();
             if (var56 == 1)
             {
-                var51 = var2.readSmart() + var54;
-                var52 = var2.readSmart() + var51;
-                var53 = var2.readSmart() + var52;
+                var51 = var2.readNewSmart() + var54;
+                var52 = var2.readNewSmart() + var51;
+                var53 = var2.readNewSmart() + var52;
                 var54 = var53;
                 def.trianglesX[var55] = var51;
                 def.trianglesY[var55] = var52;
@@ -315,7 +315,7 @@ public class ModelLoader {
             if (var56 == 2)
             {
                 var52 = var53;
-                var53 = var2.readSmart() + var54;
+                var53 = var2.readNewSmart() + var54;
                 var54 = var53;
                 def.trianglesX[var55] = var51;
                 def.trianglesY[var55] = var52;
@@ -325,7 +325,7 @@ public class ModelLoader {
             if (var56 == 3)
             {
                 var51 = var53;
-                var53 = var2.readSmart() + var54;
+                var53 = var2.readNewSmart() + var54;
                 var54 = var53;
                 def.trianglesX[var55] = var51;
                 def.trianglesY[var55] = var52;
@@ -337,7 +337,7 @@ public class ModelLoader {
                 int var57 = var51;
                 var51 = var52;
                 var52 = var57;
-                var53 = var2.readSmart() + var54;
+                var53 = var2.readNewSmart() + var54;
                 var54 = var53;
                 def.trianglesX[var55] = var51;
                 def.trianglesY[var55] = var57;
@@ -515,19 +515,19 @@ public class ModelLoader {
             var42 = 0;
             if ((var41 & 1) != 0)
             {
-                var42 = var5.readSmart();
+                var42 = var5.readNewSmart();
             }
 
             var43 = 0;
             if ((var41 & 2) != 0)
             {
-                var43 = var6.readSmart();
+                var43 = var6.readNewSmart();
             }
 
             var44 = 0;
             if ((var41 & 4) != 0)
             {
-                var44 = var7.readSmart();
+                var44 = var7.readNewSmart();
             }
 
             def.verticesX[var40] = var37 + var42;
@@ -630,9 +630,9 @@ public class ModelLoader {
             var45 = var5.readUnsignedByte();
             if (var45 == 1)
             {
-                var40 = var4.readSmart() + var43;
-                var41 = var4.readSmart() + var40;
-                var42 = var4.readSmart() + var41;
+                var40 = var4.readNewSmart() + var43;
+                var41 = var4.readNewSmart() + var40;
+                var42 = var4.readNewSmart() + var41;
                 var43 = var42;
                 def.trianglesX[var44] = var40;
                 def.trianglesY[var44] = var41;
@@ -642,7 +642,7 @@ public class ModelLoader {
             if (var45 == 2)
             {
                 var41 = var42;
-                var42 = var4.readSmart() + var43;
+                var42 = var4.readNewSmart() + var43;
                 var43 = var42;
                 def.trianglesX[var44] = var40;
                 def.trianglesY[var44] = var41;
@@ -652,7 +652,7 @@ public class ModelLoader {
             if (var45 == 3)
             {
                 var40 = var42;
-                var42 = var4.readSmart() + var43;
+                var42 = var4.readNewSmart() + var43;
                 var43 = var42;
                 def.trianglesX[var44] = var40;
                 def.trianglesY[var44] = var41;
@@ -664,7 +664,7 @@ public class ModelLoader {
                 var46 = var40;
                 var40 = var41;
                 var41 = var46;
-                var42 = var4.readSmart() + var43;
+                var42 = var4.readNewSmart() + var43;
                 var43 = var42;
                 def.trianglesX[var44] = var40;
                 def.trianglesY[var44] = var46;
@@ -912,19 +912,19 @@ public class ModelLoader {
             var51 = 0;
             if ((var50 & 1) != 0)
             {
-                var51 = var3.readSmart();
+                var51 = var3.readNewSmart();
             }
 
             var52 = 0;
             if ((var50 & 2) != 0)
             {
-                var52 = var4.readSmart();
+                var52 = var4.readNewSmart();
             }
 
             var53 = 0;
             if ((var50 & 4) != 0)
             {
-                var53 = var5.readSmart();
+                var53 = var5.readNewSmart();
             }
 
             def.verticesX[var49] = var46 + var51;
@@ -997,9 +997,9 @@ public class ModelLoader {
             var54 = var3.readUnsignedByte();
             if (var54 == 1)
             {
-                var49 = var2.readSmart() + var52;
-                var50 = var2.readSmart() + var49;
-                var51 = var2.readSmart() + var50;
+                var49 = var2.readNewSmart() + var52;
+                var50 = var2.readNewSmart() + var49;
+                var51 = var2.readNewSmart() + var50;
                 var52 = var51;
                 def.trianglesX[var53] = var49;
                 def.trianglesY[var53] = var50;
@@ -1009,7 +1009,7 @@ public class ModelLoader {
             if (var54 == 2)
             {
                 var50 = var51;
-                var51 = var2.readSmart() + var52;
+                var51 = var2.readNewSmart() + var52;
                 var52 = var51;
                 def.trianglesX[var53] = var49;
                 def.trianglesY[var53] = var50;
@@ -1019,7 +1019,7 @@ public class ModelLoader {
             if (var54 == 3)
             {
                 var49 = var51;
-                var51 = var2.readSmart() + var52;
+                var51 = var2.readNewSmart() + var52;
                 var52 = var51;
                 def.trianglesX[var53] = var49;
                 def.trianglesY[var53] = var50;
@@ -1031,7 +1031,7 @@ public class ModelLoader {
                 int var55 = var49;
                 var49 = var50;
                 var50 = var55;
-                var51 = var2.readSmart() + var52;
+                var51 = var2.readNewSmart() + var52;
                 var52 = var51;
                 def.trianglesX[var53] = var49;
                 def.trianglesY[var53] = var55;
@@ -1205,19 +1205,19 @@ public class ModelLoader {
             var40 = 0;
             if ((var39 & 1) != 0)
             {
-                var40 = var5.readSmart();
+                var40 = var5.readNewSmart();
             }
 
             var41 = 0;
             if ((var39 & 2) != 0)
             {
-                var41 = var6.readSmart();
+                var41 = var6.readNewSmart();
             }
 
             var42 = 0;
             if ((var39 & 4) != 0)
             {
-                var42 = var7.readSmart();
+                var42 = var7.readNewSmart();
             }
 
             def.verticesX[var38] = var35 + var40;
@@ -1304,9 +1304,9 @@ public class ModelLoader {
             var43 = var5.readUnsignedByte();
             if (var43 == 1)
             {
-                var38 = var4.readSmart() + var41;
-                var39 = var4.readSmart() + var38;
-                var40 = var4.readSmart() + var39;
+                var38 = var4.readNewSmart() + var41;
+                var39 = var4.readNewSmart() + var38;
+                var40 = var4.readNewSmart() + var39;
                 var41 = var40;
                 def.trianglesX[var42] = var38;
                 def.trianglesY[var42] = var39;
@@ -1316,7 +1316,7 @@ public class ModelLoader {
             if (var43 == 2)
             {
                 var39 = var40;
-                var40 = var4.readSmart() + var41;
+                var40 = var4.readNewSmart() + var41;
                 var41 = var40;
                 def.trianglesX[var42] = var38;
                 def.trianglesY[var42] = var39;
@@ -1326,7 +1326,7 @@ public class ModelLoader {
             if (var43 == 3)
             {
                 var38 = var40;
-                var40 = var4.readSmart() + var41;
+                var40 = var4.readNewSmart() + var41;
                 var41 = var40;
                 def.trianglesX[var42] = var38;
                 def.trianglesY[var42] = var39;
@@ -1338,7 +1338,7 @@ public class ModelLoader {
                 var44 = var38;
                 var38 = var39;
                 var39 = var44;
-                var40 = var4.readSmart() + var41;
+                var40 = var4.readNewSmart() + var41;
                 var41 = var40;
                 def.trianglesX[var42] = var38;
                 def.trianglesY[var42] = var44;
