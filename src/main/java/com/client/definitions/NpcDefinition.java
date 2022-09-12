@@ -690,21 +690,6 @@
 				entityDef.standAnim = 5668;
 				entityDef.walkAnim = 5666;
 			}
-			if (i == 2313) {
-				entityDef.name = "Dark kratos";
-				entityDef.models = new int[] { 46632, 46633, 46634 };
-				entityDef.actions = new String[5];
-				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
-				entityDef.originalColors = null;
-				entityDef.newColors = null;
-				entityDef.standAnim = 7017;
-				entityDef.walkAnim = 7016;
-				entityDef.size = 2;
-				entityDef.combatLevel = 0;
-				entityDef.anInt86 = 90; //WIDTH
-				entityDef.anInt91 = 90; // HEIGH
-			}
-
 			if (i == 2304) {
 				entityDef.name = "Dark k'klik";
 				entityDef.models = new int[] { 46606, 46607, 46608 };
