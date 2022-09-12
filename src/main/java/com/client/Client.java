@@ -2080,7 +2080,7 @@ public class Client extends RSApplet {
 									mouseInvInterfaceIndex = k2;
 									lastActiveInvInterface = class9_1.id;
 									int itemID = class9_1.inventoryItemId[k2] - 1;
-									if (class9_1.id == 23231) {
+									if (class9_1.id == 30000) {
 										itemID = (class9_1.inventoryItemId[k2] & 0x7FFF) - 1;
 									}
 									if (class9_1.inventoryItemId[k2] > 0) {
@@ -12034,7 +12034,7 @@ public class Client extends RSApplet {
 										int k6 = 0;
 										int j7 = 0;
 										int j9 = class9_1.inventoryItemId[i3] - 1;
-										if (class9_1.id == 23231) {
+										if (class9_1.id == 30000) {
 											j9 = (class9_1.inventoryItemId[i3] & 0x7FFF) - 1;
 										}
 										if (k5 > DrawingArea.topX - 32 && k5 < DrawingArea.bottomX && j6 > DrawingArea.topY - 32
@@ -17415,7 +17415,7 @@ public class Client extends RSApplet {
 					}
 					RSInterface class9_2 = RSInterface.interfaceCache[i9];
 					while (inStream.currentOffset < packetSize) {
-						int j20 = (i9 == 23231 ? inStream.readUnsignedByte() : inStream.readDWord());
+						int j20 = (i9 == 30000 ? inStream.readUnsignedByte() : inStream.readDWord());
 						int i23 = inStream.readUShort(); //Item ID
 						int l25 = inStream.readUnsignedByte(); // Amount
 						if (l25 == 255)
