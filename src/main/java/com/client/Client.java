@@ -1662,7 +1662,7 @@ public class Client extends RSApplet {
 						if (sprite != -1) {
 							int k3 = k2;
 							int l3 = l2;
-							System.out.println("Area id: " + j3);
+							//System.out.println("Area id: " + j3);
 							mapIconSprite[mapIconAmount] = mapFunctions[sprite];
 							anIntArray1072[mapIconAmount] = k3;
 							anIntArray1073[mapIconAmount] = l3;
@@ -6632,7 +6632,7 @@ public class Client extends RSApplet {
 			return;
 		}
 		if (l == 1226) {
-			int j1 = ObjectKey.getObjectId(i1);
+			int j1 = ObjectKey.getObjectId(keyLong);
 			ObjectDefinition class46 = ObjectDefinition.forID(j1);
 			String s10;
 			if (class46.description != null)
