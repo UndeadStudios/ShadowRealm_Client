@@ -49,10 +49,6 @@ public final class ObjectDefinition {
 		case 36201: // Raids 1 lobby entrance
 			objectDef.actions = new String[]{ "Enter", null, null, null, null};
 			break;
-			case 591:
-				objectDef.name = "Item Upgrades Table";
-				objectDef.actions = new String[]{"Forge", null, null, null, null};
-				break;
 		case 36062:
 			objectDef.description = "Teleports you anywhere around Exilius.";
 			objectDef.actions = new String[] { "Activate", "Previous Location", null, null, null };
