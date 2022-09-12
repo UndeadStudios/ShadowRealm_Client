@@ -35,7 +35,7 @@ public class ItemSearch {
 				continue;
 			
 			if(hideUntradables) {
-				if(!itemDefinitions.searchableItem)
+				if(!itemDefinitions.searchable)
 					continue;
 
 			} else {

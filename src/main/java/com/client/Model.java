@@ -5,9 +5,6 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.io.BufferedInputStream;
 import java.io.File;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Model extends Renderable {
 
@@ -543,21 +540,7 @@ public class Model extends Renderable {
         }
         return null;
     }
-    private static final Set<Integer> repeatedTextureModels = new HashSet<>();
 
-    static {
-        int[] array = {55555, 55556, 55557, 55558, 55559, 55560, 55561, 55562, 55563, 55564, 55565, 55566, 55567, 55568, 55569, 55570, 55571, 55572, 55573, 55574, 55575, 55576, 55577, 55578, 55579, 55580, 55581, 55582, 55583, 55584, 55585, 55586, 55587, 55588, 55589, 55590, 55591, 55592, 55593, 55594, 55595, 55596, 55597, 55598, 55599, 55600, 55601, 55602, 55603, 55604, 55605, 55606, 55608, 55609};
-        for (int id : array) {
-            addAll(id);
-        }
-    }
-
-    private static void addAll(int... values) {
-        for (int value : values) {
-            repeatedTextureModels.add(value);
-        }
-    }
-    public boolean[] repeatTexture;
     public Model(int model) {
         if (model == 0) {
             return;
@@ -586,11 +569,6 @@ public class Model extends Renderable {
                         face_render_priorities[j] = 10;
                     }
                 }
-            }
-            repeatTexture = new boolean[trianglesCount];
-
-            if (repeatedTextureModels.contains(model)) {
-                Arrays.fill(repeatTexture, true);
             }
         } catch (Exception e) {
             System.err.println("Error decoding model: " + model);
@@ -1470,10 +1448,8 @@ public class Model extends Renderable {
             trianglesX = new int[trianglesCount];
             trianglesY = new int[trianglesCount];
             trianglesZ = new int[trianglesCount];
-            repeatTexture = new boolean[trianglesCount];
-            if (color_flag)
+            if(color_flag)
                 colors = new short[trianglesCount];
-                repeatTexture = new boolean[trianglesCount];
 
             if (type_flag)
                 types = new int[trianglesCount];
@@ -1536,7 +1512,6 @@ public class Model extends Renderable {
                             }
                         }
                         colors[trianglesCount] = build.colors[face];
-                        repeatTexture[trianglesCount] = build.repeatTexture[face];
                         trianglesX[trianglesCount] = method465(build, build.trianglesX[face]);
                         trianglesY[trianglesCount] = method465(build, build.trianglesY[face]);
                         trianglesZ[trianglesCount] = method465(build, build.trianglesZ[face]);
@@ -1660,10 +1635,8 @@ public class Model extends Renderable {
                             alphas[trianglesCount] = 0;
                         else
                             alphas[trianglesCount] = model_1.alphas[i2];
-                    if (flag4 && model_1.colors != null) {
+                    if (flag4 && model_1.colors != null)
                         colors[trianglesCount] = model_1.colors[i2];
-                        repeatTexture[trianglesCount] = model_1.repeatTexture[i2];
-                    }
 
                     if (texture_flag) {
                         if (model_1.materials != null) {
@@ -1721,13 +1694,10 @@ public class Model extends Renderable {
         }
         if (color_flag) {
             colors = model.colors;
-            repeatTexture = model.repeatTexture;
         } else {
             colors = new short[trianglesCount];
-            repeatTexture = new boolean[trianglesCount];
-            for (int face = 0; face < trianglesCount; face++) {
-                colors[face] = model.colors[face];
-                repeatTexture[face] = model.repeatTexture[face];
+            for (int k = 0; k < trianglesCount; k++) {
+                colors[k] = model.colors[k];
             }
 
         }
@@ -1834,7 +1804,6 @@ public class Model extends Renderable {
         verticesZ = model.verticesZ;
         colors = model.colors;
         alphas = model.alphas;
-        repeatTexture = model.repeatTexture;
         face_render_priorities = model.face_render_priorities;
         face_priority = model.face_priority;
         trianglesX = model.trianglesX;
@@ -3120,15 +3089,6 @@ public class Model extends Renderable {
             type = 0;
         else
             type = types[i] & 3;
-        if (!Rasterizer.forceRepeat) {
-            if (repeatTexture == null) {
-                Rasterizer.repeatTexture = false;
-            } else {
-                Rasterizer.repeatTexture = repeatTexture[i];
-            }
-        } else {
-            Rasterizer.repeatTexture = true;
-        }
 
         if(materials != null && materials[i] != -1) {
             int texture_a = j;

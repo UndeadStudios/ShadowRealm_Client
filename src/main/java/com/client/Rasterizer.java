@@ -4,7 +4,6 @@ public final class Rasterizer extends DrawingArea {
 
     public static boolean saveDepth;
     public static float[] depthBuffer;
-    public static boolean forceRepeat = false;
     private static int mipMapLevel;
     public static int textureAmount = 117;
     static boolean aBoolean1462;
@@ -32,7 +31,6 @@ public final class Rasterizer extends DrawingArea {
     public static int lastTextureRetrievalCount;
     public static int hslToRgb[] = new int[0x10000];
     private static int[][] currentPalette = new int[textureAmount][];
-    public static boolean repeatTexture = false;
 
     static {
         anIntArray1468 = new int[512];
@@ -4506,12 +4504,10 @@ public final class Rasterizer extends DrawingArea {
                 if(var19 != 0) {
                     var20 = var9 / var19;
                     var18 = var10 / var19;
-                    if (!repeatTexture) {
                     if(var20 < 0) {
                         var20 = 0;
                     } else if(var20 > 4032) {
                         var20 = 4032;
-                    }
                     }
                 } else {
                     var20 = 0;
@@ -4525,12 +4521,10 @@ public final class Rasterizer extends DrawingArea {
                 if(var19 != 0) {
                     var22 = var9 / var19;
                     var16 = var10 / var19;
-                    if (!repeatTexture) {
                     if(var22 < 0) {
                         var22 = 0;
                     } else if(var22 > 4032) {
                         var22 = 4032;
-                    }
                     }
                 } else {
                     var22 = 0;

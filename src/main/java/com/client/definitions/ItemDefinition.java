@@ -20,6 +20,7 @@ import com.client.Rasterizer;
 import com.client.Sprite;
 import com.client.Buffer;
 import com.client.StreamLoader;
+import com.client.definitions.custom.ItemDefinition_Sub1;
 import com.client.utilities.FieldGenerator;
 import com.client.utilities.FileOperations;
 import com.client.utilities.TempWriter;
@@ -91,12 +92,12 @@ public final class ItemDefinition {
 			itemDef.toNote();
 		}
 
-		if (itemDef.opcode140 != -1) {
-			itemDef.method2789(forID(itemDef.opcode140), forID(itemDef.opcode139));
+		if (itemDef.notedId != -1) {
+			itemDef.method2789(forID(itemDef.notedId), forID(itemDef.unnotedId));
 		}
 
-		if (itemDef.opcode149 != -1) {
-			itemDef.method2790(forID(itemDef.opcode149), forID(itemDef.opcode148));
+		if (itemDef.placeholderTemplateId != -1) {
+			itemDef.method2790(forID(itemDef.placeholderTemplateId), forID(itemDef.placeholderId));
 		}
 
 		int id = itemDef.id;
@@ -113,18 +114,18 @@ public final class ItemDefinition {
 		itemDef.modifiedModelColors = copyItemDef.modifiedModelColors;
 		itemDef.originalModelColors = copyItemDef.originalModelColors;
 		itemDef.modelId = copyItemDef.modelId;
-		itemDef.maleModel = copyItemDef.maleModel;
-		itemDef.femaleModel = copyItemDef.femaleModel;
-		itemDef.modelZoom = copyItemDef.modelZoom;
+		itemDef.primaryMaleModel = copyItemDef.primaryMaleModel;
+		itemDef.primaryFemaleModel = copyItemDef.primaryFemaleModel;
+		itemDef.spriteScale = copyItemDef.spriteScale;
 		itemDef.spritePitch = copyItemDef.spritePitch;
 		itemDef.spriteCameraRoll = copyItemDef.spriteCameraRoll;
 		itemDef.spriteTranslateX = copyItemDef.spriteTranslateX;
 		itemDef.spriteTranslateY = copyItemDef.spriteTranslateY;
-		itemDef.inventoryOptions = copyItemDef.inventoryOptions;
-		itemDef.inventoryOptions = new String[5];
+		itemDef.itemActions = copyItemDef.itemActions;
+		itemDef.itemActions = new String[5];
 		if (actions != null) {
 			for (int index = 0; index < actions.length; index++) {
-				itemDef.inventoryOptions[index] = actions[index];
+				itemDef.itemActions[index] = actions[index];
 			}
 		}
 		return itemDef;
@@ -150,22 +151,22 @@ public final class ItemDefinition {
 				itemDef.name = "Completionist cape";
 				itemDef.description = "A cape worn by those who've overachieved.";
 
-				itemDef.modelZoom = 1385;
+				itemDef.spriteScale = 1385;
 				itemDef.spritePitch = 279;
 				itemDef.spriteCameraRoll = 948;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
 
-				itemDef.maleModel = 65297;
-				itemDef.femaleModel = 65316;
+				itemDef.primaryMaleModel = 65297;
+				itemDef.primaryFemaleModel = 65316;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = "Teleports";
-				itemDef.inventoryOptions[3] = "Features";
-				itemDef.inventoryOptions[4] = "Drop";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Teleports";
+				itemDef.itemActions[3] = "Features";
+				itemDef.itemActions[4] = "Drop";
 				return itemDef;
 			case 33057:
 				itemDef.setDefaults();
@@ -174,19 +175,19 @@ public final class ItemDefinition {
 				itemDef.name = "Completionist hood";
 				itemDef.description = "A hood worn by those who've over achieved.";
 
-				itemDef.modelZoom = 760;
+				itemDef.spriteScale = 760;
 				itemDef.spritePitch = 11;
 				itemDef.spriteCameraRoll = 0;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 0;
 
-				itemDef.maleModel = 65292;
-				itemDef.femaleModel = 65310;
+				itemDef.primaryMaleModel = 65292;
+				itemDef.primaryFemaleModel = 65310;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
 				return itemDef;
 			case 8817:
 				itemDef.setDefaults();
@@ -195,20 +196,20 @@ public final class ItemDefinition {
 				itemDef.name = "scythe of Osiris";
 				itemDef.description = "A scythe for the finest.";
 
-				itemDef.modelZoom = 1385;
+				itemDef.spriteScale = 1385;
 				itemDef.spritePitch = 279;
 				itemDef.spriteCameraRoll = 948;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
 
-				itemDef.maleModel = 46508;
-				itemDef.femaleModel = 46508;
+				itemDef.primaryMaleModel = 46508;
+				itemDef.primaryFemaleModel = 46508;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wield";
-				itemDef.inventoryOptions[4] = "Drop";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
 				return itemDef;
 			case 4371:
 				itemDef.setDefaults();
@@ -217,22 +218,22 @@ public final class ItemDefinition {
 				itemDef.name = "Osiris cape";
 				itemDef.description = "A Cape for the finest.";
 
-				itemDef.modelZoom = 1385;
+				itemDef.spriteScale = 1385;
 				itemDef.spritePitch = 279;
 				itemDef.spriteCameraRoll = 948;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
 
-				itemDef.maleModel = 5593;
-				itemDef.femaleModel = 5593;
+				itemDef.primaryMaleModel = 5593;
+				itemDef.primaryFemaleModel = 5593;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = "Teleports";
-				itemDef.inventoryOptions[3] = "Features";
-				itemDef.inventoryOptions[4] = "Drop";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Teleports";
+				itemDef.itemActions[3] = "Features";
+				itemDef.itemActions[4] = "Drop";
 				return itemDef;
 		}
 
@@ -256,14 +257,14 @@ public final class ItemDefinition {
 
 	private static void customItems(int itemId) {
 		ItemDefinition itemDef = forID(itemId);
-
+		ItemDefinition_Sub1.itemDef(itemId, itemDef);
 		switch (itemId) {
 			case 21726:
 			case 21728:
 				itemDef.stackable = true;
 				break;
 			case 12863:
-				itemDef.inventoryOptions = new String[] { "Open", null, null, null, null};
+				itemDef.itemActions = new String[] { "Open", null, null, null, null};
 				break;
 			case 13092: //this makes crystal halberds wieldable, weird af.
 			case 13093:
@@ -275,7 +276,7 @@ public final class ItemDefinition {
 			case 13099:
 			case 13100:
 			case 13101:
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, null};
+				itemDef.itemActions = new String[] { null, "Wield", null, null, null};
 				break;
 			case 23933:
 				itemDef.name = "Vote crystal";
@@ -310,19 +311,19 @@ public final class ItemDefinition {
 			case 9017:
 				itemDef.name = "Hespori essence";
 				itemDef.description = "Maybe I should burn this.";
-				itemDef.inventoryOptions = new String[] {  null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] {  null, null, null, null, "Drop" };
 				break;
 			case 19473:
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				break;
 			case 10556:
 			case 10557:
 			case 10558:
 			case 10559:
-				itemDef.inventoryOptions = new String[] { null, "Wear", "Feature", null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wear", "Feature", null, "Drop" };
 				break;
 			case 21898:
-				itemDef.inventoryOptions = new String[] { null, "Wear", "Teleports", "Features", null };
+				itemDef.itemActions = new String[] { null, "Wear", "Teleports", "Features", null };
 				break;
 			case 12873:
 			case 12875:
@@ -330,7 +331,7 @@ public final class ItemDefinition {
 			case 12879:
 			case 12881:
 			case 12883:
-				itemDef.inventoryOptions = new String[] { "Open", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
 				break;
 			case 23804:
 				itemDef.name = "Imbue Dust";
@@ -343,27 +344,27 @@ public final class ItemDefinition {
 				break;
 			case 691:
 				itemDef.name = "@gre@10,000 FoE Point Certificate";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				break;
 			case 692:
 				itemDef.name = "@red@25,000 FoE Point Certificate";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				break;
 			case 693:
 				itemDef.name = "@cya@50,000 FoE Point Certificate";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				break;
 			case 696:
 				itemDef.name = "@yel@250,000 FoE Point Certificate";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				break;
 			case 23877:
 				itemDef.name = "Crystal Shard";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = true;
 				break;
 			case 23943:
-				itemDef.inventoryOptions = new String[] { null, "Wear", "Uncharge", "Check", "Drop" };
+				itemDef.itemActions = new String[] { null, "Wear", "Uncharge", "Check", "Drop" };
 				break;
 			case 2996:
 				itemDef.name = "@red@PKP Ticket";
@@ -392,31 +393,31 @@ public final class ItemDefinition {
 			case 22106:
 			case 12936:
 			case 24495:
-				itemDef.inventoryOptions = new String[] { null, null, "Open", null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, "Open", null, "Drop" };
 				break;
 			case 21262:
 				itemDef.name = "Vote Genie Pet";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Release" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Release" };
 				break;
 			case 21817:
-				itemDef.inventoryOptions = new String[] { null, "Wear", "Dismantle", null, null, };
+				itemDef.itemActions = new String[] { null, "Wear", "Dismantle", null, null, };
 				break;
 			case 21347:
-				itemDef.inventoryOptions = new String[] { null, null, null, "Chisel-Options", null, };
+				itemDef.itemActions = new String[] { null, null, null, "Chisel-Options", null, };
 				break;
 			case 21259:
 				itemDef.name = "@red@Name Change Scroll";
-				itemDef.inventoryOptions = new String[] { null, null, "Read", null, null, };
+				itemDef.itemActions = new String[] { null, null, "Read", null, null, };
 				break;
 			case 22547:
 			case 22552:
 			case 22542:
-				itemDef.inventoryOptions = new String[] { null, null, null, null, null, };
+				itemDef.itemActions = new String[] { null, null, null, null, null, };
 				break;
 			case 22555:
 			case 22550:
 			case 22545:
-				itemDef.inventoryOptions = new String[] { null, "Wield", "Check", "Uncharge", null, };
+				itemDef.itemActions = new String[] { null, "Wield", "Check", "Uncharge", null, };
 				break;
 			case 732:
 				itemDef.name = "@blu@Imbuedeifer";
@@ -441,29 +442,29 @@ public final class ItemDefinition {
 			case 6829:
 				itemDef.name = "@red@YT Video Giveaway Box";
 				itemDef.description = "Spawns items to giveaway for your youtube video.";
-				itemDef.inventoryOptions = new String[] { "Giveaway", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Giveaway", null, null, null, "Drop" };
 				break;
 			case 6831:
 				itemDef.name = "@red@YT Video Giveaway Box (t2)";
 				itemDef.description = "Spawns items to giveaway for your youtube video.";
-				itemDef.inventoryOptions = new String[] { "Giveaway", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Giveaway", null, null, null, "Drop" };
 
 				break;
 			case 6832:
 				itemDef.name = "@red@YT Stream Giveaway Box";
 				itemDef.description = "Spawns items to giveaway for your youtube stream.";
-				itemDef.inventoryOptions = new String[] { "Giveaway", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Giveaway", null, null, null, "Drop" };
 
 				break;
 			case 6833:
 				itemDef.name = "@red@YT Stream Giveaway Box (t2)";
 				itemDef.description = "Spawns items to giveaway for your youtube stream.";
-				itemDef.inventoryOptions = new String[] { "Giveaway", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Giveaway", null, null, null, "Drop" };
 
 				break;
 			case 13190:
 				itemDef.name = "@yel@100m OSRS GP";
-				itemDef.inventoryOptions = new String[] { "Redeem", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Redeem", null, null, null, "Drop" };
 				itemDef.description = "Redeem for 100m OSRS GP!";
 				break;
 			case 6121:
@@ -477,37 +478,37 @@ public final class ItemDefinition {
 			case 5509:
 				itemDef.name = "Small Pouch";
 				itemDef.createCustomSprite("Small_pouch.png");
-				itemDef.inventoryOptions = new String[] { "Fill", "Empty", "Check", null, null };
+				itemDef.itemActions = new String[] { "Fill", "Empty", "Check", null, null };
 				break;
 			case 5510:
 				itemDef.name = "Medium Pouch";
 				itemDef.createCustomSprite("Medium_pouch.png");
-				itemDef.inventoryOptions = new String[] { "Fill", "Empty", "Check", null, null };
+				itemDef.itemActions = new String[] { "Fill", "Empty", "Check", null, null };
 				break;
 			case 5512:
 				itemDef.name = "Large Pouch";
 				itemDef.createCustomSprite("Large_pouch.png");
-				itemDef.inventoryOptions = new String[] { "Fill", "Empty", "Check", null, null };
+				itemDef.itemActions = new String[] { "Fill", "Empty", "Check", null, null };
 				break;
 			case 10724: //full skeleton
 			case 10725:
 			case 10726:
 			case 10727:
 			case 10728:
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
 				break;
 			case 5514:
 				itemDef.name = "Giant Pouch";
 				itemDef.createCustomSprite("Giant_pouch.png");
 				break;
 			case 22610: //vesta spear
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
 				break;
 			case 22613: //vesta longsword
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
 				break;
 			case 22504: //stat warhammer
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
 				break;
 			case 4224:
 			case 4225:
@@ -521,7 +522,7 @@ public final class ItemDefinition {
 			case 4233:
 			case 4234:
 			case 4235://crystal sheild
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
 				break;
 			case 4212:
 			case 4214:
@@ -534,30 +535,30 @@ public final class ItemDefinition {
 			case 4221:
 			case 4222:
 			case 4223:
-				itemDef.inventoryOptions = new String[] { null, "Wield", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wield", null, null, "Drop" };
 				break;
 			case 2841:
 				itemDef.name = "@red@Bonus Exp Scroll";
-				itemDef.inventoryOptions = new String[] { "@yel@Activate", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "@yel@Activate", null, null, null, "Drop" };
 				itemDef.description = "You will get double experience using this scroll.";
 				break;
 			case 21791:
 			case 21793:
 			case 21795:
-				itemDef.inventoryOptions = new String[] { null, "Wear", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wear", null, null, "Drop" };
 				break;
 			case 19841:
 				itemDef.name = "Master Casket";
 				break;
 			case 21034:
-				itemDef.inventoryOptions = new String[] { "Read", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Read", null, null, null, "Drop" };
 				break;
 			case 6830:
 				itemDef.name = "@yel@BETA @blu@BOX";
-				itemDef.inventoryOptions = new String[] { "Open", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
 				break;
 			case 21079:
-				itemDef.inventoryOptions = new String[] { "Read", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Read", null, null, null, "Drop" };
 				break;
 			case 22093:
 				itemDef.name = "@gre@Vote Streak Key";
@@ -642,7 +643,7 @@ public final class ItemDefinition {
 				itemDef.equipActions[4] = "Al-Kharid";
 				break;
 			case 21816:
-				itemDef.inventoryOptions = new String[] { null, "Wear", "Uncharge", null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Wear", "Uncharge", null, "Drop" };
 				itemDef.equipActions[1] = "Check";
 				itemDef.equipActions[2] = "Toggle-absorption";
 				break;
@@ -660,12 +661,12 @@ public final class ItemDefinition {
 			case 11739:
 				itemDef.name = "@gre@Vote Mystery Box";
 				itemDef.description = "Probably contains cosmetics, or maybe not...";
-				itemDef.inventoryOptions = new String[] { "Open", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
 				break;
 			case 6828:
 				itemDef.name = "Super Mystery Box";
 				itemDef.description = "Mystery box that contains goodies.";
-				itemDef.inventoryOptions = new String[] { "Open", null, "View-Loots", "Quick-Open", "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, "View-Loots", "Quick-Open", "Drop" };
 				itemDef.createCustomSprite("Mystery_Box.png");
 				itemDef.createSmallCustomSprite("Mystery_Box_Small.png");
 				itemDef.stackable = false;
@@ -675,14 +676,14 @@ public final class ItemDefinition {
 				itemDef.name = "Postie Pete";
 				itemDef.description = "50% chance to pick up crystal keys that drop.";
 				itemDef.createCustomSprite("Postie_Pete.png");
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				break;
 			case 30011:
 				itemDef.setDefaults();
 				itemDef.name = "Imp";
 				itemDef.description = "50% chance to pick up clue scrolls that drop.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Imp.png");
 				break;
@@ -690,7 +691,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Toucan";
 				itemDef.description = "50% chance to pick up resource packs.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Toucan.png");
 				break;
@@ -698,7 +699,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Penguin King";
 				itemDef.description = "50% chance to auto-pick up coin bags.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Penguin_King.png");
 				break;
@@ -706,7 +707,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "K'klik";
 				itemDef.description = "An extra 5% in drop rate boost.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("K'klik.png");
 				break;
@@ -714,7 +715,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Shadow warrior";
 				itemDef.description = "50% chance for an additional +10% strength bonus in pvm.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Shadow_warrior.png");
 				break;
@@ -722,7 +723,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Shadow archer";
 				itemDef.description = "50% chance for an additional +10% range str bonus in PvM.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Shadow_archer.png");
 				break;
@@ -730,7 +731,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Shadow wizard";
 				itemDef.description = "50% chance for an additional +10% mage str bonus in PvM.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Shadow_wizard.png");
 				break;
@@ -738,7 +739,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Healer Death Spawn";
 				itemDef.description = "5% chance hit restores HP.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Healer_Death_Spawn.png");
 				break;
@@ -746,7 +747,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Holy Death Spawn";
 				itemDef.description = "5% chance 1/2 of your hit is restored into prayer.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Holy_Death_Spawn.png");
 				break;
@@ -754,7 +755,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Corrupt beast";
 				itemDef.description = "50% chance for an additional +10% strength bonus for melee, mage, and range in pvm.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Corrupt_beast.png");
 				break;
@@ -762,7 +763,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Roc";
 				itemDef.description = "An extra 10% in drop rate boost.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Roc.png");
 				break;
@@ -770,7 +771,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "@red@Kratos";
 				itemDef.description = "The most powerful pet, see ::foepets for full list of perks.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Yama.png");
 				break;
@@ -778,7 +779,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Rain cloud";
 				itemDef.description = "Don't worry be happy.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("Rain_cloud.png");
 				break;
@@ -798,24 +799,24 @@ public final class ItemDefinition {
 			case 6199:
 				itemDef.name = "Mystery Box";
 				itemDef.description = "Mystery box that contains goodies.";
-				itemDef.inventoryOptions = new String[] { "Open", null, null, "Quick-Open", "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, "Quick-Open", "Drop" };
 				break;
 			case 12789:
 				itemDef.name = "@red@Youtube Mystery Box";
 				itemDef.description = "Mystery box that contains goodies.";
-				itemDef.inventoryOptions = new String[] { "Open", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
 				break;
 			case 13346:
 				itemDef.name = "Ultra Mystery Box";
-				itemDef.inventoryOptions = new String[] { "Open", null, null, "Quick-Open", "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, "Quick-Open", "Drop" };
 				break;
 			case 8167:
 				itemDef.name = "@or2@FoE Mystery Chest @red@(locked)";
-				itemDef.inventoryOptions = new String[] { "Unlock", null, null, "Quick-Open", "Drop" };
+				itemDef.itemActions = new String[] { "Unlock", null, null, "Quick-Open", "Drop" };
 				break;
 			case 13438:
 				itemDef.name = "Slayer Mystery Chest";
-				itemDef.inventoryOptions = new String[] { "Open", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
 				break;
 			case 2399:
 				itemDef.name = "@or2@FoE Mystery Key";
@@ -823,17 +824,17 @@ public final class ItemDefinition {
 				break;
 			case 10832:
 				itemDef.name = "Small coin bag";
-				itemDef.inventoryOptions = new String[] { "Open", null, "Open-All", null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, "Open-All", null, "Drop" };
 				itemDef.description = "I can see some coins inside.";
 				break;
 			case 10833:
 				itemDef.name = "Medium coin bag";
-				itemDef.inventoryOptions = new String[] { "Open", null, "Open-All", null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, "Open-All", null, "Drop" };
 				itemDef.description = "I can see some coins inside.";
 				break;
 			case 10834:
 				itemDef.name = "Large coin bag";
-				itemDef.inventoryOptions = new String[] { "Open", null, "Open-All", null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, "Open-All", null, "Drop" };
 				itemDef.description = "I can see some coins inside.";
 				break;
 			case 22316:
@@ -849,14 +850,14 @@ public final class ItemDefinition {
 				itemDef.name = "Dark postie pete";
 				itemDef.description = "Picks up all crystal keys and 25% chance to double.";
 				itemDef.createCustomSprite("dark_Postie_Pete.png");
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				break;
 			case 30111:
 				itemDef.setDefaults();
 				itemDef.name = "Dark imp";
 				itemDef.description = "Picks up all clue scrolls and 25% chance to double.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Imp.png");
 				break;
@@ -864,7 +865,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark toucan";
 				itemDef.description = "Picks up all resource boxes and 25% chance to double.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Toucan.png");
 				break;
@@ -872,7 +873,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark penguin King";
 				itemDef.description = "Picks up all coin bags and 25% chance to double.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Penguin_King.png");
 				break;
@@ -880,7 +881,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark k'klik";
 				itemDef.description = "An extra 10% in drop rate boost.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_K'klik.png");
 				break;
@@ -888,7 +889,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark shadow warrior";
 				itemDef.description = "Gives constant +10% strength bonus in pvm.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Shadow_warrior.png");
 				break;
@@ -896,7 +897,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark shadow archer";
 				itemDef.description = "Gives constant +10% range str bonus in PvM.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Shadow_archer.png");
 				break;
@@ -904,7 +905,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark shadow wizard";
 				itemDef.description = "Gives constant +10% mage str bonus in PvM.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Shadow_wizard.png");
 				break;
@@ -912,7 +913,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark healer death spawn";
 				itemDef.description = "10% chance hit restores HP.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Healer_Death_Spawn.png");
 				break;
@@ -920,7 +921,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark holy death spawn";
 				itemDef.description = "10% chance 1/2 of your hit is restored into prayer.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Holy_Death_Spawn.png");
 				break;
@@ -928,7 +929,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark corrupt beast";
 				itemDef.description = "Extra 10% in drop rate and constant +10% strength bonus for all styles in pvm.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Corrupt_beast.png");
 				break;
@@ -936,7 +937,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark roc";
 				itemDef.description = "An extra 20% in drop rate boost.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_Roc.png");
 				break;
@@ -944,7 +945,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "@red@Dark kratos";
 				itemDef.description = "The most powerful pet, see ::foepets for full list of perks.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_yama.png");
 				break;
@@ -952,7 +953,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.name = "Dark seren";
 				itemDef.description = "85% chance for Wildy Event Boss to hit a 0 and 25% chance to double key.";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = false;
 				itemDef.createCustomSprite("dark_seren.png");
 
@@ -966,110 +967,110 @@ public final class ItemDefinition {
 				itemDef.name = "@cya@Chest rate bonus (+15%)";
 				itemDef.description = "A single use +15% chance from chests, or to receive a rare raids key.";
 				itemDef.stackable = true;
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				break;
 			case 11666:
 				itemDef.name = "Full Elite Void Token";
 				itemDef.description = "Use this token to receive a full elite void set with all combat pieces.";
-				itemDef.inventoryOptions = new String[] { "Activate", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Activate", null, null, null, "Drop" };
 				break;
 			case 1004:
 				itemDef.name = "@gre@20m Coins";
 				itemDef.description = "Lovely coins.";
 				itemDef.stackable = false;
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 7629:
 				itemDef.name = "@or3@2x Slayer point scroll";
-				itemDef.inventoryOptions = new String[] { null, null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, null, null, null, "Drop" };
 				itemDef.stackable = true;
 				break;
 			case 24460:
 				itemDef.name = "@or3@Faster clues (30 mins)";
 				itemDef.description = "Clue rates are halved for npcs and skilling.";
-				itemDef.inventoryOptions = new String[] { "Boost", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Boost", null, null, null, "Drop" };
 				itemDef.stackable = true;
 				break;
 			case 7968:
 				itemDef.name = "@or3@+25% Skilling pet rate (30 mins)";
-				itemDef.inventoryOptions = new String[] { "Boost", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Boost", null, null, null, "Drop" };
 				itemDef.stackable = true;
 				break;
 			case 8899:
 				itemDef.name = "@gre@50m Coins";
 				itemDef.description = "Lovely coins.";
 				itemDef.stackable = false;
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 4035:
-				itemDef.inventoryOptions = new String[] { "Teleport", null, null, null, null };
+				itemDef.itemActions = new String[] { "Teleport", null, null, null, null };
 				break;
 			case 10835:
 				itemDef.name = "Buldging coin bag";
-				itemDef.inventoryOptions = new String[] { "Open", null, "Open-All", null, "Drop" };
+				itemDef.itemActions = new String[] { "Open", null, "Open-All", null, "Drop" };
 				itemDef.description = "I can see some coins inside.";
 				break;
 			case 15098:
 				itemDef.name = "Dice (up to 100)";
 				itemDef.description = "A 100-sided dice.";
 				itemDef.modelId = 31223;
-				itemDef.modelZoom = 1104;
+				itemDef.spriteScale = 1104;
 				itemDef.spriteCameraRoll = 215;
 				itemDef.spritePitch = 94;
 				itemDef.spriteTranslateY = -5;
 				itemDef.spriteTranslateX = -18;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Public-roll";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Public-roll";
+				itemDef.itemActions[2] = null;
 				itemDef.name = "Dice (up to 100)";
-				itemDef.anInt196 = 15;
-				itemDef.anInt184 = 25;
+				itemDef.ambient = 15;
+				itemDef.contrast = 25;
 				itemDef.createCustomSprite("Dice_Bag.png");
 				break;
 			case 11773:
 			case 11771:
 			case 11770:
 			case 11772:
-				itemDef.anInt196 += 45;
+				itemDef.ambient += 45;
 				break;
 			case 12792:
 				itemDef.name = "Graceful Recolor Box";
-				itemDef.inventoryOptions = new String[] { null, "Use", null, null, "Drop" };
+				itemDef.itemActions = new String[] { null, "Use", null, null, "Drop" };
 				break;
 			case 6769:
 				itemDef.name = "@yel@$5 Scroll";
 				itemDef.description = "Claim this scroll to be rewarded with 5 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 2403:
 				itemDef.name = "@yel@$10 Scroll";
 				itemDef.description = "Claim this scroll to be rewarded with 10 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 2396:
 				itemDef.name = "@yel@$25 Scroll";
 				itemDef.description = "Claim this scroll to be rewarded with 25 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 786:
 				itemDef.name = "@yel@$50 Donator";
 				itemDef.description = "Claim this scroll to be rewarded with 50 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 761:
 				itemDef.name = "@yel@$100 Donator";
 				itemDef.description = "Claim this scroll to be rewarded with 100 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 607:
 				itemDef.name = "@red@$250 Scroll";
 				itemDef.description = "Claim this scroll to be rewarded with 250 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 608:
 				itemDef.name = "@gre@$500 Scroll";
 				itemDef.description = "Claim this scroll to be rewarded with 500 donator points.";
-				itemDef.inventoryOptions = new String[] { "Claim", null, null, null, "Drop" };
+				itemDef.itemActions = new String[] { "Claim", null, null, null, "Drop" };
 				break;
 			case 1464:
 				itemDef.name = "Vote ticket";
@@ -1084,16 +1085,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 677, 801, 43540, 43543, 43546, 43549, 43550, 43552, 43554, 43558,
 						43560, 43575 };
 				itemDef.modelId = 50030;
-				itemDef.maleModel = 50031;
-				itemDef.femaleModel = 50031;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50031;
+				itemDef.primaryFemaleModel = 50031;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33033:
@@ -1104,16 +1105,16 @@ public final class ItemDefinition {
 				itemDef.modifiedModelColors = new int[] { 57022, 48811, 2, 1029, 1032, 11, 12, 14, 16, 20, 22, 2 };
 				itemDef.originalModelColors = new int[] { 7104, 9151, 911, 914, 917, 920, 921, 923, 925, 929, 931, 946 };
 				itemDef.modelId = 50032;
-				itemDef.maleModel = 50033;
-				itemDef.femaleModel = 50033;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50033;
+				itemDef.primaryFemaleModel = 50033;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33055:
@@ -1125,16 +1126,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 6061, 5945, 6327, 6330, 6333, 6336, 6337, 6339, 6341, 6345, 6347,
 						6362 };
 				itemDef.modelId = 50034;
-				itemDef.maleModel = 50035;
-				itemDef.femaleModel = 50035;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50035;
+				itemDef.primaryFemaleModel = 50035;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33040:
@@ -1146,16 +1147,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 920, 920, 51856, 51859, 51862, 51865, 51866, 51868, 51870, 51874,
 						51876, 51891 };
 				itemDef.modelId = 50036;
-				itemDef.maleModel = 50037;
-				itemDef.femaleModel = 50037;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50037;
+				itemDef.primaryFemaleModel = 50037;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33045:
@@ -1167,16 +1168,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 9142, 9152, 4511, 4514, 4517, 4520, 4521, 4523, 4525, 4529, 4531,
 						4546 };
 				itemDef.modelId = 50038;
-				itemDef.maleModel = 50039;
-				itemDef.femaleModel = 50039;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50039;
+				itemDef.primaryFemaleModel = 50039;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33034:
@@ -1188,16 +1189,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 10460, 10473, 41410, 41413, 41416, 41419, 41420, 41422, 41424,
 						41428, 41430, 41445 };
 				itemDef.modelId = 50040;
-				itemDef.maleModel = 50041;
-				itemDef.femaleModel = 50041;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50041;
+				itemDef.primaryFemaleModel = 50041;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33052:
@@ -1209,16 +1210,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 14775, 14792, 22026, 22029, 22032, 22035, 22036, 22038, 22040,
 						22044, 22046, 22061 };
 				itemDef.modelId = 50042;
-				itemDef.maleModel = 50043;
-				itemDef.femaleModel = 50043;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50043;
+				itemDef.primaryFemaleModel = 50043;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33044:
@@ -1230,16 +1231,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 8125, 9152, 4015, 4018, 4021, 4024, 4025, 4027, 4029, 4033, 4035,
 						4050 };
 				itemDef.modelId = 50044;
-				itemDef.maleModel = 50045;
-				itemDef.femaleModel = 50045;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50045;
+				itemDef.primaryFemaleModel = 50045;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33043:
@@ -1251,16 +1252,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 9144, 9152, 38202, 38205, 38208, 38211, 38212, 38214, 38216,
 						38220, 38222, 38237 };
 				itemDef.modelId = 50046;
-				itemDef.maleModel = 50047;
-				itemDef.femaleModel = 50047;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50047;
+				itemDef.primaryFemaleModel = 50047;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33042:
@@ -1272,16 +1273,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 6067, 9152, 33670, 33673, 33676, 33679, 33680, 33682, 33684,
 						33688, 33690, 33705 };
 				itemDef.modelId = 50048;
-				itemDef.maleModel = 50049;
-				itemDef.femaleModel = 50049;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50049;
+				itemDef.primaryFemaleModel = 50049;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33048:
@@ -1293,16 +1294,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 9145, 9156, 22414, 22417, 22420, 22423, 22424, 22426, 22428,
 						22432, 22434, 22449 };
 				itemDef.modelId = 50050;
-				itemDef.maleModel = 50051;
-				itemDef.femaleModel = 50051;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50051;
+				itemDef.primaryFemaleModel = 50051;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33036:
@@ -1314,16 +1315,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 818, 951, 8291, 8294, 8297, 8300, 8301, 8303, 8305, 8309, 8311,
 						8319 };
 				itemDef.modelId = 50052;
-				itemDef.maleModel = 50053;
-				itemDef.femaleModel = 50053;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50053;
+				itemDef.primaryFemaleModel = 50053;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				//itemDef.femaleOffset = 4;
 				break;
@@ -1336,16 +1337,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 5262, 6020, 8472, 8475, 8478, 8481, 8482, 8484, 8486, 8490, 8492,
 						8507 };
 				itemDef.modelId = 50054;
-				itemDef.maleModel = 50055;
-				itemDef.femaleModel = 50055;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50055;
+				itemDef.primaryFemaleModel = 50055;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33039:
@@ -1357,16 +1358,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 43569, 43685, 6336, 6339, 6342, 6345, 6346, 6348, 6350, 6354,
 						6356, 6371 };
 				itemDef.modelId = 50056;
-				itemDef.maleModel = 50057;
-				itemDef.femaleModel = 50057;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50057;
+				itemDef.primaryFemaleModel = 50057;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33047:
@@ -1378,16 +1379,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 36296, 36279, 10386, 10389, 10392, 10395, 10396, 10398, 10400,
 						10404, 10406, 10421 };
 				itemDef.modelId = 50058;
-				itemDef.maleModel = 50059;
-				itemDef.femaleModel = 50059;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50059;
+				itemDef.primaryFemaleModel = 50059;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33038:
@@ -1398,16 +1399,16 @@ public final class ItemDefinition {
 				itemDef.modifiedModelColors = new int[] { 57022, 48811, 2, 1029, 1032, 11, 12, 14, 16, 20, 22, 2 };
 				itemDef.originalModelColors = new int[] { 9163, 9168, 117, 120, 123, 126, 127, 127, 127, 127, 127, 127 };
 				itemDef.modelId = 50060;
-				itemDef.maleModel = 50061;
-				itemDef.femaleModel = 50061;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50061;
+				itemDef.primaryFemaleModel = 50061;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33037:
@@ -1419,16 +1420,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 3755, 3998, 15122, 15125, 15128, 15131, 15132, 15134, 15136,
 						15140, 15142, 15157 };
 				itemDef.modelId = 50062;
-				itemDef.maleModel = 50063;
-				itemDef.femaleModel = 50063;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50063;
+				itemDef.primaryFemaleModel = 50063;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33053:
@@ -1440,16 +1441,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 9152, 8128, 10318, 10321, 10324, 10327, 10328, 10330, 10332,
 						10336, 10338, 10353 };
 				itemDef.modelId = 50064;
-				itemDef.maleModel = 50065;
-				itemDef.femaleModel = 50065;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50065;
+				itemDef.primaryFemaleModel = 50065;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33051:
@@ -1459,16 +1460,16 @@ public final class ItemDefinition {
 				itemDef.modifiedModelColors = new int[] { 57022, 48811 };
 				itemDef.originalModelColors = new int[] { 912, 920 };
 				itemDef.modelId = 50066;
-				itemDef.maleModel = 50067;
-				itemDef.femaleModel = 50067;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50067;
+				itemDef.primaryFemaleModel = 50067;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33046:
@@ -1479,16 +1480,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 8115, 9148, 10386, 10389, 10392, 10395, 10396, 10398, 10400,
 						10404, 10406, 10421 };
 				itemDef.modelId = 50068;
-				itemDef.maleModel = 50069;
-				itemDef.femaleModel = 50069;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50069;
+				itemDef.primaryFemaleModel = 50069;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33035:
@@ -1499,16 +1500,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 935, 931, 27538, 27541, 27544, 27547, 27548, 27550, 27552, 27556,
 						27558, 27573 };
 				itemDef.modelId = 50070;
-				itemDef.maleModel = 50071;
-				itemDef.femaleModel = 50071;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50071;
+				itemDef.primaryFemaleModel = 50071;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33050:
@@ -1519,16 +1520,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 11, 0, 58779, 58782, 58785, 58788, 58789, 57891, 58793, 58797,
 						58799, 58814 };
 				itemDef.modelId = 50072;
-				itemDef.maleModel = 50073;
-				itemDef.femaleModel = 50073;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50073;
+				itemDef.primaryFemaleModel = 50073;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = 5;
 				break;
 			case 33041:
@@ -1539,16 +1540,16 @@ public final class ItemDefinition {
 				itemDef.originalModelColors = new int[] { 25109, 24088, 6693, 6696, 6699, 6702, 6703, 6705, 6707, 6711,
 						6713, 6728 };
 				itemDef.modelId = 50074;
-				itemDef.maleModel = 50075;
-				itemDef.femaleModel = 50075;
-				itemDef.modelZoom = 2300;
+				itemDef.primaryMaleModel = 50075;
+				itemDef.primaryFemaleModel = 50075;
+				itemDef.spriteScale = 2300;
 				itemDef.spritePitch = 400;
 				itemDef.spriteCameraRoll = 1020;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 30;
-				itemDef.inventoryOptions = new String[5];
-				itemDef.inventoryOptions[1] = "Wear";
-				itemDef.inventoryOptions[2] = null;
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = null;
 				//itemDef.maleOffset = -2;
 				break;
 		}
@@ -1556,7 +1557,7 @@ public final class ItemDefinition {
 
 	void method2789(ItemDefinition var1, ItemDefinition var2) {
 		modelId = var1.modelId * 1;
-		modelZoom = var1.modelZoom * 1;
+		spriteScale = var1.spriteScale * 1;
 		spritePitch = 1 * var1.spritePitch;
 		spriteCameraRoll = 1 * var1.spriteCameraRoll;
 		spriteCameraYaw = 1 * var1.spriteCameraYaw;
@@ -1569,33 +1570,33 @@ public final class ItemDefinition {
 		name = var2.name;
 		membersObject = var2.membersObject;
 		stackable = var2.stackable;
-		maleModel = 1 * var2.maleModel;
-		anInt188 = 1 * var2.anInt188;
-		anInt185 = 1 * var2.anInt185;
-		femaleModel = var2.femaleModel * 1;
-		anInt164 = var2.anInt164 * 1;
-		anInt162 = 1 * var2.anInt162;
-		anInt175 = 1 * var2.anInt175;
-		anInt166 = var2.anInt166 * 1;
-		anInt197 = var2.anInt197 * 1;
-		anInt173 = var2.anInt173 * 1;
+		primaryMaleModel = 1 * var2.primaryMaleModel;
+		secondaryMaleModel = 1 * var2.secondaryMaleModel;
+		tertiaryMaleEquipmentModel = 1 * var2.tertiaryMaleEquipmentModel;
+		primaryFemaleModel = var2.primaryFemaleModel * 1;
+		secondaryFemaleModel = var2.secondaryFemaleModel * 1;
+		tertiaryFemaleEquipmentModel = 1 * var2.tertiaryFemaleEquipmentModel;
+		primaryMaleHeadPiece = 1 * var2.primaryMaleHeadPiece;
+		secondaryMaleHeadPiece = var2.secondaryMaleHeadPiece * 1;
+		primaryFemaleHeadPiece = var2.primaryFemaleHeadPiece * 1;
+		secondaryFemaleHeadPiece = var2.secondaryFemaleHeadPiece * 1;
 		team = var2.team * 1;
-		groundOptions = var2.groundOptions;
-		inventoryOptions = new String[5];
+		groundActions = var2.groundActions;
+		itemActions = new String[5];
 		equipActions = new String[5];
-		if (null != var2.inventoryOptions) {
+		if (null != var2.itemActions) {
 			for (int var4 = 0; var4 < 4; ++var4) {
-				inventoryOptions[var4] = var2.inventoryOptions[var4];
+				itemActions[var4] = var2.itemActions[var4];
 			}
 		}
 
-		inventoryOptions[4] = "Discard";
+		itemActions[4] = "Discard";
 		value = 0;
 	}
 
 	void method2790(ItemDefinition var1, ItemDefinition var2) {
 		modelId = var1.modelId * 1;
-		modelZoom = 1 * var1.modelZoom;
+		spriteScale = 1 * var1.spriteScale;
 		spritePitch = var1.spritePitch * 1;
 		spriteCameraRoll = var1.spriteCameraRoll * 1;
 		spriteCameraYaw = var1.spriteCameraYaw * 1;
@@ -1679,7 +1680,7 @@ public final class ItemDefinition {
 			else if (opcode == 3)
 				description = stream.readString();
 			else if (opcode == 4)
-				modelZoom = stream.readUShort();
+				spriteScale = stream.readUShort();
 			else if (opcode == 5)
 				spritePitch = stream.readUShort();
 			else if (opcode == 6)
@@ -1699,29 +1700,29 @@ public final class ItemDefinition {
 			else if (opcode == 16)
 				membersObject = true;
 			else if (opcode == 23) {
-				maleModel = stream.readUShort();
-				aByte205 = stream.readSignedByte();
-				if (maleModel == 65535)
-					maleModel = -1;
+				primaryMaleModel = stream.readUShort();
+				maleTranslation = stream.readSignedByte();
+				if (primaryMaleModel == 65535)
+					primaryMaleModel = -1;
 			} else if (opcode == 24)
-				anInt188 = stream.readUShort();
+				secondaryMaleModel = stream.readUShort();
 			else if (opcode == 25) {
-				femaleModel = stream.readUShort();
-				aByte154 = stream.readSignedByte();
-				if (femaleModel == 65535)
-					femaleModel = -1;
+				primaryFemaleModel = stream.readUShort();
+				femaleTranslation = stream.readSignedByte();
+				if (primaryFemaleModel == 65535)
+					primaryFemaleModel = -1;
 			} else if (opcode == 26)
-				anInt164 = stream.readUShort();
+				secondaryFemaleModel = stream.readUShort();
 			else if (opcode >= 30 && opcode < 35) {
-				if (groundOptions == null)
-					groundOptions = new String[5];
-				groundOptions[opcode - 30] = stream.readString();
-				if (groundOptions[opcode - 30].equalsIgnoreCase("hidden"))
-					groundOptions[opcode - 30] = null;
+				if (groundActions == null)
+					groundActions = new String[5];
+				groundActions[opcode - 30] = stream.readString();
+				if (groundActions[opcode - 30].equalsIgnoreCase("hidden"))
+					groundActions[opcode - 30] = null;
 			} else if (opcode >= 35 && opcode < 40) {
-				if (inventoryOptions == null)
-					inventoryOptions = new String[5];
-				inventoryOptions[opcode - 35] = stream.readString();
+				if (itemActions == null)
+					itemActions = new String[5];
+				itemActions[opcode - 35] = stream.readString();
 			} else if (opcode == 40) {
 				int size = stream.readUnsignedByte();
 				originalModelColors = new int[size];
@@ -1741,19 +1742,19 @@ public final class ItemDefinition {
 			}else if (opcode == 42) {
 					stream.readUnsignedByte();
 			} else if (opcode == 65) {
-				searchableItem = true;
+				searchable = true;
 			} else if (opcode == 78)
-				anInt185 = stream.readUShort();
+				tertiaryMaleEquipmentModel = stream.readUShort();
 			else if (opcode == 79)
-				anInt162 = stream.readUShort();
+				tertiaryFemaleEquipmentModel = stream.readUShort();
 			else if (opcode == 90)
-				anInt175 = stream.readUShort();
+				primaryMaleHeadPiece = stream.readUShort();
 			else if (opcode == 91)
-				anInt197 = stream.readUShort();
+				primaryFemaleHeadPiece = stream.readUShort();
 			else if (opcode == 92)
-				anInt166 = stream.readUShort();
+				secondaryMaleHeadPiece = stream.readUShort();
 			else if (opcode == 93)
-				anInt173 = stream.readUShort();
+				secondaryFemaleHeadPiece = stream.readUShort();
 			else if (opcode == 94)
 				stream.readUShort();
 			else if (opcode == 95)
@@ -1770,32 +1771,32 @@ public final class ItemDefinition {
 				stackIDs[opcode - 100] = stream.readUShort();
 				stackAmounts[opcode - 100] = stream.readUShort();
 			} else if (opcode == 110)
-				anInt167 = stream.readUShort();
+				groundScaleX = stream.readUShort();
 			else if (opcode == 111)
-				anInt192 = stream.readUShort();
+				groundScaleY = stream.readUShort();
 			else if (opcode == 112)
-				anInt191 = stream.readUShort();
+				groundScaleZ = stream.readUShort();
 			else if (opcode == 113)
-				anInt196 = stream.readSignedByte();
+				ambient = stream.readSignedByte();
 			else if (opcode == 114)
-				anInt184 = stream.readSignedByte() * 5;
+				contrast = stream.readSignedByte() * 5;
 			else if (opcode == 115)
 				team = stream.readUnsignedByte();
 			else if (opcode == 139)
-				opcode139 = stream.readUShort();
+				unnotedId = stream.readUShort();
 			else if (opcode == 140)
-				opcode140 = stream.readUShort();
+				notedId = stream.readUShort();
 			else if (opcode == 148)
-				opcode148 = stream.readUShort();
+				placeholderId = stream.readUShort();
 			else if (opcode == 149)
-				opcode149 = stream.readUShort();
+				placeholderTemplateId = stream.readUShort();
 			else {
 				// System.out.println("Error loading item " + id + ", opcode " + opcode);
 			}
 		}
 	}
 
-	public int opcode139, opcode140, opcode148, opcode149;
+	public int unnotedId, notedId, placeholderId, placeholderTemplateId;
 
 	public static void nullLoader() {
 		mruNodes2 = null;
@@ -1806,11 +1807,11 @@ public final class ItemDefinition {
 	}
 
 	public boolean method192(int j) {
-		int k = anInt175;
-		int l = anInt166;
+		int k = primaryMaleHeadPiece;
+		int l = secondaryMaleHeadPiece;
 		if (j == 1) {
-			k = anInt197;
-			l = anInt173;
+			k = primaryFemaleHeadPiece;
+			l = secondaryFemaleHeadPiece;
 		}
 		if (k == -1)
 			return true;
@@ -1823,11 +1824,11 @@ public final class ItemDefinition {
 	}
 
 	public Model method194(int j) {
-		int k = anInt175;
-		int l = anInt166;
+		int k = primaryMaleHeadPiece;
+		int l = secondaryMaleHeadPiece;
 		if (j == 1) {
-			k = anInt197;
-			l = anInt173;
+			k = primaryFemaleHeadPiece;
+			l = secondaryFemaleHeadPiece;
 		}
 		if (k == -1)
 			return null;
@@ -1851,13 +1852,13 @@ public final class ItemDefinition {
 	}
 
 	public boolean method195(int j) {
-		int k = maleModel;
-		int l = anInt188;
-		int i1 = anInt185;
+		int k = primaryMaleModel;
+		int l = secondaryMaleModel;
+		int i1 = tertiaryMaleEquipmentModel;
 		if (j == 1) {
-			k = femaleModel;
-			l = anInt164;
-			i1 = anInt162;
+			k = primaryFemaleModel;
+			l = secondaryFemaleModel;
+			i1 = tertiaryFemaleEquipmentModel;
 		}
 		if (k == -1)
 			return true;
@@ -1872,13 +1873,13 @@ public final class ItemDefinition {
 	}
 
 	public Model method196(int i) {
-		int j = maleModel;
-		int k = anInt188;
-		int l = anInt185;
+		int j = primaryMaleModel;
+		int k = secondaryMaleModel;
+		int l = tertiaryMaleEquipmentModel;
 		if (i == 1) {
-			j = femaleModel;
-			k = anInt164;
-			l = anInt162;
+			j = primaryFemaleModel;
+			k = secondaryFemaleModel;
+			l = tertiaryFemaleEquipmentModel;
 		}
 		if (j == -1)
 			return null;
@@ -1894,10 +1895,10 @@ public final class ItemDefinition {
 				Model aclass30_sub2_sub4_sub6s[] = { model, model_2 };
 				model = new Model(2, aclass30_sub2_sub4_sub6s);
 			}
-		if (i == 0 && aByte205 != 0)
-			model.method475(0, aByte205, 0);
-		if (i == 1 && aByte154 != 0)
-			model.method475(0, aByte154, 0);
+		if (i == 0 && maleTranslation != 0)
+			model.method475(0, maleTranslation, 0);
+		if (i == 1 && femaleTranslation != 0)
+			model.method475(0, femaleTranslation, 0);
 		if (modifiedModelColors != null) {
 			for (int i1 = 0; i1 < modifiedModelColors.length; i1++)
 				model.recolor(modifiedModelColors[i1], originalModelColors[i1]);
@@ -1923,7 +1924,7 @@ public final class ItemDefinition {
 		originalModelColors = null;
 		modifiedTextureColors = null;
 		originalTextureColors = null;
-		modelZoom = 2000;
+		spriteScale = 2000;
 		spritePitch = 0;
 		spriteCameraRoll = 0;
 		spriteCameraYaw = 0;
@@ -1932,37 +1933,37 @@ public final class ItemDefinition {
 		stackable = false;
 		value = 1;
 		membersObject = false;
-		groundOptions = null;
-		inventoryOptions = null;
-		maleModel = -1;
-		anInt188 = -1;
-		aByte205 = 0;
-		femaleModel = -1;
-		anInt164 = -1;
-		aByte154 = 0;
-		anInt185 = -1;
-		anInt162 = -1;
-		anInt175 = -1;
-		anInt166 = -1;
-		anInt197 = -1;
-		anInt173 = -1;
+		groundActions = null;
+		itemActions = null;
+		primaryMaleModel = -1;
+		secondaryMaleModel = -1;
+		maleTranslation = 0;
+		primaryFemaleModel = -1;
+		secondaryFemaleModel = -1;
+		femaleTranslation = 0;
+		tertiaryMaleEquipmentModel = -1;
+		tertiaryFemaleEquipmentModel = -1;
+		primaryMaleHeadPiece = -1;
+		secondaryMaleHeadPiece = -1;
+		primaryFemaleHeadPiece = -1;
+		secondaryFemaleHeadPiece = -1;
 		stackIDs = null;
 		stackAmounts = null;
 		certID = -1;
 		certTemplateID = -1;
-		anInt167 = 128;
-		anInt192 = 128;
-		anInt191 = 128;
-		anInt196 = 0;
-		anInt184 = 0;
+		groundScaleX = 128;
+		groundScaleY = 128;
+		groundScaleZ = 128;
+		ambient = 0;
+		contrast = 0;
 		team = 0;
 
-		opcode140 = -1;
-		opcode139 = -1;
-		opcode148 = -1;
-		opcode149 = -1;
+		notedId = -1;
+		unnotedId = -1;
+		placeholderId = -1;
+		placeholderTemplateId = -1;
 
-		searchableItem = false;
+		searchable = false;
 	}
 
 	public static void dumpBonuses() {
@@ -2193,11 +2194,11 @@ public final class ItemDefinition {
 				fw.write(System.getProperty("line.separator"));
 				fw.write("itemDef.modelID= " + item.modelId + ";");
 				fw.write(System.getProperty("line.separator"));
-				fw.write("itemDef.maleModel= " + item.maleModel + ";");
+				fw.write("itemDef.maleModel= " + item.primaryMaleModel + ";");
 				fw.write(System.getProperty("line.separator"));
-				fw.write("itemDef.femaleModel= " + item.femaleModel + ";");
+				fw.write("itemDef.femaleModel= " + item.primaryFemaleModel + ";");
 				fw.write(System.getProperty("line.separator"));
-				fw.write("itemDef.modelZoom = " + item.modelZoom + ";");
+				fw.write("itemDef.modelZoom = " + item.spriteScale + ";");
 				fw.write(System.getProperty("line.separator"));
 				fw.write("itemDef.modelRotationX = " + item.spritePitch + ";");
 				fw.write(System.getProperty("line.separator"));
@@ -2347,7 +2348,7 @@ public final class ItemDefinition {
 	private void toNote() {
 		ItemDefinition itemDef = forID(certTemplateID);
 		modelId = itemDef.modelId;
-		modelZoom = itemDef.modelZoom;
+		spriteScale = itemDef.spriteScale;
 		spritePitch = itemDef.spritePitch;
 		spriteCameraRoll = itemDef.spriteCameraRoll;
 
@@ -2414,7 +2415,7 @@ public final class ItemDefinition {
 		DrawingArea.initDrawingArea(18, 18, enabledSprite.myPixels, new float[1024]);
 		DrawingArea.method336(18, 0, 0, 0, 18);
 		Rasterizer.method364();
-		int k3 = (int) (itemDef.modelZoom * 1.6D);
+		int k3 = (int) (itemDef.spriteScale * 1.6D);
 		int sin = Rasterizer.anIntArray1470[itemDef.spritePitch] * k3 >> 16;
 		int i4 = Rasterizer.anIntArray1471[itemDef.spritePitch] * k3 >> 16;
 		model.render(itemDef.spriteCameraRoll, itemDef.spriteCameraYaw, itemDef.spritePitch, itemDef.spriteTranslateX,
@@ -2471,12 +2472,12 @@ public final class ItemDefinition {
 			sprite = getSprite(itemDef.certID, 10, -1);
 			if (sprite == null)
 				return null;
-		} else if (itemDef.opcode140 != -1) {
-			sprite = getSprite(itemDef.opcode139, itemAmount, -1);
+		} else if (itemDef.notedId != -1) {
+			sprite = getSprite(itemDef.unnotedId, itemAmount, -1);
 			if (sprite == null)
 				return null;
-		} else if (itemDef.opcode149 != -1) {
-			sprite = getSprite(itemDef.opcode148, itemAmount, -1);
+		} else if (itemDef.placeholderTemplateId != -1) {
+			sprite = getSprite(itemDef.placeholderId, itemAmount, -1);
 			if (sprite == null)
 				return null;
 		}
@@ -2495,7 +2496,7 @@ public final class ItemDefinition {
 		DrawingArea.initDrawingArea(32, 32, sprite2.myPixels, new float[1024]);
 		DrawingArea.method336(32, 0, 0, 0, 32);
 		Rasterizer.method364();
-		if (itemDef.opcode149 != -1) {
+		if (itemDef.placeholderTemplateId != -1) {
 			int l5 = sprite.maxWidth;
 			int j6 = sprite.maxHeight;
 			sprite.maxWidth = 32;
@@ -2504,7 +2505,7 @@ public final class ItemDefinition {
 			sprite.maxWidth = l5;
 			sprite.maxHeight = j6;
 		}
-		int k3 = itemDef.modelZoom;
+		int k3 = itemDef.spriteScale;
 		if (highlightColor == -1)
 			k3 = (int) ((double) k3 * 1.5D);
 		if (highlightColor > 0)
@@ -2518,7 +2519,7 @@ public final class ItemDefinition {
 		}  catch (Exception e) {
 			e.printStackTrace();
 		}
-		if (itemDef.opcode140 != -1) {
+		if (itemDef.notedId != -1) {
 			int l5 = sprite.maxWidth;
 			int j6 = sprite.maxHeight;
 			sprite.maxWidth = 32;
@@ -2607,8 +2608,8 @@ public final class ItemDefinition {
 		model = Model.method462(modelId);
 		if (model == null)
 			return null;
-		if (anInt167 != 128 || anInt192 != 128 || anInt191 != 128)
-			model.method478(anInt167, anInt191, anInt192);
+		if (groundScaleX != 128 || groundScaleY != 128 || groundScaleZ != 128)
+			model.method478(groundScaleX, groundScaleZ, groundScaleY);
 		if (modifiedModelColors != null) {
 			for (int l = 0; l < modifiedModelColors.length; l++)
 				model.recolor(modifiedModelColors[l], originalModelColors[l]);
@@ -2619,7 +2620,7 @@ public final class ItemDefinition {
 				model.retexture(originalTextureColors[k2], modifiedTextureColors[k2]);
 
 		}
-		model.light(64 + anInt196, 768 + anInt184, -50, -10, -50, true);
+		model.light(64 + ambient, 768 + contrast, -50, -10, -50, true);
 		model.fits_on_single_square = true;
 		mruNodes2.removeFromCache(model, id);
 		return model;
@@ -2655,7 +2656,7 @@ public final class ItemDefinition {
 		id = -1;
 	}
 
-	private byte aByte154;
+	private byte femaleTranslation;
 	public int value;
 	public int[] originalModelColors;
 	public int[] modifiedModelColors;
@@ -2668,46 +2669,46 @@ public final class ItemDefinition {
 	public static MRUNodes mruNodes2 = new MRUNodes(50);
 
 	public boolean membersObject;
-	private int anInt162;
+	private int tertiaryFemaleEquipmentModel;
 	public int certTemplateID;
-	private int anInt164;
-	public int maleModel;
-	private int anInt166;
-	private int anInt167;
-	public String groundOptions[];
+	public int secondaryFemaleModel;
+	public int primaryMaleModel;
+	private int secondaryMaleHeadPiece;
+	private int groundScaleX;
+	public String groundActions[];
 	public int spriteTranslateX; // modelOffset1
 	public String name;
 	private static ItemDefinition[] cache;
-	private int anInt173;
+	private int secondaryFemaleHeadPiece;
 	public int modelId;
-	private int anInt175;
+	public int primaryMaleHeadPiece;
 	public boolean stackable;
 	public String description;
 	public int certID;
 	private static int cacheIndex;
-	public int modelZoom;
+	public int spriteScale;
 	private static Buffer stream;
-	private int anInt184;
-	private int anInt185;
-	private int anInt188;
-	public String inventoryOptions[];
+	private int contrast;
+	private int tertiaryMaleEquipmentModel;
+	public int secondaryMaleModel;
+	public String itemActions[];
 	public String equipActions[];
 	public int spritePitch; // modelRotation1
-	private int anInt191;
-	private int anInt192;
+	private int groundScaleZ;
+	private int groundScaleY;
 	private int[] stackIDs;
 	public int spriteTranslateY; // modelOffset2
 	private static int[] streamIndices;
-	private int anInt196;
-	private int anInt197;
+	private int ambient;
+	public int primaryFemaleHeadPiece;
 	public int spriteCameraRoll; // modelRotation2
-	public int femaleModel;
+	public int primaryFemaleModel;
 	private int[] stackAmounts;
 	public int team;
 	public static int totalItems;
-	private int spriteCameraYaw; // anInt204
-	private byte aByte205; // aByte205
-	public boolean searchableItem;
+	public int spriteCameraYaw; // anInt204
+	private byte maleTranslation; // aByte205
+	public boolean searchable;
 	private static BufferedWriter writer;
 
 }

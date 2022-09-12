@@ -2080,7 +2080,7 @@ public class Client extends RSApplet {
 									mouseInvInterfaceIndex = k2;
 									lastActiveInvInterface = class9_1.id;
 									int itemID = class9_1.inventoryItemId[k2] - 1;
-									if (class9_1.id == 23231) {
+									if (class9_1.id == 30000) {
 										itemID = (class9_1.inventoryItemId[k2] & 0x7FFF) - 1;
 									}
 									if (class9_1.inventoryItemId[k2] > 0) {
@@ -2109,11 +2109,11 @@ public class Client extends RSApplet {
 											if (class9_1.isInventoryInterface) {
 
 												for (int l3 = 4; l3 >= 3; l3--)
-													if (itemDef.inventoryOptions != null
-															&& itemDef.inventoryOptions[l3] != null) {
-														menuActionName[menuActionRow] = itemDef.inventoryOptions[l3]
+													if (itemDef.itemActions != null
+															&& itemDef.itemActions[l3] != null) {
+														menuActionName[menuActionRow] = itemDef.itemActions[l3]
 																+ " @lre@" + itemDef.name;
-														if (itemDef.inventoryOptions[l3].contains("Wield") || itemDef.inventoryOptions[l3].contains("Wear")) {
+														if (itemDef.itemActions[l3].contains("Wield") || itemDef.itemActions[l3].contains("Wear")) {
 															hintMenu = true;
 															hintName = itemDef.name;
 															hintId = itemDef.id;
@@ -2124,7 +2124,7 @@ public class Client extends RSApplet {
 															menuActionID[menuActionRow] = 493;
 														if (l3 == 4)
 															menuActionID[menuActionRow] = 847;
-														hasDestroyOption = itemDef.inventoryOptions[l3].contains("Destroy");
+														hasDestroyOption = itemDef.itemActions[l3].contains("Destroy");
 														menuActionCmd1[menuActionRow] = itemDef.id;
 														menuActionCmd2[menuActionRow] = k2;
 														menuActionCmd3[menuActionRow] = class9_1.id;
@@ -2154,11 +2154,11 @@ public class Client extends RSApplet {
 													removeShiftDropOnMenuOpen = true;
 												}
 											}
-											if (class9_1.isInventoryInterface && itemDef.inventoryOptions != null) {
+											if (class9_1.isInventoryInterface && itemDef.itemActions != null) {
 												for (int i4 = 2; i4 >= 0; i4--)
-													if (itemDef.inventoryOptions[i4] != null) {
+													if (itemDef.itemActions[i4] != null) {
 
-														if (itemDef.inventoryOptions[i4].contains("Wield") || itemDef.inventoryOptions[i4].contains("Wear")) {
+														if (itemDef.itemActions[i4].contains("Wield") || itemDef.itemActions[i4].contains("Wear")) {
 															hintMenu = true;
 															hintName = itemDef.name;
 															hintId = itemDef.id;
@@ -2166,7 +2166,7 @@ public class Client extends RSApplet {
 															hintMenu = false;
 														}
 
-														menuActionName[menuActionRow] = itemDef.inventoryOptions[i4]
+														menuActionName[menuActionRow] = itemDef.itemActions[i4]
 																+ " @lre@" + itemDef.name;
 														if (i4 == 0)
 															menuActionID[menuActionRow] = 74;
@@ -2310,10 +2310,10 @@ public class Client extends RSApplet {
 												if (System.currentTimeMillis() - debugDelay > 1000) {
 													debugDelay = System.currentTimeMillis();
 													pushMessage("<col=255>" + itemDef.name + ":</col> Male: <col=255>"
-															+ itemDef.maleModel + "</col> Female: <col=255>"
-															+ itemDef.femaleModel + "</col> Model id: <col=255>"
+															+ itemDef.primaryMaleModel + "</col> Female: <col=255>"
+															+ itemDef.primaryFemaleModel + "</col> Model id: <col=255>"
 															+ itemDef.modelId, 0, "");
-													pushMessage("Zoom: <col=255>" + itemDef.modelZoom
+													pushMessage("Zoom: <col=255>" + itemDef.spriteScale
 															+ "</col> Rotation: <col=255>x" + itemDef.spritePitch + " y"
 															+ itemDef.spriteCameraRoll + "", 0, "");
 													pushMessage("Offset: <col=255>x" + itemDef.spriteTranslateX + " y"
@@ -6632,7 +6632,7 @@ public class Client extends RSApplet {
 			return;
 		}
 		if (l == 1226) {
-			int j1 = i1 >> 14 & 0x7fff;
+			int j1 = ObjectKey.getObjectId(i1);
 			ObjectDefinition class46 = ObjectDefinition.forID(j1);
 			String s10;
 			if (class46.description != null)
@@ -7050,8 +7050,8 @@ public class Client extends RSApplet {
 							}
 						} else {
 							for (int j3 = 4; j3 >= 0; j3--)
-								if (itemDef.groundOptions != null && itemDef.groundOptions[j3] != null) {
-									menuActionName[menuActionRow] = itemDef.groundOptions[j3] + " @lre@" + itemDef.name;
+								if (itemDef.groundActions != null && itemDef.groundActions[j3] != null) {
+									menuActionName[menuActionRow] = itemDef.groundActions[j3] + " @lre@" + itemDef.name;
 									if (j3 == 0)
 										menuActionID[menuActionRow] = 652;
 									if (j3 == 1)
@@ -12034,7 +12034,7 @@ public class Client extends RSApplet {
 										int k6 = 0;
 										int j7 = 0;
 										int j9 = class9_1.inventoryItemId[i3] - 1;
-										if (class9_1.id == 23231) {
+										if (class9_1.id == 30000) {
 											j9 = (class9_1.inventoryItemId[i3] & 0x7FFF) - 1;
 										}
 										if (k5 > DrawingArea.topX - 32 && k5 < DrawingArea.bottomX && j6 > DrawingArea.topY - 32
@@ -16990,7 +16990,7 @@ public class Client extends RSApplet {
 						RSInterface.interfaceCache[i6].mediaID = k18;
 						RSInterface.interfaceCache[i6].modelRotation1 = itemDef.spritePitch;
 						RSInterface.interfaceCache[i6].modelRotation2 = itemDef.spriteCameraRoll;
-						RSInterface.interfaceCache[i6].modelZoom = (itemDef.modelZoom * 100) / i13;
+						RSInterface.interfaceCache[i6].modelZoom = (itemDef.spriteScale * 100) / i13;
 						incomingPacket = -1;
 						return true;
 					}
@@ -17415,7 +17415,7 @@ public class Client extends RSApplet {
 					}
 					RSInterface class9_2 = RSInterface.interfaceCache[i9];
 					while (inStream.currentOffset < packetSize) {
-						int j20 = (i9 == 23231 ? inStream.readUnsignedByte() : inStream.readDWord());
+						int j20 = (i9 == 30000 ? inStream.readUnsignedByte() : inStream.readDWord());
 						int i23 = inStream.readUShort(); //Item ID
 						int l25 = inStream.readUnsignedByte(); // Amount
 						if (l25 == 255)

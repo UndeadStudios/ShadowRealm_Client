@@ -8,8 +8,8 @@ final class Skills {
 	public static final int SKILLS_COUNT = 25;
 	public static String[] SKILL_NAMES = {
 			"-1", "Attack", "Strength", "Defence", "Ranged",
-			"Prayer", "Magic", "Runecrafting", "Hunter", "Hitpoints", "Agility",
-			"Herblore", "Thieving", "Crafting", "Fletching", "Slayer", "-1", "-1",
+			"Prayer", "Magic", "Runecrafting", "Construction", "Hitpoints", "Agility",
+			"Herblore", "Thieving", "Crafting", "Fletching", "Slayer", "Hunter", "-1",
 			"Mining", "Smithing", "Fishing", "Cooking", "Firemaking", "Woodcutting",
 			"Farming"
 	};
@@ -17,7 +17,6 @@ final class Skills {
 			true, true, true, true, true, true, true, true, true, true,
 			true, true, true, true, true, true, true, true, true, true,
 			true, true, true, false, false };
-
 
 
 
