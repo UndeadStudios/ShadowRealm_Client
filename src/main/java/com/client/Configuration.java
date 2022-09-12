@@ -49,7 +49,7 @@ public class Configuration {
 	public static String INDEX_DATA_DIRECTORY = "/index_data/";
 
 	public static boolean developerMode;
-	public static boolean loadExternalCacheArchives = true; // Always true because I can't seem to pack them correctly
+	public static boolean loadExternalCacheArchives = false; // Always true because I can't seem to pack them correctly
 	public static boolean packIndexData = false;
 	public static boolean dumpMaps;
 	public static boolean dumpAnimationData;
