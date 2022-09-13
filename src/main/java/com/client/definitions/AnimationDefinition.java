@@ -186,6 +186,7 @@ public final class AnimationDefinition {
 				for (int index = 0; index < count; ++index) {
 					unknown[index] = stream.readUnsignedByte();
 				}
+			} else if (i == 127){
 			} else System.out.println("Error unrecognised seq config code: " + i);
 		}
 		if (anInt352 == 0) {

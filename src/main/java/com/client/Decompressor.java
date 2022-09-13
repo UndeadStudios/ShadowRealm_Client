@@ -63,42 +63,49 @@ final class Decompressor {
 				return null;
 			byte[] fileData = new byte[fileSize];
 			int readerIndex = 0;
+			int chunkLength = fileId <= 0xffff ? 512 : 510;
+			int headerLength = fileId <= 0xffff ? 8 : 10;
 			for (int chunk = 0; readerIndex < fileSize; chunk++) {
 				if (sectorId == 0)
 					return null;
-				seekTo(dataFile, sectorId * DATA_SIZE); // Seek data file to data start position
+				seekTo(dataFile, sectorId * 520); // Seek data file to data start position
 
 				int remaining = fileSize - readerIndex;
-				if (remaining > DATA_BLOCK_SIZE)
-					remaining = DATA_BLOCK_SIZE;
+				if (remaining > chunkLength)
+					remaining = chunkLength;
 
 				int offset = 0;
-				for (; offset < remaining + DATA_HEADER_SIZE; offset += read) {
-					read = dataFile.read(buffer, offset, (remaining + DATA_HEADER_SIZE) - offset);
+				for (; offset < remaining + headerLength; offset += read) {
+					read = dataFile.read(buffer, offset, (remaining + headerLength) - offset);
 					if (read == -1)
 						return null;
 				}
 
-				// file id is the actual file id, model 1 would have 1 here
-				int readFileId = ((buffer[0] & 0xff) << 8) + (buffer[1] & 0xff);
 
-				// Chunk is a piece of the file (read from the 512 sectors)
-				int readChunkId = ((buffer[2] & 0xff) << 8) + (buffer[3] & 0xff);
+				int currentIndex;
+				int currentPart;
+				int nextSector;
+				int currentFile;
 
-				// sector is the 520 byte blocks of data (512 + 6 for header)
-				int readSectorId = ((buffer[4] & 0xff) << 16) + ((buffer[5] & 0xff) << 8) + (buffer[6] & 0xff);
-
-				// Type is the type of file, 1=models, 4=maps, etc
-				int readTypeId = buffer[7] & 0xff;
-
-				if (readFileId != fileId || readChunkId != chunk || readTypeId != fileType)
+				if(fileId <= 0xffff) {
+					currentIndex = ((buffer[0] & 0xff) << 8) + (buffer[1] & 0xff);//Short
+					currentPart = ((buffer[2] & 0xff) << 8) + (buffer[3] & 0xff);//Short
+					nextSector = ((buffer[4] & 0xff) << 16) + ((buffer[5] & 0xff) << 8) + (buffer[6] & 0xff);//Medium
+					currentFile = buffer[7] & 0xff;//Byte
+				} else {
+					currentIndex = ((buffer[0] & 0xff) << 24) + ((buffer[1] & 0xff) << 16) + ((buffer[2] & 0xff) << 8) + (buffer[3] & 0xff);//Int
+					currentPart = ((buffer[4] & 0xff) << 8) + (buffer[5] & 0xff);//Short
+					nextSector = ((buffer[6] & 0xff) << 16) + ((buffer[7] & 0xff) << 8) + (buffer[8] & 0xff);//Medium
+					currentFile = buffer[9] & 0xff;//Byte
+				}
+				if (currentIndex != fileId || currentPart != chunk || currentFile != fileType)
 					return null;
-				if (readSectorId < 0 || (long) readSectorId > dataFile.length() / DATA_SIZE)
+				if (nextSector < 0 || (long) nextSector > dataFile.length() / DATA_SIZE)
 					return null;
 				for (int dataReaderIndex = 0; dataReaderIndex < remaining; dataReaderIndex++)
 					fileData[readerIndex++] = buffer[dataReaderIndex + 8];
 
-				sectorId = readSectorId;
+				sectorId = nextSector;
 			}
 
 			return fileData;
@@ -142,56 +149,93 @@ final class Decompressor {
 			buffer[5] = (byte) firstSectorId;
 			seekTo(indexFile, fileId * INDEX_SIZE);
 			indexFile.write(buffer, 0, INDEX_SIZE);
+			int chunkLength = fileId <= 0xffff ? 512 : 510;
+			int headerLength = fileId <= 0xffff ? 8 : 10;
+
 			int j1 = 0;
 			for (int chunkId = 0; j1 < fileSize; chunkId++) {
-				int currentSectorId = 0;
+				int nextSector = 0;
 				if (overwrite) {
 					// Read stored data header
 					seekTo(dataFile, firstSectorId * DATA_SIZE);
 					int length;
 					int read;
-					for (length = 0; length < 8; length += read) {
+					for (length = 0; length < headerLength; length += read) {
 						read = dataFile.read(buffer, length, DATA_HEADER_SIZE - length);
 						if (read == -1)
 							break;
 					}
-					if (length == DATA_HEADER_SIZE) {
-						int storedFileId = ((buffer[0] & 0xff) << 8) + (buffer[1] & 0xff);
-						int storedChunkId = ((buffer[2] & 0xff) << 8) + (buffer[3] & 0xff);
-						currentSectorId = ((buffer[4] & 0xff) << 16) + ((buffer[5] & 0xff) << 8) + (buffer[6] & 0xff);
-						int storedFileType = buffer[7] & 0xff;
-						if (storedFileId != fileId || storedChunkId != chunkId || storedFileType != fileType)
+					if (length == headerLength) {
+						int currentIndex;
+						int currentPart;
+						int currentFile;
+
+						if(fileId <= 0xffff) {
+							currentIndex = ((buffer[0] & 0xff) << 8) + (buffer[1] & 0xff);//Short
+							currentPart = ((buffer[2] & 0xff) << 8) + (buffer[3] & 0xff);//Short
+							nextSector = ((buffer[4] & 0xff) << 16) + ((buffer[5] & 0xff) << 8) + (buffer[6] & 0xff);//Medium
+							currentFile = buffer[7] & 0xff;//Byte
+						} else {
+							currentIndex = ((buffer[0] & 0xff) << 24) + ((buffer[1] & 0xff) << 16) + ((buffer[2] & 0xff) << 8) + (buffer[3] & 0xff);//Int
+							currentPart = ((buffer[4] & 0xff) << 8) + (buffer[5] & 0xff);//Short
+							nextSector = ((buffer[6] & 0xff) << 16) + ((buffer[7] & 0xff) << 8) + (buffer[8] & 0xff);//Medium
+							currentFile = buffer[9] & 0xff;//Byte
+						}
+
+						if (currentIndex != fileId || currentPart != chunkId || currentFile != fileType)
 							return false;
-						if (currentSectorId < 0 || (long) currentSectorId > dataFile.length() / DATA_SIZE)
+						if (nextSector < 0 || (long) nextSector > dataFile.length() / DATA_SIZE)
 							return false;
 					}
 				}
-				if (currentSectorId == 0) {
+				if (nextSector == 0) {
 					overwrite = false;
-					currentSectorId = (int) ((dataFile.length() + 519L) / DATA_SIZE); // Is it 519 because length starts 1 instead of 0?
-					if (currentSectorId == 0)
-						currentSectorId++;
-					if (currentSectorId == firstSectorId)
-						currentSectorId++;
+					nextSector = (int) ((dataFile.length() + 519L) / DATA_SIZE); // Is it 519 because length starts 1 instead of 0?
+					if (nextSector == 0)
+						nextSector++;
+					if (nextSector == firstSectorId)
+						nextSector++;
 				}
-				if (fileSize - j1 <= DATA_BLOCK_SIZE)
-					currentSectorId = 0;
-				buffer[0] = (byte) (fileId >> 8);
+				if (fileSize - j1 <= chunkLength)
+					nextSector = 0;
+				/*buffer[0] = (byte) (fileId >> 8);
 				buffer[1] = (byte) fileId;
 				buffer[2] = (byte) (chunkId >> 8);
 				buffer[3] = (byte) chunkId;
-				buffer[4] = (byte) (currentSectorId >> 16);
-				buffer[5] = (byte) (currentSectorId >> 8);
-				buffer[6] = (byte) currentSectorId;
+				buffer[4] = (byte) (nextSector >> 16);
+				buffer[5] = (byte) (nextSector >> 8);
+				buffer[6] = (byte) nextSector;
 				buffer[7] = (byte) fileType;
+				 */
+				if(fileId <= 0xffff) {
+					buffer[0] = (byte) (fileId >> 8);//Short
+					buffer[1] = (byte) fileId;
+					buffer[2] = (byte) (chunkId >> 8);//Short
+					buffer[3] = (byte) chunkId;
+					buffer[4] = (byte) (nextSector >> 16);//Medium
+					buffer[5] = (byte) (nextSector >> 8);
+					buffer[6] = (byte) nextSector;
+					buffer[7] = (byte) fileType;//Byte
+				} else {
+					buffer[0] = (byte) (fileId >> 24);//Int
+					buffer[1] = (byte) (fileId >> 16);
+					buffer[2] = (byte) (fileId >> 8);
+					buffer[3] = (byte) fileId;
+					buffer[4] = (byte) (chunkId >> 8);//Short
+					buffer[5] = (byte) chunkId;
+					buffer[6] = (byte) (nextSector >> 16);//Medium
+					buffer[7] = (byte) (nextSector >> 8);
+					buffer[8] = (byte) nextSector;
+					buffer[9] = (byte) fileType;//Byte
+				}
 				seekTo(dataFile, firstSectorId * DATA_SIZE);
 				dataFile.write(buffer, 0, 8);
 				int k2 = fileSize - j1;
-				if (k2 > 512)
-					k2 = 512;
+				if (k2 > chunkLength)
+					k2 = chunkLength;
 				dataFile.write(data, j1, k2);
 				j1 += k2;
-				firstSectorId = currentSectorId;
+				firstSectorId = nextSector;
 			}
 
 			return true;
