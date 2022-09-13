@@ -40,6 +40,31 @@ public class ItemDefinition_Sub1
             itemDef.name = "Orange abyssal whip";
             itemDef.description = "a Orange abyssal whip";
         }
+        if(i == 28347)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modelId = 53288;
+            itemDef.spriteScale = 2992;
+            itemDef.spritePitch = 517;
+            itemDef.spriteCameraRoll = 1035;
+            itemDef.spriteTranslateX = 39;
+            itemDef.spriteTranslateY = 73;
+            itemDef.spriteCameraYaw = 14;
+            itemDef.primaryMaleModel = 53287;
+            itemDef.primaryFemaleModel = 53287;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Death Cape";
+            itemDef.description = "Death Cape! ";
+        }
         if(i == 28214)
         {
             itemDef.itemActions = new String[5];

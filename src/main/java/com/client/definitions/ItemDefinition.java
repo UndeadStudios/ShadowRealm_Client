@@ -192,7 +192,7 @@ public final class ItemDefinition {
 			case 8817:
 				itemDef.setDefaults();
 				itemDef.id = 8817;
-				itemDef.modelId = 46508;
+				itemDef.modelId = 46636;
 				itemDef.name = "scythe of Osiris";
 				itemDef.description = "A scythe for the finest.";
 
@@ -203,8 +203,8 @@ public final class ItemDefinition {
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
 
-				itemDef.primaryMaleModel = 46508;
-				itemDef.primaryFemaleModel = 46508;
+				itemDef.primaryMaleModel = 46636;
+				itemDef.primaryFemaleModel = 46636;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];
