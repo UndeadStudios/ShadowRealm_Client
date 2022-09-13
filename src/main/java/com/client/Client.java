@@ -6632,7 +6632,7 @@ public class Client extends RSApplet {
 			return;
 		}
 		if (l == 1226) {
-			int j1 = ObjectKey.getObjectId(i1);
+			int j1 = ObjectKey.getObjectId(keyLong);
 			ObjectDefinition class46 = ObjectDefinition.forID(j1);
 			String s10;
 			if (class46.description != null)
