@@ -11,6 +11,7 @@ import com.client.Configuration;
 import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.definitions.custom.AnimationDefinitionCustom;
+import com.client.sign.Signlink;
 import com.google.common.collect.Lists;
 
 public final class AnimationDefinition {
@@ -29,7 +30,8 @@ public final class AnimationDefinition {
 			AnimationDefinitionCustom.custom(j, anims);
 
 			if (Configuration.dumpAnimationData) {
-				if (anims[j].frameLengths != null && anims[j].frameLengths.length > 0) {
+
+			if (anims[j].frameLengths != null && anims[j].frameLengths.length > 0) {
 					int sum = 0;
 					for (int i = 0; i < anims[j].frameLengths.length; i++) {
 						if (anims[j].frameLengths[i] < 100) {
@@ -61,14 +63,22 @@ public final class AnimationDefinition {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
+			try (BufferedWriter writer = new BufferedWriter(new FileWriter("./temp/animation_ids.cfg"))) {
+				for (int j = 0; j < length; j++) {
+					if (anims[j].anInt361 != -1) {
+						writer.write("ID" + j + ", ItemID:" + anims[j].anInt361);
+						writer.newLine();
+					}
+				}
+			} catch(Exception e){
+				e.printStackTrace();
+			}
 			System.out.println("Dumping animation sounds..");
 			for (int j = 0; j < length; j++) {
 				if (anims[j].frameSounds != null) {
-					System.out.println(j +":" + Arrays.toString(anims[j].frameSounds));
+					System.out.println(j + ":" + Arrays.toString(anims[j].frameSounds));
 				}
 			}
-
 			System.out.println("Dumping animation fields to /temp/animation_dump.txt");
 			dump();
 		}
@@ -99,7 +109,6 @@ public final class AnimationDefinition {
 			return 0;
 		}
 	}
-
 	private void readValues(Buffer stream) {
 		int i;
 		while ((i = stream.readUnsignedByte()) != 0) {
@@ -186,6 +195,7 @@ public final class AnimationDefinition {
 				for (int index = 0; index < count; ++index) {
 					unknown[index] = stream.readUnsignedByte();
 				}
+			} else if (i == 127){
 			} else System.out.println("Error unrecognised seq config code: " + i);
 		}
 		if (anInt352 == 0) {

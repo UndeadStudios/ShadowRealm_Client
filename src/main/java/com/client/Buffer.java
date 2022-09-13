@@ -226,7 +226,17 @@ public final class Buffer extends NodeSub {
     {
         return (this.readUnsignedByte() << 16) + (this.readUnsignedByte() << 8) + this.readUnsignedByte();
     }
+    public int readUnsignedIntSmartShortCompat() {
+        int var1 = 0;
 
+        int var2;
+        for (var2 = this.readUSmart(); var2 == 32767; var2 = this.readUSmart()) {
+            var1 += 32767;
+        }
+
+        var1 += var2;
+        return var1;
+    }
     public int readUnsignedByte() {
         return buffer[currentOffset++] & 0xff;
     }
@@ -499,7 +509,7 @@ public final class Buffer extends NodeSub {
                 + ((buffer[currentOffset - 1] & 0xff) << 8)
                 + (buffer[currentOffset - 2] & 0xff);
     }
-    public int readUnsignedIntSmartShortCompat() {
+    public int readUnsignedIntSmarSthortCompat() {
         int var1 = 0;
 
         int var2;

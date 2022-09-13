@@ -1231,9 +1231,9 @@ public class Client extends RSApplet {
 			}
 		}
 
-		packCustomMaps();
-		packCustomModels();
-		packCustomAnimations();
+		//packCustomMaps();
+		//packCustomModels();
+		//packCustomAnimations();
 	}
 
 	public byte[] fileToByteArray(File file) {
