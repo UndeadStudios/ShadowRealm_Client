@@ -192,7 +192,7 @@ public final class ItemDefinition {
 			case 8817:
 				itemDef.setDefaults();
 				itemDef.id = 8817;
-				itemDef.modelId = 46636;
+				itemDef.modelId = 52300;
 				itemDef.name = "scythe of Osiris";
 				itemDef.description = "A scythe for the finest.";
 
@@ -203,8 +203,92 @@ public final class ItemDefinition {
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
 
-				itemDef.primaryMaleModel = 46636;
-				itemDef.primaryFemaleModel = 46636;
+				itemDef.primaryMaleModel = 52300;
+				itemDef.primaryFemaleModel = 52300;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 26399:
+				itemDef.setDefaults();
+				itemDef.id = 26399;
+				itemDef.modelId = 52401;
+				itemDef.name = "Lava Scythe";
+				itemDef.description = "A scythe from lava.";
+				itemDef.spriteScale = 2105;
+				itemDef.spritePitch = 23;
+				itemDef.spriteCameraRoll = 327;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 1;
+				itemDef.spriteTranslateY = 17;
+
+				itemDef.primaryMaleModel = 52400;
+				itemDef.primaryFemaleModel = 52400;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 8813:
+				itemDef.setDefaults();
+				itemDef.id = 8813;
+				itemDef.modelId = 65132;
+				itemDef.name = "Lava Torva Platebody";
+				itemDef.description = "A body from lava.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 2042;
+				itemDef.spriteCameraRoll = 473;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -4;
+				itemDef.spriteTranslateY = 12;
+
+				itemDef.primaryMaleModel = 65133;
+				itemDef.primaryFemaleModel = 65133;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 8812:
+				itemDef.setDefaults();
+				itemDef.id = 8812;
+				itemDef.modelId = 65134;
+				itemDef.name = "Lava Torva Platelegs";
+				itemDef.description = "Platelegs made from lava.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 2045;
+				itemDef.spriteCameraRoll = 474;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -4;
+				itemDef.spriteTranslateY = 12;
+
+				itemDef.primaryMaleModel = 65135;
+				itemDef.primaryFemaleModel = 65135;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+				case 8814:
+				itemDef.setDefaults();
+				itemDef.id = 8814;
+				itemDef.modelId = 65130;
+				itemDef.name = "Lava Torva Full Helm";
+				itemDef.description = "A Helm from lava.";
+				itemDef.spriteScale = 1780;
+					itemDef.spritePitch = 1867;
+					itemDef.spriteCameraRoll = 85;
+				itemDef.spriteCameraYaw = 1;
+				itemDef.spriteTranslateX = -4;
+				itemDef.spriteTranslateY = 12;
+
+				itemDef.primaryMaleModel = 65131;
+				itemDef.primaryFemaleModel = 65131;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];

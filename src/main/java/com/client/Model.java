@@ -551,6 +551,8 @@ public class Model extends Renderable {
         }
 
         try {
+
+
             byte[] data = aClass21Array1661[model].aByteArray368;
 
             if (data[data.length - 1] == -3 && data[data.length - 2] == -1) {
@@ -567,6 +569,32 @@ public class Model extends Renderable {
                 if (face_render_priorities != null) {
                     for (int j = 0; j < face_render_priorities.length; j++) {
                         face_render_priorities[j] = 10;
+                        this.face_priority = 10;
+                    }
+                }
+            }
+
+            /**
+             * Manual Invisible Fix
+             **/
+            /*int[] invisibleFix = { 65130, 65131, 65133, 65135, 65131, 32655, 32663};
+            for (int i1 = 0; i1 < invisibleFix.length; i1++) {
+                if (id == invisibleFix[i1]) {
+                    if (face_render_priorities != null) {
+                        for (int j = 0; j < face_render_priorities.length; j++) {
+                            face_render_priorities[j] = 10;
+                            this.face_priority = 10;
+                        }
+                    }
+                }
+            }*/
+            /**
+             * Black Fix
+             **/
+            for (int i2 = 0; i2 < trianglesCount; i2++) {
+                if (colors != null) {
+                    if (colors[i2] == 0) {
+                        colors[i2] = 1;
                     }
                 }
             }
