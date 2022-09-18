@@ -161,7 +161,7 @@ final class Decompressor {
 					int length;
 					int read;
 					for (length = 0; length < headerLength; length += read) {
-						read = dataFile.read(buffer, length, DATA_HEADER_SIZE - length);
+						read = dataFile.read(buffer, length, headerLength - length);
 						if (read == -1)
 							break;
 					}
@@ -229,7 +229,7 @@ final class Decompressor {
 					buffer[9] = (byte) fileType;//Byte
 				}
 				seekTo(dataFile, firstSectorId * DATA_SIZE);
-				dataFile.write(buffer, 0, 8);
+				dataFile.write(buffer, 0, headerLength);
 				int k2 = fileSize - j1;
 				if (k2 > chunkLength)
 					k2 = chunkLength;

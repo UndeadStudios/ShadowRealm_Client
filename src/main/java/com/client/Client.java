@@ -1219,7 +1219,7 @@ public class Client extends RSApplet {
 	}
 
 	public String indexLocation(int cacheIndex, int index) {
-		return "D:\\dump\\index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+		return "D:\\models\\index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
 	}
 
 	public void repackCacheAll() {
@@ -1280,7 +1280,7 @@ public class Client extends RSApplet {
 		byte[] data = fileToByteArray(file);
 		if (data != null && data.length > 0) {
 			decompressors[cacheIndex].write(data.length, data, fileIndex);
-			//System.out.println("Packed " + file.toString() + " to index " + cacheIndex);
+			System.out.println("Packed " + file.toString() + " to index " + cacheIndex);
 			return true;
 		} else {
 			System.out.println("No file to pack: " + file);

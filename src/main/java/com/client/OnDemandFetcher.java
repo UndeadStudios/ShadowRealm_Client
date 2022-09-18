@@ -271,7 +271,7 @@ public final class OnDemandFetcher extends OnDemandFetcherParent implements Runn
 	}
 
 	public int getModelCount() {
-		return 30999;
+		return 100000;
 	}
 
 	public void provide(int i, int j) {
@@ -294,7 +294,7 @@ public final class OnDemandFetcher extends OnDemandFetcherParent implements Runn
 	}
 
 	public int getModelIndex(int i) {
-		return modelIndices[i] & 0xff;
+		return modelIndices[i];
 	}
 
 	@SuppressWarnings("static-access")
@@ -604,7 +604,7 @@ public final class OnDemandFetcher extends OnDemandFetcherParent implements Runn
 		running = true;
 		waiting = false;
 		aClass19_1358 = new NodeList();
-		gzipInputBuffer = new byte[0x71868];
+		gzipInputBuffer = new byte[9999999];
 		nodeSubList = new NodeSubList();
 		versions = new int[4][];
 		aClass19_1368 = new NodeList();

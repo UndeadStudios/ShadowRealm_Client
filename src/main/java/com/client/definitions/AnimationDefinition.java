@@ -20,7 +20,7 @@ public final class AnimationDefinition {
 		Buffer stream = new Buffer(streamLoader.getArchiveData("seq.dat"));
 		int length = stream.readUShort();
 		if (anims == null)
-			anims = new AnimationDefinition[length];
+			anims = new AnimationDefinition[length+5000];
 
 		for (int j = 0; j < length; j++) {
 			if (anims[j] == null)

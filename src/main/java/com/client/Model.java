@@ -1385,7 +1385,7 @@ public class Model extends Renderable {
     public static boolean newmodel[];
 
     public static void method459(int i, OnDemandFetcherParent onDemandFetcherParent) {
-        aClass21Array1661 = new ModelHeader[80_000];
+        aClass21Array1661 = new ModelHeader[100_000];
         newmodel = new boolean[100000];
         aOnDemandFetcherParent_1662 = onDemandFetcherParent;
     }
