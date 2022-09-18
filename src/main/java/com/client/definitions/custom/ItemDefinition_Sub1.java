@@ -4177,6 +4177,180 @@ public class ItemDefinition_Sub1
             itemDef.placeholderId = 17851;
             itemDef.placeholderTemplateId = -1;
         }
+        if(i == 29095) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, null};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Epic's Platebody"; //Name
+            itemDef.description = "Its an Epic's Platebody"; //Description
+            itemDef.modifiedModelColors = new int[8];
+            itemDef.originalModelColors = new int[8];
+            itemDef.modifiedModelColors[0] = 61;
+            itemDef.modifiedModelColors[1] = 24;
+            itemDef.modifiedModelColors[2] = 41;
+            itemDef.modifiedModelColors[3] = 10394;
+            itemDef.modifiedModelColors[4] = 10518;
+            itemDef.modifiedModelColors[5] = 10388;
+            itemDef.modifiedModelColors[6] = 10514;
+            itemDef.modifiedModelColors[7] = 10508;
+            itemDef.originalModelColors[0] = 40959;
+            itemDef.originalModelColors[1] = 43929;
+            itemDef.originalModelColors[2] = 40959;
+            itemDef.originalModelColors[3] = 40959;
+            itemDef.originalModelColors[4] = 43929;
+            itemDef.originalModelColors[5] = 43929;
+            itemDef.originalModelColors[6] = 43929;
+            itemDef.originalModelColors[7] = 43929;
+            itemDef.modelId = 2378;
+            itemDef.spriteScale = 1380;
+            itemDef.spritePitch = 452;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -1;
+            itemDef.primaryMaleModel = 6646;
+            itemDef.primaryFemaleModel = 6685;
+            itemDef.secondaryMaleModel = 3379;
+            itemDef.secondaryFemaleModel = 3383;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.placeholderId = 17851;
+            itemDef.placeholderTemplateId = -1;
+        }
+
+
+
+        if(i == 29096)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 926;
+            itemDef.originalModelColors[0] = 40959;
+            itemDef.modifiedModelColors[1] = 912;
+            itemDef.originalModelColors[1] = 43929;
+            itemDef.spriteScale = 1740;
+            itemDef.spritePitch = 444;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -8;
+            itemDef.primaryMaleModel = 5024;
+            itemDef.primaryFemaleModel = 5025;
+            itemDef.modelId = 5026;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Epic's Platelegs";
+            itemDef.description = "A set of moderators platelegs.";
+        }
+        if(i == 29097)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[4];
+            itemDef.originalModelColors = new int[4];
+            itemDef.modifiedModelColors[0] = 61;
+            itemDef.originalModelColors[0] = 40959;
+            itemDef.modelId = 5037;
+            itemDef.spriteScale = 770;
+            itemDef.spritePitch = 164;
+            itemDef.spriteCameraRoll = 156;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = -3;
+            itemDef.primaryMaleModel = 4954;
+            itemDef.primaryFemaleModel = 5031;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Epic's Boots";
+            itemDef.description = "198087's boots";
+        }
+        if(i == 29098)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[3];
+            itemDef.originalModelColors = new int[3];
+            itemDef.modifiedModelColors[0] = 61;
+            itemDef.originalModelColors[0] = 40959;
+            itemDef.modifiedModelColors[1] = 57;
+            itemDef.originalModelColors[1] = 40959;
+            itemDef.modifiedModelColors[2] = 7054;
+            itemDef.originalModelColors[2] = 43929;
+            itemDef.modelId = 2339;
+            itemDef.spriteScale = 1560;
+            itemDef.spritePitch = 344;
+            itemDef.spriteCameraRoll = 1104;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -6;
+            itemDef.spriteTranslateY = -14;
+            itemDef.primaryMaleModel = 486;
+            itemDef.primaryFemaleModel = 486;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Epic's Kiteshield";
+            itemDef.description = "It's an 198087's kiteshield.";
+        }
+        if(i == 29099) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, null};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Epic's Crown"; //Name
+            itemDef.description = "Its an Epic's Crown"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 945;
+            itemDef.modifiedModelColors[1] = 8128;
+            itemDef.originalModelColors[0] = 43929;
+            itemDef.originalModelColors[1] = 40959;
+            itemDef.modelId = 8774;
+            itemDef.spriteScale = 500;
+            itemDef.spritePitch = 0;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 90;
+            itemDef.primaryMaleModel = 8774;
+            itemDef.primaryFemaleModel = 8774;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.placeholderId = 17851;
+            itemDef.placeholderTemplateId = -1;
+        }
         if(i == 28630)
         {
             itemDef.itemActions = new String[5];
