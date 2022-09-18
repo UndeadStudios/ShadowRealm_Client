@@ -5751,6 +5751,7 @@ public class ItemDefinition_Sub1
             itemDef.name = "Dark Gray beret";
             itemDef.description = "Parlez-voius francais?";
         }
+
         return itemDef;
     }
 
