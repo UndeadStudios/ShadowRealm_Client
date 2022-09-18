@@ -298,7 +298,7 @@ public final class ItemDefinition {
 			case 4371:
 				itemDef.setDefaults();
 				itemDef.id = 4371;
-				itemDef.modelId = 5593;
+				itemDef.modelId = 56670;
 				itemDef.name = "Osiris cape";
 				itemDef.description = "A Cape for the finest.";
 
@@ -309,8 +309,8 @@ public final class ItemDefinition {
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
 
-				itemDef.primaryMaleModel = 5593;
-				itemDef.primaryFemaleModel = 5593;
+				itemDef.primaryMaleModel = 56670;
+				itemDef.primaryFemaleModel = 56670;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];
