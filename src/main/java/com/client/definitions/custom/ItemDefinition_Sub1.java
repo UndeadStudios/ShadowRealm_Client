@@ -5925,7 +5925,105 @@ public class ItemDefinition_Sub1
             itemDef.name = "Dark Gray beret";
             itemDef.description = "Parlez-voius francais?";
         }
-
+        if(i == 29163) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Bandos chestplate (g)"; //Name
+            itemDef.description = "Its an Bandos chestplate (g)"; //Description
+            itemDef.modifiedModelColors = new int[6];
+            itemDef.originalModelColors = new int[6];
+            itemDef.modifiedModelColors[0] = 9403;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.modifiedModelColors[1] = 9523;
+            itemDef.originalModelColors[1] = 7114;
+            itemDef.modifiedModelColors[2] = 8367;
+            itemDef.originalModelColors[2] = 7114;
+            itemDef.modifiedModelColors[3] = 8384;
+            itemDef.originalModelColors[3] = 7114;
+            itemDef.modifiedModelColors[4] = 8375;
+            itemDef.originalModelColors[4] = 7114;
+            itemDef.modifiedModelColors[5] = 8379;
+            itemDef.originalModelColors[5] = 7114;
+            itemDef.modelId = 28042;
+            itemDef.spriteScale = 984;
+            itemDef.spritePitch = 501;
+            itemDef.spriteCameraRoll = 6;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 1;
+            itemDef.spriteTranslateY = 4;
+            itemDef.primaryMaleModel = 27636;
+            itemDef.primaryFemaleModel = 27644;
+            itemDef.secondaryMaleModel = 28826;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = 28827;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 290010;
+        }
+        if(i == 29164) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Bandos tassets (g)"; //Name
+            itemDef.description = "Its an Bandos tassets (g)"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 8390;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.modifiedModelColors[1] = 9523;
+            itemDef.originalModelColors[1] = 7114;
+            itemDef.modelId = 28047;
+            itemDef.spriteScale = 854;
+            itemDef.spritePitch = 540;
+            itemDef.spriteCameraRoll = 2039;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 3;
+            itemDef.primaryMaleModel = 27625;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleModel = 27640;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 289910;
+        }
+        if(i == 29165) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Bandos boots (g)"; //Name
+            itemDef.description = "Its an Bandos boots (g)"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10291;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.modelId = 28040;
+            itemDef.spriteScale = 724;
+            itemDef.spritePitch = 171;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -7;
+            itemDef.primaryMaleModel = 27637;
+            itemDef.primaryFemaleModel = 19951;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 289010;
+        }
         return itemDef;
     }
 
