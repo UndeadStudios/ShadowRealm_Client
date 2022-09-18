@@ -14,6 +14,8 @@ public final class IDK {
 			if (cache[j] == null)
 				cache[j] = new IDK();
 			cache[j].readValues(stream);
+			cache[j].colourToFind[0] = 55232;
+			cache[j].colourToReplace[0] = 6798;
 		}
 	}
 
