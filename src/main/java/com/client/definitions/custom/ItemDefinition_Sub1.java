@@ -5925,6 +5925,723 @@ public class ItemDefinition_Sub1
             itemDef.name = "Dark Gray beret";
             itemDef.description = "Parlez-voius francais?";
         }
+        if(i == 29160) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Golden halo"; //Name
+            itemDef.description = "A Halo for halo"; //Description
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modifiedModelColors[0] = 960;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.modifiedModelColors[1] = 6984;
+            itemDef.originalModelColors[1] = 7114;
+            itemDef.modifiedModelColors[2] = 4930;
+            itemDef.originalModelColors[2] = 7114;
+            itemDef.modifiedModelColors[3] = 1730;
+            itemDef.originalModelColors[3] = 7114;
+            itemDef.modifiedModelColors[4] = 1969;
+            itemDef.originalModelColors[4] = 7114;
+            itemDef.modelId = 28838;
+            itemDef.spriteScale = 528;
+            itemDef.spritePitch = 327;
+            itemDef.spriteCameraRoll = 213;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 12;
+            itemDef.primaryMaleModel = 27643;
+            itemDef.primaryFemaleModel = 28832;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 28845;
+            itemDef.primaryFemaleHeadPiece = 28834;
+            itemDef.value = 150000;
+        }
+        if(i == 29161) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Golden Gnome scarf"; //Name
+            itemDef.description = "Its an Golden Gnome scarf"; //Description
+            itemDef.modifiedModelColors = new int[4];
+            itemDef.originalModelColors = new int[4];
+            itemDef.modifiedModelColors[0] = 127;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.modifiedModelColors[1] = 111;
+            itemDef.originalModelColors[1] = 7114;
+            itemDef.modifiedModelColors[2] = 119;
+            itemDef.originalModelColors[2] = 7114;
+            itemDef.modifiedModelColors[3] = 108;
+            itemDef.originalModelColors[3] = 7114;
+            itemDef.modelId = 17125;
+            itemDef.spriteScale = 919;
+            itemDef.spritePitch = 595;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -7;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 17155;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleModel = 17157;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+        if(i == 29162) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Golden Gloves"; //Name
+            itemDef.description = "Its an Golden Gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10004;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.modelId = 2649;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 420;
+            itemDef.spriteCameraRoll = 828;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 8;
+            itemDef.spriteTranslateY = -8;
+            itemDef.primaryMaleModel = 179;
+            itemDef.primaryFemaleModel = 356;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 600;
+        }
+        if(i == 28472)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 18105;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Lime Green abyssal whip";
+            itemDef.description = "Lime Green abyssal whip";
+        }
+        if(i == 28473)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 45549;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Unknowed White abyssal whip";
+            itemDef.description = "Unknowed White abyssal whip";
+        }
+        if(i == 28474)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 50971;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Deep Purple abyssal whip";
+            itemDef.description = "Deep Purple abyssal whip";
+        }
+        if(i == 28475)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 60176;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Deeper Purple abyssal whip";
+            itemDef.description = "Deeper Purple abyssal whip";
+        }
+        if(i == 28476)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 19213;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Deep Green abyssal whip";
+            itemDef.description = "Deep Green abyssal whip";
+        }
+        if(i == 28477)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 3654;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Dull Orange abyssal whip";
+            itemDef.description = "Dull Orange abyssal whip";
+        }
+        if(i == 28478)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 12904;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Bright Yellow abyssal whip";
+            itemDef.description = "Bright Yellow abyssal whip";
+        }
+        if(i == 28479)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 618;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Bright Pink abyssal whip";
+            itemDef.description = "Bright Pink abyssal whip";
+        }
+        if(i == 28480)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 46440;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Bright Blue abyssal whip";
+            itemDef.description = "Bright Blue abyssal whip";
+        }
+        if(i == 28481)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 11378;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Bright Gray abyssal whip";
+            itemDef.description = "Bright Gray abyssal whip";
+        }
+        if(i == 28482)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 36207;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Bright Sky Blue abyssal whip";
+            itemDef.description = "Bright Sky Blue abyssal whip";
+        }
+        if(i == 28483)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 32562;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Teal abyssal whip";
+            itemDef.description = "Teal abyssal whip";
+        }
+        if(i == 28484)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 8245;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;    		itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Dark Gray abyssal whip";
+            itemDef.description = "Dark Gray abyssal whip";
+        }
+        if(i == 28529)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 21662;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Adam abyssal whip";
+            itemDef.description = "abyssal whip Made Of Adam";
+        }
+        if(i == 28530)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 36133;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Rune abyssal whip";
+            itemDef.description = "abyssal whip Made Of Rune";
+        }
+        if(i == 28531)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 43297;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Mithril abyssal whip";
+            itemDef.description = "abyssal whip Made Of Mithril";
+        }
+        if(i == 28532)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 8;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Black abyssal whip";
+            itemDef.description = "abyssal whip Made Of Black";
+        }
+        if(i == 28533)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 43072;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Steel abyssal whip";
+            itemDef.description = "abyssal whip Made Of Steel";
+        }
+        if(i == 28534)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 33;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Iron abyssal whip";
+            itemDef.description = "abyssal whip Made Of Iron";
+        }
+        if(i == 28535)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 5652;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Bronze abyssal whip";
+            itemDef.description = "abyssal whip Made Of Bronze";
+        }
+        if(i == 28536)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 926;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Dragon abyssal whip";
+            itemDef.description = "A abyssal whip made of Dragon";
+        }
+        if(i == 28537)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 528;
+            itemDef.originalModelColors[0] = 49500;
+            itemDef.modelId = 5412;
+            itemDef.spriteScale = 840;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = 56;
+            itemDef.primaryMaleModel = 5409;
+            itemDef.primaryFemaleModel = 5409;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Sexy abyssal whip";
+            itemDef.description = "hshsh";
+        }
         if(i == 29163) //ID
         {
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
