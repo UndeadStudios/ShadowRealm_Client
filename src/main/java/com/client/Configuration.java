@@ -53,7 +53,7 @@ public class Configuration {
 	public static boolean packIndexData = true;
 	public static boolean dumpMaps;
 	public static boolean dumpAnimationData = false;
-	public static boolean dumpDataLists;
+	public static boolean dumpDataLists = true;
 	public static boolean newFonts; // TODO text offsets (i.e. spacing between characters) are incorrect, needs automatic fix from kourend
 	public static String cacheName = CACHE_NAME;
 	public static String clientTitle = "";

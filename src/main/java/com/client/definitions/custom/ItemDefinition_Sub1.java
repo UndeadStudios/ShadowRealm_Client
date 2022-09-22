@@ -3982,6 +3982,40 @@ public class ItemDefinition_Sub1
             itemDef.name = "Rico's Kiteshield";
             itemDef.description = "It's an Rico's kiteshield.";
         }
+        if(i == 29399) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, null};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Rico's Crown"; //Name
+            itemDef.description = "Its an Rico's Crown"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 945;
+            itemDef.modifiedModelColors[1] = 8128;
+            itemDef.originalModelColors[0] = 7114;
+            itemDef.originalModelColors[1] = 972;
+            itemDef.modelId = 8774;
+            itemDef.spriteScale = 500;
+            itemDef.spritePitch = 0;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 90;
+            itemDef.primaryMaleModel = 8774;
+            itemDef.primaryFemaleModel = 8774;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.placeholderId = 17851;
+            itemDef.placeholderTemplateId = -1;
+        }
         if(i == 28347)
         {
             itemDef.itemActions = new String[5];

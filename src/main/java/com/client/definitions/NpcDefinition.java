@@ -822,6 +822,20 @@
 				entityDef.anInt86 = 30; //WIDTH
 				entityDef.anInt91 = 30; // HEIGH
 			}
+			if(i == 11855){
+				entityDef.name = "Snow Imp";
+				entityDef.models = new int[] { 51337 };
+				entityDef.actions = new String[5];
+				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
+				entityDef.originalColors = null;
+				entityDef.newColors = null;
+				entityDef.standAnim = 171;
+				entityDef.walkAnim = 168;
+				entityDef.size = 1;
+				entityDef.combatLevel = 0;
+				entityDef.anInt86 = 150; //WIDTH
+				entityDef.anInt91 = 150; // HEIGH
+			}
 			if (i == 8027) {
 				entityDef.name = "Vorkath";
 				entityDef.combatLevel = 732;
@@ -889,7 +903,7 @@
 			stream = new Buffer(streamLoader.getArchiveData("npc.dat"));
 			Buffer stream = new Buffer(streamLoader.getArchiveData("npc.idx"));
 			totalAmount = stream.readUShort();
-			streamIndices = new int[totalAmount];
+			streamIndices = new int[totalAmount+500];
 			int i = 2;
 			for (int j = 0; j < totalAmount; j++) {
 				streamIndices[j] = i;
