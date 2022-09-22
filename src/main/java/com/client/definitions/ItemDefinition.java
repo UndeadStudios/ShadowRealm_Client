@@ -242,8 +242,8 @@ public final class ItemDefinition {
 				itemDef.spritePitch = 2042;
 				itemDef.spriteCameraRoll = 473;
 				itemDef.spriteCameraYaw = 0;
-				itemDef.spriteTranslateX = -4;
-				itemDef.spriteTranslateY = 12;
+				itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = -1;
 
 				itemDef.primaryMaleModel = 65133;
 				itemDef.primaryFemaleModel = 65133;
@@ -263,8 +263,8 @@ public final class ItemDefinition {
 				itemDef.spritePitch = 2045;
 				itemDef.spriteCameraRoll = 474;
 				itemDef.spriteCameraYaw = 0;
-				itemDef.spriteTranslateX = -4;
-				itemDef.spriteTranslateY = 12;
+				itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = 8;
 
 				itemDef.primaryMaleModel = 65135;
 				itemDef.primaryFemaleModel = 65135;
@@ -284,8 +284,8 @@ public final class ItemDefinition {
 					itemDef.spritePitch = 1867;
 					itemDef.spriteCameraRoll = 85;
 				itemDef.spriteCameraYaw = 1;
-				itemDef.spriteTranslateX = -4;
-				itemDef.spriteTranslateY = 12;
+				//itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = -2;
 
 				itemDef.primaryMaleModel = 65131;
 				itemDef.primaryFemaleModel = 65131;

@@ -577,21 +577,23 @@ public class Model extends Renderable {
             /**
              * Manual Invisible Fix
              **/
-            /*int[] invisibleFix = { 65130, 65131, 65133, 65135, 65131, 32655, 32663};
+            int[] invisibleFix = { 65130, 65131, 65133, 65135, 65131};
             for (int i1 = 0; i1 < invisibleFix.length; i1++) {
                 if (id == invisibleFix[i1]) {
+                    scale2(3);
                     if (face_render_priorities != null) {
                         for (int j = 0; j < face_render_priorities.length; j++) {
                             face_render_priorities[j] = 10;
-                            this.face_priority = 10;
+                           // this.face_priority = 10;
                         }
                     }
                 }
-            }*/
+            }
             /**
              * Black Fix
              **/
             for (int i2 = 0; i2 < trianglesCount; i2++) {
+                //scale2(4);
                 if (colors != null) {
                     if (colors[i2] == 0) {
                         colors[i2] = 1;
@@ -612,7 +614,7 @@ public class Model extends Renderable {
         }
     }
 
-  /*  public void read622Model(byte abyte0[], int modelID) {
+    public void read622Model(byte abyte0[], int modelID) {
         Buffer nc1 = new Buffer(abyte0);
         Buffer nc2 = new Buffer(abyte0);
         Buffer nc3 = new Buffer(abyte0);
@@ -632,10 +634,10 @@ public class Model extends Renderable {
         int l1 = nc1.readUnsignedByte();
         boolean bool = (0x1 & l1 ^ 0xffffffff) == -2;
         boolean bool_26_ = (0x8 & l1) == 8;
-        if (!bool_26_) {
-            read525Model(abyte0, modelID);
-            return;
-        }
+//        if (!bool_26_) {
+//            read525Model(abyte0, modelID);
+//            return;
+//        }
         int newformat = 0;
         if (bool_26_) {
             nc1.currentOffset -= 7;
@@ -758,7 +760,7 @@ public class Model extends Renderable {
         int[] facePoint3 = new int[numTriangles];
         vertexData = new int[numVertices];
         types = new int[numTriangles];
-        face_render_priorities = new int[numTriangles];
+        face_render_priorities = new byte [numTriangles];
         alphas = new int[numTriangles];
         triangleData = new int[numTriangles];
         if (i3 == 1) {
@@ -768,7 +770,7 @@ public class Model extends Renderable {
             types = new int[numTriangles];
         }
         if (i2 == 255) {
-            face_render_priorities = new int[numTriangles];
+            face_render_priorities = new byte[numTriangles];
         } else {
         }
         if (j2 == 1) {
@@ -1002,10 +1004,10 @@ public class Model extends Renderable {
         }
         if (i2 != 255) {
             for (int i12 = 0; i12 < numTriangles; i12++) {
-                face_render_priorities[i12] = i2;
+                face_render_priorities[i12] = (byte) i2;
             }
         }
-        colors = triangleColours2;
+        colors = new short [trianglesCount];
         this.verticesCount = numVertices;
         this.trianglesCount = numTriangles;
         this.verticesX = vertexX;
@@ -1015,7 +1017,7 @@ public class Model extends Renderable {
         trianglesY = facePoint2;
         trianglesZ = facePoint3;
         convertTexturesTo317(D, texTrianglesPoint1, texTrianglesPoint2, texTrianglesPoint3, false, x);
-    }*/
+    }
 
 	/*private void readOldModel(int i) {
         int j = -870;

@@ -2283,7 +2283,7 @@ interfaceId+=5000;
 		interfaceId++;
 		child++;
 
-		int teleportAmount = 40;
+		int teleportAmount = 41;
 		scrollTab1.width = 209;
 		scrollTab1.height = 174;
 		scrollTab1.scrollMax = 625;
