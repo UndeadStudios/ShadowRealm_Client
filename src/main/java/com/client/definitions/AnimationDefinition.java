@@ -63,10 +63,14 @@ public final class AnimationDefinition {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			try (BufferedWriter writer = new BufferedWriter(new FileWriter("./temp/animation_ids.cfg"))) {
+			try (BufferedWriter writer = new BufferedWriter(new FileWriter("./temp/208animation_ids.cfg"))) {
 				for (int j = 0; j < length; j++) {
 					if (anims[j].anInt361 != -1) {
-						writer.write("ID" + j + ", ItemID:" + anims[j].anInt361);
+						writer.write("ID:" + j + ", Right Hand ItemID:" + (anims[j].anInt361-512));
+						writer.newLine();
+					}
+					if (anims[j].anInt360 != -1) {
+						writer.write("ID:" + j + ", left Hand ItemID:" + (anims[j].anInt360-512));
 						writer.newLine();
 					}
 				}
