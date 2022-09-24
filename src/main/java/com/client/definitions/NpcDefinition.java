@@ -520,14 +520,14 @@
 
 
 			}
-			if (i == 6723) {//healer
-				entityDef.actions = new String[5];
-				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
-				entityDef.anInt86 = 65; //WIDTH
-				entityDef.anInt91 = 65; // HEIGH
-				entityDef.combatLevel = 0;
-
-			}
+//			if (i == 6723) {//healer
+//				entityDef.actions = new String[5];
+//				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
+//				entityDef.anInt86 = 65; //WIDTH
+//				entityDef.anInt91 = 65; // HEIGH
+//				entityDef.combatLevel = 0;
+//
+//			}
 			if (i == 1088) {
 				entityDef.name = "Seren";
 				entityDef.models = new int[] { 38605 };
@@ -607,7 +607,7 @@
 				entityDef.combatLevel = 0;
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 			}
-			if (i == 6723 || i == 6716 || i == 8709) {
+			if (i == 6716 || i == 8709) {
 				entityDef.actions = new String[5];
 				entityDef.combatLevel = 0;
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
@@ -754,6 +754,14 @@
 				entityDef.walkAnim = 8527;
 				entityDef.anInt86 = 85; //WIDTH
 				entityDef.anInt91 = 85; // HEIGH
+			}
+			if (i == 6723) {
+				entityDef.name = "Healer death spawn";
+				entityDef.actions = new String[5];
+				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
+				entityDef.anInt86 = 65; //WIDTH
+				entityDef.anInt91 = 65; // HEIGH
+				entityDef.combatLevel = 0;
 			}
 			if (i == 2308) {
 				entityDef.name = "Dark healer death spawn";
