@@ -3558,11 +3558,11 @@ public class Client extends RSApplet {
 				anIntArray894[anInt893++] = k;
 			npc.anInt1540 = npc.desc.size;
 			npc.anInt1504 = npc.desc.getDegreesToTurn;
-			npc.anInt1554 = npc.desc.walkAnim;
-			npc.anInt1555 = npc.desc.anInt58;
-			npc.anInt1556 = npc.desc.anInt83;
-			npc.anInt1557 = npc.desc.anInt55;
-			npc.anInt1511 = npc.desc.standAnim;
+			npc.anInt1554 = npc.desc.walkAnimation;
+			npc.anInt1555 = npc.desc.rotate180Animation;
+			npc.anInt1556 = npc.desc.rotate90RightAnimation;
+			npc.anInt1557 = npc.desc.rotate90LeftAnimation;
+			npc.anInt1511 = npc.desc.standAnimation;
 			npc.anInt1538 = 0;
 			npc.anInt1539 = 0;
 			npc.setPos(myPlayer.pathX[0] + i1, myPlayer.pathY[0] + l, j1 == 1);
@@ -7683,8 +7683,8 @@ public class Client extends RSApplet {
 								} else {
 									pushMessage("Id: " + id, 0, "");
 									pushMessage("Name: " + entity.name, 0, "");
-									pushMessage("Stand: " + entity.standAnim, 0, "");
-									pushMessage("Walk: " + entity.walkAnim, 0, "");
+									pushMessage("Stand: " + entity.standAnimation, 0, "");
+									pushMessage("Walk: " + entity.walkAnimation, 0, "");
 								}
 							} catch (ArrayIndexOutOfBoundsException | NumberFormatException exception) {
 								exception.printStackTrace();
@@ -10274,11 +10274,11 @@ public class Client extends RSApplet {
 				npc.desc = NpcDefinition.forID(stream.method436());
 				npc.anInt1540 = npc.desc.size;
 				npc.anInt1504 = npc.desc.getDegreesToTurn;
-				npc.anInt1554 = npc.desc.walkAnim;
-				npc.anInt1555 = npc.desc.anInt58;
-				npc.anInt1556 = npc.desc.anInt83;
-				npc.anInt1557 = npc.desc.anInt55;
-				npc.anInt1511 = npc.desc.standAnim;
+				npc.anInt1554 = npc.desc.walkAnimation;
+				npc.anInt1555 = npc.desc.rotate180Animation;
+				npc.anInt1556 = npc.desc.rotate90RightAnimation;
+				npc.anInt1557 = npc.desc.rotate90LeftAnimation;
+				npc.anInt1511 = npc.desc.standAnimation;
 			}
 			if ((l & 4) != 0) {
 				npc.anInt1538 = stream.method434();
@@ -10376,7 +10376,7 @@ public class Client extends RSApplet {
 						+ " @whi@("
 						+ "id=" + entityDef.npcId
 						+ ", index=" + i
-						+ ", stand=" + entityDef.standAnim
+						+ ", stand=" + entityDef.standAnimation
 						+ ", pos=[" + npc.getAbsoluteX() + ", " + npc.getAbsoluteY() + "]"
 						+ ", size=" + entityDef.size
 						+ ")";
@@ -10393,8 +10393,8 @@ public class Client extends RSApplet {
 					String modelIds = Arrays.toString(entityDef.models);
 					String regColors = Arrays.toString(entityDef.originalColors);
 					String newColors = Arrays.toString(entityDef.newColors);
-					int standAnim = entityDef.standAnim;
-					int walkAnim = entityDef.walkAnim;
+					int standAnim = entityDef.standAnimation;
+					int walkAnim = entityDef.walkAnimation;
 					String name = entityDef.name;
 					System.out.println(name + modelIds);
 					pushMessage(name + ": " + modelIds, 0, "");

@@ -71,6 +71,12 @@
 				entityDef.actions = new String[5];
 				entityDef.actions[0] = "Pickpocket";
 			}
+			if(i == 3362){
+				entityDef.standAnimation = 813;
+				entityDef.walkAnimation = 1205;
+				entityDef.rotate90RightAnimation = 1207;
+				entityDef.rotate180Animation = 1206;
+			}
 			if (i == 3247) {
 				entityDef.name = "Wizard";
 				entityDef.actions = new String[5];
@@ -336,7 +342,7 @@
 				entityDef.name = "Vorkath";
 				// entityDef.combatLevel = 732;
 				entityDef.models = new int[] { 35023 };
-				entityDef.standAnim = 7946;
+				entityDef.standAnimation = 7946;
 				entityDef.onMinimap = true;
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Poke", null, null, null, null };
@@ -344,14 +350,14 @@
 				entityDef.anInt91 = 100;
 			}
 			if (i == 7852 || i == 7853 || i == 7884) {//Dawn
-				entityDef.standAnim = 7775;
-				entityDef.walkAnim = 7775;
+				entityDef.standAnimation = 7775;
+				entityDef.walkAnimation = 7775;
 			}
 			if (i == 5518) {
-				entityDef.standAnim = 185;
+				entityDef.standAnimation = 185;
 			}
 			if (i == 8019) {
-				entityDef.standAnim = 185;
+				entityDef.standAnimation = 185;
 				entityDef.actions = new String[5];
 				entityDef.actions[0] = "Talk-to";
 				entityDef.actions[2] = "Trade";
@@ -364,13 +370,13 @@
 				entityDef.actions[4] = "Skull";
 			}
 			if (i == 6088) {
-				entityDef.standAnim = 185;
+				entityDef.standAnimation = 185;
 				entityDef.actions = new String[5];
 				entityDef.actions[0] = "Talk-to";
 				entityDef.actions[2] = "Travel";
 			}
 			if (i == 1434 || i == 876 || i == 1612) {//gnome fix
-				entityDef.standAnim = 185;
+				entityDef.standAnimation = 185;
 			}
 			if (i == 7674 || i == 8009 || i == 388 || i == 8010) {
 
@@ -538,8 +544,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8372;
-				entityDef.walkAnim = 8372;
+				entityDef.standAnimation = 8372;
+				entityDef.walkAnimation = 8372;
 				entityDef.models = new int[] { 38605 };
 
 			}
@@ -553,8 +559,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8307;
-				entityDef.walkAnim = 8306;
+				entityDef.standAnimation = 8307;
+				entityDef.walkAnimation = 8306;
 				entityDef.models = new int[] { 37142 };
 
 			}
@@ -568,8 +574,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8526;
-				entityDef.walkAnim = 8527;
+				entityDef.standAnimation = 8526;
+				entityDef.walkAnimation = 8527;
 				entityDef.models = new int[] { 29267 };
 
 			}
@@ -583,8 +589,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8526;
-				entityDef.walkAnim = 8527;
+				entityDef.standAnimation = 8526;
+				entityDef.walkAnimation = 8527;
 				entityDef.models = new int[] { 29268 };
 			}
 			if (i == 2122) {
@@ -597,8 +603,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8526;
-				entityDef.walkAnim = 8527;
+				entityDef.standAnimation = 8526;
+				entityDef.walkAnimation = 8527;
 				entityDef.models = new int[] { 29266 };
 			}
 
@@ -639,8 +645,8 @@
 			if (i == 1873) {//klik
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
-				entityDef.standAnim = 3345;
-				entityDef.walkAnim = 3346;
+				entityDef.standAnimation = 3345;
+				entityDef.walkAnimation = 3346;
 
 			}
 			//dark pets
@@ -654,8 +660,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 3948;
-				entityDef.walkAnim = 3947;
+				entityDef.standAnimation = 3948;
+				entityDef.walkAnimation = 3947;
 			}
 			if (i == 2301) {
 				entityDef.name = "Dark imp";
@@ -665,8 +671,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 171;
-				entityDef.walkAnim = 168;
+				entityDef.standAnimation = 171;
+				entityDef.walkAnimation = 168;
 			}
 			if (i == 2302) {
 				entityDef.name = "Dark toucan";
@@ -676,8 +682,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 6772;
-				entityDef.walkAnim = 6774;
+				entityDef.standAnimation = 6772;
+				entityDef.walkAnimation = 6774;
 			}
 			if (i == 2303) {
 				entityDef.name = "Dark king penguin";
@@ -687,8 +693,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 5668;
-				entityDef.walkAnim = 5666;
+				entityDef.standAnimation = 5668;
+				entityDef.walkAnimation = 5666;
 			}
 			if (i == 2313) {
 				entityDef.name = "Dark kratos";
@@ -697,8 +703,8 @@
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
-				entityDef.standAnim = 7017;
-				entityDef.walkAnim = 7016;
+				entityDef.standAnimation = 7017;
+				entityDef.walkAnimation = 7016;
 				entityDef.size = 2;
 				entityDef.combatLevel = 0;
 				entityDef.anInt86 = 90; //WIDTH
@@ -713,8 +719,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 3346;
-				entityDef.walkAnim = -1;
+				entityDef.standAnimation = 3346;
+				entityDef.walkAnimation = -1;
 			}
 			if (i == 2305) {
 				entityDef.name = "Dark shadow warrior";
@@ -724,8 +730,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8526;
-				entityDef.walkAnim = 8527;
+				entityDef.standAnimation = 8526;
+				entityDef.walkAnimation = 8527;
 				entityDef.anInt86 = 85; //WIDTH
 				entityDef.anInt91 = 85; // HEIGH
 			}
@@ -737,8 +743,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8526;
-				entityDef.walkAnim = 8527;
+				entityDef.standAnimation = 8526;
+				entityDef.walkAnimation = 8527;
 				entityDef.anInt86 = 85; //WIDTH
 				entityDef.anInt91 = 85; // HEIGH
 			}
@@ -750,8 +756,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8526;
-				entityDef.walkAnim = 8527;
+				entityDef.standAnimation = 8526;
+				entityDef.walkAnimation = 8527;
 				entityDef.anInt86 = 85; //WIDTH
 				entityDef.anInt91 = 85; // HEIGH
 			}
@@ -773,8 +779,8 @@
 				entityDef.anInt86 = 65; //WIDTH
 				entityDef.anInt91 = 65; // HEIGH
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 1539;
-				entityDef.walkAnim = 1539;
+				entityDef.standAnimation = 1539;
+				entityDef.walkAnimation = 1539;
 			}
 			if (i == 2309) {
 				entityDef.name = "Dark holy death spawn";
@@ -786,8 +792,8 @@
 				entityDef.anInt86 = 65; //WIDTH
 				entityDef.anInt91 = 65; // HEIGH
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 1539;
-				entityDef.walkAnim = 1539;
+				entityDef.standAnimation = 1539;
+				entityDef.walkAnimation = 1539;
 			}
 			if (i == 2310) {
 				entityDef.name = "Dark seren";
@@ -797,8 +803,8 @@
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
 				entityDef.combatLevel = 0;
-				entityDef.standAnim = 8372;
-				entityDef.walkAnim = 8372;
+				entityDef.standAnimation = 8372;
+				entityDef.walkAnimation = 8372;
 				entityDef.anInt86 = 65; //WIDTH
 				entityDef.anInt91 = 65; // HEIGH
 			}
@@ -813,8 +819,8 @@
 				entityDef.anInt86 = 60; //WIDTH
 				entityDef.anInt91 = 60; // HEIGH
 				entityDef.size = 1;
-				entityDef.standAnim = 5616;
-				entityDef.walkAnim = 5615;
+				entityDef.standAnimation = 5616;
+				entityDef.walkAnimation = 5615;
 			}
 			if (i == 2312) {
 				entityDef.name = "Dark roc";
@@ -823,8 +829,8 @@
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
-				entityDef.standAnim = 5021;
-				entityDef.walkAnim = 5022;
+				entityDef.standAnimation = 5021;
+				entityDef.walkAnimation = 5022;
 				entityDef.size = 1;
 				entityDef.combatLevel = 0;
 				entityDef.anInt86 = 30; //WIDTH
@@ -837,8 +843,8 @@
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
 				entityDef.newColors = null;
-				entityDef.standAnim = 171;
-				entityDef.walkAnim = 168;
+				entityDef.standAnimation = 171;
+				entityDef.walkAnimation = 168;
 				entityDef.size = 1;
 				entityDef.combatLevel = 0;
 				entityDef.anInt86 = 150; //WIDTH
@@ -848,7 +854,7 @@
 				entityDef.name = "Vorkath";
 				entityDef.combatLevel = 732;
 				entityDef.models = new int[] { 35023 };
-				entityDef.standAnim = 7950;
+				entityDef.standAnimation = 7950;
 				entityDef.onMinimap = true;
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { null, null, null, null, null };
@@ -859,7 +865,7 @@
 				entityDef.name = "Vorkath";
 				entityDef.combatLevel = 732;
 				entityDef.models = new int[] { 35023 };
-				entityDef.standAnim = 7948;
+				entityDef.standAnimation = 7948;
 				entityDef.onMinimap = true;
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { null, "Attack", null, null, null };
@@ -894,9 +900,9 @@
 						if (def != null) {
 							writer.write("Npc=" + i);
 							writer.newLine();
-							writer.write("Stand animation=" + def.standAnim);
+							writer.write("Stand animation=" + def.standAnimation);
 							writer.newLine();
-							writer.write("Walk animation=" + def.walkAnim);
+							writer.write("Walk animation=" + def.walkAnimation);
 							writer.newLine();
 							writer.newLine();
 						}
@@ -1005,22 +1011,22 @@
 				else if (opcode == 12)
 					size = stream.readSignedByte();
 				else if (opcode == 13)
-					standAnim = stream.readUShort();
+					standAnimation = stream.readUShort();
 				else if (opcode == 14)
-					walkAnim = stream.readUShort();
+					walkAnimation = stream.readUShort();
 				else if (opcode == 17) {
-					walkAnim = stream.readUShort();
-					anInt58 = stream.readUShort();
-					anInt83 = stream.readUShort();
-					anInt55 = stream.readUShort();
-					if (anInt58 == 65535) {
-						anInt58 = -1;
+					walkAnimation = stream.readUShort();
+					rotate180Animation = stream.readUShort();
+					rotate90RightAnimation = stream.readUShort();
+					rotate90LeftAnimation = stream.readUShort();
+					if (rotate180Animation == 65535) {
+						rotate180Animation = -1;
 					}
-					if (anInt83 == 65535) {
-						anInt83 = -1;
+					if (rotate90RightAnimation == 65535) {
+						rotate90RightAnimation = -1;
 					}
-					if (anInt55 == 65535) {
-						anInt55 = -1;
+					if (rotate90LeftAnimation == 65535) {
+						rotate90LeftAnimation = -1;
 					}
 				} else if(opcode == 18){
 					stream.readUShort();
@@ -1230,19 +1236,19 @@
 		}
 
 		private NpcDefinition() {
-			anInt55 = -1;
-			anInt57 = walkAnim;
-			anInt58 = walkAnim;
-			anInt59 = walkAnim;
+			rotate90LeftAnimation = -1;
+			anInt57 = walkAnimation;
+			rotate180Animation = walkAnimation;
+			anInt59 = walkAnimation;
 			combatLevel = -1;
 			anInt64 = 1834;
-			walkAnim = -1;
+			walkAnimation = -1;
 			size = 1;
 			anInt75 = -1;
-			standAnim = -1;
+			standAnimation = -1;
 			npcId = -1L;
 			getDegreesToTurn = 32;
-			anInt83 = -1;
+			rotate90RightAnimation = -1;
 			aBoolean84 = true;
 			anInt86 = 128;
 			onMinimap = true;
@@ -1257,9 +1263,9 @@
 					", combatLevel=" + combatLevel +
 					", name='" + name + '\'' +
 					", actions=" + Arrays.toString(actions) +
-					", walkAnim=" + walkAnim +
+					", walkAnim=" + walkAnimation +
 					", size=" + size +
-					", standAnim=" + standAnim +
+					", standAnim=" + standAnimation +
 					", childrenIDs=" + Arrays.toString(childrenIDs) +
 					", models=" + Arrays.toString(models) +
 					'}';
@@ -1285,7 +1291,7 @@
 						NpcDefinition definition = forID(i);
 						if (definition != null) {
 							writer.write("npc = " + i + "\t" + definition.name + "\t" + definition.combatLevel + "\t"
-									+ definition.standAnim + "\t" + definition.walkAnim + "\t");
+									+ definition.standAnimation + "\t" + definition.walkAnimation + "\t");
 							writer.newLine();
 						}
 					}
@@ -1321,17 +1327,17 @@
 			}
 		}
 
-		public int anInt55;
+		public int rotate90LeftAnimation;
 		public static int anInt56;
 		public int anInt57;
-		public int anInt58;
+		public int rotate180Animation;
 		public int anInt59;
 		public static Buffer stream;
 		public int combatLevel;
 		public final int anInt64;
 		public String name;
 		public String actions[];
-		public int walkAnim;
+		public int walkAnimation;
 		public byte size;
 		public int[] newColors;
 		public static int[] streamIndices;
@@ -1339,12 +1345,12 @@
 		public int anInt75;
 		public int[] originalColors;
 		public short[] originalTextures, newTextures;
-		public int standAnim;
+		public int standAnimation;
 		public long npcId;
 		public int getDegreesToTurn;
 		public static NpcDefinition[] cache;
 		public static Client clientInstance;
-		public int anInt83;
+		public int rotate90RightAnimation;
 		public boolean aBoolean84;
 		public int anInt85;
 		public int anInt86;

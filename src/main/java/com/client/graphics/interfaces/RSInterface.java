@@ -62,7 +62,7 @@ public class RSInterface {
 
 	public static void unpack(StreamLoader streamLoader, TextDrawingArea textDrawingAreas[],
 			StreamLoader streamLoader_1, RSFont[] newFontSystem) {
-		aMRUNodes_238 = new MRUNodes(50000);
+		aMRUNodes_238 = new MRUNodes(80000);
 		Buffer stream = new Buffer(streamLoader.getArchiveData("data"));
 		newFonts = newFontSystem;
 		int i = -1;
