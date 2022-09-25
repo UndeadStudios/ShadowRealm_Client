@@ -48,7 +48,7 @@ public final class ItemDefinition {
 		for (int index = 0; index < 10; index++) {
 			cache[index] = new ItemDefinition();
 		}
-
+		//dumpItemConfig();
 		if (Configuration.dumpDataLists) {
 			TempWriter writer2 = new TempWriter("item_fields");
 			FieldGenerator generator = new FieldGenerator(writer2::writeLine);
@@ -105,7 +105,22 @@ public final class ItemDefinition {
 		itemDef.id = id; // Have to do this for some cases
 		return itemDef;
 	}
-
+	public static void dumpItemConfig() {
+		for(int i = 0; i < totalItems; i++) {
+			ItemDefinition class5 = forID(i);
+			BufferedWriter bw = null;
+			try {
+				bw = new BufferedWriter(new FileWriter("./temp/item_list_208_4.txt", true));
+				if(class5.name!= null) {
+					bw.write("ItemID: "+i+" Name: "+class5.name.toLowerCase());
+					bw.newLine();
+					bw.flush();
+					bw.close();
+				}
+			} catch (IOException ioe2) {
+			}
+		}
+	}
 	public static ItemDefinition copy(ItemDefinition itemDef, int newId, int copyingItemId, String newName, String...actions) {
 		ItemDefinition copyItemDef = forID(copyingItemId);
 		itemDef.id = newId;
@@ -2646,14 +2661,6 @@ public final class ItemDefinition {
 						sprite2.myPixels[i5 + j4 * 32] = 1;
 
 		}
-
-		sprite2.outline(1);
-		if (highlightColor > 0) {
-			sprite2.outline(16777215);
-		}
-		if (highlightColor == 0) {
-			sprite2.shadow(3153952);
-		}
 		if (itemDef.certTemplateID != -1) {
 			int l5 = sprite.maxWidth;
 			int j6 = sprite.maxHeight;
@@ -2667,6 +2674,15 @@ public final class ItemDefinition {
 			mruNodes1.removeFromCache(sprite2, itemId);
 		}
 		DrawingArea.initDrawingArea(j2, i2, ai1, new float[1024]);
+		if (highlightColor >= 1) { // L: 416
+			sprite2.outline(1);
+		}
+		if (highlightColor > 0) {
+			sprite2.outline(16777215);
+		}
+		if (highlightColor == 0) {
+			sprite2.shadow(highlightColor);
+		}
 		DrawingArea.setDrawingArea(j3, k2, l2, i3);
 		Rasterizer.textureInt1 = k1;
 		Rasterizer.textureInt2 = l1;
