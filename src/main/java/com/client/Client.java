@@ -748,7 +748,7 @@ public class Client extends RSApplet {
 							if (itemResults[itemId] != -1) {
 								final int startX = xPosition + rowCountX * 160;
 								final int startY = yPosition + rowCountY * 35;
-								Sprite itemSprite = ItemDefinition.getSprite(itemResults[itemId], 1, 0);
+								Sprite itemSprite = ItemDefinition.getSprite(itemResults[itemId], 1, 0, 0, false);
 								if (itemSprite != null)
 									itemSprite.drawSprite(startX, startY);
 
@@ -12080,7 +12080,7 @@ public class Client extends RSApplet {
 													itemSprite = new Sprite(itemDef.customSpriteLocation);
 												}
 											} else {
-												itemSprite = ItemDefinition.getSprite(j9, class9_1.inventoryAmounts[i3], l9);
+												itemSprite = ItemDefinition.getSprite(j9, class9_1.inventoryAmounts[i3], l9, 0,false);
 												if (itemDef.customSpriteLocation != null)
 												{
 													itemSprite = new Sprite(itemDef.customSpriteLocation);

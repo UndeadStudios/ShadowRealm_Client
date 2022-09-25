@@ -2515,7 +2515,7 @@ public final class ItemDefinition {
 		}
 		Sprite sprite1 = null;
 		if (itemDef.certTemplateID != -1) {
-			sprite1 = getSprite(itemDef.certID, 10, -1);
+			sprite1 = getSprite(itemDef.certID, 10, -1, 0,true);
 			if (sprite1 == null) {
 				return null;
 			}
@@ -2562,7 +2562,7 @@ public final class ItemDefinition {
 		return enabledSprite;
 	}
 
-	public static Sprite getSprite(int itemId, int itemAmount, int highlightColor) {
+	public static Sprite getSprite(int itemId, int itemAmount, int highlightColor, int var3, boolean var5) {
 		if (highlightColor == 0) {
 			Sprite sprite = (Sprite) mruNodes1.insertFromCache(itemId);
 			if (sprite != null && sprite.maxHeight != itemAmount && sprite.maxHeight != -1) {
@@ -2589,15 +2589,15 @@ public final class ItemDefinition {
 			return null;
 		Sprite sprite = null;
 		if (itemDef.certTemplateID != -1) {
-			sprite = getSprite(itemDef.certID, 10, -1);
+			sprite = getSprite(itemDef.certID, 10, -1, 0,true);
 			if (sprite == null)
 				return null;
 		} else if (itemDef.notedId != -1) {
-			sprite = getSprite(itemDef.unnotedId, itemAmount, -1);
+			sprite = getSprite(itemDef.unnotedId, itemAmount, -1, var3, false);
 			if (sprite == null)
 				return null;
 		} else if (itemDef.placeholderTemplateId != -1) {
-			sprite = getSprite(itemDef.placeholderId, itemAmount, -1);
+			sprite = getSprite(itemDef.placeholderId, itemAmount, -1, 0, false);
 			if (sprite == null)
 				return null;
 		}
@@ -2625,13 +2625,15 @@ public final class ItemDefinition {
 			sprite.maxWidth = l5;
 			sprite.maxHeight = j6;
 		}
-		int k3 = itemDef.spriteScale;
-		if (highlightColor == -1)
-			k3 = (int) ((double) k3 * 1.5D);
-		if (highlightColor > 0)
-			k3 = (int) ((double) k3 * 1.04D);
-		int l3 = Rasterizer.anIntArray1470[itemDef.spritePitch] * k3 >> 16;
-		int i4 = Rasterizer.anIntArray1471[itemDef.spritePitch] * k3 >> 16;
+		int var16 = itemDef.spriteScale;
+		if (var5) { // L: 409
+			var16 = (int)((double)var16 * 1.5D);
+		} else if (highlightColor == 2) { // L: 410
+			var16 = (int)(1.04D * (double)var16);
+		}
+
+		int l3 = Rasterizer.anIntArray1470[itemDef.spritePitch] * var16 >> 16;
+		int i4 = Rasterizer.anIntArray1471[itemDef.spritePitch] * var16 >> 16;
 		try {
 			model.render(itemDef.spriteCameraRoll, itemDef.spriteCameraYaw, itemDef.spritePitch, itemDef.spriteTranslateX,
 					l3 + model.modelHeight / 2 + itemDef.spriteTranslateY, i4 + itemDef.spriteTranslateY);
@@ -2648,19 +2650,6 @@ public final class ItemDefinition {
 			sprite.maxWidth = l5;
 			sprite.maxHeight = j6;
 		}
-		for (int i5 = 31; i5 >= 0; i5--) {
-			for (int j4 = 31; j4 >= 0; j4--)
-				if (sprite2.myPixels[i5 + j4 * 32] == 0)
-					if (i5 > 0 && sprite2.myPixels[(i5 - 1) + j4 * 32] > 1)
-						sprite2.myPixels[i5 + j4 * 32] = 1;
-					else if (j4 > 0 && sprite2.myPixels[i5 + (j4 - 1) * 32] > 1)
-						sprite2.myPixels[i5 + j4 * 32] = 1;
-					else if (i5 < 31 && sprite2.myPixels[i5 + 1 + j4 * 32] > 1)
-						sprite2.myPixels[i5 + j4 * 32] = 1;
-					else if (j4 < 31 && sprite2.myPixels[i5 + (j4 + 1) * 32] > 1)
-						sprite2.myPixels[i5 + j4 * 32] = 1;
-
-		}
 		if (itemDef.certTemplateID != -1) {
 			int l5 = sprite.maxWidth;
 			int j6 = sprite.maxHeight;
@@ -2670,19 +2659,20 @@ public final class ItemDefinition {
 			sprite.maxWidth = l5;
 			sprite.maxHeight = j6;
 		}
-		if (highlightColor == 0) {
+		if (itemDef.certTemplateID != -1 && highlightColor == 0) {
 			mruNodes1.removeFromCache(sprite2, itemId);
 		}
-		DrawingArea.initDrawingArea(j2, i2, ai1, new float[1024]);
-		if (highlightColor >= 1) { // L: 416
-			sprite2.outline(1);
+		if (itemDef.certTemplateID != -1 && highlightColor == 1) {
+			mruNodes1.removeFromCache(sprite2, itemId);
 		}
+		sprite2.outline(1);
 		if (highlightColor > 0) {
 			sprite2.outline(16777215);
 		}
-		if (highlightColor == 0) {
-			sprite2.shadow(highlightColor);
+		if (var3 == 0) {
+			sprite2.shadow(3153952);
 		}
+		DrawingArea.initDrawingArea(j2, i2, ai1, new float[1024]);
 		DrawingArea.setDrawingArea(j3, k2, l2, i3);
 		Rasterizer.textureInt1 = k1;
 		Rasterizer.textureInt2 = l1;
