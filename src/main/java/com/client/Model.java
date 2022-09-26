@@ -3131,7 +3131,7 @@ public class Model extends Renderable {
                 texture_c = texturesZ[coordinate];
             }
             if(colorsZ[i] == -1 || type == 3) {
-                Rasterizer.drawTexturedTile(
+                Rasterizer.drawTexturedTriangle(
                         projected_verticesY[j], projected_verticesY[k], projected_verticesY[l],
                         projected_verticesX[j], projected_verticesX[k], projected_verticesX[l],
                         colorsX[i], colorsX[i], colorsX[i],
@@ -3140,7 +3140,7 @@ public class Model extends Renderable {
                         viewportTextureZ[texture_a], viewportTextureZ[texture_b], viewportTextureZ[texture_c],
                         materials[i]);
             } else {
-                Rasterizer.drawTexturedTile(
+                Rasterizer.drawTexturedTriangle(
                         projected_verticesY[j], projected_verticesY[k], projected_verticesY[l],
                         projected_verticesX[j], projected_verticesX[k],projected_verticesX[l],
                         colorsX[i], colorsY[i], colorsZ[i],
@@ -3301,7 +3301,7 @@ public class Model extends Renderable {
                         texture_c = texturesZ[coordinate];
                     }
                     if(colorsZ[i] == -1) {
-                        Rasterizer.drawTexturedTile(
+                        Rasterizer.drawTexturedTriangle(
                                 i7, j7, k7,
                                 j3, j4, j5,
                                 colorsX[i], colorsX[i], colorsX[i],
@@ -3310,7 +3310,7 @@ public class Model extends Renderable {
                                 viewportTextureZ[texture_a], viewportTextureZ[texture_b], viewportTextureZ[texture_c],
                                 materials[i]);
                     } else {
-                        Rasterizer.drawTexturedTile(
+                        Rasterizer.drawTexturedTriangle(
                                 i7, j7, k7,
                                 j3, j4, j5,
                                 anIntArray1680[0], anIntArray1680[1], anIntArray1680[2],
@@ -3346,7 +3346,7 @@ public class Model extends Renderable {
                         texture_c = texturesZ[coordinate];
                     }
                     if(colorsZ[i] == -1) {
-                        Rasterizer.drawTexturedTile(
+                        Rasterizer.drawTexturedTriangle(
                                 i7, j7, k7,
                                 j3, j4, j5,
                                 colorsX[i], colorsX[i], colorsX[i],
@@ -3354,7 +3354,7 @@ public class Model extends Renderable {
                                 camera_verticesY[texture_a], camera_verticesY[texture_b], camera_verticesY[texture_c],
                                 viewportTextureZ[texture_a], viewportTextureZ[texture_b], viewportTextureZ[texture_c],
                                 materials[i]);
-                        Rasterizer.drawTexturedTile(
+                        Rasterizer.drawTexturedTriangle(
                                 i7, k7, anIntArray1679[3],
                                 j3, j5, anIntArray1678[3],
                                 colorsX[i], colorsX[i], colorsX[i],
@@ -3363,7 +3363,7 @@ public class Model extends Renderable {
                                 viewportTextureZ[texture_a], viewportTextureZ[texture_b], viewportTextureZ[texture_c],
                                 materials[i]);
                     } else {
-                        Rasterizer.drawTexturedTile(
+                        Rasterizer.drawTexturedTriangle(
                                 i7, j7, k7,
                                 j3, j4, j5,
                                 anIntArray1680[0], anIntArray1680[1], anIntArray1680[2],
@@ -3371,7 +3371,7 @@ public class Model extends Renderable {
                                 camera_verticesY[texture_a], camera_verticesY[texture_b], camera_verticesY[texture_c],
                                 viewportTextureZ[texture_a], viewportTextureZ[texture_b], viewportTextureZ[texture_c],
                                 materials[i]);
-                        Rasterizer.drawTexturedTile(
+                        Rasterizer.drawTexturedTriangle(
                                 i7, k7, anIntArray1679[3],
                                 j3, j5, anIntArray1678[3],
                                 anIntArray1680[0], anIntArray1680[2], anIntArray1680[3],
