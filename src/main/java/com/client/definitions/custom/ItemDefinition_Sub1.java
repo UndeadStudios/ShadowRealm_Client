@@ -7121,6 +7121,35 @@ public class ItemDefinition_Sub1
             itemDef.primaryMaleHeadPiece = -1;
             itemDef.primaryFemaleHeadPiece = -1;
         }
+        if(i == 29180) //ID
+        {
+            itemDef.itemActions = new String[] {null, null, null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "<col=A67711>Halloween-<col=0>token"; //Name
+            itemDef.description = "Its an Halloween-token"; //Description
+            itemDef.modelId = 5242;
+            itemDef.spriteScale = 970;
+            itemDef.spritePitch = 496;
+            itemDef.spriteCameraRoll = 88;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 1;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = -1;
+            itemDef.primaryFemaleModel = 65535;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = true;
+            itemDef.placeholderId = 17781;
+            itemDef.placeholderTemplateId = -1;
+        }
+
         return itemDef;
     }
 
