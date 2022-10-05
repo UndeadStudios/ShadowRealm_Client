@@ -1223,15 +1223,15 @@ public class Client extends RSApplet {
 	}
 
 	public void repackCacheAll() {
-		/*for (int index = 0; index < 10; index++) {
+		for (int index = 0; index < 10; index++) {
 			try {
 				repackCacheIndex(index);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}*/
+		}
 
-		packCustomMaps();
+		//packCustomMaps();
 		//packCustomModels();
 		//packCustomAnimations();
 	}

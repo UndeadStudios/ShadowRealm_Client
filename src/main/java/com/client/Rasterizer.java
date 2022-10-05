@@ -471,15 +471,16 @@ public final class Rasterizer extends DrawingArea {
                 var11 -= var9; // L: 1911
                 var14 -= var12; // L: 1912
                 var17 -= var15; // L: 1913
+                final int FOV = (aBoolean1464 ? WorldController.focalLength : 512);
                 int var32 = var11 * var12 - var9 * var14 << 14; // L: 1914
-                int var33 = (int)(((long)(var15 * var14 - var17 * var12) << 14) / (long)WorldController.focalLength); // L: 1915
-                int var34 = (int)(((long)(var17 * var9 - var11 * var15) << 14) / (long)WorldController.focalLength); // L: 1916
+                int var33 = (int)(((long)(var15 * var14 - var17 * var12) << 14) / (long)FOV); // L: 1915
+                int var34 = (int)(((long)(var17 * var9 - var11 * var15) << 14) / (long)FOV); // L: 1916
                 int var35 = var10 * var12 - var13 * var9 << 14; // L: 1917
-                int var36 = (int)(((long)(var13 * var15 - var16 * var12) << 14) / (long)WorldController.focalLength); // L: 1918
-                int var37 = (int)(((long)(var16 * var9 - var10 * var15) << 14) / (long)WorldController.focalLength); // L: 1919
+                int var36 = (int)(((long)(var13 * var15 - var16 * var12) << 14) / (long)FOV); // L: 1918
+                int var37 = (int)(((long)(var16 * var9 - var10 * var15) << 14) / (long)FOV); // L: 1919
                 int var38 = var13 * var11 - var10 * var14 << 14; // L: 1920
-                int var39 = (int)(((long)(var16 * var14 - var13 * var17) << 14) / (long)WorldController.focalLength); // L: 1921
-                int var40 = (int)(((long)(var17 * var10 - var11 * var16) << 14) / (long)WorldController.focalLength); // L: 1922
+                int var39 = (int)(((long)(var16 * var14 - var13 * var17) << 14) / (long)FOV); // L: 1921
+                int var40 = (int)(((long)(var17 * var10 - var11 * var16) << 14) / (long)FOV); // L: 1922
                 int var41;
                 if (var0 <= var1 && var0 <= var2) { // L: 1923
                     if (var0 < DrawingArea.bottomY) { // L: 1924
