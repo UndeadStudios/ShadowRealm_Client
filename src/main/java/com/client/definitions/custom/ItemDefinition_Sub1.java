@@ -7121,11 +7121,11 @@ public class ItemDefinition_Sub1
             itemDef.primaryMaleHeadPiece = -1;
             itemDef.primaryFemaleHeadPiece = -1;
         }
-        if(i == 29180) //ID
+        if(i == 29280) //ID
         {
             itemDef.itemActions = new String[] {null, null, null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
-            itemDef.name = "<col=A67711>Halloween-<col=0>token"; //Name
+            itemDef.name = "<col=A67711>Halloween</col> <<col=0>token</col>"; //Name
             itemDef.description = "Its an Halloween-token"; //Description
             itemDef.modelId = 5242;
             itemDef.spriteScale = 970;
@@ -7140,7 +7140,7 @@ public class ItemDefinition_Sub1
             itemDef.secondaryFemaleModel = -1;
             itemDef.primaryMaleHeadPiece = -1;
             itemDef.primaryFemaleHeadPiece = -1;
-            itemDef.value = 1;
+            itemDef.value = 10000;
             itemDef.unnotedId = -1;
             itemDef.notedId = -1;
             itemDef.certID = -1;

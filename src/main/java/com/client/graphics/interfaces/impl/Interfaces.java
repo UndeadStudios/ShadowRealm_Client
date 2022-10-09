@@ -2195,22 +2195,24 @@ public final class Interfaces extends RSInterface {
 
 	private static final void addGodwarsWidget(TextDrawingArea[] tda) {
 		RSInterface godwars = addInterface(16210);
-		setChildren(9, godwars);
+		setChildren(11, godwars);
 		addText(16211, "NPC Killcount", tda, 0, 0xFD851A, false, true);
 		addText(16212, "Armadyl", tda, 0, 0xFD851A, false, true);
 		addText(16213, "Bandos", tda, 0, 0xFD851A, false, true);
 		addText(16214, "Saradomin", tda, 0, 0xFD851A, false, true);
 		addText(16215, "Zamorak", tda, 0, 0xFD851A, false, true);
-		addText(16216, "0", tda, 0, 0x66FFFF, false, true);
+		addText(16216, "Zaros", tda, 0, 0xFD851A, false, true);
 		addText(16217, "0", tda, 0, 0x66FFFF, false, true);
 		addText(16218, "0", tda, 0, 0x66FFFF, false, true);
 		addText(16219, "0", tda, 0, 0x66FFFF, false, true);
+		addText(16220, "0", tda, 0, 0x66FFFF, false, true);
+		addText(16221, "0", tda, 0, 0x66FFFF, false, true);
 		setBounds(16211, 400, 20, 0, godwars);
-		for (int index = 1; index <= 4; index++) {
+		for (int index = 1; index <= 5; index++) {
 			setBounds(16211 + index, 400, 20 + index * 13, index, godwars);
 		}
-		for (int index = 1; index <= 4; index++) {
-			setBounds(16215 + index, 480, 20 + index * 13, index + 4, godwars);
+		for (int index = 1; index <= 5; index++) {
+			setBounds(16217 + index, 480, 20 + index * 13, index + 4, godwars);
 		}
 	}
 
@@ -2564,14 +2566,16 @@ interfaceId+=5000;
 		addText(16213, "Bandos kills", tda, 0, 0xff9040, true, true);
 		addText(16214, "Saradomin kills", tda, 0, 0xff9040, true, true);
 		addText(16215, "Zamorak kills", tda, 0, 0xff9040, true, true);
-		addText(16216, "0", tda, 0, 0x66FFFF, true, true);// armadyl
-		addText(16217, "0", tda, 0, 0x66FFFF, true, true);// bandos
-		addText(16218, "0", tda, 0, 0x66FFFF, true, true);// saradomin
-		addText(16219, "0", tda, 0, 0x66FFFF, true, true);// zamorak
+		addText(16216, "Zaros kills", tda, 0, 0xff9040, true, true);
+		addText(16217, "0", tda, 0, 0x66FFFF, true, true);// armadyl
+		addText(16218, "0", tda, 0, 0x66FFFF, true, true);// bandos
+		addText(16219, "0", tda, 0, 0x66FFFF, true, true);// saradomin
+		addText(16220, "0", tda, 0, 0x66FFFF, true, true);// zamorak
+		addText(16221, "0", tda, 0, 0x66FFFF, true, true);// zaros
 		rsinterface.scrollMax = 0;
-		rsinterface.children = new int[9];
-		rsinterface.childX = new int[9];
-		rsinterface.childY = new int[9];
+		rsinterface.children = new int[11];
+		rsinterface.childX = new int[11];
+		rsinterface.childY = new int[11];
 		rsinterface.children[0] = 16211;
 		rsinterface.childX[0] = -52 + 375 + 30;
 		rsinterface.childY[0] = 7;
@@ -2588,17 +2592,23 @@ interfaceId+=5000;
 		rsinterface.childX[4] = -52 + 375 + 30;
 		rsinterface.childY[4] = 73;
 		rsinterface.children[5] = 16216;
-		rsinterface.childX[5] = -52 + 460 + 60;
-		rsinterface.childY[5] = 31;
+		rsinterface.childX[5] = -52 + 375 + 30;
+		rsinterface.childY[5] = 88;
 		rsinterface.children[6] = 16217;
 		rsinterface.childX[6] = -52 + 460 + 60;
-		rsinterface.childY[6] = 45;
+		rsinterface.childY[6] = 31;
 		rsinterface.children[7] = 16218;
 		rsinterface.childX[7] = -52 + 460 + 60;
-		rsinterface.childY[7] = 59;
+		rsinterface.childY[7] = 45;
 		rsinterface.children[8] = 16219;
 		rsinterface.childX[8] = -52 + 460 + 60;
-		rsinterface.childY[8] = 74;
+		rsinterface.childY[8] = 59;
+		rsinterface.children[9] = 16220;
+		rsinterface.childX[9] = -52 + 460 + 60;
+		rsinterface.childY[9] = 74;
+		rsinterface.children[10] = 16221;
+		rsinterface.childX[10] = -52 + 460 + 60;
+		rsinterface.childY[10] = 74;
 	}
 
 	public static final int BEGIN_READING_PRAYER_INTERFACE = 6;// Amount of total custom prayers we've added

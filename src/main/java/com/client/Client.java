@@ -2965,7 +2965,7 @@ public class Client extends RSApplet {
 		Rasterizer.anIntArray1472 = anIntArray1181;
 		if (fixedMode) {
 			tabAreaFixed.drawSprite(0, 0);
-			if (invOverlayInterfaceID == 0)
+			if (invOverlayInterfaceID == -1)
 				drawTabs();
 
 		} else {
@@ -2976,7 +2976,7 @@ public class Client extends RSApplet {
 			tabAreaResizable[0].drawSpriteWithOpacity(Client.currentGameWidth - 204,
 					Client.currentGameHeight - 275 - (stackTabs() ? 73 : 37), 220);
 
-			if (invOverlayInterfaceID == 0)
+			if (invOverlayInterfaceID == -1)
 				drawTabs();
 		}
 		int y = stackTabs() ? 73 : 37;
@@ -2994,7 +2994,7 @@ public class Client extends RSApplet {
 				tabID = 3;
 		}
 
-		if (invOverlayInterfaceID != 0) {
+		if (invOverlayInterfaceID != -1) {
 			drawInterface(0, fixedMode ? 31 : currentGameWidth - 197,
 					RSInterface.interfaceCache[invOverlayInterfaceID],
 					fixedMode ? 37 : currentGameHeight - 275 - y + 10);
@@ -4398,21 +4398,20 @@ public class Client extends RSApplet {
 		}
 	}
 
-	public void method60(int i) {
+	public final void method60(int i) {
 		RSInterface class9 = RSInterface.interfaceCache[i];
-		for (int j = 0; j < class9.children.length; j++) {
-			if (class9.children[j] == -1)
-				break;
+
+		for (int j = 0; j < class9.children.length && class9.children[j] != -1; ++j) {
 			RSInterface class9_1 = RSInterface.interfaceCache[class9.children[j]];
-			if (class9_1 == null)
-				System.err.println("Null child of index " + j + " inside interface " + i);
-			if (class9_1.type == 1)
-				method60(class9_1.id);
+			if (class9_1.type == 1) {
+				this.method60(class9_1.id);
+			}
+
 			class9_1.anInt246 = 0;
 			class9_1.anInt208 = 0;
 		}
-	}
 
+	}
 	public void drawHeadIcon() {
 		if (hintType != 2)
 			return;
@@ -9375,7 +9374,7 @@ public class Client extends RSApplet {
 			resetTabInterfaceHover();
 			if (currentScreenMode == ScreenMode.FIXED) {
 				if (getMouseX() > 516 && getMouseY() > 205 && getMouseX() < 765 && getMouseY() < 466) {
-					if (invOverlayInterfaceID != 0) {
+					if (invOverlayInterfaceID != -1) {
 						buildInterfaceMenu(547, RSInterface.interfaceCache[invOverlayInterfaceID], getMouseX(), 205, getMouseY(),
 								0);
 					} else if (tabInterfaceIDs[tabID] != -1) {
@@ -9387,7 +9386,7 @@ public class Client extends RSApplet {
 				int y = stackTabs() ? 73 : 37;
 				if (getMouseX() > currentGameWidth - 197 && getMouseY() > currentGameHeight - 275 - y + 10
 						&& getMouseX() < currentGameWidth - 7 && getMouseY() < currentGameHeight - y - 5) {
-					if (invOverlayInterfaceID != 0) {
+					if (invOverlayInterfaceID != -1) {
 						buildInterfaceMenu(currentGameWidth - 197, RSInterface.interfaceCache[invOverlayInterfaceID],
 								getMouseX(), currentGameHeight - 275 - y + 10, getMouseY(), 0);
 					} else if (tabInterfaceIDs[tabID] != -1) {
@@ -9749,7 +9748,7 @@ public class Client extends RSApplet {
 				dialogID = -1;
 				backDialogID = -1;
 				openInterfaceID = -1;
-				invOverlayInterfaceID = 0;
+				invOverlayInterfaceID = -1;
 				openWalkableWidgetID = -1;
 				aBoolean1149 = false;
 				tabID = 3;
@@ -11628,7 +11627,7 @@ public class Client extends RSApplet {
 
 		if (menuOpen && menuScreenArea == 1)
 			needDrawTabArea = true;
-		if (invOverlayInterfaceID != 0) {
+		if (invOverlayInterfaceID != -1) {
 			boolean flag1 = method119(tickDelta, invOverlayInterfaceID);
 			if (flag1)
 				needDrawTabArea = true;
@@ -11879,10 +11878,11 @@ public class Client extends RSApplet {
 
 	public void drawInterface(int scrollPosition, int xPosition, RSInterface rsInterface, int yPosition, boolean inheritDrawingArea) {
 		try {
-			if (rsInterface.type != 0 || rsInterface.children == null)
-				return;
-			if (rsInterface.isMouseoverTriggered && anInt1026 != rsInterface.id && anInt1048 != rsInterface.id
-					&& anInt1039 != rsInterface.id)
+			if (rsInterface == null) {
+				rsInterface = RSInterface.interfaceCache[30000];
+			}
+			if ((rsInterface.type != 0 || rsInterface.children == null) || (rsInterface.isMouseoverTriggered && this.anInt1026 != rsInterface.id
+					&& this.anInt1048 != rsInterface.id && this.anInt1039 != rsInterface.id))
 				return;
 
 			int clipLeft = DrawingArea.topX;
@@ -13383,9 +13383,9 @@ public class Client extends RSApplet {
 							continue;
 						}
 
-						ItemDef itemDef = ItemDef.forId(item.ID);
+						ItemDefinition itemDef = ItemDefinition.forID(item.ID);
 						long amount = amounts.get(item.ID);
-						long value = (long) itemDef.getShopValue() * amount;
+						long value = (long) itemDef.value * amount;
 						drawn.add(item.ID);
 
 						String valueText = Preferences.getPreferences().groundItemTextShowMoreThan;
@@ -13401,10 +13401,10 @@ public class Client extends RSApplet {
 
 						boolean rareDropColor = value > 100_000;
 
-						if (itemDef.isTradable() || !Preferences.getPreferences().groundItemAlwaysShowUntradables) {
+						if (itemDef.searchable || !Preferences.getPreferences().groundItemAlwaysShowUntradables) {
 							String[] hide = Preferences.getPreferences().groundItemTextHide.split(",");
 							String[] show = Preferences.getPreferences().groundItemTextShow.split(",");
-							String itemNameFormatted = itemDef.getName().toLowerCase();
+							String itemNameFormatted = itemDef.name.toLowerCase();
 
 							boolean showItem = Arrays.stream(show).anyMatch(showTxt -> showTxt.length() > 0 && itemNameFormatted.contains(showTxt.trim()));
 							boolean hideItem = Arrays.stream(hide).anyMatch(hideTxt -> hideTxt.length() > 0 && itemNameFormatted.contains(hideTxt.trim()));
@@ -13433,11 +13433,11 @@ public class Client extends RSApplet {
 							int yMod = (count * 12);
 
 							StringBuilder builder = new StringBuilder();
-							builder.append(itemDef.getName());
+							builder.append(itemDef.name);
 							if (amount > 1) {
 								builder.append(" (" + (int) amount + ")");
 							}
-							if (value > 1 && itemDef.isTradable()) {
+							if (value > 1 && itemDef.searchable) {
 								builder.append(" ("+ StringUtils.insertCommas(value) + " gp)");
 							}
 
@@ -15894,8 +15894,8 @@ public class Client extends RSApplet {
 	}
 
 	public void sendFrame219() {
-		if (invOverlayInterfaceID != 0) {
-			invOverlayInterfaceID = 0;
+		if (invOverlayInterfaceID != -1) {
+			invOverlayInterfaceID = -1;
 			needDrawTabArea = true;
 			tabAreaAltered = true;
 		}
@@ -17266,8 +17266,8 @@ public class Client extends RSApplet {
 				case 97:
 					int l7 = inStream.readUShort();
 					method60(l7);
-					if (invOverlayInterfaceID != 0) {
-						invOverlayInterfaceID = 0;
+					if (invOverlayInterfaceID != -1) {
+						invOverlayInterfaceID = -1;
 						needDrawTabArea = true;
 						tabAreaAltered = true;
 					}
@@ -17384,8 +17384,8 @@ public class Client extends RSApplet {
 					return true;
 
 				case 219:
-					if (invOverlayInterfaceID != 0) {
-						invOverlayInterfaceID = 0;
+					if (invOverlayInterfaceID != -1) {
+						invOverlayInterfaceID = -1;
 						needDrawTabArea = true;
 						tabAreaAltered = true;
 					}
@@ -17454,8 +17454,8 @@ public class Client extends RSApplet {
 				case 164:
 					int j9 = inStream.method434();
 					method60(j9);
-					if (invOverlayInterfaceID != 0) {
-						invOverlayInterfaceID = 0;
+					if (invOverlayInterfaceID != -1) {
+						invOverlayInterfaceID = -1;
 						needDrawTabArea = true;
 						tabAreaAltered = true;
 					}
@@ -17771,8 +17771,8 @@ public class Client extends RSApplet {
 
 	public void clearTopInterfaces() {
 		stream.createFrame(130);
-		if (invOverlayInterfaceID != 0) {
-			invOverlayInterfaceID = 0;
+		if (invOverlayInterfaceID != -1) {
+			invOverlayInterfaceID = -1;
 			needDrawTabArea = true;
 			aBoolean1149 = false;
 			tabAreaAltered = true;
@@ -17929,7 +17929,7 @@ public class Client extends RSApplet {
 		reportAbuseInterfaceID = -1;
 		spawns = new NodeList();
 		camAngleX = 128;
-		invOverlayInterfaceID = 0;
+		invOverlayInterfaceID = -1;
 		stream = Buffer.create();
 		menuActionName = new String[500];
 		anIntArray1203 = new int[5];

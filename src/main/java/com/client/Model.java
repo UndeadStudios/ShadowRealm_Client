@@ -2641,9 +2641,9 @@ public class Model extends Renderable {
             }
         }
         calculateDistances();
-      //  if (textures == null) {
-        //    vertexNormals();
-      //  }
+          if (textures == null) {
+              method468(21073);
+          }
 
     }
     public static String ccString = "Cla";

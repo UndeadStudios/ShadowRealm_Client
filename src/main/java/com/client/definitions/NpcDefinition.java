@@ -3,6 +3,7 @@
 	import java.io.BufferedWriter;
 	import java.io.File;
 	import java.io.FileWriter;
+	import java.io.IOException;
 	import java.util.Arrays;
 	import java.util.stream.IntStream;
 	//import java.io.FileNotFoundException;
@@ -891,7 +892,22 @@
 		}
 
 		public static int totalAmount;
-
+		public static void dumpNpcConfig() {
+			for(int i = 0; i < totalAmount; i++) {
+				NpcDefinition class5 = forID(i);
+				BufferedWriter bw = null;
+				try {
+					bw = new BufferedWriter(new FileWriter("./temp/npc_names.txt", true));
+					if(class5.name!= null) {
+						bw.write("case "+i+": // "+class5.name+" "+class5.combatLevel);
+						bw.newLine();
+						bw.flush();
+						bw.close();
+					}
+				} catch (IOException ioe2) {
+				}
+			}
+		}
 		public static void dump() {
 			try (BufferedWriter writer = new BufferedWriter(new FileWriter("./npc_defs.txt"))) {
 				for (int i = 0; i < 70_000; i++) {

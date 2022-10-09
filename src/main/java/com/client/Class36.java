@@ -98,6 +98,7 @@ public final class Class36 {
 			file = Integer.parseInt(s.substring(0, s.length() - 4), 16);
 			k = Integer.parseInt(s.substring(s.length() - 4), 16);
 			if(animationlist[file].length == 0) {
+				System.out.println("Animation frame id: "+file);
 				clientInstance.onDemandFetcher.provide(1, file);
 				return null;
 			}

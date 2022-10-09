@@ -15,10 +15,6 @@ import com.client.StreamLoader;
 
 public final class ObjectDefinition {
 
-	public void applyTexturing(Model m, int id) {
-		if (id == 26764)
-			m.setTexture(26);
-	}
 
 	public static ObjectDefinition forID(int i) {
 		if (i > streamIndices.length)
@@ -498,13 +494,6 @@ public final class ObjectDefinition {
 		}
 	}
 
-	public void applyTexture(Model model, int id) {
-		switch (id) {
-		case 26764:// Venenatis Webs
-			model.setTexture(26);
-			break;
-		}
-	}
 
 	private void setDefaults() {
 		anIntArray773 = null;
@@ -513,8 +502,8 @@ public final class ObjectDefinition {
 		description = null;
 		modifiedModelColors = null;
 		originalModelColors = null;
-		// originalTexture = null;
-		// modifiedTexture = null;
+		 originalTexture = null;
+		 modifiedTexture = null;
 		xLength = 1;
 		yLength = 1;
 		aBoolean767 = true;
@@ -589,14 +578,12 @@ public final class ObjectDefinition {
 			Model model = (Model) mruNodes2.insertFromCache(type);
 			for (int k = 0; k < anIntArray773.length; k++)
 				flag1 &= Model.method463(anIntArray773[k] & 0xffff);
-			applyTexturing(model, type);
 			return flag1;
 		}
 		Model model = (Model) mruNodes2.insertFromCache(type);
 		for (int j = 0; j < anIntArray776.length; j++)
 			if (anIntArray776[j] == i)
 				return Model.method463(anIntArray773[j] & 0xffff);
-		applyTexturing(model, type);
 		return true;
 	}
 
@@ -660,7 +647,6 @@ public final class ObjectDefinition {
 			Model model_1 = (Model) mruNodes2.insertFromCache(l1);
 			if (model_1 != null)
 				return model_1;
-			applyTexture(model, type);
 			if (anIntArray773 == null)
 				return null;
 			boolean flag1 = aBoolean751 ^ (l > 3);
@@ -672,7 +658,6 @@ public final class ObjectDefinition {
 				model = (Model) mruNodes1.insertFromCache(l2);
 				if (model == null) {
 					model = Model.method462(l2 & 0xffff);
-					applyTexture(model, type);
 					if (model == null)
 						return null;
 					if (flag1)
@@ -707,7 +692,6 @@ public final class ObjectDefinition {
 			model = (Model) mruNodes1.insertFromCache(j2);
 			if (model == null) {
 				model = Model.method462(j2 & 0xffff);
-				applyTexture(model, type);// try
 				if (model == null)
 					return null;
 				if (flag3)
@@ -841,17 +825,14 @@ public final class ObjectDefinition {
 					originalTexture[i2] = (short) stream.readUShort();
 					modifiedTexture[i2] = (short) stream.readUShort();
 				}
-//			} else if (type == 60) {
-//				mapFunctionId = stream.readUnsignedWord();
-//				System.out.println("60 - " + name + ", " + type + ", " + mapFunctionId);
-			} else if (type == 62)
+			} else if (type == 61)
+					stream.readUShort();
+			else if (type == 62)
 				aBoolean751 = true;
 			else if (type == 64)
 				aBoolean779 = false;
 			else if (type == 65)
 				thickness = stream.readUShort();
-			else if (type == 61)
-				stream.readUShort();
 			else if (type == 66)
 				height = stream.readUShort();
 			else if (type == 67)
