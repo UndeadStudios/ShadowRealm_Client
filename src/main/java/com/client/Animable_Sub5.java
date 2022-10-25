@@ -34,9 +34,9 @@ final class Animable_Sub5 extends Renderable {
 		int i = -1;
 		if (anInt1601 != -1 && anInt1601 < VarBit.cache.length) {
 			VarBit varBit = VarBit.cache[anInt1601];
-			int k = varBit.anInt648;
-			int l = varBit.anInt649;
-			int i1 = varBit.anInt650;
+			int k = varBit.configID;
+			int l = varBit.lsb;
+			int i1 = varBit.msb;
 			int j1 = Client.anIntArray1232[i1 - l];
 			i = clientInstance.variousSettings[k] >> l & j1;
 		} else if (anInt1602 != -1

@@ -6,9 +6,9 @@ public class AnimationDefinitionCustom {
 
     public static void custom(int j, AnimationDefinition[] anims) {
         if (j == 719) {
-            anims[j].anInt361 = 28232;
+            anims[j].weapon = 28232;
             anims[j].anInt359 = 6;
-            anims[j].anInt360 = 0;
+            anims[j].shield = 0;
             anims[j].anInt365 = 1;
             anims[j].anInt356 = -1;
             anims[j].aBoolean358 = false;
@@ -26,8 +26,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = -1;
                 anim.aBoolean358 = false;
                 anim.anInt359 = 5;
-                anim.anInt360 = -1;
-                anim.anInt361 = -1;
+                anim.shield = -1;
+                anim.weapon = -1;
                 anim.anInt362 = 99;
                 anim.anInt363 = 2; // need this to 2 and add the anIntArray357 to fix movement stalling
                 anim.anInt364 = 0;
@@ -43,8 +43,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = -1;
                 anim.aBoolean358 = true;
                 anim.anInt359 = 6;
-                anim.anInt360 = -1;
-                anim.anInt361 = -1;
+                anim.shield = -1;
+                anim.weapon = -1;
                 anim.anInt362 = 99;
                 anim.anInt363 = 2;
                 anim.anInt364 = 2;
@@ -60,8 +60,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = 15;
                 anim.aBoolean358 = false;
                 anim.anInt359 = 5;
-                anim.anInt360 = 0;
-                anim.anInt361 = 2992;
+                anim.shield = 0;
+                anim.weapon = 2992;
                 anim.anInt362 = 2;
                 anim.anInt363 = 2;
                 anim.anInt364 = 2;
@@ -76,8 +76,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = -1;
                 anim.aBoolean358 = false;
                 anim.anInt359 = 5;
-                anim.anInt360 = -1;
-                anim.anInt361 = -1;
+                anim.shield = -1;
+                anim.weapon = -1;
                 anim.anInt362 = 99;
                 anim.anInt363 = 0;
                 anim.anInt364 = 0;
@@ -92,8 +92,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = -1;
                 anim.aBoolean358 = false;
                 anim.anInt359 = 5;
-                anim.anInt360 = -1;
-                anim.anInt361 = -1;
+                anim.shield = -1;
+                anim.weapon = -1;
                 anim.anInt362 = 99;
                 anim.anInt363 = 0;
                 anim.anInt364 = 0;
@@ -109,8 +109,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = -1;
                 anim.aBoolean358 = false;
                 anim.anInt359 = 5;
-                anim.anInt360 = -1;
-                anim.anInt361 = -1;
+                anim.shield = -1;
+                anim.weapon = -1;
                 anim.anInt362 = 99;
                 anim.anInt363 = 0;
                 anim.anInt364 = 0;
@@ -126,8 +126,8 @@ public class AnimationDefinitionCustom {
                 anim.anInt356 = -1;
                 anim.aBoolean358 = false;
                 anim.anInt359 = 5;
-                anim.anInt360 = 0;
-                anim.anInt361 = 14088;
+                anim.shield = 0;
+                anim.weapon = 14088;
                 anim.anInt362 = 99;
                 anim.anInt363 = 0;
                 anim.anInt364 = 0;
@@ -310,8 +310,8 @@ public class AnimationDefinitionCustom {
                 // 19, 37, 39, 41, 43, 45, 164, 166, 168, 170, 172, 174, 176,
                 // 178, 180, 182, 183, 185, 191, 192, 9999999, };
                 anims[j].anInt359 = 6;
-                anims[j].anInt360 = 0;
-                anims[j].anInt361 = 13438;
+                anims[j].shield = 0;
+                anims[j].weapon = 13438;
                 anims[j].anInt365 = 1;
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
@@ -523,7 +523,7 @@ public class AnimationDefinitionCustom {
              * 158990414, 158990405, 158990432, 158990410, 158990415, 158990426,
              * 158990430, 158990394, }; anims[j].anInt352 = 28;
              * anims[j].anInt356 = -1; anims[j].aBoolean358 = false;
-             * anims[j].anInt359 = 5; anims[j].anInt360 = -1; anims[j].anInt361
+             * anims[j].anInt359 = 5; anims[j].shield = -1; anims[j].weapon
              * = -1; anims[j].anInt362 = 99; anims[j].anInt363 = -1;
              * anims[j].anInt364 = -1; anims[j].anInt365 = 2; break;
              */
@@ -542,8 +542,8 @@ public class AnimationDefinitionCustom {
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
                 anims[j].anInt359 = 5;
-                anims[j].anInt360 = -1;
-                anims[j].anInt361 = -1;
+                anims[j].shield = -1;
+                anims[j].weapon = -1;
                 anims[j].anInt362 = 99;
                 anims[j].anInt363 = -1;
                 anims[j].anInt364 = -1;
@@ -563,8 +563,8 @@ public class AnimationDefinitionCustom {
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
                 anims[j].anInt359 = 5;
-                anims[j].anInt360 = -1;
-                anims[j].anInt361 = -1;
+                anims[j].shield = -1;
+                anims[j].weapon = -1;
                 anims[j].anInt362 = 99;
                 anims[j].anInt363 = -1;
                 anims[j].anInt364 = -1;
@@ -580,8 +580,8 @@ public class AnimationDefinitionCustom {
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
                 anims[j].anInt359 = 5;
-                anims[j].anInt360 = -1;
-                anims[j].anInt361 = -1;
+                anims[j].shield = -1;
+                anims[j].weapon = -1;
                 anims[j].anInt362 = 99;
                 anims[j].anInt363 = -1;
                 anims[j].anInt364 = -1;
@@ -601,8 +601,8 @@ public class AnimationDefinitionCustom {
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
                 anims[j].anInt359 = 5;
-                anims[j].anInt360 = -1;
-                anims[j].anInt361 = -1;
+                anims[j].shield = -1;
+                anims[j].weapon = -1;
                 anims[j].anInt362 = 99;
                 anims[j].anInt363 = -1;
                 anims[j].anInt364 = -1;
@@ -619,8 +619,8 @@ public class AnimationDefinitionCustom {
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
                 anims[j].anInt359 = 5;
-                anims[j].anInt360 = -1;
-                anims[j].anInt361 = -1;
+                anims[j].shield = -1;
+                anims[j].weapon = -1;
                 anims[j].anInt362 = 99;
                 anims[j].anInt363 = -1;
                 anims[j].anInt364 = -1;
@@ -637,8 +637,8 @@ public class AnimationDefinitionCustom {
                 anims[j].anInt356 = -1;
                 anims[j].aBoolean358 = false;
                 anims[j].anInt359 = 5;
-                anims[j].anInt360 = -1;
-                anims[j].anInt361 = -1;
+                anims[j].shield = -1;
+                anims[j].weapon = -1;
                 anims[j].anInt362 = 99;
                 anims[j].anInt363 = -1;
                 anims[j].anInt364 = -1;

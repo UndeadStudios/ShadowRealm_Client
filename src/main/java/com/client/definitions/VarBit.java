@@ -22,9 +22,9 @@ public final class VarBit {
 
 	private void readValues(Buffer stream) {
 		stream.readUnsignedByte();
-		anInt648 = stream.readUShort();
-		anInt649 = stream.readUnsignedByte();
-		anInt650 = stream.readUnsignedByte();
+		configID = stream.readUShort();
+		lsb = stream.readUnsignedByte();
+		msb = stream.readUnsignedByte();
 	}
 
 	private VarBit() {
@@ -32,8 +32,8 @@ public final class VarBit {
 	}
 
 	public static VarBit cache[];
-	public int anInt648;
-	public int anInt649;
-	public int anInt650;
+	public int configID;
+	public int lsb;
+	public int msb;
 	
 }

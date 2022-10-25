@@ -184,12 +184,12 @@ public final class Player extends Entity {
 			k = animation.anIntArray353[super.animFrameIndex];
 			if (super.anInt1517 >= 0 && super.anInt1517 != super.anInt1511)
 				i1 = AnimationDefinition.anims[super.anInt1517].anIntArray353[super.anInt1518];
-			if (animation.anInt360 >= 0) {
-				j1 = animation.anInt360;
+			if (animation.shield >= 0) {
+				j1 = animation.shield;
 				l += j1 - equipment[5] << 40;
 			}
-			if (animation.anInt361 >= 0) {
-				k1 = animation.anInt361;
+			if (animation.weapon >= 0) {
+				k1 = animation.weapon;
 				l += k1 - equipment[3] << 48;
 			}
 		} else if (super.anInt1517 >= 0)

@@ -1179,9 +1179,9 @@
 			int j = -1;
 			if (anInt57 != -1 && anInt57 <= 2113) {
 				VarBit varBit = VarBit.cache[anInt57];
-				int k = varBit.anInt648;
-				int l = varBit.anInt649;
-				int i1 = varBit.anInt650;
+				int k = varBit.configID;
+				int l = varBit.lsb;
+				int i1 = varBit.msb;
 				int j1 = Client.anIntArray1232[i1 - l];
 				j = clientInstance.variousSettings[k] >> l & j1;
 			} else if (anInt59 != -1)

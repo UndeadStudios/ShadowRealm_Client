@@ -195,10 +195,6 @@ public final class ObjectDefinition {
 			case 8720:
 				objectDef.name = "Vote shop";
 				break;
-		case 8210:
-			objectDef.actions = new String[] { "Rake", null, null, null, null };
-			objectDef.name = "Herb Patch";
-			break;
 			case 29150:
 				objectDef.actions = new String[] { "Venerate", null, null, null, null };
 				break;
@@ -206,13 +202,6 @@ public final class ObjectDefinition {
 				objectDef.name = null;
 				objectDef.actions = new String[] { null, null, null, null, null };
 				break;
-		case 8139:
-		case 8140:
-		case 8141:
-		case 8142:
-			objectDef.actions = new String[] { "Inspect", null, null, null, null };
-			objectDef.name = "Herbs";
-			break;
 		case 2341:
 			objectDef.actions = new String[] { null, null, null, null, null };
 			break;
@@ -622,9 +611,9 @@ public final class ObjectDefinition {
 		int i = -1;
 		if (varpId != -1) {
 			VarBit varBit = VarBit.cache[varpId];
-			int j = varBit.anInt648;
-			int k = varBit.anInt649;
-			int l = varBit.anInt650;
+			int j = varBit.configID;
+			int k = varBit.lsb;
+			int l = varBit.msb;
 			int i1 = Client.anIntArray1232[l - k];
 			i = clientInstance.variousSettings[j] >> k & i1;
 		} else if (configId != -1)

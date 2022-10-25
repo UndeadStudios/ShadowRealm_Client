@@ -14099,9 +14099,9 @@ public class Client extends RSApplet {
 				if (instruction == 14) {
 					int index = script[counter++];
 					VarBit bits = VarBit.cache[index];
-					int setting = bits.anInt648;
-					int low = bits.anInt649;
-					int high = bits.anInt650;
+					int setting = bits.configID;
+					int low = bits.lsb;
+					int high = bits.msb;
 					int mask = anIntArray1232[high - low];
 					value = variousSettings[setting] >> low & mask;
 				}

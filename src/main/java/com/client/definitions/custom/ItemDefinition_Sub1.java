@@ -7005,6 +7005,148 @@ public class ItemDefinition_Sub1
             itemDef.primaryMaleHeadPiece = -1;
             itemDef.primaryFemaleHeadPiece = -1;
         }
+        if(i == 28816)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+//class8.modifiedModelColors[0] = 61;
+//class8.originalModelColors[0] = 5652;
+            itemDef.modelId = 58162;
+            itemDef.spriteScale = 885;
+            itemDef.spritePitch = 498;
+            itemDef.spriteCameraRoll = 716;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 7;
+            itemDef.spriteTranslateY = -11;
+            itemDef.primaryMaleModel = 58162;
+            itemDef.primaryFemaleModel = 58162;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Blue halo";
+            itemDef.description = "Its a halo";
+        }
+        if(i == 28817)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+//class8.modifiedModelColors[0] = 61;
+//class8.originalModelColors[0] = 5652;
+            itemDef.modelId = 58163;
+            itemDef.spriteScale = 885;
+            itemDef.spritePitch = 498;
+            itemDef.spriteCameraRoll = 716;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 7;
+            itemDef.spriteTranslateY = -11;
+            itemDef.primaryMaleModel = 58163;
+            itemDef.primaryFemaleModel = 58163;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Green halo";
+            itemDef.description = "Its a halo";
+        }
+        if(i == 28818)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+//class8.modifiedModelColors[0] = 61;
+//class8.originalModelColors[0] = 5652;
+            itemDef.modelId = 58164;
+            itemDef.spriteScale = 885;
+            itemDef.spritePitch = 498;
+            itemDef.spriteCameraRoll = 716;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 7;
+            itemDef.spriteTranslateY = -11;
+            itemDef.primaryMaleModel = 58164;
+            itemDef.primaryFemaleModel = 58164;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Pink halo";
+            itemDef.description = "Its a halo";
+        }
+
+        if(i == 28819)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+//class8.modifiedModelColors[0] = 61;
+//class8.originalModelColors[0] = 5652;
+            itemDef.modelId = 58165;
+            itemDef.spriteScale = 885;
+            itemDef.spritePitch = 498;
+            itemDef.spriteCameraRoll = 716;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 7;
+            itemDef.spriteTranslateY = -11;
+            itemDef.primaryMaleModel = 58165;
+            itemDef.primaryFemaleModel = 58165;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Red halo";
+            itemDef.description = "Its a halo";
+        }
+
+        if(i == 28820)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+//class8.modifiedModelColors[0] = 61;
+//class8.originalModelColors[0] = 5652;
+            itemDef.modelId = 58166;
+            itemDef.spriteScale = 885;
+            itemDef.spritePitch = 498;
+            itemDef.spriteCameraRoll = 716;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 7;
+            itemDef.spriteTranslateY = -11;
+            itemDef.primaryMaleModel = 58166;
+            itemDef.primaryFemaleModel = 58166;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Yellow halo";
+            itemDef.description = "Its a halo";
+        }
         if(i == 29177) //ID
         {
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};

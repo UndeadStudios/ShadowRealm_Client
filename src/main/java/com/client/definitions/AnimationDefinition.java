@@ -11,7 +11,6 @@ import com.client.Configuration;
 import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.definitions.custom.AnimationDefinitionCustom;
-import com.client.sign.Signlink;
 import com.google.common.collect.Lists;
 
 public final class AnimationDefinition {
@@ -65,12 +64,12 @@ public final class AnimationDefinition {
 			}
 			try (BufferedWriter writer = new BufferedWriter(new FileWriter("./temp/208animation_ids.cfg"))) {
 				for (int j = 0; j < length; j++) {
-					if (anims[j].anInt361 != -1) {
-						writer.write("ID:" + j + ", Right Hand ItemID:" + (anims[j].anInt361-512));
+					if (anims[j].weapon != -1) {
+						writer.write("ID:" + j + ", Right Hand ItemID:" + (anims[j].weapon -512));
 						writer.newLine();
 					}
-					if (anims[j].anInt360 != -1) {
-						writer.write("ID:" + j + ", left Hand ItemID:" + (anims[j].anInt360-512));
+					if (anims[j].shield != -1) {
+						writer.write("ID:" + j + ", left Hand ItemID:" + (anims[j].shield -512));
 						writer.newLine();
 					}
 				}
@@ -146,9 +145,9 @@ public final class AnimationDefinition {
 			else if (i == 5)
 				anInt359 = stream.readUnsignedByte();
 			else if (i == 6)
-				anInt360 = stream.readUShort();
+				shield = stream.readUShort();
 			else if (i == 7)
-				anInt361 = stream.readUShort();
+				weapon = stream.readUShort();
 			else if (i == 8)
 				anInt362 = stream.readUnsignedByte();
 			else if (i == 9)
@@ -180,7 +179,7 @@ public final class AnimationDefinition {
 						frameSounds[var4] = var6;
 					}
 				}
-			} else if (i == 14) {
+			/*} else if (i == 14) {
 				skeletalId = stream.readInt();
 			} else if (i == 15) {
 				int count = stream.readUShort();
@@ -198,7 +197,7 @@ public final class AnimationDefinition {
 				unknown = new int[count];
 				for (int index = 0; index < count; ++index) {
 					unknown[index] = stream.readUnsignedByte();
-				}
+				}*/
 			} else if (i == 127){
 			} else System.out.println("Error unrecognised seq config code: " + i);
 		}
@@ -229,8 +228,8 @@ public final class AnimationDefinition {
 		anInt356 = -1;
 		aBoolean358 = false;
 		anInt359 = 5;
-		anInt360 = -1;
-		anInt361 = -1;
+		shield = -1;
+		weapon = -1;
 		anInt362 = 99;
 		anInt363 = -1;
 		anInt364 = -1;
@@ -248,8 +247,8 @@ public final class AnimationDefinition {
 	public int anIntArray357[];
 	public boolean aBoolean358;
 	public int anInt359;
-	public int anInt360;
-	public int anInt361;
+	public int shield;
+	public int weapon;
 	public int anInt362;
 	public int anInt363;
 	public int anInt364;
@@ -276,9 +275,9 @@ public final class AnimationDefinition {
 					writer.newLine();
 					writer.write("\t\tanim.anInt359 = " + anim.anInt359 + ";");
 					writer.newLine();
-					writer.write("\t\tanim.anInt360 = " + anim.anInt360 + ";");
+					writer.write("\t\tanim.shield = " + anim.shield + ";");
 					writer.newLine();
-					writer.write("\t\tanim.anInt361 = " + anim.anInt361 + ";");
+					writer.write("\t\tanim.weapon = " + anim.weapon + ";");
 					writer.newLine();
 					writer.write("\t\tanim.anInt362 = " + anim.anInt362 + ";");
 					writer.newLine();

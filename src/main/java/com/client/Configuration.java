@@ -50,9 +50,9 @@ public class Configuration {
 
 	public static boolean developerMode;
 	public static boolean loadExternalCacheArchives = false; // Always true because I can't seem to pack them correctly
-	public static boolean packIndexData = false;
+	public static boolean packIndexData = true;
 	public static boolean dumpMaps;
-	public static boolean dumpAnimationData = false;
+	public static boolean dumpAnimationData = true;
 	public static boolean dumpDataLists = false;
 	public static boolean newFonts; // TODO text offsets (i.e. spacing between characters) are incorrect, needs automatic fix from kourend
 	public static String cacheName = CACHE_NAME;
