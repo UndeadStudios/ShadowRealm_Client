@@ -247,27 +247,27 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-//			case 29180:
-//				itemDef.setDefaults();
-//				itemDef.id = 29180;
-//				itemDef.modelId = 46559;
-//				itemDef.name = "Osiris Chainmace";
-//				itemDef.description = "A Mace From Hell.";
-//				itemDef.spriteScale = 2105;
-//				itemDef.spritePitch = 23;
-//				itemDef.spriteCameraRoll = 327;
-//				itemDef.spriteCameraYaw = 0;
-//				itemDef.spriteTranslateX = 1;
-//				itemDef.spriteTranslateY = 17;
-//
-//				itemDef.primaryMaleModel = 46559;
-//				itemDef.primaryFemaleModel = 46559;
-//				//itemDef.groundActions = new String[5];
-//				//itemDef.groundActions[2] = "Take";
-//				itemDef.itemActions = new String[5];
-//				itemDef.itemActions[1] = "Wield";
-//				itemDef.itemActions[4] = "Drop";
-//				return itemDef;
+			case 29180:
+				itemDef.setDefaults();
+				itemDef.id = 29180;
+				itemDef.modelId = 50000;
+				itemDef.name = "Osiris Chainmace";
+				itemDef.description = "A Mace From Hell.";
+				itemDef.spriteScale = 2105;
+				itemDef.spritePitch = 23;
+				itemDef.spriteCameraRoll = 327;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 1;
+				itemDef.spriteTranslateY = 17;
+
+				itemDef.primaryMaleModel = 50000;
+				itemDef.primaryFemaleModel = 50000;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
 			case 8813:
 				itemDef.setDefaults();
 				itemDef.id = 8813;
@@ -282,7 +282,9 @@ public final class ItemDefinition {
 				itemDef.spriteTranslateY = -1;
 
 				itemDef.primaryMaleModel = 65133;
+				itemDef.secondaryMaleModel = 65129;
 				itemDef.primaryFemaleModel = 65133;
+				itemDef.secondaryFemaleModel = 65129;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];
@@ -354,6 +356,118 @@ public final class ItemDefinition {
 				itemDef.itemActions[2] = "Teleports";
 				itemDef.itemActions[3] = "Features";
 				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 26230:
+				itemDef.setDefaults();
+				itemDef.id = 26230;
+				itemDef.modelId = 50500;
+				itemDef.name = "burning skeleteon boots";
+				itemDef.description = "spooky skeleton.";
+
+				itemDef.spriteScale = 1385;
+				itemDef.spritePitch = 279;
+				itemDef.spriteCameraRoll = 948;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 0;
+				itemDef.spriteTranslateY = 24;
+
+				itemDef.primaryMaleModel = 50500;
+				itemDef.primaryFemaleModel = 50500;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Drop";
+				return itemDef;
+			case 26231:
+				itemDef.setDefaults();
+				itemDef.id = 26231;
+				itemDef.modelId = 50501;
+				itemDef.name = "Burning skeleteon Gloves";
+				itemDef.description = "spooky skeleton.";
+
+				itemDef.spriteScale = 1385;
+				itemDef.spritePitch = 279;
+				itemDef.spriteCameraRoll = 948;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 0;
+				itemDef.spriteTranslateY = 24;
+
+				itemDef.primaryMaleModel = 50501;
+				itemDef.primaryFemaleModel = 50501;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Drop";
+				return itemDef;
+			case 26232:
+				itemDef.setDefaults();
+				itemDef.id = 26232;
+				itemDef.modelId = 50502;
+				itemDef.name = "Burning skeleteon mask";
+				itemDef.description = "spooky skeleton.";
+
+				itemDef.spriteScale = 1385;
+				itemDef.spritePitch = 279;
+				itemDef.spriteCameraRoll = 948;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 0;
+				itemDef.spriteTranslateY = 24;
+
+				itemDef.primaryMaleModel = 50502;
+				itemDef.primaryFemaleModel = 50502;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Drop";
+				return itemDef;
+			case 26233:
+				itemDef.setDefaults();
+				itemDef.id = 26233;
+				itemDef.modelId = 50503;
+				itemDef.name = "Burning skeleteon leggings";
+				itemDef.description = "spooky skeleton.";
+
+				itemDef.spriteScale = 1385;
+				itemDef.spritePitch = 279;
+				itemDef.spriteCameraRoll = 948;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 0;
+				itemDef.spriteTranslateY = 24;
+
+				itemDef.primaryMaleModel = 50503;
+				itemDef.primaryFemaleModel = 50503;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Drop";
+				return itemDef;
+			case 26234:
+				itemDef.setDefaults();
+				itemDef.id = 26234;
+				itemDef.modelId = 50505;
+				itemDef.name = "Burning skeleteon Skirt";
+				itemDef.description = "spooky skeleton.";
+
+				itemDef.spriteScale = 1385;
+				itemDef.spritePitch = 279;
+				itemDef.spriteCameraRoll = 948;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 0;
+				itemDef.spriteTranslateY = 24;
+
+				itemDef.primaryMaleModel = 50505;
+				itemDef.secondaryMaleModel = 50504;
+				itemDef.primaryFemaleModel = 50505;
+				itemDef.secondaryFemaleModel = 50504;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wear";
+				itemDef.itemActions[2] = "Drop";
 				return itemDef;
 		}
 
