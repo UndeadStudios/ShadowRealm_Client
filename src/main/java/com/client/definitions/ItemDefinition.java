@@ -30,6 +30,9 @@ public final class ItemDefinition {
 
 	public byte[] customSpriteLocation;
 	public byte[] customSmallSpriteLocation;
+	public int field2142 = -1;
+	public int field2157 = -1;
+	public int field2158 = -1;
 
 	public static void unpackConfig(final StreamLoader streamLoader) {
 		// stream = new Stream(streamLoader.getArchiveData("obj.dat"));
@@ -1931,6 +1934,10 @@ public final class ItemDefinition {
 				stackable = true;
 			else if (opcode == 12)
 				value = stream.readDWord();
+		 else if(opcode == 13)
+			this.field2142 = stream.readSignedByte();
+		 else if(opcode == 14)
+			this.field2157 = stream.readSignedByte();
 			else if (opcode == 16)
 				membersObject = true;
 			else if (opcode == 23) {
@@ -1947,6 +1954,8 @@ public final class ItemDefinition {
 					primaryFemaleModel = -1;
 			} else if (opcode == 26)
 				secondaryFemaleModel = stream.readUShort();
+		 else if(opcode == 27)
+			this.field2158 = stream.readSignedByte();
 			else if (opcode >= 30 && opcode < 35) {
 				if (groundActions == null)
 					groundActions = new String[5];
