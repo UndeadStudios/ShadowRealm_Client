@@ -655,7 +655,7 @@
 			if (i == 2300) {
 				entityDef.models = new int[1];
 				entityDef.name = "Dark postie pete";
-				entityDef.models = new int[] { 46601 };
+				entityDef.models = new int[] { 56601 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -666,7 +666,7 @@
 			}
 			if (i == 2301) {
 				entityDef.name = "Dark imp";
-				entityDef.models = new int[] { 46602 };
+				entityDef.models = new int[] { 56602 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -677,7 +677,7 @@
 			}
 			if (i == 2302) {
 				entityDef.name = "Dark toucan";
-				entityDef.models = new int[] { 46603, 46604 };
+				entityDef.models = new int[] { 56603, 56604 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -688,7 +688,7 @@
 			}
 			if (i == 2303) {
 				entityDef.name = "Dark king penguin";
-				entityDef.models = new int[] { 46605 };
+				entityDef.models = new int[] { 56605 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -699,7 +699,7 @@
 			}
 			if (i == 2313) {
 				entityDef.name = "Dark kratos";
-				entityDef.models = new int[] { 46632, 46633, 46634 };
+				entityDef.models = new int[] { 56632, 56633, 56634 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -714,7 +714,7 @@
 
 			if (i == 2304) {
 				entityDef.name = "Dark k'klik";
-				entityDef.models = new int[] { 46606, 46607, 46608 };
+				entityDef.models = new int[] { 56606, 56607, 56608 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -725,7 +725,7 @@
 			}
 			if (i == 2305) {
 				entityDef.name = "Dark shadow warrior";
-				entityDef.models = new int[] { 46609 };
+				entityDef.models = new int[] { 56609 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -738,7 +738,7 @@
 			}
 			if (i == 2306) {
 				entityDef.name = "Dark shadow archer";
-				entityDef.models = new int[] { 46610 };
+				entityDef.models = new int[] { 56610 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -751,7 +751,7 @@
 			}
 			if (i == 2307) {
 				entityDef.name = "Dark shadow wizard";
-				entityDef.models = new int[] { 46611 };
+				entityDef.models = new int[] { 56611 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -772,7 +772,7 @@
 			}
 			if (i == 2308) {
 				entityDef.name = "Dark healer death spawn";
-				entityDef.models = new int[] { 46612, 46613, 46614, 46615, 46616, 46616, 46617,};
+				entityDef.models = new int[] { 56612, 56613, 56614, 56615, 56616, 56616, 56617,};
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -785,7 +785,7 @@
 			}
 			if (i == 2309) {
 				entityDef.name = "Dark holy death spawn";
-				entityDef.models = new int[] { 46624, 46623, 46622, 46621, 46620, 46619, 46618 };
+				entityDef.models = new int[] { 56624, 56623, 56622, 56621, 56620, 56619, 56618 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -798,7 +798,7 @@
 			}
 			if (i == 2310) {
 				entityDef.name = "Dark seren";
-				entityDef.models = new int[] { 46625 };
+				entityDef.models = new int[] { 56625 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -811,7 +811,7 @@
 			}
 			if (i == 2311) {
 				entityDef.name = "Dark corrupt beast";
-				entityDef.models = new int[] { 46626 };
+				entityDef.models = new int[] { 56626 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
@@ -825,7 +825,7 @@
 			}
 			if (i == 2312) {
 				entityDef.name = "Dark roc";
-				entityDef.models = new int[] { 46627, 46628 };
+				entityDef.models = new int[] { 56627, 56628 };
 				entityDef.actions = new String[5];
 				entityDef.actions = new String[] { "Talk-to", null, "Pick-Up", null, null };
 				entityDef.originalColors = null;
