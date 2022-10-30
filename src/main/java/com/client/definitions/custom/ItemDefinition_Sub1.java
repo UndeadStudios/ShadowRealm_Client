@@ -4289,7 +4289,7 @@ public class ItemDefinition_Sub1
             itemDef.unnotedId = -1;
             itemDef.notedId = -1;
             itemDef.name = "Epic's Platelegs";
-            itemDef.description = "A set of moderators platelegs.";
+            itemDef.description = "A set of Epic's platelegs.";
         }
         if(i == 29097)
         {
@@ -4318,7 +4318,7 @@ public class ItemDefinition_Sub1
             itemDef.unnotedId = -1;
             itemDef.notedId = -1;
             itemDef.name = "Epic's Boots";
-            itemDef.description = "198087's boots";
+            itemDef.description = "Epic's boots";
         }
         if(i == 29098)
         {
@@ -4349,7 +4349,7 @@ public class ItemDefinition_Sub1
             itemDef.unnotedId = -1;
             itemDef.notedId = -1;
             itemDef.name = "Epic's Kiteshield";
-            itemDef.description = "It's an 198087's kiteshield.";
+            itemDef.description = "It's an Epic's kiteshield.";
         }
         if(i == 29099) //ID
         {
@@ -5082,7 +5082,7 @@ public class ItemDefinition_Sub1
             itemDef.certTemplateID = -1;
             itemDef.unnotedId = -1;
             itemDef.notedId = -1;
-            itemDef.name = "Bright PInk h'ween Mask";
+            itemDef.name = "Bright Pink h'ween Mask";
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28656)
@@ -7291,7 +7291,1074 @@ public class ItemDefinition_Sub1
             itemDef.placeholderId = 17781;
             itemDef.placeholderTemplateId = -1;
         }
+        if(i == 29328) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Blue Ghostly boots"; //Name
+            itemDef.description = "Its an Light Blue Ghostly boots"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 33525;
+            itemDef.modelId = 8366;
+            itemDef.spriteScale = 880;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 120;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 8380;
+            itemDef.primaryFemaleModel = 8386;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
 
+
+        if(i == 29329) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Blue Ghostly robe top"; //Name
+            itemDef.description = "Its an Light Blue Ghostly robe top"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 33525;
+            itemDef.modelId = 8370;
+            itemDef.spriteScale = 1320;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 6;
+            itemDef.primaryMaleModel = 8383;
+            itemDef.primaryFemaleModel = 8389;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29330) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Blue Ghostly robe bottom"; //Name
+            itemDef.description = "Its an Light Blue Ghostly robe bottom"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 33525;
+            itemDef.modelId = 8369;
+            itemDef.spriteScale = 1980;
+            itemDef.spritePitch = 460;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 8382;
+            itemDef.primaryFemaleModel = 8388;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29331) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Blue Ghostly hood"; //Name
+            itemDef.description = "Its an Light Blue Ghostly hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 33525;
+            itemDef.modelId = 8368;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 124;
+            itemDef.spriteCameraRoll = 52;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -2;
+            itemDef.primaryMaleModel = 8391;
+            itemDef.primaryFemaleModel = 8392;
+            itemDef.secondaryMaleModel = 8381;
+            itemDef.secondaryFemaleModel = 8387;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 8374;
+            itemDef.primaryFemaleHeadPiece = 8377;
+        }
+
+
+        if(i == 29332) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Blue Ghostly gloves"; //Name
+            itemDef.description = "Its an Light Blue Ghostly gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 33525;
+            itemDef.modelId = 8367;
+            itemDef.spriteScale = 750;
+            itemDef.spritePitch = 404;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 10;
+            itemDef.primaryMaleModel = 8379;
+            itemDef.primaryFemaleModel = 8385;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29333) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Blue Ghostly cloak"; //Name
+            itemDef.description = "Its an Light Blue Ghostly cloak"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 33525;
+            itemDef.modelId = 8365;
+            itemDef.spriteScale = 2080;
+            itemDef.spritePitch = 448;
+            itemDef.spriteCameraRoll = 540;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 8384;
+            itemDef.primaryFemaleModel = 8390;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+        if(i == 29334) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Green Ghostly boots"; //Name
+            itemDef.description = "Its an Light Green Ghostly boots"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 19455;
+            itemDef.modelId = 8366;
+            itemDef.spriteScale = 880;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 120;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 8380;
+            itemDef.primaryFemaleModel = 8386;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29335) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Green Ghostly robe top"; //Name
+            itemDef.description = "Its an Light Green Ghostly robe top"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 19455;
+            itemDef.modelId = 8370;
+            itemDef.spriteScale = 1320;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 6;
+            itemDef.primaryMaleModel = 8383;
+            itemDef.primaryFemaleModel = 8389;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29336) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Green Ghostly robe bottom"; //Name
+            itemDef.description = "Its an Light Green Ghostly robe bottom"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 19455;
+            itemDef.modelId = 8369;
+            itemDef.spriteScale = 1980;
+            itemDef.spritePitch = 460;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 8382;
+            itemDef.primaryFemaleModel = 8388;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29337) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Green Ghostly hood"; //Name
+            itemDef.description = "Its an Light Green Ghostly hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 19455;
+            itemDef.modelId = 8368;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 124;
+            itemDef.spriteCameraRoll = 52;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -2;
+            itemDef.primaryMaleModel = 8391;
+            itemDef.primaryFemaleModel = 8392;
+            itemDef.secondaryMaleModel = 8381;
+            itemDef.secondaryFemaleModel = 8387;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 8374;
+            itemDef.primaryFemaleHeadPiece = 8377;
+        }
+
+
+        if(i == 29338) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Green Ghostly gloves"; //Name
+            itemDef.description = "Its an Light Green Ghostly gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 19455;
+            itemDef.modelId = 8367;
+            itemDef.spriteScale = 750;
+            itemDef.spritePitch = 404;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 10;
+            itemDef.primaryMaleModel = 8379;
+            itemDef.primaryFemaleModel = 8385;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29339) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Light Green Ghostly cloak"; //Name
+            itemDef.description = "Its an Light Green Ghostly cloak"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 19455;
+            itemDef.modelId = 8365;
+            itemDef.spriteScale = 2080;
+            itemDef.spritePitch = 448;
+            itemDef.spriteCameraRoll = 540;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 8384;
+            itemDef.primaryFemaleModel = 8390;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+        if(i == 29340) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Red Ghostly boots"; //Name
+            itemDef.description = "Its an Red Ghostly boots"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 997;
+            itemDef.modelId = 8366;
+            itemDef.spriteScale = 880;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 120;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 8380;
+            itemDef.primaryFemaleModel = 8386;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29341) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Red Ghostly robe top"; //Name
+            itemDef.description = "Its an Red Ghostly robe top"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 997;
+            itemDef.modelId = 8370;
+            itemDef.spriteScale = 1320;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 6;
+            itemDef.primaryMaleModel = 8383;
+            itemDef.primaryFemaleModel = 8389;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29342) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Red Ghostly robe bottom"; //Name
+            itemDef.description = "Its an Red Ghostly robe bottom"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 997;
+            itemDef.modelId = 8369;
+            itemDef.spriteScale = 1980;
+            itemDef.spritePitch = 460;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 8382;
+            itemDef.primaryFemaleModel = 8388;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29343) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Red Ghostly hood"; //Name
+            itemDef.description = "Its an Red Ghostly hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 997;
+            itemDef.modelId = 8368;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 124;
+            itemDef.spriteCameraRoll = 52;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -2;
+            itemDef.primaryMaleModel = 8391;
+            itemDef.primaryFemaleModel = 8392;
+            itemDef.secondaryMaleModel = 8381;
+            itemDef.secondaryFemaleModel = 8387;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 8374;
+            itemDef.primaryFemaleHeadPiece = 8377;
+        }
+
+
+        if(i == 29344) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Red Ghostly gloves"; //Name
+            itemDef.description = "Its an Red Ghostly gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 997;
+            itemDef.modelId = 8367;
+            itemDef.spriteScale = 750;
+            itemDef.spritePitch = 404;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 10;
+            itemDef.primaryMaleModel = 8379;
+            itemDef.primaryFemaleModel = 8385;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29345) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Red Ghostly cloak"; //Name
+            itemDef.description = "Its an Red Ghostly cloak"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 997;
+            itemDef.modelId = 8365;
+            itemDef.spriteScale = 2080;
+            itemDef.spritePitch = 448;
+            itemDef.spriteCameraRoll = 540;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 8384;
+            itemDef.primaryFemaleModel = 8390;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+        if(i == 29346) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Yellow Ghostly boots"; //Name
+            itemDef.description = "Its an Yellow Ghostly boots"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 11263;
+            itemDef.modelId = 8366;
+            itemDef.spriteScale = 880;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 120;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 8380;
+            itemDef.primaryFemaleModel = 8386;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29347) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Yellow Ghostly robe top"; //Name
+            itemDef.description = "Its an Yellow Ghostly robe top"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 11263;
+            itemDef.modelId = 8370;
+            itemDef.spriteScale = 1320;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 6;
+            itemDef.primaryMaleModel = 8383;
+            itemDef.primaryFemaleModel = 8389;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29348) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Yellow Ghostly robe bottom"; //Name
+            itemDef.description = "Its an Yellow Ghostly robe bottom"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 11263;
+            itemDef.modelId = 8369;
+            itemDef.spriteScale = 1980;
+            itemDef.spritePitch = 460;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 8382;
+            itemDef.primaryFemaleModel = 8388;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29349) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Yellow Ghostly hood"; //Name
+            itemDef.description = "Its an Yellow Ghostly hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 11263;
+            itemDef.modelId = 8368;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 124;
+            itemDef.spriteCameraRoll = 52;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -2;
+            itemDef.primaryMaleModel = 8391;
+            itemDef.primaryFemaleModel = 8392;
+            itemDef.secondaryMaleModel = 8381;
+            itemDef.secondaryFemaleModel = 8387;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 8374;
+            itemDef.primaryFemaleHeadPiece = 8377;
+        }
+
+
+        if(i == 29350) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Yellow Ghostly gloves"; //Name
+            itemDef.description = "Its an Yellow Ghostly gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 11263;
+            itemDef.modelId = 8367;
+            itemDef.spriteScale = 750;
+            itemDef.spritePitch = 404;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 10;
+            itemDef.primaryMaleModel = 8379;
+            itemDef.primaryFemaleModel = 8385;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29351) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Yellow Ghostly cloak"; //Name
+            itemDef.description = "Its an Yellow Ghostly cloak"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 11263;
+            itemDef.modelId = 8365;
+            itemDef.spriteScale = 2080;
+            itemDef.spritePitch = 448;
+            itemDef.spriteCameraRoll = 540;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 8384;
+            itemDef.primaryFemaleModel = 8390;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+        if(i == 29352) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Pink Ghostly boots"; //Name
+            itemDef.description = "Its an Pink Ghostly boots"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 639;
+            itemDef.modelId = 8366;
+            itemDef.spriteScale = 880;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 120;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 8380;
+            itemDef.primaryFemaleModel = 8386;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29353) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Pink Ghostly robe top"; //Name
+            itemDef.description = "Its an Pink Ghostly robe top"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 639;
+            itemDef.modelId = 8370;
+            itemDef.spriteScale = 1320;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 6;
+            itemDef.primaryMaleModel = 8383;
+            itemDef.primaryFemaleModel = 8389;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29354) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Pink Ghostly robe bottom"; //Name
+            itemDef.description = "Its an Pink Ghostly robe bottom"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 639;
+            itemDef.modelId = 8369;
+            itemDef.spriteScale = 1980;
+            itemDef.spritePitch = 460;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 8382;
+            itemDef.primaryFemaleModel = 8388;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29355) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Pink Ghostly hood"; //Name
+            itemDef.description = "Its an Pink Ghostly hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 639;
+            itemDef.modelId = 8368;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 124;
+            itemDef.spriteCameraRoll = 52;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -2;
+            itemDef.primaryMaleModel = 8391;
+            itemDef.primaryFemaleModel = 8392;
+            itemDef.secondaryMaleModel = 8381;
+            itemDef.secondaryFemaleModel = 8387;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 8374;
+            itemDef.primaryFemaleHeadPiece = 8377;
+        }
+
+
+        if(i == 29356) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Pink Ghostly gloves"; //Name
+            itemDef.description = "Its an Pink Ghostly gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 639;
+            itemDef.modelId = 8367;
+            itemDef.spriteScale = 750;
+            itemDef.spritePitch = 404;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 10;
+            itemDef.primaryMaleModel = 8379;
+            itemDef.primaryFemaleModel = 8385;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29357) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "Pink Ghostly cloak"; //Name
+            itemDef.description = "Its an Pink Ghostly cloak"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 639;
+            itemDef.modelId = 8365;
+            itemDef.spriteScale = 2080;
+            itemDef.spritePitch = 448;
+            itemDef.spriteCameraRoll = 540;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 8384;
+            itemDef.primaryFemaleModel = 8390;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+        if(i == 29358) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "White Ghostly boots"; //Name
+            itemDef.description = "Its an White Ghostly boots"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 127;
+            itemDef.modelId = 8366;
+            itemDef.spriteScale = 880;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 120;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 8380;
+            itemDef.primaryFemaleModel = 8386;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29359) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "White Ghostly robe top"; //Name
+            itemDef.description = "Its an White Ghostly robe top"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 127;
+            itemDef.modelId = 8370;
+            itemDef.spriteScale = 1320;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 6;
+            itemDef.primaryMaleModel = 8383;
+            itemDef.primaryFemaleModel = 8389;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29360) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "White Ghostly robe bottom"; //Name
+            itemDef.description = "Its an White Ghostly robe bottom"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 127;
+            itemDef.modelId = 8369;
+            itemDef.spriteScale = 1980;
+            itemDef.spritePitch = 460;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 8382;
+            itemDef.primaryFemaleModel = 8388;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29361) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "White Ghostly hood"; //Name
+            itemDef.description = "Its an White Ghostly hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 127;
+            itemDef.modelId = 8368;
+            itemDef.spriteScale = 930;
+            itemDef.spritePitch = 124;
+            itemDef.spriteCameraRoll = 52;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -2;
+            itemDef.primaryMaleModel = 8391;
+            itemDef.primaryFemaleModel = 8392;
+            itemDef.secondaryMaleModel = 8381;
+            itemDef.secondaryFemaleModel = 8387;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 8374;
+            itemDef.primaryFemaleHeadPiece = 8377;
+        }
+
+
+        if(i == 29362) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "White Ghostly gloves"; //Name
+            itemDef.description = "Its an White Ghostly gloves"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 127;
+            itemDef.modelId = 8367;
+            itemDef.spriteScale = 750;
+            itemDef.spritePitch = 404;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 10;
+            itemDef.primaryMaleModel = 8379;
+            itemDef.primaryFemaleModel = 8385;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
+
+
+        if(i == 29363) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name  = "White Ghostly cloak"; //Name
+            itemDef.description = "Its an White Ghostly cloak"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 10266;
+            itemDef.originalModelColors[0] = 127;
+            itemDef.modelId = 8365;
+            itemDef.spriteScale = 2080;
+            itemDef.spritePitch = 448;
+            itemDef.spriteCameraRoll = 540;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 8384;
+            itemDef.primaryFemaleModel = 8390;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+        }
         return itemDef;
     }
 

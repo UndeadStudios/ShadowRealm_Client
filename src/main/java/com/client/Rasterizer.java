@@ -193,7 +193,7 @@ public final class Rasterizer extends DrawingArea {
                     textures[index].method356();
                 } else {
                     textures[index].method357();
-                    textures[index].setTransparency(255, 0, 255);
+                    textures[index].setTransparency();
                 }
                 textureCount++;
                 //System.out.println("Texture amount "+textureCount);
