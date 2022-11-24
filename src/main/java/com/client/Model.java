@@ -2797,6 +2797,8 @@ public class Model extends Renderable {
             return;
         }
     }
+    private final int MODEL_DRAW_DISTANCE = 30000;
+
 
     /**
      * Entity / object render at point
@@ -2817,7 +2819,7 @@ public class Model extends Renderable {
         int k2 = k1 * j + j2 * k >> 16;
         int l2 = XYZMag * k >> 16;
         int i3 = k2 + l2;
-        if (i3 <= 50 || k2 >= 9500) {
+        if (i3 <= 50 || k2 >= MODEL_DRAW_DISTANCE) {
             return;
         }
         int j3 = l1 * l + j1 * i1 >> 16;

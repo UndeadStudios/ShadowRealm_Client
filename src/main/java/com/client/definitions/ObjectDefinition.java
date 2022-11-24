@@ -239,7 +239,7 @@ public final class ObjectDefinition {
 			objectDef.name = "Group chest";
 			break;
 		case 1750:
-			objectDef.anIntArray773 = new int[] { 8131, };
+			objectDef.modelIds = new int[] { 8131, };
 			objectDef.name = "Willow";
 			objectDef.xLength = 2;
 			objectDef.yLength = 2;
@@ -253,7 +253,7 @@ public final class ObjectDefinition {
 			break;
 
 		case 1751:
-			objectDef.anIntArray773 = new int[] { 8037, 8040, };
+			objectDef.modelIds = new int[] { 8037, 8040, };
 			objectDef.name = "Oak";
 			objectDef.xLength = 3;
 			objectDef.yLength = 3;
@@ -296,7 +296,7 @@ public final class ObjectDefinition {
 			objectDef.description = "A chest to store items for UIM.";
 			break;
 		case 1752:
-			objectDef.anIntArray773 = new int[] { 4146, };
+			objectDef.modelIds = new int[] { 4146, };
 			objectDef.name = "Hollow tree";
 			objectDef.aByte737 = 25;
 			objectDef.actions = new String[] { "Chop down", null, null, null, null };
@@ -354,7 +354,7 @@ public final class ObjectDefinition {
 			objectDef.name = "Barrows Mini-game Portal";
 			break;
 		case 1753:
-			objectDef.anIntArray773 = new int[] { 8157, };
+			objectDef.modelIds = new int[] { 8157, };
 			objectDef.name = "Yew";
 			objectDef.xLength = 3;
 			objectDef.yLength = 3;
@@ -364,7 +364,7 @@ public final class ObjectDefinition {
 			break;
 
 		case 6943:
-			objectDef.anIntArray773 = new int[] { 1270, };
+			objectDef.modelIds = new int[] { 1270, };
 			objectDef.name = "Bank booth";
 			objectDef.aBoolean757 = false;
 			objectDef.aByte737 = 25;
@@ -420,14 +420,14 @@ public final class ObjectDefinition {
 		case 29333:
 			objectDef.name = "Trading post";
 			objectDef.actions = new String[] { "Open", null, "Collect", null, null };
-			objectDef.anIntArray773 = new int[] { 60884 };
+			objectDef.modelIds = new int[] { 60884 };
 			objectDef.aByte737 = 25;
 			objectDef.aBoolean769 = false;
 			objectDef.description = "Buy and sell items with players here!";
 			break;
 
 		case 11700:
-			objectDef.anIntArray773 = new int[] { 4086 };
+			objectDef.modelIds = new int[] { 4086 };
 			objectDef.name = "Venom";
 			objectDef.xLength = 3;
 			objectDef.yLength = 3;
@@ -443,7 +443,19 @@ public final class ObjectDefinition {
 			// objectDef.description = new String(
 			// "It's a cloud of venomous smoke that is extremely toxic.");
 			break;
-
+			case 46324:
+				objectDef.modelIds = new int[] { 39095 };
+				objectDef.name = "Christmas Tree";
+				objectDef.aBoolean757 = false;
+				objectDef.xLength = 7;
+				objectDef.yLength = 7;
+				objectDef.aBoolean767 = true;
+				objectDef.aByte737 = 25;
+				objectDef.aByte742 = 25;
+				objectDef.thickness = 112;
+				objectDef.height = 112;
+				objectDef.width = 112;
+				break;
 		case 11601: // 11601
 			objectDef.originalTexture = new short[] { 2 };
 			objectDef.modifiedTexture = new short[] { 46 };
@@ -468,7 +480,7 @@ public final class ObjectDefinition {
 				String output = "[\"" + StringUtils.join(def.actions, "\", \"") + "\"],";
 
 				String finalOutput = "	{\n" + "		\"id\": " + def.type + ",\n		" + "\"name\": \"" + def.name
-						+ "\",\n		\"models\": " + Arrays.toString(def.anIntArray773) + ",\n		\"actions\": "
+						+ "\",\n		\"models\": " + Arrays.toString(def.modelIds) + ",\n		\"actions\": "
 						+ output.replaceAll(", \"\"]", ", \"Examine\"]").replaceAll("\"\"", "null")
 								.replace("[\"null\"]", "[null, null, null, null, \"Examine\"]")
 								.replaceAll(", \"Remove\"", ", \"Remove\", \"Examine\"")
@@ -485,8 +497,8 @@ public final class ObjectDefinition {
 
 
 	private void setDefaults() {
-		anIntArray773 = null;
-		anIntArray776 = null;
+		modelIds = null;
+		models = null;
 		name = null;
 		description = null;
 		modifiedModelColors = null;
@@ -526,10 +538,10 @@ public final class ObjectDefinition {
 	}
 
 	public void method574(OnDemandFetcher class42_sub1) {
-		if (anIntArray773 == null)
+		if (modelIds == null)
 			return;
-		for (int j = 0; j < anIntArray773.length; j++)
-			class42_sub1.method560(anIntArray773[j] & 0xffff, 0);
+		for (int j = 0; j < modelIds.length; j++)
+			class42_sub1.method560(modelIds[j] & 0xffff, 0);
 	}
 
 	public static void nullLoader() {
@@ -558,21 +570,21 @@ public final class ObjectDefinition {
 	}
 
 	public boolean method577(int i) {
-		if (anIntArray776 == null) {
-			if (anIntArray773 == null)
+		if (models == null) {
+			if (modelIds == null)
 				return true;
 			if (i != 10)
 				return true;
 			boolean flag1 = true;
 			Model model = (Model) mruNodes2.insertFromCache(type);
-			for (int k = 0; k < anIntArray773.length; k++)
-				flag1 &= Model.method463(anIntArray773[k] & 0xffff);
+			for (int k = 0; k < modelIds.length; k++)
+				flag1 &= model.method463(modelIds[k] & 0xffff);
 			return flag1;
 		}
 		Model model = (Model) mruNodes2.insertFromCache(type);
-		for (int j = 0; j < anIntArray776.length; j++)
-			if (anIntArray776[j] == i)
-				return Model.method463(anIntArray773[j] & 0xffff);
+		for (int j = 0; j < models.length; j++)
+			if (models[j] == i)
+				return model.method463(modelIds[j] & 0xffff);
 		return true;
 	}
 
@@ -599,11 +611,11 @@ public final class ObjectDefinition {
 	}
 
 	public boolean method579() {
-		if (anIntArray773 == null)
+		if (modelIds == null)
 			return true;
 		boolean flag1 = true;
-		for (int i = 0; i < anIntArray773.length; i++)
-			flag1 &= Model.method463(anIntArray773[i] & 0xffff);
+		for (int i = 0; i < modelIds.length; i++)
+			flag1 &= Model.method463(modelIds[i] & 0xffff);
 		return flag1;
 	}
 
@@ -629,19 +641,19 @@ public final class ObjectDefinition {
 	private Model method581(int j, int k, int l) {
 		Model model = null;
 		long l1;
-		if (anIntArray776 == null) {
+		if (models == null) {
 			if (j != 10)
 				return null;
 			l1 = (type << 6) + l + ((long) (k + 1) << 32);
 			Model model_1 = (Model) mruNodes2.insertFromCache(l1);
 			if (model_1 != null)
 				return model_1;
-			if (anIntArray773 == null)
+			if (modelIds == null)
 				return null;
 			boolean flag1 = aBoolean751 ^ (l > 3);
-			int k1 = anIntArray773.length;
+			int k1 = modelIds.length;
 			for (int i2 = 0; i2 < k1; i2++) {
-				int l2 = anIntArray773[i2];
+				int l2 = modelIds[i2];
 				if (flag1)
 					l2 += 0x10000;
 				model = (Model) mruNodes1.insertFromCache(l2);
@@ -661,8 +673,8 @@ public final class ObjectDefinition {
 				model = new Model(k1, aModelArray741s);
 		} else {
 			int i1 = -1;
-			for (int j1 = 0; j1 < anIntArray776.length; j1++) {
-				if (anIntArray776[j1] != j)
+			for (int j1 = 0; j1 < models.length; j1++) {
+				if (models[j1] != j)
 					continue;
 				i1 = j1;
 				break;
@@ -674,7 +686,7 @@ public final class ObjectDefinition {
 			Model model_2 = (Model) mruNodes2.insertFromCache(l1);
 			if (model_2 != null)
 				return model_2;
-			int j2 = anIntArray773[i1];
+			int j2 = modelIds[i1];
 			boolean flag3 = aBoolean751 ^ (l > 3);
 			if (flag3)
 				j2 += 0x10000;
@@ -739,12 +751,12 @@ public final class ObjectDefinition {
 			if (type == 1) {
 				int len = stream.readUnsignedByte();
 				if (len > 0) {
-					if (anIntArray773 == null || lowMem) {
-						anIntArray776 = new int[len];
-						anIntArray773 = new int[len];
+					if (modelIds == null || lowMem) {
+						models = new int[len];
+						modelIds = new int[len];
 						for (int k1 = 0; k1 < len; k1++) {
-							anIntArray773[k1] = stream.readUShort();
-							anIntArray776[k1] = stream.readUnsignedByte();
+							modelIds[k1] = stream.readUShort();
+							models[k1] = stream.readUnsignedByte();
 						}
 					} else {
 						stream.currentOffset += len * 3;
@@ -757,11 +769,11 @@ public final class ObjectDefinition {
 			else if (type == 5) {
 				int len = stream.readUnsignedByte();
 				if (len > 0) {
-					if (anIntArray773 == null || lowMem) {
-						anIntArray776 = null;
-						anIntArray773 = new int[len];
+					if (modelIds == null || lowMem) {
+						models = null;
+						modelIds = new int[len];
 						for (int l1 = 0; l1 < len; l1++)
-							anIntArray773[l1] = stream.readUShort();
+							modelIds[l1] = stream.readUShort();
 					} else {
 						stream.currentOffset += len * 2;
 					}
@@ -887,7 +899,7 @@ public final class ObjectDefinition {
 			}
 		} while (true);
 		if (flag == -1 && name != "null" && name != null) {
-			hasActions = anIntArray773 != null && (anIntArray776 == null || anIntArray776[0] == 10);
+			hasActions = modelIds != null && (models == null || models[0] == 10);
 			if (actions != null)
 				hasActions = true;
 		}
@@ -939,10 +951,10 @@ public final class ObjectDefinition {
 	private boolean aBoolean769;
 	private static int cacheIndex;
 	private int height;
-	public int[] anIntArray773;
+	public int[] modelIds;
 	public int varpId;
 	public int anInt775;
-	private int[] anIntArray776;
+	private int[] models;
 	public String description;
 	public boolean hasActions;
 	public boolean aBoolean779;

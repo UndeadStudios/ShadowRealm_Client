@@ -33,6 +33,7 @@ public final class ItemDefinition {
 	public int field2142 = -1;
 	public int field2157 = -1;
 	public int field2158 = -1;
+	private int field2182;
 
 	public static void unpackConfig(final StreamLoader streamLoader) {
 		// stream = new Stream(streamLoader.getArchiveData("obj.dat"));
@@ -1986,6 +1987,8 @@ public final class ItemDefinition {
 					stream.readUnsignedByte();
 			} else if (opcode == 65) {
 				searchable = true;
+			} else if (opcode == 75){
+				this.field2182 = stream.readSignedWord();
 			} else if (opcode == 78)
 				tertiaryMaleEquipmentModel = stream.readUShort();
 			else if (opcode == 79)

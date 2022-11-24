@@ -133,7 +133,7 @@ public class Client extends RSApplet {
 	private int screenFlashColor = 0;
 	private int screenFlashMaxIntensity = 30;
 	private boolean screenFlashAutoFadeOut;
-
+	private Socket aSocket832;
 	public boolean fogEnabled;
 	public int fogOpacity;
 
@@ -1394,7 +1394,36 @@ public class Client extends RSApplet {
 			return null;
 		}
 	}
+	public final Socket method19(int i)
+			throws IOException {
+		if (Signlink.mainapp != null)
+			return Signlink.opensocket(i);
+		else
+			return new Socket(InetAddress.getByName(getCodeBase().getHost()), i);
+	}
 
+	public final DataInputStream method132(String s)
+			throws IOException {
+		//if(!aBoolean872)
+		//    if(signlink.mainapp != null)
+		//        return signlink.openurl(s);
+		//    else
+		//        return new DataInputStream((new URL(getCodeBase(), s)).openStream());
+		if (aSocket832 != null) {
+			try {
+				aSocket832.close();
+			} catch (Exception _ex) {
+			}
+			aSocket832 = null;
+		}
+		aSocket832 = method19(43595);
+		aSocket832.setSoTimeout(10000);
+		java.io.InputStream inputstream = aSocket832.getInputStream();
+		OutputStream outputstream = aSocket832.getOutputStream();
+		outputstream.write(("JAGGRAB /" + s + "\n\n").getBytes());
+		System.out.println("JAGGRAB /" + s + "\n\n");
+		return new DataInputStream(inputstream);
+	}
 	public void saveMidi(boolean flag, byte abyte0[]) {
 		Signlink.midifade = flag ? 1 : 0;
 		Signlink.midisave(abyte0, abyte0.length);
@@ -6971,12 +7000,12 @@ public class Client extends RSApplet {
 					if (debugModels == true) {
 						menuActionName[menuActionRow] = "Examine @cya@" + class46.name + " @gre@ID: @whi@" + l1
 								+ " @gre@X, Y: @whi@" + (i1 + baseX) + "," + (j1 + baseY) + " @gre@Models: @whi@"
-								+ Arrays.toString(class46.anIntArray773);
+								+ Arrays.toString(class46.modelIds);
 
 					}
 
 					menuActionID[menuActionRow] = 1226;
-					menuActionCmd1[menuActionRow] = class46.type << 14;
+					menuActionCmd1[menuActionRow] = l;
 					menuActionCmd2[menuActionRow] = i1;
 					menuActionCmd3[menuActionRow] = j1;
 					menuActionRow++;
@@ -14286,26 +14315,26 @@ public class Client extends RSApplet {
 				113 bowl
 				 */
 				// sprite id, x, y
-				{0, 3081, 3487}, // general store
-				{53, 3083, 3499}, // slayer area
+				//{0, 3081, 3487}, // general store
+			//	{53, 3083, 3499}, // slayer area
 				//{53, 3115, 3514}, // wildy slayer area
-				{40, 3082, 3510}, // outlast portal
-				{40, 3067, 3499}, // hespori entrance
-				{98, 3106, 3482}, // ironman store
-				{77, 3110, 3495}, //supplies area
-				{24, 3087, 3470}, //thieving red gem
-				{66, 3091, 3470}, //thieving leather
-				{38, 3095, 3465}, //thieving bakers stall
-				{31, 3091, 3465}, //thieving silk
-				{34, 3087, 3465}, //thieving silver
-				{51, 3093, 3474}, //agility
-				{58, 3103, 3471}, //house portal
-				{5, 3100, 3509}, //bank
-				{5, 3119, 3506}, //bank
-				{112, 3099, 3513}, //ancient altar
-				{21, 3098, 3484}, // altar
-				{57, 3087, 3494}, // travel arrow
-				{28, 3125, 3490} //fishing
+				//{40, 3082, 3510}, // outlast portal
+			//	{40, 3067, 3499}, // hespori entrance
+			//	{98, 3106, 3482}, // ironman store
+			//	{77, 3110, 3495}, //supplies area
+			//	{24, 3087, 3470}, //thieving red gem
+			//	{66, 3091, 3470}, //thieving leather
+			//	{38, 3095, 3465}, //thieving bakers stall
+			//	{31, 3091, 3465}, //thieving silk
+			//	{34, 3087, 3465}, //thieving silver
+			//	{51, 3093, 3474}, //agility
+			//	{58, 3103, 3471}, //house portal
+			//	{5, 3100, 3509}, //bank
+			//	{5, 3119, 3506}, //bank
+			//	{112, 3099, 3513}, //ancient altar
+			//	{21, 3098, 3484}, // altar
+			//	{57, 3087, 3494}, // travel arrow
+			//	{28, 3125, 3490} //fishing
 				/*{5, 3090, 3499}, // bank
                 {5, 3077, 3517}, // bank
                 {5, 3090, 3517}, // bank

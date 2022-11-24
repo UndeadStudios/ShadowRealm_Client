@@ -15,6 +15,7 @@ public class LootViewer extends RSInterface {
     private static final boolean PRINT_IDS = false;
 
     private enum Button {
+        NEX_KEY("Nex chest", 3460),
         VOTE_KEY("Vote key", 22093),
         PORAZDIRS_KEY("Porazdir's key", 4185),
         HUNNLEFS_KEY("Hunnlef's key", 23776),
@@ -23,6 +24,7 @@ public class LootViewer extends RSInterface {
         MYSTERY_BOX("Mystery box", 6199),
         SUPER_MYSTERY_BOX("Super m. box", 6828),
         ULTRA_MYSTERY_BOX("Ultra m. box", 13346),
+        DR_MYSTERY_BOX("Dr cape m. box", 29326),
         FOE_MYSTERY_CHEST("FoE m. chest", 8167),
         SLAYER_MYSTERY_CHEST("Slayer m. chest", 13438),
         BRIMSTONE_KEY("Brimstone Key", Items.BRIMSTONE_KEY),
