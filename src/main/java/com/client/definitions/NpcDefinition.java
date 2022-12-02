@@ -180,10 +180,6 @@
 				entityDef.combatLevel = 0;
 				entityDef.actions = new String[] { "Make-over", null, null, null, null };
 			}
-			if(i==3257){
-				entityDef.combatLevel = 0;
-				entityDef.actions = new String[] { "Trade", null, null, null, null };
-			}
 			if(i==1011){
 				entityDef.combatLevel = 0;
 				entityDef.name = "Item Gambler";

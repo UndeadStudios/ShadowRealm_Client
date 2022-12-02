@@ -21,6 +21,7 @@ import com.client.Sprite;
 import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.definitions.custom.ItemDefinition_Sub1;
+import com.client.definitions.custom.ItemDefinition_Sub2;
 import com.client.utilities.FieldGenerator;
 import com.client.utilities.FileOperations;
 import com.client.utilities.TempWriter;
@@ -237,14 +238,35 @@ public final class ItemDefinition {
 				itemDef.name = "Lava Scythe";
 				itemDef.description = "A scythe from lava.";
 				itemDef.spriteScale = 2105;
-				itemDef.spritePitch = 23;
-				itemDef.spriteCameraRoll = 327;
+				itemDef.spritePitch = 327;
+				itemDef.spriteCameraRoll = 23;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = 1;
 				itemDef.spriteTranslateY = 17;
 
 				itemDef.primaryMaleModel = 52400;
 				itemDef.primaryFemaleModel = 52400;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 29047:
+				itemDef.setDefaults();
+				itemDef.id = 29047;
+				itemDef.modelId = 55742;
+				itemDef.name = "Ice Scythe";
+				itemDef.description = "A scythe from Ice.";
+				itemDef.spriteScale = 2105;
+				itemDef.spritePitch = 327;
+				itemDef.spriteCameraRoll = 23;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 1;
+				itemDef.spriteTranslateY = 17;
+
+				itemDef.primaryMaleModel = 52906;
+				itemDef.primaryFemaleModel = 52906;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];
@@ -496,6 +518,7 @@ public final class ItemDefinition {
 	private static void customItems(int itemId) {
 		ItemDefinition itemDef = forID(itemId);
 		ItemDefinition_Sub1.itemDef(itemId, itemDef);
+		ItemDefinition_Sub2.itemDef(itemId, itemDef);
 		switch (itemId) {
 			case 21726:
 			case 21728:

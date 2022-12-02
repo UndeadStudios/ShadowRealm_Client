@@ -3863,10 +3863,10 @@ public class ItemDefinition_Sub1
             itemDef.modifiedModelColors[5] = 10388;
             itemDef.modifiedModelColors[6] = 10514;
             itemDef.modifiedModelColors[7] = 10508;
-            itemDef.originalModelColors[0] = 972;
+            itemDef.originalModelColors[0] = 0;
             itemDef.originalModelColors[1] = 7114;
-            itemDef.originalModelColors[2] = 972;
-            itemDef.originalModelColors[3] = 972;
+            itemDef.originalModelColors[2] = 0;
+            itemDef.originalModelColors[3] = 0;
             itemDef.originalModelColors[4] = 7114;
             itemDef.originalModelColors[5] = 7114;
             itemDef.originalModelColors[6] = 7114;
@@ -3901,7 +3901,7 @@ public class ItemDefinition_Sub1
             itemDef.modifiedModelColors = new int[2];
             itemDef.originalModelColors = new int[2];
             itemDef.modifiedModelColors[0] = 926;
-            itemDef.originalModelColors[0] = 972;
+            itemDef.originalModelColors[0] = 0;
             itemDef.modifiedModelColors[1] = 912;
             itemDef.originalModelColors[1] = 7114;
             itemDef.spriteScale = 1740;
@@ -3959,9 +3959,9 @@ public class ItemDefinition_Sub1
             itemDef.modifiedModelColors = new int[3];
             itemDef.originalModelColors = new int[3];
             itemDef.modifiedModelColors[0] = 61;
-            itemDef.originalModelColors[0] = 972;
+            itemDef.originalModelColors[0] = 0;
             itemDef.modifiedModelColors[1] = 57;
-            itemDef.originalModelColors[1] = 972;
+            itemDef.originalModelColors[1] = 0;
             itemDef.modifiedModelColors[2] = 7054;
             itemDef.originalModelColors[2] = 7114;
             itemDef.modelId = 2339;
@@ -3993,7 +3993,7 @@ public class ItemDefinition_Sub1
             itemDef.modifiedModelColors[0] = 945;
             itemDef.modifiedModelColors[1] = 8128;
             itemDef.originalModelColors[0] = 7114;
-            itemDef.originalModelColors[1] = 972;
+            itemDef.originalModelColors[1] = 0;
             itemDef.modelId = 8774;
             itemDef.spriteScale = 500;
             itemDef.spritePitch = 0;
