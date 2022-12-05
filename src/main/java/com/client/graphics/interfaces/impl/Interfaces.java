@@ -1889,7 +1889,7 @@ public final class Interfaces extends RSInterface {
 
 		setChildren(1001, main);
 		
-		int childId = 26022;
+		int childId = 36022;
 		int frame = 0;
 		
 		addToItemGroup(childId, 1, 250, 0, 7, true, "Buy 1", "Buy 5", "Buy 10", "Buy All", "Buy X", "View History");

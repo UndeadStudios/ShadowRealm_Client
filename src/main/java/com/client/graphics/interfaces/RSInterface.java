@@ -62,246 +62,250 @@ public class RSInterface {
 
 	public static void unpack(StreamLoader streamLoader, TextDrawingArea textDrawingAreas[],
 			StreamLoader streamLoader_1, RSFont[] newFontSystem) {
-		aMRUNodes_238 = new MRUNodes(80000);
-		Buffer stream = new Buffer(streamLoader.getArchiveData("data"));
-		newFonts = newFontSystem;
-		int i = -1;
-		int j = stream.readUShort();
-		interfaceCache = new RSInterface[100000];
-		while (stream.currentOffset < stream.buffer.length) {
-			int k = stream.readUShort();
-			if (k == 65535) {
-				i = stream.readUShort();
-				k = stream.readUShort();
-			}
-			RSInterface rsInterface = interfaceCache[k] = new RSInterface();
-			rsInterface.id = k;
-			rsInterface.parentID = i;
-			rsInterface.type = stream.readUnsignedByte();
-			rsInterface.atActionType = stream.readUnsignedByte();
-			rsInterface.contentType = stream.readUShort();
-			rsInterface.width = stream.readUShort();
-			rsInterface.height = stream.readUShort();
-			rsInterface.aByte254 = (byte) stream.readUnsignedByte();
-			rsInterface.mOverInterToTrigger = stream.readUnsignedByte();
-			if (rsInterface.mOverInterToTrigger != 0)
-				rsInterface.mOverInterToTrigger = (rsInterface.mOverInterToTrigger - 1 << 8)
-						+ stream.readUnsignedByte();
-			else
-				rsInterface.mOverInterToTrigger = -1;
-			int i1 = stream.readUnsignedByte();
-			if (i1 > 0) {
-				rsInterface.anIntArray245 = new int[i1];
-				rsInterface.anIntArray212 = new int[i1];
-				for (int j1 = 0; j1 < i1; j1++) {
-					rsInterface.anIntArray245[j1] = stream.readUnsignedByte();
-					rsInterface.anIntArray212[j1] = stream.readUShort();
+		try {
+			aMRUNodes_238 = new MRUNodes(200000);
+			Buffer stream = new Buffer(streamLoader.getArchiveData("data"));
+			newFonts = newFontSystem;
+			int i = -1;
+			int j = stream.readUShort();
+			interfaceCache = new RSInterface[200000];
+			while (stream.currentOffset < stream.buffer.length) {
+				int k = stream.readUShort();
+				if (k == 65535) {
+					i = stream.readUShort();
+					k = stream.readUShort();
 				}
-
-			}
-			int k1 = stream.readUnsignedByte();
-			if (k1 > 0) {
-				rsInterface.scripts = new int[k1][];
-				for (int l1 = 0; l1 < k1; l1++) {
-					int i3 = stream.readUShort();
-					rsInterface.scripts[l1] = new int[i3];
-					for (int l4 = 0; l4 < i3; l4++)
-						rsInterface.scripts[l1][l4] = stream.readUShort();
+				RSInterface rsInterface = interfaceCache[k] = new RSInterface();
+				rsInterface.id = k;
+				rsInterface.parentID = i;
+				rsInterface.type = stream.readUnsignedByte();
+				rsInterface.atActionType = stream.readUnsignedByte();
+				rsInterface.contentType = stream.readUShort();
+				rsInterface.width = stream.readUShort();
+				rsInterface.height = stream.readUShort();
+				rsInterface.aByte254 = (byte) stream.readUnsignedByte();
+				rsInterface.mOverInterToTrigger = stream.readUnsignedByte();
+				if (rsInterface.mOverInterToTrigger != 0)
+					rsInterface.mOverInterToTrigger = (rsInterface.mOverInterToTrigger - 1 << 8)
+							+ stream.readUnsignedByte();
+				else
+					rsInterface.mOverInterToTrigger = -1;
+				int i1 = stream.readUnsignedByte();
+				if (i1 > 0) {
+					rsInterface.anIntArray245 = new int[i1];
+					rsInterface.anIntArray212 = new int[i1];
+					for (int j1 = 0; j1 < i1; j1++) {
+						rsInterface.anIntArray245[j1] = stream.readUnsignedByte();
+						rsInterface.anIntArray212[j1] = stream.readUShort();
+					}
 
 				}
+				int k1 = stream.readUnsignedByte();
+				if (k1 > 0) {
+					rsInterface.scripts = new int[k1][];
+					for (int l1 = 0; l1 < k1; l1++) {
+						int i3 = stream.readUShort();
+						rsInterface.scripts[l1] = new int[i3];
+						for (int l4 = 0; l4 < i3; l4++)
+							rsInterface.scripts[l1][l4] = stream.readUShort();
 
-			}
-			if (rsInterface.type == 0) {
-				rsInterface.drawsTransparent = false;
-				rsInterface.scrollMax = stream.readUShort();
-				rsInterface.isMouseoverTriggered = stream.readUnsignedByte() == 1;
-				int i2 = stream.readUShort();
-				rsInterface.children = new int[i2];
-				rsInterface.childX = new int[i2];
-				rsInterface.childY = new int[i2];
-				for (int j3 = 0; j3 < i2; j3++) {
-					rsInterface.children[j3] = stream.readUShort();
-					rsInterface.childX[j3] = stream.readSignedWord();
-					rsInterface.childY[j3] = stream.readSignedWord();
+					}
+
 				}
-			}
-			if (rsInterface.type == 1) {
-				stream.readUShort();
-				stream.readUnsignedByte();
-			}
-			if (rsInterface.type == 2) {
-				rsInterface.inventoryItemId = new int[rsInterface.width * rsInterface.height];
-				rsInterface.inventoryAmounts = new int[rsInterface.width * rsInterface.height];
-				rsInterface.aBoolean259 = stream.readUnsignedByte() == 1;
-				rsInterface.isInventoryInterface = stream.readUnsignedByte() == 1;
-				rsInterface.usableItemInterface = stream.readUnsignedByte() == 1;
-				rsInterface.aBoolean235 = stream.readUnsignedByte() == 1;
-				rsInterface.invSpritePadX = stream.readUnsignedByte();
-				rsInterface.invSpritePadY = stream.readUnsignedByte();
-				rsInterface.spritesX = new int[20];
-				rsInterface.spritesY = new int[20];
-				rsInterface.sprites = new Sprite[20];
-				for (int j2 = 0; j2 < 20; j2++) {
-					int k3 = stream.readUnsignedByte();
-					if (k3 == 1) {
-						rsInterface.spritesX[j2] = stream.readSignedWord();
-						rsInterface.spritesY[j2] = stream.readSignedWord();
-						String s1 = stream.readString();
-						if (streamLoader_1 != null && s1.length() > 0) {
-							int i5 = s1.lastIndexOf(",");
-							if(s1.substring(0, i5).toLowerCase().equals("mige")){
-								int id = Integer.parseInt(s1.substring(i5 + 1));
-								rsInterface.sprites[j2] = Client.cacheSprite474[id];
-							} else
-								rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1, s1.substring(0, i5));
-
-						}
+				if (rsInterface.type == 0) {
+					rsInterface.drawsTransparent = false;
+					rsInterface.scrollMax = stream.readUShort();
+					rsInterface.isMouseoverTriggered = stream.readUnsignedByte() == 1;
+					int i2 = stream.readUShort();
+					rsInterface.children = new int[i2];
+					rsInterface.childX = new int[i2];
+					rsInterface.childY = new int[i2];
+					for (int j3 = 0; j3 < i2; j3++) {
+						rsInterface.children[j3] = stream.readUShort();
+						rsInterface.childX[j3] = stream.readSignedWord();
+						rsInterface.childY[j3] = stream.readSignedWord();
 					}
 				}
-				rsInterface.actions = new String[6];
-				for (int l3 = 0; l3 < 5; l3++) {
-					rsInterface.actions[l3] = stream.readString();
-					if (rsInterface.actions[l3].length() == 0)
-						rsInterface.actions[l3] = null;
-					if (rsInterface.parentID == 3822)
-						rsInterface.actions[4] = "Sell X";
-					 if(rsInterface.parentID == 3822)
-						rsInterface.actions[4] = "Sell All";
-					if (rsInterface.parentID == 3824)
-						rsInterface.actions[4] = "Buy X";
-					if (rsInterface.parentID == 1644)
-						rsInterface.actions[2] = "Operate";
+				if (rsInterface.type == 1) {
+					stream.readUShort();
+					stream.readUnsignedByte();
 				}
-			}
-			if (rsInterface.type == 3)
-				rsInterface.aBoolean227 = stream.readUnsignedByte() == 1;
-			if (rsInterface.type == 4 || rsInterface.type == 1) {
-				rsInterface.centerText = stream.readUnsignedByte() == 1;
-				int k2 = stream.readUnsignedByte();
-				if (textDrawingAreas != null)
-					rsInterface.textDrawingAreas = textDrawingAreas[k2];
-				rsInterface.textShadow = stream.readUnsignedByte() == 1;
-			}
-			if (rsInterface.type == 4) {
-				rsInterface.message = stream.readString().replaceAll("RuneScape", Configuration.CLIENT_TITLE);
+				if (rsInterface.type == 2) {
+					rsInterface.inventoryItemId = new int[rsInterface.width * rsInterface.height];
+					rsInterface.inventoryAmounts = new int[rsInterface.width * rsInterface.height];
+					rsInterface.aBoolean259 = stream.readUnsignedByte() == 1;
+					rsInterface.isInventoryInterface = stream.readUnsignedByte() == 1;
+					rsInterface.usableItemInterface = stream.readUnsignedByte() == 1;
+					rsInterface.aBoolean235 = stream.readUnsignedByte() == 1;
+					rsInterface.invSpritePadX = stream.readUnsignedByte();
+					rsInterface.invSpritePadY = stream.readUnsignedByte();
+					rsInterface.spritesX = new int[20];
+					rsInterface.spritesY = new int[20];
+					rsInterface.sprites = new Sprite[20];
+					for (int j2 = 0; j2 < 20; j2++) {
+						int k3 = stream.readUnsignedByte();
+						if (k3 == 1) {
+							rsInterface.spritesX[j2] = stream.readSignedWord();
+							rsInterface.spritesY[j2] = stream.readSignedWord();
+							String s1 = stream.readString();
+							if (streamLoader_1 != null && s1.length() > 0) {
+								int i5 = s1.lastIndexOf(",");
+								if (s1.substring(0, i5).toLowerCase().equals("mige")) {
+									int id = Integer.parseInt(s1.substring(i5 + 1));
+									rsInterface.sprites[j2] = Client.cacheSprite474[id];
+								} else
+									rsInterface.sprites[j2] = method207(Integer.parseInt(s1.substring(i5 + 1)), streamLoader_1, s1.substring(0, i5));
 
-				if (showIds) {
-					rsInterface.message = Integer.toString(rsInterface.id);
+							}
+						}
+					}
+					rsInterface.actions = new String[6];
+					for (int l3 = 0; l3 < 5; l3++) {
+						rsInterface.actions[l3] = stream.readString();
+						if (rsInterface.actions[l3].length() == 0)
+							rsInterface.actions[l3] = null;
+						if (rsInterface.parentID == 3822)
+							rsInterface.actions[4] = "Sell X";
+						if (rsInterface.parentID == 3822)
+							rsInterface.actions[4] = "Sell All";
+						if (rsInterface.parentID == 3824)
+							rsInterface.actions[4] = "Buy X";
+						if (rsInterface.parentID == 1644)
+							rsInterface.actions[2] = "Operate";
+					}
 				}
-				rsInterface.aString228 = stream.readString();
-			}
-			if (rsInterface.type == 1 || rsInterface.type == 3 || rsInterface.type == 4)
-				rsInterface.textColor = stream.readDWord();
-			if (rsInterface.type == 3 || rsInterface.type == 4) {
-				rsInterface.secondaryColor = stream.readDWord();
-				rsInterface.anInt216 = stream.readDWord();
-				rsInterface.anInt239 = stream.readDWord();
-			}
-			if (rsInterface.type == 5) {
-				rsInterface.drawsTransparent = false;
-				String s = stream.readString();
-				if (streamLoader_1 != null && s.length() > 0) {
-					int i4 = s.lastIndexOf(",");
-					if(s.substring(0, i4).toLowerCase().equals("mige")){
-						int id = Integer.parseInt(s.substring(i4 + 1));
-						rsInterface.sprite1 = Client.cacheSprite474[id];
-					} else
-						rsInterface.sprite1 = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1, s.substring(0, i4));
+				if (rsInterface.type == 3)
+					rsInterface.aBoolean227 = stream.readUnsignedByte() == 1;
+				if (rsInterface.type == 4 || rsInterface.type == 1) {
+					rsInterface.centerText = stream.readUnsignedByte() == 1;
+					int k2 = stream.readUnsignedByte();
+					if (textDrawingAreas != null)
+						rsInterface.textDrawingAreas = textDrawingAreas[k2];
+					rsInterface.textShadow = stream.readUnsignedByte() == 1;
 				}
-				s = stream.readString();
-				if (streamLoader_1 != null && s.length() > 0) {
-					int j4 = s.lastIndexOf(",");
-					if(s.substring(0, j4).toLowerCase().equals("mige")){
-						int id = Integer.parseInt(s.substring(j4 + 1));
-						rsInterface.sprite2 = Client.cacheSprite474[id];
-					} else
-						rsInterface.sprite2 = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1, s.substring(0, j4));
+				if (rsInterface.type == 4) {
+					rsInterface.message = stream.readString().replaceAll("RuneScape", Configuration.CLIENT_TITLE);
+
+					if (showIds) {
+						rsInterface.message = Integer.toString(rsInterface.id);
+					}
+					rsInterface.aString228 = stream.readString();
 				}
-			}
-			if (rsInterface.type == 6) {
-				int l = stream.readUnsignedByte();
-				if (l != 0) {
-					rsInterface.anInt233 = 1;
-					rsInterface.mediaID = (l - 1 << 8) + stream.readUnsignedByte();
+				if (rsInterface.type == 1 || rsInterface.type == 3 || rsInterface.type == 4)
+					rsInterface.textColor = stream.readDWord();
+				if (rsInterface.type == 3 || rsInterface.type == 4) {
+					rsInterface.secondaryColor = stream.readDWord();
+					rsInterface.anInt216 = stream.readDWord();
+					rsInterface.anInt239 = stream.readDWord();
 				}
-				l = stream.readUnsignedByte();
-				if (l != 0) {
-					rsInterface.anInt255 = 1;
-					rsInterface.anInt256 = (l - 1 << 8) + stream.readUnsignedByte();
+				if (rsInterface.type == 5) {
+					rsInterface.drawsTransparent = false;
+					String s = stream.readString();
+					if (streamLoader_1 != null && s.length() > 0) {
+						int i4 = s.lastIndexOf(",");
+						if (s.substring(0, i4).toLowerCase().equals("mige")) {
+							int id = Integer.parseInt(s.substring(i4 + 1));
+							rsInterface.sprite1 = Client.cacheSprite474[id];
+						} else
+							rsInterface.sprite1 = method207(Integer.parseInt(s.substring(i4 + 1)), streamLoader_1, s.substring(0, i4));
+					}
+					s = stream.readString();
+					if (streamLoader_1 != null && s.length() > 0) {
+						int j4 = s.lastIndexOf(",");
+						if (s.substring(0, j4).toLowerCase().equals("mige")) {
+							int id = Integer.parseInt(s.substring(j4 + 1));
+							rsInterface.sprite2 = Client.cacheSprite474[id];
+						} else
+							rsInterface.sprite2 = method207(Integer.parseInt(s.substring(j4 + 1)), streamLoader_1, s.substring(0, j4));
+					}
 				}
-				l = stream.readUnsignedByte();
-				if (l != 0)
-					rsInterface.anInt257 = (l - 1 << 8) + stream.readUnsignedByte();
-				else
-					rsInterface.anInt257 = -1;
-				l = stream.readUnsignedByte();
-				if (l != 0)
-					rsInterface.anInt258 = (l - 1 << 8) + stream.readUnsignedByte();
-				else
-					rsInterface.anInt258 = -1;
-				rsInterface.modelZoom = stream.readUShort();
-				rsInterface.modelRotation1 = stream.readUShort();
-				rsInterface.modelRotation2 = stream.readUShort();
-			}
-			if (rsInterface.type == 7) {
-				rsInterface.inventoryItemId = new int[rsInterface.width * rsInterface.height];
-				rsInterface.inventoryAmounts = new int[rsInterface.width * rsInterface.height];
-				rsInterface.centerText = stream.readUnsignedByte() == 1;
-				int l2 = stream.readUnsignedByte();
-				if (textDrawingAreas != null)
-					rsInterface.textDrawingAreas = textDrawingAreas[l2];
-				rsInterface.textShadow = stream.readUnsignedByte() == 1;
-				rsInterface.textColor = stream.readDWord();
-				rsInterface.invSpritePadX = stream.readSignedWord();
-				rsInterface.invSpritePadY = stream.readSignedWord();
-				rsInterface.isInventoryInterface = stream.readUnsignedByte() == 1;
-				rsInterface.actions = new String[6];
-				for (int k4 = 0; k4 < 5; k4++) {
-					rsInterface.actions[k4] = stream.readString();
-					if (rsInterface.actions[k4].length() == 0)
-						rsInterface.actions[k4] = null;
+				if (rsInterface.type == 6) {
+					int l = stream.readUnsignedByte();
+					if (l != 0) {
+						rsInterface.anInt233 = 1;
+						rsInterface.mediaID = (l - 1 << 8) + stream.readUnsignedByte();
+					}
+					l = stream.readUnsignedByte();
+					if (l != 0) {
+						rsInterface.anInt255 = 1;
+						rsInterface.anInt256 = (l - 1 << 8) + stream.readUnsignedByte();
+					}
+					l = stream.readUnsignedByte();
+					if (l != 0)
+						rsInterface.anInt257 = (l - 1 << 8) + stream.readUnsignedByte();
+					else
+						rsInterface.anInt257 = -1;
+					l = stream.readUnsignedByte();
+					if (l != 0)
+						rsInterface.anInt258 = (l - 1 << 8) + stream.readUnsignedByte();
+					else
+						rsInterface.anInt258 = -1;
+					rsInterface.modelZoom = stream.readUShort();
+					rsInterface.modelRotation1 = stream.readUShort();
+					rsInterface.modelRotation2 = stream.readUShort();
+				}
+				if (rsInterface.type == 7) {
+					rsInterface.inventoryItemId = new int[rsInterface.width * rsInterface.height];
+					rsInterface.inventoryAmounts = new int[rsInterface.width * rsInterface.height];
+					rsInterface.centerText = stream.readUnsignedByte() == 1;
+					int l2 = stream.readUnsignedByte();
+					if (textDrawingAreas != null)
+						rsInterface.textDrawingAreas = textDrawingAreas[l2];
+					rsInterface.textShadow = stream.readUnsignedByte() == 1;
+					rsInterface.textColor = stream.readDWord();
+					rsInterface.invSpritePadX = stream.readSignedWord();
+					rsInterface.invSpritePadY = stream.readSignedWord();
+					rsInterface.isInventoryInterface = stream.readUnsignedByte() == 1;
+					rsInterface.actions = new String[6];
+					for (int k4 = 0; k4 < 5; k4++) {
+						rsInterface.actions[k4] = stream.readString();
+						if (rsInterface.actions[k4].length() == 0)
+							rsInterface.actions[k4] = null;
+					}
+
+				}
+				if (rsInterface.atActionType == 2 || rsInterface.type == 2) {
+					rsInterface.selectedActionName = stream.readString();
+					rsInterface.spellName = stream.readString();
+					rsInterface.spellUsableOn = stream.readUShort();
 				}
 
-			}
-			if (rsInterface.atActionType == 2 || rsInterface.type == 2) {
-				rsInterface.selectedActionName = stream.readString();
-				rsInterface.spellName = stream.readString();
-				rsInterface.spellUsableOn = stream.readUShort();
-			}
+				if (rsInterface.type == 8)
+					rsInterface.message = stream.readString();
 
-			if (rsInterface.type == 8)
-				rsInterface.message = stream.readString();
-
-			if (rsInterface.atActionType == 1 || rsInterface.atActionType == 4 || rsInterface.atActionType == 5
-					|| rsInterface.atActionType == 6) {
-				rsInterface.tooltip = stream.readString();
-				if (rsInterface.tooltip.length() == 0) {
-					if (rsInterface.atActionType == 1)
-						rsInterface.tooltip = "Ok";
-					if (rsInterface.atActionType == 4)
-						rsInterface.tooltip = "Select";
-					if (rsInterface.atActionType == 5)
-						rsInterface.tooltip = "Select";
-					if (rsInterface.atActionType == 6)
-						rsInterface.tooltip = "Continue";
+				if (rsInterface.atActionType == 1 || rsInterface.atActionType == 4 || rsInterface.atActionType == 5
+						|| rsInterface.atActionType == 6) {
+					rsInterface.tooltip = stream.readString();
+					if (rsInterface.tooltip.length() == 0) {
+						if (rsInterface.atActionType == 1)
+							rsInterface.tooltip = "Ok";
+						if (rsInterface.atActionType == 4)
+							rsInterface.tooltip = "Select";
+						if (rsInterface.atActionType == 5)
+							rsInterface.tooltip = "Select";
+						if (rsInterface.atActionType == 6)
+							rsInterface.tooltip = "Continue";
+					}
+				}
+				if (rsInterface.id == 8278) {
+					rsInterface.message = "Players will be required to just use an Abyssal whip and Dragon dagger during combat.";
+				}
+				if (rsInterface.parentID == 6412) {
+					if (rsInterface.scrollMax > 0) {
+						rsInterface.scrollMax = 300;
+					}
 				}
 			}
-			if (rsInterface.id == 8278) {
-				rsInterface.message = "Players will be required to just use an Abyssal whip and Dragon dagger during combat.";
-			}
-			if (rsInterface.parentID == 6412) {
-				if (rsInterface.scrollMax > 0) {
-					rsInterface.scrollMax = 300;
-				}
-			}
+		} catch(Exception e){
+			e.printStackTrace();
 		}
-		aClass44 = streamLoader;
-		defaultTextDrawingAreas = textDrawingAreas;
-		Interfaces.loadInterfaces();
-		if (!Configuration.developerMode) {
-			aMRUNodes_238 = null; // We'll need this to reload interfaces in developer mode.
-		}
-		addInterface(emptyInterface);
+			aClass44 = streamLoader;
+			defaultTextDrawingAreas = textDrawingAreas;
+			Interfaces.loadInterfaces();
+			if (!Configuration.developerMode) {
+				aMRUNodes_238 = null; // We'll need this to reload interfaces in developer mode.
+			}
+			addInterface(emptyInterface);
 	}
 
 	public static int findOpenConfigFrame(int amount) {

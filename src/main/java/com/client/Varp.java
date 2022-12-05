@@ -3,6 +3,10 @@ package com.client;
 // Jad home page: http://www.kpdus.com/jad.html
 // Decompiler options: packimports(3) 
 
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public final class Varp {
 
 	public static int cacheSize;
@@ -12,7 +16,7 @@ public final class Varp {
 		anInt702 = 0;
 		cacheSize = stream.readUShort();
 		if (cache == null)
-			cache = new Varp[cacheSize + 1000];
+			cache = new Varp[cacheSize];
 		if (anIntArray703 == null)
 			anIntArray703 = new int[cacheSize];
 		for (int j = 0; j < cacheSize; j++) {
@@ -22,8 +26,31 @@ public final class Varp {
 		}
 		if (stream.currentOffset != stream.buffer.length)
 			System.out.println("varptype load mismatch");
+		// extend and dump varp
+		/*int newSize = 2000;//config ids up to 1000
+			Varp[] newData = new Varp[newSize];
+			for(int id = 0; id < Varp.cacheSize; id++){
+		newData[id] = Varp.cache[id];
+			}
+		try(DataOutputStream dos = new DataOutputStream(new FileOutputStream("./extended-varp.dat"))){
+			dos.writeShort(newSize);
+			for(int id = 0; id < newSize; id++){
+				encode(dos, newData[id]);
+			}
+			dos.flush();
+			dos.close();
+		} catch(Exception e){
+		e.printStackTrace();
+			}*/
 	}
 
+	public static void encode(DataOutputStream dos, Varp varp) throws IOException, IOException {
+		if(varp != null && varp.anInt709 != 0){
+			dos.writeByte(5);
+			dos.writeShort(varp.anInt709);
+		}
+		dos.writeByte(0);
+	}
 	private void readValues(Buffer stream, int i) {
 		do {
 			int j = stream.readUnsignedByte();

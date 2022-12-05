@@ -4427,20 +4427,19 @@ public class Client extends RSApplet {
 		}
 	}
 
-	public final void method60(int i) {
+	public void method60(int i) {
 		RSInterface class9 = RSInterface.interfaceCache[i];
-
-		for (int j = 0; j < class9.children.length && class9.children[j] != -1; ++j) {
+		for (int j = 0; j < class9.children.length; j++) {
+			if (class9.children[j] == -1)
+				break;
 			RSInterface class9_1 = RSInterface.interfaceCache[class9.children[j]];
-			if (class9_1.type == 1) {
-				this.method60(class9_1.id);
-			}
-
+			if (class9_1.type == 1)
+				method60(class9_1.id);
 			class9_1.anInt246 = 0;
 			class9_1.anInt208 = 0;
 		}
-
 	}
+
 	public void drawHeadIcon() {
 		if (hintType != 2)
 			return;
@@ -4487,12 +4486,10 @@ public class Client extends RSApplet {
 		if (anInt1011 > 0)
 			anInt1011--;
 
-		int packetsHandled = 0;
-		while (parsePacket()) {
-			if (packetsHandled++ >= 10) {
+		for (int j = 0; j < 100; j++)
+			if (!parsePacket())
 				break;
-			}
-		}
+
 
 		if (!loggedIn)
 			return;
@@ -11908,11 +11905,14 @@ public class Client extends RSApplet {
 	public void drawInterface(int scrollPosition, int xPosition, RSInterface rsInterface, int yPosition, boolean inheritDrawingArea) {
 		try {
 			if (rsInterface == null) {
-				rsInterface = RSInterface.interfaceCache[30000];
+				rsInterface = RSInterface.interfaceCache[70000];
 			}
-			if ((rsInterface.type != 0 || rsInterface.children == null) || (rsInterface.isMouseoverTriggered && this.anInt1026 != rsInterface.id
-					&& this.anInt1048 != rsInterface.id && this.anInt1039 != rsInterface.id))
+			if (rsInterface.type != 0 || rsInterface.children == null)
 				return;
+			if (rsInterface.isMouseoverTriggered && anInt1026 != rsInterface.id && anInt1048 != rsInterface.id
+					&& anInt1039 != rsInterface.id)
+				return;
+
 
 			int clipLeft = DrawingArea.topX;
 			int clipTop = DrawingArea.topY;

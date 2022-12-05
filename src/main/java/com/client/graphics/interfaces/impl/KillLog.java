@@ -12,7 +12,7 @@ public class KillLog extends RSInterface {
         return INSTANCE;
     }
 
-    private static final int INTERFACE_ID = 24430;
+    private static final int INTERFACE_ID = 34430;
     private static final Sprite BG = new Sprite("kill_log/bg");
     private static final Sprite DIVIDER = new Sprite("kill_log/divider");
     private static final Sprite TOP_DIVIDER = new Sprite("kill_log/top_divider");

@@ -23,7 +23,7 @@ public final class Buffer extends NodeSub {
         }
         Buffer stream_1 = new Buffer();
         stream_1.currentOffset = 0;
-        stream_1.buffer = new byte[RSSocket.SIZE];
+        stream_1.buffer = new byte[40000];
         return stream_1;
     }
 
