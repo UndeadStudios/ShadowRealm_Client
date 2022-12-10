@@ -6333,9 +6333,9 @@ public class Client extends RSApplet {
 							s9 = new String(entityDef.description);
 						else if (entityDef.combatLevel == 0)
 							s9 = "It's a " + entityDef.name + ".";
-						if (s9 != null) {
-							pushMessage(s9, 0, "");
-						}
+						stream.createFrame(6);
+						stream.writeWord((int) entityDef.npcId);
+						stream.writeWord(i1);
 					}
 
 					if (entityDef.combatLevel > 0) {
@@ -6664,7 +6664,10 @@ public class Client extends RSApplet {
 				s10 = new String(class46.description);
 			else
 				s10 = "It's a " + class46.name + ".";
-			pushMessage(s10, 0, "");
+			stream.createFrame(146);
+			stream.method433(x + baseX);
+			stream.writeWord(j1);
+			stream.method432(y + baseY);
 		}
 		if (l == 244) {
 			boolean flag7 = doWalkTo(2, myPlayer.pathX[0], myPlayer.pathY[0], 0, 0, 0, 0, 0, buttonPressed, false, j);

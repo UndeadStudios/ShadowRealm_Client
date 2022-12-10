@@ -53,7 +53,6 @@ public final class ItemDefinition {
 		for (int index = 0; index < 10; index++) {
 			cache[index] = new ItemDefinition();
 		}
-		//dumpItemConfig();
 		if (Configuration.dumpDataLists) {
 			TempWriter writer2 = new TempWriter("item_fields");
 			FieldGenerator generator = new FieldGenerator(writer2::writeLine);
@@ -109,22 +108,6 @@ public final class ItemDefinition {
 		customItems(itemDef.id);
 		itemDef.id = id; // Have to do this for some cases
 		return itemDef;
-	}
-	public static void dumpItemConfig() {
-		for(int i = 0; i < totalItems; i++) {
-			ItemDefinition class5 = forID(i);
-			BufferedWriter bw = null;
-			try {
-				bw = new BufferedWriter(new FileWriter("./temp/item_list_208_4.txt", true));
-				if(class5.name!= null) {
-					bw.write("ItemID: "+i+" Name: "+class5.name.toLowerCase());
-					bw.newLine();
-					bw.flush();
-					bw.close();
-				}
-			} catch (IOException ioe2) {
-			}
-		}
 	}
 	public static ItemDefinition copy(ItemDefinition itemDef, int newId, int copyingItemId, String newName, String...actions) {
 		ItemDefinition copyItemDef = forID(copyingItemId);

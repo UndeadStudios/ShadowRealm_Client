@@ -41,9 +41,9 @@ public class TaskInterfaceActions {
     }
 
     public void onButtonClick(int buttonId) {
-        if (buttonId == 24_501) {
+        if (buttonId == 35_501) {
             setOpen(TaskEntryType.DIARIES);
-        } else if (buttonId == 24_503) {
+        } else if (buttonId == 35_503) {
             setOpen(TaskEntryType.ACHIEVEMENTS);
         }
     }

@@ -1889,7 +1889,7 @@ public final class Interfaces extends RSInterface {
 
 		setChildren(1001, main);
 		
-		int childId = 36022;
+		int childId = 44022;
 		int frame = 0;
 		
 		addToItemGroup(childId, 1, 250, 0, 7, true, "Buy 1", "Buy 5", "Buy 10", "Buy All", "Buy X", "View History");
@@ -2218,7 +2218,7 @@ public final class Interfaces extends RSInterface {
 
 	private static void teleportInterface(TextDrawingArea[] textDrawingAreas) {
 
-		int interfaceId = 39700;//checkinterface
+		int interfaceId = 41000;//checkinterface
 		int child = 0;
 		RSInterface interfaces = RSInterface.addInterface(interfaceId);
 		interfaceId++;
