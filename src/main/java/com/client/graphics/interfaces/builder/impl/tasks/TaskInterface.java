@@ -41,7 +41,7 @@ public class TaskInterface extends InterfaceBuilder {
     public static boolean TEST_MODE = false && Configuration.developerMode;
 
     public TaskInterface() {
-        super(35_500); // 1400 free
+        super(55_500); // 1400 free
     }
 
     @Override

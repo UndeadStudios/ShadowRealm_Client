@@ -15,7 +15,7 @@ public class QuestTab extends RSInterface {
 
     public static final int TAB_1 = 10280; // Information
     public static final int TAB_2 = 19050; // Coin tab
-    public static final int TAB_3 = 35_500;//29475; // Diaries
+    public static final int TAB_3 = 55_500;//29475; // Diaries
     public static final int TAB_4 = 50614; // Quests
 
     public static final int[] INTERFACE_PLACEHOLDERS = {TAB_1, TAB_2, TAB_3, TAB_4};
