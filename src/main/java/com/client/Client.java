@@ -12533,17 +12533,18 @@ public class Client extends RSApplet {
 							if (yPos + boxHeight > yPosition + rsInterface.height)
 								yPos = (_y - boxHeight);
 							switch (class9_1.id) {
-								case 9217:
-								case 9220:
-								case 9223:
-								case 9226:
-								case 9229:
-								case 9232:
-								case 9235:
+								case 25528:
+								case 25531:
+								case 25534:
+								case 25537:
+								case 25540:
+								case 25547:
+								case 25550:
 								case 9238:
 									xPos -= 80;
 									break;
-								case 9239:
+								case 25551:
+									case 25552:
 									yPos -= 100;
 									break;
 							}

@@ -221,6 +221,10 @@ public final class ObjectDefinition {
 		    objectDef.name = "Max Island";
 		    objectDef.actions = new String[] { "Tele to", null, null, null, null };
 			break;
+			case 31722:
+				objectDef.name = "Bond fire";
+				objectDef.actions = new String[] { "Burn logs", null, null, null, null };
+				break;
 		case 2996:
 		    objectDef.name = "Vote Chest";
 		    objectDef.actions = new String[] { "Unlock", null, null, null, null };

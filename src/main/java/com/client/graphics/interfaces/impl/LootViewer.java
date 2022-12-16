@@ -33,7 +33,8 @@ public class LootViewer extends RSInterface {
         VOTE_MYSTERY_BOX("Vote Mystery Box", 11739),
         CRYSTAL_CHEST("Crystal Chest", 989),
         PVM_CASKET("PvM Casket", 405),
-        LARRANS_CHEST("Larran's Chest", Items.LARRANS_KEY)
+        LARRANS_CHEST("Larran's Chest", Items.LARRANS_KEY),
+        PRESENT("Xmas present", 6542)
         ;
 
         private final String name;
@@ -142,7 +143,7 @@ public class LootViewer extends RSInterface {
         RSInterface inter = addInterface(id++);
         inter.height = 263;
         inter.width = 176;
-        inter.scrollMax = inter.height + 215;
+        inter.scrollMax = inter.height + 300;
 
 
         setChildren(Button.values().length * 3, inter);

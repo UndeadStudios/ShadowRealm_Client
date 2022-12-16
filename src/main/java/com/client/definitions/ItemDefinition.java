@@ -22,6 +22,7 @@ import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.definitions.custom.ItemDefinition_Sub1;
 import com.client.definitions.custom.ItemDefinition_Sub2;
+import com.client.sign.Signlink;
 import com.client.utilities.FieldGenerator;
 import com.client.utilities.FileOperations;
 import com.client.utilities.TempWriter;
@@ -53,6 +54,7 @@ public final class ItemDefinition {
 		for (int index = 0; index < 10; index++) {
 			cache[index] = new ItemDefinition();
 		}
+		//dumpGameItemConfig();
 		if (Configuration.dumpDataLists) {
 			TempWriter writer2 = new TempWriter("item_fields");
 			FieldGenerator generator = new FieldGenerator(writer2::writeLine);
@@ -133,7 +135,22 @@ public final class ItemDefinition {
 		}
 		return itemDef;
 	}
-
+	public static void dumpGameItemConfig() {
+		for(int i = 0; i < totalItems; i++) {
+			ItemDefinition class5 = forID(i);
+			BufferedWriter bw = null;
+			try {
+				bw = new BufferedWriter(new FileWriter("./temp/gameitem.txt", true));
+				if(class5.name!= null) {
+					bw.write("new GameItem("+i+"), // "+class5.name);
+					bw.newLine();
+					bw.flush();
+					bw.close();
+				}
+			} catch (IOException ioe2) {
+			}
+		}
+	}
 	private static ItemDefinition newCustomItems(int itemId) {
 		ItemDefinition itemDef = new ItemDefinition();
 		itemDef.setDefaults();
