@@ -44,7 +44,7 @@
 			switch(i){
 				case 11958:
 					//entityDef.models = new int[] { 7400 };
-					return copy(entityDef, 11958, 2205, "Vote boss",new int[] {57989, 27937, 57985, 57968, 27990},  null, "Attack", null, null, null);
+					return copy(entityDef, 11958, 2205, "Vote boss",new int[] {57989, 27937, 57985, 57968, 27990}, 1000, null, "Attack", null, null, null);
 			}
 			if (i == Npcs.BOB_BARTER_HERBS) {
 				entityDef.actions = new String[] { "Talk-to", "Prices", "Decant", "Clean", null };
@@ -1011,7 +1011,7 @@
 		 *
 		 * } else if (i == 107) aBoolean84 = false; } while (true); }
 		 */
-		public static NpcDefinition copy(NpcDefinition itemDef, int newId, int copyingItemId, String newName, int[] models, String... actions) {
+		public static NpcDefinition copy(NpcDefinition itemDef, int newId, int copyingItemId, String newName, int[] models, int combatLevel, String... actions) {
 			NpcDefinition copyItemDef = forID(copyingItemId);
 			itemDef.npcId = newId;
 			itemDef.name = newName;
@@ -1029,7 +1029,7 @@
 			itemDef.newTextures = copyItemDef.newTextures;
 			itemDef.dialogueModels = copyItemDef.dialogueModels;
 			itemDef.onMinimap = copyItemDef.onMinimap;
-			itemDef.combatLevel = copyItemDef.combatLevel;
+			itemDef.combatLevel = combatLevel;
 			itemDef.anInt91 = copyItemDef.anInt91;
 			itemDef.anInt86 = copyItemDef.anInt86;
 			itemDef.anInt75 = copyItemDef.anInt75;
