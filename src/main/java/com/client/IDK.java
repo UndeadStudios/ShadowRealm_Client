@@ -95,13 +95,9 @@ public final class IDK {
 					aclass30_sub2_sub4_sub6s);
 		if(colourToFind != null)
 		for (int j = 0; j < colourToFind.length; j++) {
-			model.replaceColor(colourToFind[j], colourToReplace[j]);
+			model.recolor(colourToFind[j], colourToReplace[j]);
 		}
 
-		if(textureToFind != null)
-		for (int j = 0; j < textureToFind.length; j++) {
-			model.replaceTexture(textureToFind[j], textureToReplace[j]);
-		}
 
 		return model;
 	}
@@ -126,13 +122,8 @@ public final class IDK {
 		Model model = new Model(j, aclass30_sub2_sub4_sub6s);
 		if(colourToFind != null)
 			for (int l = 0; l < colourToFind.length; l++) {
-				model.replaceColor(colourToFind[l], colourToReplace[l]);
+				model.recolor(colourToFind[l], colourToReplace[l]);
 			}
-		if(textureToFind != null)
-		for (int l = 0; l < textureToFind.length; l++) {
-			model.replaceTexture(textureToFind[l], textureToReplace[l]);
-		}
-
 
 		return model;
 	}

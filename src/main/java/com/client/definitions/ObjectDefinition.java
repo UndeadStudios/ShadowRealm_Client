@@ -188,10 +188,6 @@ public final class ObjectDefinition {
 		case 10562:
 			objectDef.actions = new String[] { "Open", null, null, null, null };
 			break;
-		case 8207:
-			objectDef.actions = new String[] { "Care-To", null, null, null, null };
-			objectDef.name = "Herb Patch";
-			break;
 			case 8720:
 				objectDef.name = "Vote shop";
 				break;

@@ -136,6 +136,9 @@ public class Client extends RSApplet {
 	private Socket aSocket832;
 	public boolean fogEnabled;
 	public int fogOpacity;
+	private boolean wikiHover;
+	Sprite wiki1 = new Sprite("/Interfaces/Wiki/2420");
+	Sprite wiki2 = new Sprite("/Interfaces/Wiki/2421");
 
 	public void drawScreenBox() {
 		if (screenFlashDrawing) {
@@ -1191,7 +1194,10 @@ public class Client extends RSApplet {
 		counterHover = fixed ? super.getMouseX() >= 522 && super.getMouseX() <= 544 && super.getMouseY() >= 20 && super.getMouseY() <= 47
 				: super.getMouseX() >= currentGameWidth - 205 && super.getMouseX() <= currentGameWidth - 184 && super.getMouseY() >= 27
 				&& super.getMouseY() <= 44;
-		worldHover = fixed ? super.getMouseX() >= 715 && super.getMouseX() <= 740 && super.getMouseY() >= 132 && super.getMouseY() <= 160
+		worldHover = fixed ? super.getMouseX() >= 714 && super.getMouseX() <= 740 && super.getMouseY() >= 121 && super.getMouseY() <= 146
+				: super.getMouseX() >= currentGameWidth - 34 && super.getMouseX() <= currentGameWidth - 5 && super.getMouseY() >= 143
+				&& super.getMouseY() <= 172;
+		wikiHover = fixed ? super.getMouseX() >= 706 && super.getMouseX() <= 742 && super.getMouseY() >= 160 && super.getMouseY() <= 147
 				: super.getMouseX() >= currentGameWidth - 34 && super.getMouseX() <= currentGameWidth - 5 && super.getMouseY() >= 143
 				&& super.getMouseY() <= 172;
 	}
@@ -5207,6 +5213,15 @@ public class Client extends RSApplet {
 			stream.createFrame(185);
 			stream.writeWord(5100);
 		}
+		if(l==855){//wiki search
+
+			inputTaken = true;
+			inputDialogState = 0;
+			messagePromptRaised = true;
+			promptInput = "";
+			friendsListAction = 14;
+			aString1121 = "Search the OSRS wiki (opens browser)";
+		}
 		if (l == 769) {
 			RSInterface d = RSInterface.interfaceCache[j];
 			RSInterface p = RSInterface.interfaceCache[buttonPressed];
@@ -7203,6 +7218,7 @@ public class Client extends RSApplet {
 		mapDotFriend = null;
 		mapScenes = null;
 		mapFunctions = null;
+		wiki = null;
 		anIntArrayArray929 = null;
 		players = null;
 		playerIndices = null;
@@ -7383,6 +7399,8 @@ public class Client extends RSApplet {
 						sendString(5, promptInput);
 					} else if (friendsListAction == 13) {
 						sendString(6, promptInput);
+					} else if (friendsListAction == 14) {//search wiki
+						sendString(7, promptInput);
 					}
 				}
 			} else if (inputDialogState == 1) {
@@ -9522,6 +9540,11 @@ public class Client extends RSApplet {
 			menuActionID[1] = 851;
 			menuActionRow = 3;
 		}
+		if (wikiHover && drawOrbs) {
+			menuActionName[1] = "search @or1@wiki";//2nd option
+			menuActionID[1] = 855;
+			menuActionRow = 2;
+		}
 		int mouseX1 = currentScreenMode == ScreenMode.FIXED ? 572 : currentGameWidth - 175;
 		int mouseX2 = currentScreenMode == ScreenMode.FIXED ? 600 : currentGameWidth - 150;
 		if (runHover) {
@@ -10609,8 +10632,7 @@ public class Client extends RSApplet {
 		addObject(26709, 1280, 3551, 1, 10, 0); // stronghold slayer
 		addObject(2123, 1257, 3501, 3, 10, 0); // rellekka slayer
 		// addObject(11803, 1650, 3619, 0, 10, 0); //icedung
-		addObject(-1, 3008, 9550, 0, 10, 0); // iceexit
-		addObject(2268, 3009, 9553, 0, 10, 0); // icedungexit
+
 		addObject(29734, 1349, 3591, 0, 10, 0); // demonicentrance
 		addObject(2823, 1792, 3708, 0, 10, 0); // mith entrance
 		addObject(4152, 1547, 3570, 1, 10, 0); // corpent
@@ -10864,7 +10886,11 @@ public class Client extends RSApplet {
 					mapFunctions[l3] = new Sprite("MapFunctions/" + l3);
 			} catch (Exception _ex) {
 			}
-
+			try {
+				for (int l3 = 0; l3 < 1; l3++)
+					wiki[l3] = new Sprite("Wiki/" + l3);
+			} catch (Exception _ex) {
+			}
 			try {
 				for (int i4 = 0; i4 < 20; i4++) {
 					hitMarks[i4] = new Sprite(streamLoader_2, "hitmarks", i4);
@@ -11749,6 +11775,11 @@ public class Client extends RSApplet {
 					menuActionName[1] = "Regional @or1@World Map";
 					menuActionID[1] = 851;
 					menuActionRow = 3;
+				}
+				if (wikiHover) {
+					menuActionName[1] = "search @or1@Wiki";
+					menuActionID[1] = 855;
+					menuActionRow = 2;
 				}
 				if (prayHover) {
 					menuActionName[2] = prayClicked ? "Turn Quick Prayers Off" : "Turn Quick Prayers On";
@@ -14377,7 +14408,6 @@ public class Client extends RSApplet {
 				//{38, 2326, 3175}, // achievement
 		};
 	}
-
 	private void drawMinimap() {
 		if (currentScreenMode == ScreenMode.FIXED)
 			mapAreaGraphicsBuffer.initDrawingArea();
@@ -14557,11 +14587,9 @@ public class Client extends RSApplet {
 				int l4 = (destY * 4 + 2) - myPlayer.y / 32;
 				markMinimap(mapFlag, j2, l4);
 			}
-
 			DrawingArea.drawPixels(3, (currentScreenMode == ScreenMode.FIXED ? 83 : 81),
 					(currentScreenMode == ScreenMode.FIXED ? 125 : currentGameWidth - 85), 0xffffff, 3);
 		}
-
 		if (currentScreenMode == ScreenMode.FIXED) {
 
 			mapArea[0].drawSprite(0, 4);
@@ -14575,22 +14603,29 @@ public class Client extends RSApplet {
 		if (drawOrbs)
 			loadAllOrbs(currentScreenMode == ScreenMode.FIXED ? 0 : currentGameWidth - 217);
 		if (currentScreenMode == ScreenMode.FIXED) {
-			cacheSprite2[6].drawSprite(198 - 2, 17 + 110);
+			cacheSprite2[6].drawSprite(198 - 2, 19 + 100);
 			if (worldHover) {
-				cacheSprite2[1].drawSprite(202 - 2, 20 + 111);
+				cacheSprite2[1].drawSprite(202 - 2, 123);
 			} else {
-				cacheSprite2[0].drawSprite(202 - 2, 20 + 111);
+				cacheSprite2[0].drawSprite(202 - 2, 123);
+			}
+			if (wikiHover) {
+				wiki[1].drawSprite(190, 149);
+
+			} else {
+				wiki[0].drawSprite(190, 149);
+
 			}
 		} else {
 
 
-			cacheSprite2[6].drawSprite(currentGameWidth - 35, 141);
+			cacheSprite2[6].drawSprite(currentGameWidth - 35, 125);
 			if (worldHover) {
-				cacheSprite2[1].drawSprite(currentGameWidth - 31, 145);
+				cacheSprite2[1].drawSprite(currentGameWidth - 31, 129);
 			} else {
-				cacheSprite2[0].drawSprite(currentGameWidth - 31, 145);
+				cacheSprite2[0].drawSprite(currentGameWidth - 31, 129);
 			}
-
+				wiki[0].drawSprite(currentGameWidth - 43, 155);
 		}
 		if (menuOpen) {
 			drawMenu(currentScreenMode == ScreenMode.FIXED ? 516 : 0, 0);
@@ -17915,6 +17950,7 @@ public class Client extends RSApplet {
 		anIntArray1030 = new int[5];
 		aBoolean1031 = false;
 		mapFunctions = new Sprite[125];
+		wiki = new Sprite[2];
 		dialogID = -1;
 		maxStats = new int[Skills.SKILLS_COUNT];
 		anIntArray1045 = new int[25000];
@@ -18184,6 +18220,7 @@ public class Client extends RSApplet {
 	private final int[] anIntArray1030;
 	private boolean aBoolean1031;
 	private static Sprite[] mapFunctions;
+	private static Sprite[] wiki;
 	static int baseX;
 	static int baseY;
 	private int previousAbsoluteX;

@@ -41,6 +41,11 @@
 			stream.currentOffset = streamIndices[i];
 			entityDef.npcId = i;
 			entityDef.readValues(stream);
+			switch(i){
+				case 11958:
+					//entityDef.models = new int[] { 7400 };
+					return copy(entityDef, 11958, 2205, "Vote boss",new int[] {57989, 27937, 57985, 57968, 27990},  null, "Attack", null, null, null);
+			}
 			if (i == Npcs.BOB_BARTER_HERBS) {
 				entityDef.actions = new String[] { "Talk-to", "Prices", "Decant", "Clean", null };
 			}
@@ -884,6 +889,7 @@
 			if (entityDef.name != null && entityDef.name.toLowerCase().contains("chinchompa") && !entityDef.name.toLowerCase().contains("baby")) {
 				entityDef.actions = new String[5];
 			}
+
 			return entityDef;
 		}
 
@@ -1005,6 +1011,56 @@
 		 *
 		 * } else if (i == 107) aBoolean84 = false; } while (true); }
 		 */
+		public static NpcDefinition copy(NpcDefinition itemDef, int newId, int copyingItemId, String newName, int[] models, String... actions) {
+			NpcDefinition copyItemDef = forID(copyingItemId);
+			itemDef.npcId = newId;
+			itemDef.name = newName;
+			itemDef.description = copyItemDef.description;
+			itemDef.models = models;
+			itemDef.size = copyItemDef.size;
+			itemDef.standAnimation = copyItemDef.standAnimation;
+			itemDef.walkAnimation = copyItemDef.walkAnimation;
+			itemDef.rotate180Animation = copyItemDef.rotate180Animation;
+			itemDef.rotate90RightAnimation = copyItemDef.rotate90RightAnimation;
+			itemDef.rotate90LeftAnimation = copyItemDef.rotate90LeftAnimation;
+			itemDef.originalColors = copyItemDef.originalColors;
+			itemDef.newColors = copyItemDef.newColors;
+			itemDef.originalTextures = copyItemDef.originalTextures;
+			itemDef.newTextures = copyItemDef.newTextures;
+			itemDef.dialogueModels = copyItemDef.dialogueModels;
+			itemDef.onMinimap = copyItemDef.onMinimap;
+			itemDef.combatLevel = copyItemDef.combatLevel;
+			itemDef.anInt91 = copyItemDef.anInt91;
+			itemDef.anInt86 = copyItemDef.anInt86;
+			itemDef.anInt75 = copyItemDef.anInt75;
+			itemDef.aBoolean93 = copyItemDef.aBoolean93;
+			itemDef.anInt85 = copyItemDef.anInt85;
+			itemDef.anInt92 = copyItemDef.anInt92;
+			itemDef.anInt75 = copyItemDef.anInt75;
+			itemDef.getDegreesToTurn = copyItemDef.getDegreesToTurn;
+			itemDef.anInt57 = copyItemDef.anInt57;
+			itemDef.anInt59 = copyItemDef.anInt59;
+			itemDef.childrenIDs = copyItemDef.childrenIDs;
+			itemDef.aBoolean84 = copyItemDef.aBoolean84;
+			itemDef.isClickable = copyItemDef.isClickable;
+			itemDef.aBool2190 = copyItemDef.aBool2190;
+			itemDef.field1914 = copyItemDef.field1914;
+			itemDef.field1919 = copyItemDef.field1919;
+			itemDef.field1918 = copyItemDef.field1918;
+			itemDef.field1938 = copyItemDef.field1938;
+			itemDef.field1920 = copyItemDef.field1920;
+			itemDef.field1933 = copyItemDef.field1933;
+			itemDef.field1922 = copyItemDef.field1922;
+			itemDef.field1923 = copyItemDef.field1923;
+			itemDef.actions = copyItemDef.actions;
+			itemDef.actions = new String[5];
+			if (actions != null) {
+				for (int index = 0; index < actions.length; index++) {
+					itemDef.actions[index] = actions[index];
+				}
+			}
+			return itemDef;
+		}
 		private void readValues(Buffer stream) {
 			while (true) {
 				int opcode = stream.readUnsignedByte();

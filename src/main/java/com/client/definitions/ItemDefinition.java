@@ -231,9 +231,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-			case 26399:
+			case 29499:
 				itemDef.setDefaults();
-				itemDef.id = 26399;
+				itemDef.id = 29499;
 				itemDef.modelId = 52401;
 				itemDef.name = "Lava Scythe";
 				itemDef.description = "A scythe from lava.";

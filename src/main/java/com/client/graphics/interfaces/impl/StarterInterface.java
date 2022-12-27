@@ -23,7 +23,7 @@ public class StarterInterface extends RSInterface {
     private static final String MODE_HEADER_COLOUR = "<col=" + 0xFFFFFFFF + ">";
     private static final String MODE_DESC_COLOUR = " <col=" + RSInterface.DEFAULT_TEXT_COLOR + ">";
     private String[] GAME_MODES = {
-            "Standard Mode\\nThe standard " + Configuration.CLIENT_TITLE + " experience.\\n250x combat experience rate.",
+            "Standard Mode\\nThe standard " + Configuration.CLIENT_TITLE + " experience.\\n50x combat experience rate.",
             "Rogue Mode\\nStandard mode with a 5x experience rate.\\nReceives 5% drop rate boost.",
             "Ironman Mode\\nAn Iron Man cannot trade, stake, receive PK loot, \\nor scavenge dropped items.\\nShares the standard experience rate.",
             "Hardcore Ironman\\nIn addition to the standard Iron Man rules, Hardcore\\nhas 1 life. A dangerous death will result in being\\ndowngraded to a standard Iron Man.",

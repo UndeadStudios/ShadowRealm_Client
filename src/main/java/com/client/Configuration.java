@@ -9,13 +9,13 @@ public class Configuration {
 	 * the player has the most up-to-date client, otherwise they
 	 * will receive an error on login to update their client.
 	 */
-	public static final int CLIENT_VERSION = 232;
+	public static final int CLIENT_VERSION = 233;
 
 	/**
 	 * Cache version is written to the cache folder inside a version file.
 	 * This is read on startup to tell if the cache is out of date or not.
 	 */
-	public static final int CACHE_VERSION = 64; // Set this to the same value, v0.030 = 30, v1.120 = 1120
+	public static final int CACHE_VERSION = 69; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
 	public static final String CACHE_LINK = "https://cache.exilius-osrs.com/v0.049.zip";
 
@@ -50,7 +50,7 @@ public class Configuration {
 
 	public static boolean developerMode;
 	public static boolean loadExternalCacheArchives = false; // Always true because I can't seem to pack them correctly
-	public static boolean packIndexData = false;
+	public static boolean packIndexData = true;
 	public static boolean dumpMaps;
 	public static boolean dumpAnimationData = false;
 	public static boolean dumpDataLists = false;
