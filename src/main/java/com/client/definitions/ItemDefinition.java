@@ -345,12 +345,12 @@ public final class ItemDefinition {
 				itemDef.name = "Lava Torva Full Helm";
 				itemDef.description = "A Helm from lava.";
 				itemDef.spriteScale = 1780;
-					itemDef.spritePitch = 1867;
-					itemDef.spriteCameraRoll = 85;
+				itemDef.spritePitch = 1867;
+				itemDef.spriteCameraRoll = 85;
 				itemDef.spriteCameraYaw = 1;
 				//itemDef.spriteTranslateX = -1;
 				itemDef.spriteTranslateY = -2;
-
+				itemDef.itemActions = new String[5];
 				itemDef.primaryMaleModel = 65131;
 				itemDef.primaryFemaleModel = 65131;
 				//itemDef.groundActions = new String[5];
@@ -363,7 +363,7 @@ public final class ItemDefinition {
 				itemDef.setDefaults();
 				itemDef.id = 4371;
 				itemDef.modelId = 56670;
-				itemDef.name = "Osiris cape";
+				itemDef.name = "Admin Cape";
 				itemDef.description = "A Cape for the finest.";
 
 				itemDef.spriteScale = 1385;
