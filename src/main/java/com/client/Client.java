@@ -1767,8 +1767,7 @@ public class Client extends RSApplet {
 				if (anIntArrayArray929[l][i1] == anInt1265)
 					continue;
 				anIntArrayArray929[l][i1] = anInt1265;
-			}
-			if (npc.desc.aBoolean84)
+			}if (!npc.desc.aBoolean84)
 				k |= ~0x7fffffffffffffffL;
 			worldController.method285(plane, npc.anInt1552, getCenterHeight(plane, npc.y, npc.x), k, npc.y,
 					(npc.anInt1540 - 1) * 64 + 60, npc.x, npc, npc.aBoolean1541);
@@ -3613,6 +3612,14 @@ public class Client extends RSApplet {
 			npc.anInt1556 = npc.desc.rotate90RightAnimation;
 			npc.anInt1557 = npc.desc.rotate90LeftAnimation;
 			npc.anInt1511 = npc.desc.standAnimation;
+			npc.field1139 = npc.desc.field1914;
+			npc.field1140 = npc.desc.field1919;
+			npc.field1141 = npc.desc.field1918;
+			npc.field1149 = npc.desc.field1938;
+			npc.field1143 = npc.desc.field1920;
+			npc.field1170 = npc.desc.field1933;
+			npc.field1145 = npc.desc.field1922;
+			npc.field1150 = npc.desc.field1923;
 			npc.anInt1538 = 0;
 			npc.anInt1539 = 0;
 			npc.setPos(myPlayer.pathX[0] + i1, myPlayer.pathY[0] + l, j1 == 1);
@@ -10373,14 +10380,6 @@ public class Client extends RSApplet {
 				npc.anInt1556 = npc.desc.rotate90RightAnimation;
 				npc.anInt1557 = npc.desc.rotate90LeftAnimation;
 				npc.anInt1511 = npc.desc.standAnimation;
-				npc.field1139 = npc.desc.field1914;
-				npc.field1140 = npc.desc.field1919;
-				npc.field1141 = npc.desc.field1918;
-				npc.field1149 = npc.desc.field1938;
-				npc.field1143 = npc.desc.field1920;
-				npc.field1170 = npc.desc.field1933;
-				npc.field1145 = npc.desc.field1922;
-				npc.field1150 = npc.desc.field1923;
 			}
 			if ((l & 4) != 0) {
 				npc.anInt1538 = stream.method434();
@@ -10398,7 +10397,6 @@ public class Client extends RSApplet {
 			entityDef = entityDef.method161();
 		if (entityDef != null) {
 		if (entityDef.aBoolean84) {
-			if(!entityDef.aBool2190) {
 				String s = entityDef.name;
 				if (entityDef.combatLevel != 0)
 					s = s + combatDiffColor(myPlayer.combatLevel, entityDef.combatLevel) + " (level-" + entityDef.combatLevel
@@ -10511,7 +10509,6 @@ public class Client extends RSApplet {
 						}
 					}
 				}
-			}
 		}
 		}
 	}
@@ -14592,7 +14589,7 @@ public class Client extends RSApplet {
 					NpcDefinition entityDef = npc.desc;
 					if (entityDef.childrenIDs != null)
 						entityDef = entityDef.method161();
-					if (entityDef != null && entityDef.onMinimap && !entityDef.aBoolean84) {
+					if (entityDef != null && entityDef.onMinimap && entityDef.aBoolean84) {
 						int i1 = npc.x / 32 - myPlayer.x / 32;
 						int k3 = npc.y / 32 - myPlayer.y / 32;
 						markMinimap(mapDotNPC, i1, k3);

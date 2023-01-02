@@ -179,7 +179,7 @@ public final class AnimationDefinition {
 						frameSounds[var4] = var6;
 					}
 				}
-			/*} else if (i == 14) {
+			} else if (i == 14) {
 				skeletalId = stream.readInt();
 			} else if (i == 15) {
 				int count = stream.readUShort();
@@ -197,7 +197,7 @@ public final class AnimationDefinition {
 				unknown = new int[count];
 				for (int index = 0; index < count; ++index) {
 					unknown[index] = stream.readUnsignedByte();
-				}*/
+				}
 			} else if (i == 127){
 			} else System.out.println("Error unrecognised seq config code: " + i);
 		}
