@@ -566,7 +566,7 @@ final class ObjectManager {
 		key |= (long) id << 32;
 		byte byte0 = (byte) ((orientation << 6) + type);
 		if (type == 22) {
-			if (lowMem && !definition.hasActions && !definition.aBoolean736)
+			if (lowMem && !definition.hasActions && definition.interactType == 1)
 				return;
 			Object obj;
 			if (definition.animation == -1 && definition.childrenIDs == null)
@@ -574,7 +574,7 @@ final class ObjectManager {
 			else
 				obj = new Animable_Sub5(id, orientation, 22, l1, i2, k1, j2, definition.animation, true);
 			worldController.method280(z, k2, y, ((Renderable) (obj)), byte0, key, x);
-			if (definition.aBoolean767 && definition.hasActions && class11 != null)
+			if (definition.interactType == 1 && definition.hasActions && class11 != null)
 				class11.method213(y, x);
 			return;
 		}
@@ -598,7 +598,7 @@ final class ObjectManager {
 					l4 = definition.yLength;
 				}
 				if (worldController.method284(key, byte0, k2, l4, ((Renderable) (obj1)), j4, z, i5, y, x)
-						&& definition.aBoolean779) {
+						&& definition.clipped) {
 					Model model;
 					if (obj1 instanceof Model)
 						model = (Model) obj1;
@@ -619,7 +619,7 @@ final class ObjectManager {
 					}
 				}
 			}
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method212(definition.aBoolean757, definition.xLength, definition.yLength, x, y, orientation);
 			return;
 		}
@@ -632,7 +632,7 @@ final class ObjectManager {
 			worldController.method284(key, byte0, k2, 1, ((Renderable) (obj2)), 1, z, 0, y, x);
 			if (type >= 12 && type <= 17 && type != 13 && z > 0)
 				anIntArrayArrayArray135[z][x][y] |= 0x924;
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method212(definition.aBoolean757, definition.xLength, definition.yLength, x, y, orientation);
 			return;
 		}
@@ -644,35 +644,35 @@ final class ObjectManager {
 				obj3 = new Animable_Sub5(id, orientation, 0, l1, i2, k1, j2, definition.animation, true);
 			worldController.method282(anIntArray152[orientation], ((Renderable) (obj3)), key, y, byte0, x, null, k2, 0, z);
 			if (orientation == 0) {
-				if (definition.aBoolean779) {
+				if (definition.clipped) {
 					shading[z][x][y] = 50;
 					shading[z][x][y + 1] = 50;
 				}
 				if (definition.aBoolean764)
 					anIntArrayArrayArray135[z][x][y] |= 0x249;
 			} else if (orientation == 1) {
-				if (definition.aBoolean779) {
+				if (definition.clipped) {
 					shading[z][x][y + 1] = 50;
 					shading[z][x + 1][y + 1] = 50;
 				}
 				if (definition.aBoolean764)
 					anIntArrayArrayArray135[z][x][y + 1] |= 0x492;
 			} else if (orientation == 2) {
-				if (definition.aBoolean779) {
+				if (definition.clipped) {
 					shading[z][x + 1][y] = 50;
 					shading[z][x + 1][y + 1] = 50;
 				}
 				if (definition.aBoolean764)
 					anIntArrayArrayArray135[z][x + 1][y] |= 0x249;
 			} else if (orientation == 3) {
-				if (definition.aBoolean779) {
+				if (definition.clipped) {
 					shading[z][x][y] = 50;
 					shading[z][x + 1][y] = 50;
 				}
 				if (definition.aBoolean764)
 					anIntArrayArrayArray135[z][x][y] |= 0x492;
 			}
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			if (definition.anInt775 != 16)
 				worldController.method290(y, definition.anInt775, x, z);
@@ -685,7 +685,7 @@ final class ObjectManager {
 			else
 				obj4 = new Animable_Sub5(id, orientation, 1, l1, i2, k1, j2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj4)), key, y, byte0, x, null, k2, 0, z);
-			if (definition.aBoolean779)
+			if (definition.clipped)
 				if (orientation == 0)
 					shading[z][x][y + 1] = 50;
 				else if (orientation == 1)
@@ -694,7 +694,7 @@ final class ObjectManager {
 					shading[z][x + 1][y] = 50;
 				else if (orientation == 3)
 					shading[z][x][y] = 50;
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -725,7 +725,7 @@ final class ObjectManager {
 					anIntArrayArrayArray135[z][x][y] |= 0x492;
 					anIntArrayArrayArray135[z][x][y] |= 0x249;
 				}
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			if (definition.anInt775 != 16)
 				worldController.method290(y, definition.anInt775, x, z);
@@ -738,7 +738,7 @@ final class ObjectManager {
 			else
 				obj5 = new Animable_Sub5(id, orientation, 3, l1, i2, k1, j2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj5)), key, y, byte0, x, null, k2, 0, z);
-			if (definition.aBoolean779)
+			if (definition.clipped)
 				if (orientation == 0)
 					shading[z][x][y + 1] = 50;
 				else if (orientation == 1)
@@ -747,7 +747,7 @@ final class ObjectManager {
 					shading[z][x + 1][y] = 50;
 				else if (orientation == 3)
 					shading[z][x][y] = 50;
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -758,7 +758,7 @@ final class ObjectManager {
 			else
 				obj6 = new Animable_Sub5(id, orientation, type, l1, i2, k1, j2, definition.animation, true);
 			worldController.method284(key, byte0, k2, 1, ((Renderable) (obj6)), 1, z, 0, y, x);
-			if (definition.aBoolean767 && class11 != null)
+			if (definition.interactType != 0 && class11 != null)
 				class11.method212(definition.aBoolean757, definition.xLength, definition.yLength, x, y, orientation);
 			return;
 		}
@@ -1112,7 +1112,7 @@ final class ObjectManager {
 				}
 				worldController.method284(key, byte1, l2, i5, ((Renderable) (obj1)), k4, k1, j5, y, x);
 			}
-			if (definition.aBoolean767)
+			if (definition.interactType == 1)
 				class11.method212(definition.aBoolean757, definition.xLength, definition.yLength, x, y, orientation);
 			return;
 		}
@@ -1145,7 +1145,7 @@ final class ObjectManager {
 			else
 				obj4 = new Animable_Sub5(id, orientation, 1, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj4)), key, y, byte1, x, null, l2, 0, k1);
-			if (definition.aBoolean767)
+			if (definition.interactType != 0)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -1162,7 +1162,7 @@ final class ObjectManager {
 			}
 			worldController.method282(anIntArray152[orientation], ((Renderable) (obj11)), key, y, byte1, x,
 					((Renderable) (obj12)), l2, anIntArray152[j3], k1);
-			if (definition.aBoolean767)
+			if (definition.interactType != 0)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -1173,7 +1173,7 @@ final class ObjectManager {
 			else
 				obj5 = new Animable_Sub5(id, orientation, 3, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj5)), key, y, byte1, x, null, l2, 0, k1);
-			if (definition.aBoolean767)
+			if (definition.interactType != 0)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -1184,7 +1184,7 @@ final class ObjectManager {
 			else
 				obj6 = new Animable_Sub5(id, orientation, type, i2, j2, l1, k2, definition.animation, true);
 			worldController.method284(key, byte1, l2, 1, ((Renderable) (obj6)), 1, k1, 0, y, x);
-			if (definition.aBoolean767)
+			if (definition.interactType != 0)
 				class11.method212(definition.aBoolean757, definition.xLength, definition.yLength, x, y, orientation);
 			return;
 		} // try

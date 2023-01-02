@@ -170,7 +170,7 @@ final class CollisionMap {
     public void method213(int i, int k) {
         k -= xOffset;
         i -= yOffset;
-        anIntArrayArray294[k][i] |= 0x200000;
+        anIntArrayArray294[k][i] |= 262144;
     }
 
     private void flag(int i, int j, int k) {

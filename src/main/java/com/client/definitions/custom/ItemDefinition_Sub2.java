@@ -1476,6 +1476,443 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderId = -1;
             itemDef.placeholderTemplateId = -1;
         }
+        if(i == 27651) //ID
+        {
+            itemDef.itemActions = new String[] {null, null, null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Vote Boss jr"; //Name
+            itemDef.description = "Its an Vote Boss jr"; //Description
+            itemDef.modelId = 58870;
+            itemDef.spriteScale = 1000;
+            itemDef.spritePitch = 9;
+            itemDef.spriteCameraRoll = 1931;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = -1;
+            itemDef.primaryFemaleModel = 65535;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28870) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, null};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Mod sgs Platebody"; //Name
+            itemDef.description = "Its an Mod sgs Platebody"; //Description
+            itemDef.modifiedModelColors = new int[8];
+            itemDef.originalModelColors = new int[8];
+            itemDef.modifiedModelColors[0] = 61;
+            itemDef.modifiedModelColors[1] = 24;
+            itemDef.modifiedModelColors[2] = 41;
+            itemDef.modifiedModelColors[3] = 10394;
+            itemDef.modifiedModelColors[4] = 10518;
+            itemDef.modifiedModelColors[5] = 10388;
+            itemDef.modifiedModelColors[6] = 10514;
+            itemDef.modifiedModelColors[7] = 10508;
+            itemDef.originalModelColors[0] = 32465;
+            itemDef.originalModelColors[1] = 64449;
+            itemDef.originalModelColors[2] = 32465;
+            itemDef.originalModelColors[3] = 32465;
+            itemDef.originalModelColors[4] = 64449;
+            itemDef.originalModelColors[5] = 64449;
+            itemDef.originalModelColors[6] = 64449;
+            itemDef.originalModelColors[7] = 64449;
+            itemDef.modelId = 2378;
+            itemDef.spriteScale = 1380;
+            itemDef.spritePitch = 452;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -1;
+            itemDef.primaryMaleModel = 6646;
+            itemDef.primaryFemaleModel = 6685;
+            itemDef.secondaryMaleModel = 3379;
+            itemDef.secondaryFemaleModel = 3383;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.placeholderId = 17851;
+            itemDef.placeholderTemplateId = -1;
+        }
+
+        if(i == 28871)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 926;
+            itemDef.originalModelColors[0] = 32465;
+            itemDef.modifiedModelColors[1] = 912;
+            itemDef.originalModelColors[1] = 64449;
+            itemDef.spriteScale = 1740;
+            itemDef.spritePitch = 444;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -8;
+            itemDef.primaryMaleModel = 5024;
+            itemDef.primaryFemaleModel = 5025;
+            itemDef.modelId = 5026;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Mod Sgs Platelegs";
+            itemDef.description = "Made By Mod Sgsrocks From Godzhell.";
+        }
+        if(i == 28872) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, null};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Mod Sgs Platebody V.2"; //Name
+            itemDef.description = "Its an Mod Sgs Platebody V.2"; //Description
+            itemDef.modifiedModelColors = new int[8];
+            itemDef.originalModelColors = new int[8];
+            itemDef.modifiedModelColors[0] = 61;
+            itemDef.modifiedModelColors[1] = 24;
+            itemDef.modifiedModelColors[2] = 41;
+            itemDef.modifiedModelColors[3] = 10394;
+            itemDef.modifiedModelColors[4] = 10518;
+            itemDef.modifiedModelColors[5] = 10388;
+            itemDef.modifiedModelColors[6] = 10514;
+            itemDef.modifiedModelColors[7] = 10508;
+            itemDef.originalModelColors[0] = 47009;
+            itemDef.originalModelColors[1] = 64162;
+            itemDef.originalModelColors[2] = 47009;
+            itemDef.originalModelColors[3] = 47009;
+            itemDef.originalModelColors[4] = 64162;
+            itemDef.originalModelColors[5] = 64162;
+            itemDef.originalModelColors[6] = 64162;
+            itemDef.originalModelColors[7] = 64162;
+            itemDef.modelId = 2378;
+            itemDef.spriteScale = 1380;
+            itemDef.spritePitch = 452;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -1;
+            itemDef.primaryMaleModel = 6646;
+            itemDef.primaryFemaleModel = 6685;
+            itemDef.secondaryMaleModel = 3379;
+            itemDef.secondaryFemaleModel = 3383;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.placeholderId = 17851;
+            itemDef.placeholderTemplateId = -1;
+        }
+
+
+        if(i == 28873)
+        {
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 926;
+            itemDef.originalModelColors[0] = 47009;
+            itemDef.modifiedModelColors[1] = 912;
+            itemDef.originalModelColors[1] = 64162;
+            itemDef.spriteScale = 1740;
+            itemDef.spritePitch = 444;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -8;
+            itemDef.primaryMaleModel = 5024;
+            itemDef.primaryFemaleModel = 5025;
+            itemDef.modelId = 5026;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Mod Sgs Platelegs V.2";
+            itemDef.description = "Made By Mod Sgsrocks From Godzhell.";
+        }
+        if(i == 28020) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Frozen Ancestral hat"; //Name
+            itemDef.description = "Its an Frozen Ancestral hat"; //Description
+            itemDef.modelId = 52794;
+            itemDef.spriteScale = 1236;
+            itemDef.spritePitch = 118;
+            itemDef.spriteCameraRoll = 10;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -12;
+            itemDef.primaryMaleModel = 52655;
+            itemDef.primaryFemaleModel = 52655;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 45000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 21019;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 21020;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28021) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, "null"};
+            itemDef.name = "Frozen Ancestral robe top"; //Name
+            itemDef.description = "Its an Frozen Ancestral robe top"; //Description
+            itemDef.modelId = 52790;
+            itemDef.spriteScale = 1358;
+            itemDef.spritePitch = 514;
+            itemDef.spriteCameraRoll = 2041;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -3;
+            itemDef.primaryMaleModel = 52657;
+            itemDef.primaryFemaleModel = 52657;
+            itemDef.secondaryMaleModel = 52658;
+            itemDef.secondaryFemaleModel = 52658;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 120000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28022) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, "null"};
+            itemDef.name = "Frozen Ancestral robe bottom"; //Name
+            itemDef.description = "Its an Frozen Ancestral robe bottom"; //Description
+            itemDef.modelId = 52787;
+            itemDef.spriteScale = 1690;
+            itemDef.spritePitch = 435;
+            itemDef.spriteCameraRoll = 9;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -1;
+            itemDef.spriteTranslateY = 7;
+            itemDef.primaryMaleModel = 52653;
+            itemDef.primaryFemaleModel = 52662;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 80000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28023) //ID
+        {
+            itemDef.itemActions = new String[] {null, null, null,null, null,};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Berserker crystal"; //Name
+            itemDef.description = "Its an berserker crystal"; //Description
+            itemDef.modelId = 59263;
+            itemDef.spriteScale = 740;
+            itemDef.spritePitch = 429;
+            itemDef.spriteCameraRoll = 225;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = 5;
+            itemDef.primaryMaleModel = -1;
+            itemDef.primaryFemaleModel = 65535;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 45000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 13230;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14022;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28024) //ID
+        {
+            itemDef.itemActions = new String[] {null, null, null,null, null,};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Galaxy stone"; //Name
+            itemDef.description = "Its an Galaxy stone"; //Description
+            itemDef.modelId = 59264;
+            itemDef.spriteScale = 653;
+            itemDef.spritePitch = 229;
+            itemDef.spriteCameraRoll = 1818;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -8;
+            itemDef.primaryMaleModel = 29258;
+            itemDef.primaryFemaleModel = 29258;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 45000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 13234;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14024;
+            itemDef.placeholderTemplateId = -1;
+        }
+
+        if(i == 28025) //ID
+        {
+            itemDef.itemActions = new String[] {null, null, null,null, null,};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Superior crystal"; //Name
+            itemDef.description = "Its an Superior crystal"; //Description
+            itemDef.modelId = 59261;
+            itemDef.spriteScale = 740;
+            itemDef.spritePitch = 429;
+            itemDef.spriteCameraRoll = 225;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = 5;
+            itemDef.primaryMaleModel = -1;
+            itemDef.primaryFemaleModel = 65535;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 45000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 13232;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14023;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28026) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Berserker boots"; //Name
+            itemDef.description = "Its an Berserker boots"; //Description
+            itemDef.modelId = 55551;
+            itemDef.spriteScale = 976;
+            itemDef.spritePitch = 147;
+            itemDef.spriteCameraRoll = 279;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = -5;
+            itemDef.primaryMaleModel = 55551;
+            itemDef.primaryFemaleModel = 55551;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 75000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 13236;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14025;
+            itemDef.placeholderTemplateId = -1;
+        }
+
+        if(i == 28027) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Galaxy boots"; //Name
+            itemDef.description = "Its an Galaxy boots"; //Description
+            itemDef.modelId = 55550;
+            itemDef.spriteScale = 976;
+            itemDef.spritePitch = 147;
+            itemDef.spriteCameraRoll = 279;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = -5;
+            itemDef.primaryMaleModel = 55550;
+            itemDef.primaryFemaleModel = 55550;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 75000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 13240;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14027;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 28028) //ID
+        {
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Superior boots"; //Name
+            itemDef.description = "Its an Superior boots"; //Description
+            itemDef.modelId = 55552;
+            itemDef.spriteScale = 976;
+            itemDef.spritePitch = 147;
+            itemDef.spriteCameraRoll = 279;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = -5;
+            itemDef.primaryMaleModel = 55552;
+            itemDef.primaryFemaleModel = 55552;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 75000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = 13238;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14026;
+            itemDef.placeholderTemplateId = -1;
+        }
 
         return itemDef;
 }

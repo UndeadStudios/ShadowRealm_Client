@@ -722,6 +722,9 @@ public class Client extends RSApplet {
 			} else if (Bank.isSearchingBank()) {
 				newBoldFont.drawCenteredString("Enter an item to search for:", 259, 60 + yOffset, 0, -1);
 				newBoldFont.drawCenteredString(Bank.searchingBankString + "*", 259, 80 + yOffset, 128, -1);
+			} else if (inputDialogState == 10) {
+				newBoldFont.drawCenteredString("Enter an players name to join:", 259, 60 + yOffset, 0, -1);
+				newBoldFont.drawCenteredString(amountOrNameInput + "*", 259, 80 + yOffset, 128, -1);
 			} else if (inputDialogState == 3) {
 				DrawingArea.fillPixels(8, 505, 108, 0x463214, 28 + yOffset);
 				DrawingArea.drawAlphaBox(8, 28 + yOffset, 505, 108, 0x746346, 75);
@@ -1444,7 +1447,7 @@ public class Client extends RSApplet {
 			unlinkMRUNodes();
 			worldController.initToNull();
 			System.gc();
-			load_objects();
+			//load_objects();
 			for (int i = 0; i < 4; i++)
 				aClass11Array1230[i].setDefault();
 
@@ -1765,7 +1768,7 @@ public class Client extends RSApplet {
 					continue;
 				anIntArrayArray929[l][i1] = anInt1265;
 			}
-			if (!npc.desc.aBoolean84)
+			if (npc.desc.aBoolean84)
 				k |= ~0x7fffffffffffffffL;
 			worldController.method285(plane, npc.anInt1552, getCenterHeight(plane, npc.y, npc.x), k, npc.y,
 					(npc.anInt1540 - 1) * 64 + 60, npc.x, npc, npc.aBoolean1541);
@@ -3311,6 +3314,18 @@ public class Client extends RSApplet {
 				aByteArray912 = abyte2;
 				Rasterizer.requestTextureUpdate(40);
 			}
+			if (Rasterizer.textureLastUsed[91] >= j) {
+				Background background_2 = Rasterizer.textures[91];
+				int i1 = background_2.width * background_2.anInt1453 - 1;
+				int l1 = background_2.width * tickDelta * 2;
+				byte abyte2[] = background_2.palettePixels;
+				byte abyte5[] = aByteArray912;
+				for (int k2 = 0; k2 <= i1; k2++)
+					abyte5[k2] = abyte2[k2 - l1 & i1];
+				background_2.palettePixels = abyte5;
+				aByteArray912 = abyte2;
+				Rasterizer.requestTextureUpdate(91);
+			}
 			if (Rasterizer.textureLastUsed[49] >= j) {
 				Background background_2 = Rasterizer.textures[49];
 				int i1 = background_2.width * background_2.anInt1453 - 1;
@@ -3710,6 +3725,14 @@ public class Client extends RSApplet {
 			promptInput = "";
 			friendsListAction = 6;
 			aString1121 = "Enter the name of the chat you wish to join";
+		}
+		if (j == 554) {
+			inputTaken = true;
+			inputDialogState = 0;
+			messagePromptRaised = true;
+			promptInput = "";
+			friendsListAction = 15;
+			aString1121 = "Enter the name of the player that u want to join";
 		}
 		if (j >= 300 && j <= 313) {
 			int k = (j - 300) / 2;
@@ -7401,6 +7424,8 @@ public class Client extends RSApplet {
 						sendString(6, promptInput);
 					} else if (friendsListAction == 14) {//search wiki
 						sendString(7, promptInput);
+					} else if (friendsListAction == 15) {//poh enter
+						sendString(10, promptInput);
 					}
 				}
 			} else if (inputDialogState == 1) {
@@ -7548,6 +7573,24 @@ public class Client extends RSApplet {
 						stream.createFrame(208);
 						stream.writeDWord(amount);
 						modifiableXValue = amount;
+					}
+					inputDialogState = 0;
+					inputTaken = true;
+				}
+			} else if (inputDialogState == 10) {
+				if (j >= 32 && j <= 122 && amountOrNameInput.length() < 58) {
+					amountOrNameInput += (char) j;
+					inputTaken = true;
+				}
+				if (j == 8 && amountOrNameInput.length() > 0) {
+					amountOrNameInput = amountOrNameInput.substring(0, amountOrNameInput.length() - 1);
+					inputTaken = true;
+				}
+				if (j == 13 || j == 10) {
+					if (amountOrNameInput.length() > 0) {
+						stream.createFrame(60);
+						stream.writeUnsignedByte(amountOrNameInput.length() + 1);
+						stream.writeString(amountOrNameInput);
 					}
 					inputDialogState = 0;
 					inputTaken = true;
@@ -10330,6 +10373,14 @@ public class Client extends RSApplet {
 				npc.anInt1556 = npc.desc.rotate90RightAnimation;
 				npc.anInt1557 = npc.desc.rotate90LeftAnimation;
 				npc.anInt1511 = npc.desc.standAnimation;
+				npc.field1139 = npc.desc.field1914;
+				npc.field1140 = npc.desc.field1919;
+				npc.field1141 = npc.desc.field1918;
+				npc.field1149 = npc.desc.field1938;
+				npc.field1143 = npc.desc.field1920;
+				npc.field1170 = npc.desc.field1933;
+				npc.field1145 = npc.desc.field1922;
+				npc.field1150 = npc.desc.field1923;
 			}
 			if ((l & 4) != 0) {
 				npc.anInt1538 = stream.method434();
@@ -10345,122 +10396,123 @@ public class Client extends RSApplet {
 			return;
 		if (entityDef.childrenIDs != null)
 			entityDef = entityDef.method161();
-		if (entityDef == null)
-			return;
-		if (!entityDef.aBoolean84)
-			return;
-		String s = entityDef.name;
-		if (entityDef.combatLevel != 0)
-			s = s + combatDiffColor(myPlayer.combatLevel, entityDef.combatLevel) + " (level-" + entityDef.combatLevel
-					+ ")";
-		if (itemSelected == 1) {
-			menuActionName[menuActionRow] = "Use " + selectedItemName + " with @yel@" + s;
-			menuActionID[menuActionRow] = 582;
-			menuActionCmd1[menuActionRow] = i;
-			menuActionCmd2[menuActionRow] = k;
-			menuActionCmd3[menuActionRow] = j;
-			menuActionRow++;
-			return;
+		if (entityDef != null) {
+		if (entityDef.aBoolean84) {
+			if(!entityDef.aBool2190) {
+				String s = entityDef.name;
+				if (entityDef.combatLevel != 0)
+					s = s + combatDiffColor(myPlayer.combatLevel, entityDef.combatLevel) + " (level-" + entityDef.combatLevel
+							+ ")";
+				if (itemSelected == 1) {
+					menuActionName[menuActionRow] = "Use " + selectedItemName + " with @yel@" + s;
+					menuActionID[menuActionRow] = 582;
+					menuActionCmd1[menuActionRow] = i;
+					menuActionCmd2[menuActionRow] = k;
+					menuActionCmd3[menuActionRow] = j;
+					menuActionRow++;
+					return;
+				}
+				if (spellSelected == 1) {
+					if ((spellUsableOn & 2) == 2) {
+						menuActionName[menuActionRow] = spellTooltip + " @yel@" + s;
+						menuActionID[menuActionRow] = 413;
+						menuActionCmd1[menuActionRow] = i;
+						menuActionCmd2[menuActionRow] = k;
+						menuActionCmd3[menuActionRow] = j;
+						menuActionRow++;
+					}
+				} else {
+					if (entityDef.actions != null) {
+						for (int l = 4; l >= 0; l--)
+							if (entityDef.actions[l] != null && !entityDef.actions[l].equalsIgnoreCase("attack")) {
+								menuActionName[menuActionRow] = entityDef.actions[l] + " @yel@" + s;
+								if (l == 0)
+									menuActionID[menuActionRow] = 20;
+								if (l == 1)
+									menuActionID[menuActionRow] = 412;
+								if (l == 2)
+									menuActionID[menuActionRow] = 225;
+								if (l == 3)
+									menuActionID[menuActionRow] = 965;
+								if (l == 4)
+									menuActionID[menuActionRow] = 478;
+								menuActionCmd1[menuActionRow] = i;
+								menuActionCmd2[menuActionRow] = k;
+								menuActionCmd3[menuActionRow] = j;
+								menuActionRow++;
+							}
+
+					}
+					if (entityDef.actions != null) {
+						for (int i1 = 4; i1 >= 0; i1--) {
+							if (entityDef.actions[i1] != null && entityDef.actions[i1].equalsIgnoreCase("attack")) {
+								char c = '\0';
+								if (Configuration.npcAttackOptionPriority == 3)
+									continue;
+								if (Configuration.npcAttackOptionPriority == 0 && entityDef.combatLevel > myPlayer.combatLevel
+										|| Configuration.npcAttackOptionPriority == 1)
+									c = '\u07D0';
+								menuActionName[menuActionRow] = entityDef.actions[i1] + " @yel@" + s;
+								if (i1 == 0)
+									menuActionID[menuActionRow] = 20 + c;
+								if (i1 == 1)
+									menuActionID[menuActionRow] = 412 + c;
+								if (i1 == 2)
+									menuActionID[menuActionRow] = 225 + c;
+								if (i1 == 3)
+									menuActionID[menuActionRow] = 965 + c;
+								if (i1 == 4)
+									menuActionID[menuActionRow] = 478 + c;
+								menuActionCmd1[menuActionRow] = i;
+								menuActionCmd2[menuActionRow] = k;
+								menuActionCmd3[menuActionRow] = j;
+								menuActionRow++;
+							}
+						}
+
+					}
+					if (clientData) {
+						NPC npc = npcs[i];
+						menuActionName[menuActionRow] = "Examine @yel@" + s
+								+ " @whi@("
+								+ "id=" + entityDef.npcId
+								+ ", index=" + i
+								+ ", stand=" + entityDef.standAnimation
+								+ ", pos=[" + npc.getAbsoluteX() + ", " + npc.getAbsoluteY() + "]"
+								+ ", size=" + entityDef.size
+								+ ")";
+					} else
+						menuActionName[menuActionRow] = "Examine @yel@" + s;
+					menuActionID[menuActionRow] = 1025;
+					menuActionCmd1[menuActionRow] = i;
+					menuActionCmd2[menuActionRow] = k;
+					menuActionCmd3[menuActionRow] = j;
+					menuActionRow++;
+
+					if (debugModels == true) {
+						if (System.currentTimeMillis() - debugDelay > 1000 && entityDef.models != null) {
+							String modelIds = Arrays.toString(entityDef.models);
+							String regColors = Arrays.toString(entityDef.originalColors);
+							String newColors = Arrays.toString(entityDef.newColors);
+							int standAnim = entityDef.standAnimation;
+							int walkAnim = entityDef.walkAnimation;
+							String name = entityDef.name;
+							System.out.println(name + modelIds);
+							pushMessage(name + ": " + modelIds, 0, "");
+							pushMessage("Reg: " + regColors, 0, "");
+							pushMessage("New: " + newColors, 0, "");
+							pushMessage("stand: " + standAnim, 0, "");
+							pushMessage("walk: " + walkAnim, 0, "");
+							debugDelay = System.currentTimeMillis();
+							// menuActionName[menuActionRow] = "Examine
+							// @gre@O(@whi@"+Arrays.toString(entityDef.models)+")@gre@)";
+							// menuActionName[menuActionRow] = "#2
+							// (@whi@"+Arrays.toString(entityDef.originalColors)+")@gre@)(@whi@"+Arrays.toString(entityDef.newColors)+")@gre@)";
+						}
+					}
+				}
+			}
 		}
-		if (spellSelected == 1) {
-			if ((spellUsableOn & 2) == 2) {
-				menuActionName[menuActionRow] = spellTooltip + " @yel@" + s;
-				menuActionID[menuActionRow] = 413;
-				menuActionCmd1[menuActionRow] = i;
-				menuActionCmd2[menuActionRow] = k;
-				menuActionCmd3[menuActionRow] = j;
-				menuActionRow++;
-			}
-		} else {
-			if (entityDef.actions != null) {
-				for (int l = 4; l >= 0; l--)
-					if (entityDef.actions[l] != null && !entityDef.actions[l].equalsIgnoreCase("attack")) {
-						menuActionName[menuActionRow] = entityDef.actions[l] + " @yel@" + s;
-						if (l == 0)
-							menuActionID[menuActionRow] = 20;
-						if (l == 1)
-							menuActionID[menuActionRow] = 412;
-						if (l == 2)
-							menuActionID[menuActionRow] = 225;
-						if (l == 3)
-							menuActionID[menuActionRow] = 965;
-						if (l == 4)
-							menuActionID[menuActionRow] = 478;
-						menuActionCmd1[menuActionRow] = i;
-						menuActionCmd2[menuActionRow] = k;
-						menuActionCmd3[menuActionRow] = j;
-						menuActionRow++;
-					}
-
-			}
-			if (entityDef.actions != null) {
-				for (int i1 = 4; i1 >= 0; i1--) {
-					if (entityDef.actions[i1] != null && entityDef.actions[i1].equalsIgnoreCase("attack")) {
-						char c = '\0';
-						if (Configuration.npcAttackOptionPriority == 3)
-							continue;
-						if (Configuration.npcAttackOptionPriority == 0 && entityDef.combatLevel > myPlayer.combatLevel
-								|| Configuration.npcAttackOptionPriority == 1)
-							c = '\u07D0';
-						menuActionName[menuActionRow] = entityDef.actions[i1] + " @yel@" + s;
-						if (i1 == 0)
-							menuActionID[menuActionRow] = 20 + c;
-						if (i1 == 1)
-							menuActionID[menuActionRow] = 412 + c;
-						if (i1 == 2)
-							menuActionID[menuActionRow] = 225 + c;
-						if (i1 == 3)
-							menuActionID[menuActionRow] = 965 + c;
-						if (i1 == 4)
-							menuActionID[menuActionRow] = 478 + c;
-						menuActionCmd1[menuActionRow] = i;
-						menuActionCmd2[menuActionRow] = k;
-						menuActionCmd3[menuActionRow] = j;
-						menuActionRow++;
-					}
-				}
-
-			}
-			if (clientData) {
-				NPC npc = npcs[i];
-				menuActionName[menuActionRow] = "Examine @yel@" + s
-						+ " @whi@("
-						+ "id=" + entityDef.npcId
-						+ ", index=" + i
-						+ ", stand=" + entityDef.standAnimation
-						+ ", pos=[" + npc.getAbsoluteX() + ", " + npc.getAbsoluteY() + "]"
-						+ ", size=" + entityDef.size
-						+ ")";
-			} else
-				menuActionName[menuActionRow] = "Examine @yel@" + s;
-			menuActionID[menuActionRow] = 1025;
-			menuActionCmd1[menuActionRow] = i;
-			menuActionCmd2[menuActionRow] = k;
-			menuActionCmd3[menuActionRow] = j;
-			menuActionRow++;
-
-			if (debugModels == true) {
-				if (System.currentTimeMillis() - debugDelay > 1000 && entityDef.models != null) {
-					String modelIds = Arrays.toString(entityDef.models);
-					String regColors = Arrays.toString(entityDef.originalColors);
-					String newColors = Arrays.toString(entityDef.newColors);
-					int standAnim = entityDef.standAnimation;
-					int walkAnim = entityDef.walkAnimation;
-					String name = entityDef.name;
-					System.out.println(name + modelIds);
-					pushMessage(name + ": " + modelIds, 0, "");
-					pushMessage("Reg: " + regColors, 0, "");
-					pushMessage("New: " + newColors, 0, "");
-					pushMessage("stand: " + standAnim, 0, "");
-					pushMessage("walk: " + walkAnim, 0, "");
-					debugDelay = System.currentTimeMillis();
-					// menuActionName[menuActionRow] = "Examine
-					// @gre@O(@whi@"+Arrays.toString(entityDef.models)+")@gre@)";
-					// menuActionName[menuActionRow] = "#2
-					// (@whi@"+Arrays.toString(entityDef.originalColors)+")@gre@)(@whi@"+Arrays.toString(entityDef.newColors)+")@gre@)";
-				}
-			}
-
 		}
 	}
 
@@ -10644,7 +10696,7 @@ public class Client extends RSApplet {
 		addObject(8356, 1268, 3561, 0, 10, 0); // spirittreeMountQ
 		addObject(8356, 1315, 3619, 0, 10, 0); // spirittreeXeric
 		addObject(8356, 1477, 3555, 0, 10, 0); // spirittreeHeros
-		addObject(11835, 1213, 3539, 1, 10, 0); // tzhaar
+		//addObject(11835, 1213, 3539, 1, 10, 0); // tzhaar
 		addObject(678, 1605, 3707, 3, 10, 0); // CorpPortal
 		addObject(2544, 1672, 3557, 1, 10, 0); // Dagentrence
 
@@ -11816,10 +11868,34 @@ public class Client extends RSApplet {
 						rsInterface_1.width = worldViewportWidth;
 						rsInterface_1.height = worldViewportHeight;
 					}
+					if (rsInterface_1.width == 512 && rsInterface_1.height == 334 && rsInterface_1.type == 3) {
+						rsInterface_1.width = worldViewportWidth;
+						rsInterface_1.height = worldViewportHeight;
+					}
+					if (rsInterface_1.width == 513 && rsInterface_1.height == 335 && rsInterface_1.type == 3) {
+						rsInterface_1.width = worldViewportWidth;
+						rsInterface_1.height = worldViewportHeight;
+					}
+					if (rsInterface_1.width == 562 && rsInterface_1.height == 3625 && rsInterface_1.type == 3) {
+						rsInterface_1.width = worldViewportWidth;
+						rsInterface_1.height = worldViewportHeight;
+					}
 					drawInterface((currentScreenMode == ScreenMode.FIXED ? 0 : worldViewportHeight / 2 - 503), (currentScreenMode == ScreenMode.FIXED ? 0 : worldViewportWidth / 2 - 383), rsInterface_1, 8);
 				}
 				RSInterface rsInterface = RSInterface.interfaceCache[fullscreenInterfaceID];
 				if (rsInterface.width == 512 && rsInterface.height == 334 && rsInterface.type == 0) {
+					rsInterface.width = worldViewportWidth;
+					rsInterface.height = worldViewportHeight;
+				}
+				if (rsInterface.width == 512 && rsInterface.height == 334 && rsInterface.type == 3) {
+					rsInterface.width = worldViewportWidth;
+					rsInterface.height = worldViewportHeight;
+				}
+				if (rsInterface.width == 513 && rsInterface.height == 335 && rsInterface.type == 3) {
+					rsInterface.width = worldViewportWidth;
+					rsInterface.height = worldViewportHeight;
+				}
+				if (rsInterface.width == 562 && rsInterface.height == 362 && rsInterface.type == 3) {
 					rsInterface.width = worldViewportWidth;
 					rsInterface.height = worldViewportHeight;
 				}
@@ -12264,16 +12340,22 @@ public class Client extends RSApplet {
 									colour = class9_1.anInt216;
 							}
 							if (class9_1.aByte254 == 0) {
-								if (class9_1.aBoolean227)
+								if (class9_1.aBoolean227) {
+									if (class9_1.width == 562 || class9_1.height == 362) {
+										class9_1.width = worldViewportWidth;
+										class9_1.height = worldViewportHeight;
+									}
 									DrawingArea.drawPixels(class9_1.height, _y, _x, colour, class9_1.width);
-								else
+								} else {
 									DrawingArea.fillPixels(_x, class9_1.width, class9_1.height, colour, _y);
-							} else if (class9_1.aBoolean227)
+								}
+							} else if (class9_1.aBoolean227) {
 								DrawingArea.method335(colour, _y, class9_1.width, class9_1.height,
 										256 - (class9_1.aByte254 & 0xff), _x);
-							else
+							} else {
 								DrawingArea.method338(_y, class9_1.height, 256 - (class9_1.aByte254 & 0xff), colour,
 										class9_1.width, _x);
+							}
 						} else if (class9_1.type == 4 || class9_1.type == RSInterface.TYPE_TEXT_DRAW_FROM_LEFT) {
 							TextDrawingArea textDrawingArea = class9_1.textDrawingAreas;
 							String s = class9_1.message;
@@ -14510,7 +14592,7 @@ public class Client extends RSApplet {
 					NpcDefinition entityDef = npc.desc;
 					if (entityDef.childrenIDs != null)
 						entityDef = entityDef.method161();
-					if (entityDef != null && entityDef.onMinimap && entityDef.aBoolean84) {
+					if (entityDef != null && entityDef.onMinimap && !entityDef.aBoolean84) {
 						int i1 = npc.x / 32 - myPlayer.x / 32;
 						int k3 = npc.y / 32 - myPlayer.y / 32;
 						markMinimap(mapDotNPC, i1, k3);
@@ -17330,7 +17412,15 @@ public class Client extends RSApplet {
 					inputTaken = true;
 					incomingPacket = -1;
 					return true;
-
+				case 193:
+					enterInputInChatString = inStream.readString();
+					messagePromptRaised = false;
+					inputDialogState = 10;
+					amountOrNameInput = "";
+					inputTaken = true;
+					aString1121 = "Enter the name of the player you want to join";
+					incomingPacket = -1;
+					return true;
 				case 97:
 					int l7 = inStream.readUShort();
 					method60(l7);
@@ -18482,7 +18572,7 @@ public class Client extends RSApplet {
 		mainGameGraphicsBuffer = null;
 		leftSideFlame = null;
 		rightSideFlame = null;
-		fullGameScreen = new RSImageProducer(765, 503, getGameComponent());
+		fullGameScreen = new RSImageProducer(worldViewportWidth, worldViewportHeight, getGameComponent());
 		welcomeScreenRaised = true;
 	}
 	public void launchURL(String url) {

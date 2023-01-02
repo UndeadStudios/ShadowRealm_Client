@@ -28,8 +28,8 @@
 
 	public final class NpcDefinition {
 
-		private boolean isClickable = true;
-		private boolean aBool2190= false;
+		public boolean isClickable = true;
+		public boolean aBool2190 = false;
 
 		public static NpcDefinition forID(int i) {
 			for (int j = 0; j < 20; j++)
@@ -45,6 +45,12 @@
 				case 11958:
 					//entityDef.models = new int[] { 7400 };
 					return copy(entityDef, 11958, 2205, "Vote boss",new int[] {57989, 27937, 57985, 57968, 27990}, 1000, null, "Attack", null, null, null);
+				case 11959:
+					//entityDef.models = new int[] { 7400 };
+					return copy(entityDef, 11959, 8633, "Legendary boss",new int[] {57142}, 1000, null, "Attack", null, null, null);
+					case 11855:
+					//entityDef.models = new int[] { 7400 };
+					return copy(entityDef, 11855, 6633, "Vote boss jr",new int[] {57989, 27937, 57985, 57968, 27990}, 0, "Talk-to", null, "Pick-Up", null, null);
 			}
 			if (i == Npcs.BOB_BARTER_HERBS) {
 				entityDef.actions = new String[] { "Talk-to", "Prices", "Decant", "Clean", null };
@@ -1053,7 +1059,7 @@
 			itemDef.field1922 = copyItemDef.field1922;
 			itemDef.field1923 = copyItemDef.field1923;
 			itemDef.actions = copyItemDef.actions;
-			itemDef.actions = new String[5];
+			itemDef.actions = new String[10];
 			if (actions != null) {
 				for (int index = 0; index < actions.length; index++) {
 					itemDef.actions[index] = actions[index];
@@ -1171,18 +1177,48 @@
 					this.aBool2190 = true;
 				} else if(opcode == 114) {
 					this.field1914 = stream.readUShort();
+					if(this.field1914 == '\uffff') {
+						this.field1914 = -1;
+					}
 				} else if(opcode == 115) {
 					this.field1914 = stream.readUShort();
 					this.field1919 = stream.readUShort();
 					this.field1918 = stream.readUShort();
 					this.field1938 = stream.readUShort();
+					if(this.field1914 == '\uffff') {
+						this.field1914 = -1;
+					}
+					if(this.field1919 == '\uffff') {
+						this.field1919 = -1;
+					}
+					if(this.field1918 == '\uffff') {
+						this.field1918 = -1;
+					}
+					if(this.field1938 == '\uffff') {
+						this.field1938 = -1;
+					}
 				} else if(opcode == 116) {
 					this.field1920 = stream.readUShort();
+					if(this.field1920 == '\uffff') {
+						this.field1920 = -1;
+					}
 				} else if(opcode == 117) {
 					this.field1920 = stream.readUShort();
 					this.field1933 = stream.readUShort();
 					this.field1922 = stream.readUShort();
 					this.field1923 = stream.readUShort();
+					if(this.field1920 == '\uffff') {
+						this.field1920 = -1;
+					}
+					if(this.field1933 == '\uffff') {
+						this.field1933 = -1;
+					}
+					if(this.field1922 == '\uffff') {
+						this.field1922 = -1;
+					}
+					if(this.field1923 == '\uffff') {
+						this.field1923 = -1;
+					}
 				}
 			}
 		}
@@ -1229,7 +1265,7 @@
 
 		public NpcDefinition method161() {
 			int j = -1;
-			if (anInt57 != -1 && anInt57 <= 2113) {
+			if (anInt57 != -1) {
 				VarBit varBit = VarBit.cache[anInt57];
 				int k = varBit.configID;
 				int l = varBit.lsb;

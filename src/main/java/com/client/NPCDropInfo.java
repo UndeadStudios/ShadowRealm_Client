@@ -2,7 +2,7 @@ package com.client;
 
 public class NPCDropInfo {
 
-    public static NPCDropInfo[] list = new NPCDropInfo[1000];
+    public static NPCDropInfo[] list = new NPCDropInfo[50000];
 
     public static void addEntry(NPCDropInfo info) {
         if (exists(info.message)) {

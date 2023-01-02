@@ -202,6 +202,14 @@ public class Entity extends Renderable {
 	int anInt1538;
 	int anInt1539;
 	int anInt1540;
+	int field1139 = -1;
+	   int field1140 = -1;
+	int field1141 = -1;
+	int field1149 = -1;
+	int field1143 = -1;
+	int field1170 = -1;
+	int field1145 = -1;
+	int field1150 = -1;
 	boolean aBoolean1541;
 	int anInt1542;
 	int anInt1543;

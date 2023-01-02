@@ -257,7 +257,7 @@ public final class Rasterizer extends DrawingArea {
     }
 
     public static void requestTextureUpdate(int i) {
-        if (i > 50 && i != 59){
+        if (i > 50 && i != 59 && i != 91){
             return;
         }
         if (texturesPixelBuffer[i] == null)

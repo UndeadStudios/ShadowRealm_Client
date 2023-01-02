@@ -507,6 +507,7 @@ public final class ObjectDefinition {
 		 modifiedTexture = null;
 		xLength = 1;
 		yLength = 1;
+		this.interactType = 2; // L: 35
 		aBoolean767 = true;
 		aBoolean757 = true;
 		hasActions = false;
@@ -521,7 +522,7 @@ public final class ObjectDefinition {
 		mapFunctionId = -1;
 		mapSceneId = -1;
 		aBoolean751 = false;
-		aBoolean779 = true;
+		clipped = true;
 		thickness = 128;
 		height = 128;
 		width = 128;
@@ -782,9 +783,10 @@ public final class ObjectDefinition {
 				xLength = stream.readUnsignedByte();
 			else if (type == 15)
 				yLength = stream.readUnsignedByte();
-			else if (type == 17)
+			else if (type == 17) {
+				this.interactType = 0; // L: 135
 				aBoolean767 = false;
-			else if (type == 18)
+			} else if (type == 18)
 				aBoolean757 = false;
 			else if (type == 19)
 				hasActions = (stream.readUnsignedByte() == 1);
@@ -798,6 +800,8 @@ public final class ObjectDefinition {
 				animation = stream.readUShort();
 				if (animation == 65535)
 					animation = -1;
+			} else if (type == 27) { // L: 147
+				this.interactType = 1;
 			} else if (type == 28)
 				anInt775 = stream.readUnsignedByte();
 			else if (type == 29)
@@ -831,7 +835,7 @@ public final class ObjectDefinition {
 			else if (type == 62)
 				aBoolean751 = true;
 			else if (type == 64)
-				aBoolean779 = false;
+				clipped = false;
 			else if (type == 65)
 				thickness = stream.readUShort();
 			else if (type == 66)
@@ -957,7 +961,7 @@ public final class ObjectDefinition {
 	private int[] models;
 	public String description;
 	public boolean hasActions;
-	public boolean aBoolean779;
+	public boolean clipped;
 	public static MRUNodes mruNodes2 = new MRUNodes(30);
 	public int animation;
 	private static ObjectDefinition[] cache;
@@ -965,5 +969,6 @@ public final class ObjectDefinition {
 	private int[] modifiedModelColors;
 	public static MRUNodes mruNodes1 = new MRUNodes(500);
 	public String actions[];
+	public int interactType;
 
 }
