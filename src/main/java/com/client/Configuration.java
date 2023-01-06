@@ -15,7 +15,7 @@ public class Configuration {
 	 * Cache version is written to the cache folder inside a version file.
 	 * This is read on startup to tell if the cache is out of date or not.
 	 */
-	public static final int CACHE_VERSION = 79; // Set this to the same value, v0.030 = 30, v1.120 = 1120
+	public static final int CACHE_VERSION = 1; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
 	public static final String CACHE_LINK = "https://cache.exilius-osrs.com/v0.049.zip";
 
@@ -25,7 +25,7 @@ public class Configuration {
 	 * This should only be changed when a new server is launched, otherwise change {@link Configuration#CLIENT_VERSION}.
 	 */
 
-	public static final int SERVER_VERSION = 2;
+	public static final int SERVER_VERSION = 3;
 
 
 	public static final String CLIENT_TITLE = "Exilius";
