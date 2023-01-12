@@ -17,8 +17,18 @@ public class Configuration {
 	 */
 	public static final int CACHE_VERSION = 4; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
-	public static final String CACHE_LINK = "https://cache.exilius-osrs.com/v0.049.zip";
+	// US Client Download
+	//public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
 
+	// UK CLIENT DOWNLOAD:
+	public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
+
+	/**
+	 * New Link to new US Cache.
+		* public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
+	 * Old Link
+	 * public static final String CACHE_LINK = "https://cache.exilius-osrs.com/v0.049.zip";
+	 */
 	/**
 	 * The server version. The cache path is append with a _v1/2/3 etc for the version number
 	 * to prevent overwriting older version caches.
