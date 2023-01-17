@@ -15,6 +15,7 @@ public class ClientDiscordRPC {
         DiscordRPC.discordRegister(applicationID, "");
         setTopText("Play Exilius Repowered by Endless-OS @ exilius-osrs.com!");
         setSmallImage("logo", "Exilius");
+        setLargeImage("logo", "Exilius");
     }
 
     public static void setTopText(String text) {
