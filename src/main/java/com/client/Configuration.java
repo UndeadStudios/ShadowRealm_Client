@@ -15,7 +15,7 @@ public class Configuration {
 	 * Cache version is written to the cache folder inside a version file.
 	 * This is read on startup to tell if the cache is out of date or not.
 	 */
-	public static final int CACHE_VERSION = 4; // Set this to the same value, v0.030 = 30, v1.120 = 1120
+	public static final int CACHE_VERSION = 6; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
 	// US Client Download
 	//public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
@@ -38,10 +38,10 @@ public class Configuration {
 	public static final int SERVER_VERSION = 3;
 
 
-	public static final String CLIENT_TITLE = "Exilius";
+	public static final String CLIENT_TITLE = "Exilius Powered by +Endless-Os+";
 //	public static final String CLIENT_TITLE = "Exilius Dev";
-	public static final String WEBSITE = "exilius-osrs.com";
-	public static final String DEDICATED_SERVER_ADDRESS = "204.12.234.194";//51.222.245.179
+	public static final String WEBSITE = "Endless-Os.com";
+	public static final String DEDICATED_SERVER_ADDRESS = "204.12.234.194";//Ip address here
 	public static final String TEST_SERVER_ADDRESS = "127.0.0.1";//51.79.50.152
 //	public static final int PORT = 52778;
 	public static final int PORT = 52777;

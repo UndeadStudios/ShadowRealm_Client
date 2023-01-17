@@ -1093,6 +1093,16 @@ public final class ItemDefinition {
 				itemDef.itemActions = new String[] { "Open", null, "Open-All", null, "Drop" };
 				itemDef.description = "I can see some coins inside.";
 				break;
+			case 26500:
+				itemDef.name = "Battle Pass";
+				itemDef.itemActions = new String[] { "Redeem", null, null, null, null};
+				itemDef.description = "Redeem this pass to unlock the premium rewards.";
+				break;
+			case 26502:
+				itemDef.name = "Battle Pass";
+				itemDef.itemActions = new String[] { "Redeem", null, null, null, null};
+				itemDef.description = "Redeem this pass to unlock the premium rewards.";
+				break;
 			case 10834:
 				itemDef.name = "Large coin bag";
 				itemDef.itemActions = new String[] { "Open", null, "Open-All", null, "Drop" };

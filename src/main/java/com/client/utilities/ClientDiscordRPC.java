@@ -13,7 +13,7 @@ public class ClientDiscordRPC {
         DiscordEventHandlers handlers = new DiscordEventHandlers.Builder().build();
         DiscordRPC.discordInitialize(applicationID, handlers, false);
         DiscordRPC.discordRegister(applicationID, "");
-        setTopText("Play Exilius-OSRS @ exilius-osrs.com!");
+        setTopText("Play Exilius-OS @ https://endless-os.com!");
         //setSmallImage("icon", "Test");
     }
 
