@@ -24,7 +24,6 @@ public class LootViewer extends RSInterface {
         MYSTERY_BOX("Mystery box", 6199),
         SUPER_MYSTERY_BOX("Super m. box", 6828),
         ULTRA_MYSTERY_BOX("Ultra m. box", 13346),
-        DR_MYSTERY_BOX("Dr cape m. box", 29326),
         FOE_MYSTERY_CHEST("FoE m. chest", 8167),
         SLAYER_MYSTERY_CHEST("Slayer m. chest", 13438),
         BRIMSTONE_KEY("Brimstone Key", Items.BRIMSTONE_KEY),
@@ -34,7 +33,6 @@ public class LootViewer extends RSInterface {
         CRYSTAL_CHEST("Crystal Chest", 989),
         PVM_CASKET("PvM Casket", 405),
         LARRANS_CHEST("Larran's Chest", Items.LARRANS_KEY),
-        PRESENT("Xmas present", 6542)
         ;
 
         private final String name;
