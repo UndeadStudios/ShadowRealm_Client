@@ -22,7 +22,6 @@ import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.definitions.custom.ItemDefinition_Sub1;
 import com.client.definitions.custom.ItemDefinition_Sub2;
-import com.client.sign.Signlink;
 import com.client.utilities.FieldGenerator;
 import com.client.utilities.FileOperations;
 import com.client.utilities.TempWriter;
@@ -87,8 +86,6 @@ public final class ItemDefinition {
 		cacheIndex = (cacheIndex + 1) % 10;
 		ItemDefinition itemDef = cache[cacheIndex];
 
-		if (itemId >= streamIndices.length)
-			itemId = 0;
 		stream.currentOffset = streamIndices[itemId];
 		itemDef.id = itemId;
 		itemDef.setDefaults();
@@ -107,6 +104,8 @@ public final class ItemDefinition {
 		}
 
 		int id = itemDef.id;
+		ItemDefinition_Sub1.itemDef(itemDef.id, itemDef);
+		ItemDefinition_Sub2.itemDef(itemDef.id, itemDef);
 		customItems(itemDef.id);
 		itemDef.id = id; // Have to do this for some cases
 		return itemDef;
@@ -163,7 +162,26 @@ public final class ItemDefinition {
 				return copy(itemDef, 30_002, 11738, "Resource box(large)", "Open");
 			case 22375:
 				return copy(itemDef, 22375, 22374, "Mossy key");
-
+			case 22689:
+				return copy(itemDef, 22689, 0, "Null");
+			case 22690:
+				return copy(itemDef, 22690, 0, "Null");
+			case 22692:
+				return copy(itemDef, 22692, 0, "Null");
+			case 22693:
+				return copy(itemDef, 22693, 0, "Null");
+			case 22695:
+				return copy(itemDef, 22695, 0, "Null");
+			case 22696:
+				return copy(itemDef, 22696, 0, "Null");
+			case 22698:
+				return copy(itemDef, 22698, 0, "Null");
+			case 22699:
+				return copy(itemDef, 22699, 0, "Null");
+			case 22701:
+				return copy(itemDef, 22701, 0, "Null");
+			case 22702:
+				return copy(itemDef, 22702, 0, "Null");
 			case 33056:
 				itemDef.setDefaults();
 				itemDef.id = 33056;
@@ -517,8 +535,6 @@ public final class ItemDefinition {
 
 	private static void customItems(int itemId) {
 		ItemDefinition itemDef = forID(itemId);
-		ItemDefinition_Sub1.itemDef(itemId, itemDef);
-		ItemDefinition_Sub2.itemDef(itemId, itemDef);
 		switch (itemId) {
 			case 21726:
 			case 21728:
@@ -2175,9 +2191,9 @@ public final class ItemDefinition {
 				model = new Model(2, aclass30_sub2_sub4_sub6s);
 			}
 		if (i == 0 && maleTranslation != 0)
-			model.method475(0, maleTranslation, 0);
+			model.translate(0, maleTranslation, 0);
 		if (i == 1 && femaleTranslation != 0)
-			model.method475(0, femaleTranslation, 0);
+			model.translate(0, femaleTranslation, 0);
 		if (modifiedModelColors != null) {
 			for (int i1 = 0; i1 < modifiedModelColors.length; i1++)
 				model.recolor(modifiedModelColors[i1], originalModelColors[i1]);
@@ -2862,7 +2878,7 @@ public final class ItemDefinition {
 		if (model == null)
 			return null;
 		if (groundScaleX != 128 || groundScaleY != 128 || groundScaleZ != 128)
-			model.method478(groundScaleX, groundScaleZ, groundScaleY);
+			model.scale(groundScaleX, groundScaleZ, groundScaleY);
 		if (modifiedModelColors != null) {
 			for (int l = 0; l < modifiedModelColors.length; l++)
 				model.recolor(modifiedModelColors[l], originalModelColors[l]);

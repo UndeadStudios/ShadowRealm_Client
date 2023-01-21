@@ -41,7 +41,7 @@ public class Configuration {
 	public static final String CLIENT_TITLE = "Exilius Repowered by + Endless-OS +";
 //	public static final String CLIENT_TITLE = "Exilius Dev";
 	public static final String WEBSITE = "exilius-osrs.com";
-	public static final String DEDICATED_SERVER_ADDRESS = "204.12.234.194";//51.222.245.179
+	public static final String DEDICATED_SERVER_ADDRESS = "199.127.61.40";//51.222.245.179
 	public static final String TEST_SERVER_ADDRESS = "127.0.0.1";//51.79.50.152
 //	public static final int PORT = 52778;
 	public static final int PORT = 52777;

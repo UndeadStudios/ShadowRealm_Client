@@ -933,36 +933,6 @@ final class ObjectManager {
 							return;
 						}
 					}
-					/**
-					 * Halloween floor at edgeville
-					 */
-					if (absX >= 2576 && absX <= 2622 && absY >= 4749 && absY <= 4798 && absZ == 0
-							&& Configuration.HALLOWEEN) {
-						overlays[l][k][i] = 108; // 108
-						// Orange/brown
-						overlayTypes[l][k][i] = 0; // tile shape
-					}
-					if (absX >= 3083 && absX <= 3104 && absY >= 3483 && absY <= 3504 && absZ == 0
-							&& Configuration.HALLOWEEN) {
-						overlays[l][k][i] = 108; // 108
-						// Orange/brown
-						overlayTypes[l][k][i] = 0; // tile shape
-					}
-					/**
-					 * Legendary donator zone
-					 */
-					if (absX >= 3367 && absX <= 3370 && absY >= 9637 && absY <= 9643 && absZ == 1) {
-						overlays[l][k][i] = 100; // 103 - 16 =
-						// Orange/brown
-						overlayTypes[l][k][i] = 0; // tile shape
-					}
-					/**
-					 * Free for all 1v1 to multi boundary
-					 */
-					if (absX >= 3340 && absX <= 3340 && absY >= 4760 && absY <= 4851 && absZ == 0) {
-						overlays[l][k][i] = 44; // 44 = Gray
-						overlayTypes[l][k][i] = 0; // tile shape
-					}
 					if (l1 <= 49) {
 						overlays[l][k][i] = stream.readSignedByte();
 						overlayTypes[l][k][i] = (byte) ((l1 - 2) / 4);
@@ -1087,7 +1057,7 @@ final class ObjectManager {
 			else
 				obj = new Animable_Sub5(id, orientation, 22, i2, j2, l1, k2, definition.animation, true);
 			worldController.method280(k1, l2, y, ((Renderable) (obj)), byte1, key, x);
-			if (definition.aBoolean767 && definition.hasActions)
+			if (definition.interactType == 1 && definition.hasActions)
 				class11.method213(y, x);
 			return;
 		}
@@ -1123,7 +1093,7 @@ final class ObjectManager {
 			else
 				obj2 = new Animable_Sub5(id, orientation, type, i2, j2, l1, k2, definition.animation, true);
 			worldController.method284(key, byte1, l2, 1, ((Renderable) (obj2)), 1, k1, 0, y, x);
-			if (definition.aBoolean767)
+			if (definition.interactType == 1)
 				class11.method212(definition.aBoolean757, definition.xLength, definition.yLength, x, y, orientation);
 			return;
 		}
@@ -1134,7 +1104,7 @@ final class ObjectManager {
 			else
 				obj3 = new Animable_Sub5(id, orientation, 0, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray152[orientation], ((Renderable) (obj3)), key, y, byte1, x, null, l2, 0, k1);
-			if (definition.aBoolean767)
+			if (definition.interactType != 0)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -1173,7 +1143,7 @@ final class ObjectManager {
 			else
 				obj5 = new Animable_Sub5(id, orientation, 3, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj5)), key, y, byte1, x, null, l2, 0, k1);
-			if (definition.interactType != 0)
+			if (definition.interactType == 1)
 				class11.method211(y, orientation, x, type, definition.aBoolean757);
 			return;
 		}
@@ -1260,53 +1230,44 @@ final class ObjectManager {
 		}
 	}
 
-	static final boolean method189(int var2, byte[] var0, int var1) {
-		boolean var4 = true;
-		Buffer var5 = new Buffer(var0);
-		int var6 = -1;
-
-		label57:
-		while (true) {
-			int var7 = var5.method1606();
-			if (0 == var7) {
-				return var4;
-			}
-
-			var6 += var7;
-			int var8 = 0;
-			boolean var9 = false;
-
-			while (true) {
-				int var10;
-				while (!var9) {
-					var10 = var5.getUIncrementalSmart();
-					if (var10 == 0) {
-						continue label57;
-					}
-
-					var8 += var10 - 1;
-					int var11 = var8 & 63;
-					int var12 = var8 >> 6 & 63;
-					int var13 = var5.readUnsignedByte() >> 2;
-					int var14 = var1 + var12;
-					int var15 = var11 + var2;
-					if (var14 > 0 && var15 > 0 && var14 < 103 && var15 < 103) {
-						ObjectDefinition class46 = ObjectDefinition.forID(var6);
-						if (22 != var13 || !lowMem || class46.hasActions || class46.aBoolean736) {
-							var4 &= class46.method579();
-							var9 = true;
+	public static boolean method189(int i, byte[] is, int i_250_) {
+		boolean bool = true;
+		Buffer stream = new Buffer(is);
+		int i_252_ = -1;
+		for (;;) {
+			int i_253_ = stream.readUnsignedIntSmartShortCompat();
+			if (i_253_ == 0)
+				break;
+			i_252_ += i_253_;
+			int i_254_ = 0;
+			boolean bool_255_ = false;
+			for (;;) {
+				if (bool_255_) {
+					int i_256_ = stream.readUSmart();
+					if (i_256_ == 0)
+						break;
+					stream.readUnsignedByte();
+				} else {
+					int i_257_ = stream.readUSmart();
+					if (i_257_ == 0)
+						break;
+					i_254_ += i_257_ - 1;
+					int i_258_ = i_254_ & 0x3f;
+					int i_259_ = i_254_ >> 6 & 0x3f;
+					int i_260_ = stream.readUnsignedByte() >> 2;
+					int i_261_ = i_259_ + i;
+					int i_262_ = i_258_ + i_250_;
+					if (i_261_ > 0 && i_262_ > 0 && i_261_ < 103 && i_262_ < 103) {
+						ObjectDefinition class46 = ObjectDefinition.forID(i_252_);
+						if (i_260_ != 22 || !lowMem || class46.hasActions || class46.interactType == 1 || class46.aBoolean736) {
+							bool &= class46.method579();
+							bool_255_ = true;
 						}
 					}
 				}
-
-				var10 = var5.readUShortSmart();
-				if (var10 == 0) {
-					break;
-				}
-
-				var5.readUnsignedByte();
 			}
 		}
+		return bool;
 	}
 
 	public final void method190(int i, CollisionMap aclass11[], int j, WorldController worldController, byte abyte0[]) {

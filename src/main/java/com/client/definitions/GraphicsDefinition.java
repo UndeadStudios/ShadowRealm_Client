@@ -28,11 +28,6 @@ public final class GraphicsDefinition {
 			cache[j].setDefault();
 			cache[j].readValues(stream);
 		}
-		cache[1282] = new GraphicsDefinition();
-		cache[1282].index = 1282;
-		cache[1282].modelId = 44811;
-		cache[1282].anInt406 = 7155;
-		cache[1282].aAnimation_407 = AnimationDefinition.anims[cache[1282].anInt406];
 
 		if (Configuration.dumpDataLists) {
 			gfxDump();

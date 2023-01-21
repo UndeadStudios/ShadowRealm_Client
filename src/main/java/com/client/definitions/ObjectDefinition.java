@@ -24,13 +24,13 @@ public final class ObjectDefinition {
 			i = 15552;
 
 		for (int j = 0; j < 20; j++)
-			if (cache[j].type == i)
+			if (cache[j].id == i)
 				return cache[j];
 
 		cacheIndex = (cacheIndex + 1) % 20;
 		ObjectDefinition objectDef = cache[cacheIndex];
 		stream.currentOffset = streamIndices[i];
-		objectDef.type = i;
+		objectDef.id = i;
 		objectDef.setDefaults();
 		objectDef.readValues(stream);
 		if (i >= 26281 && i <= 26290) {
@@ -479,7 +479,7 @@ public final class ObjectDefinition {
 				ObjectDefinition def = ObjectDefinition.forID(i);
 				String output = "[\"" + StringUtils.join(def.actions, "\", \"") + "\"],";
 
-				String finalOutput = "	{\n" + "		\"id\": " + def.type + ",\n		" + "\"name\": \"" + def.name
+				String finalOutput = "	{\n" + "		\"id\": " + def.id + ",\n		" + "\"name\": \"" + def.name
 						+ "\",\n		\"models\": " + Arrays.toString(def.modelIds) + ",\n		\"actions\": "
 						+ output.replaceAll(", \"\"]", ", \"Examine\"]").replaceAll("\"\"", "null")
 								.replace("[\"null\"]", "[null, null, null, null, \"Examine\"]")
@@ -521,7 +521,7 @@ public final class ObjectDefinition {
 		actions = null;
 		mapFunctionId = -1;
 		mapSceneId = -1;
-		aBoolean751 = false;
+		inverted = false;
 		clipped = true;
 		thickness = 128;
 		height = 128;
@@ -577,12 +577,12 @@ public final class ObjectDefinition {
 			if (i != 10)
 				return true;
 			boolean flag1 = true;
-			Model model = (Model) mruNodes2.insertFromCache(type);
+			Model model = (Model) mruNodes2.insertFromCache(id);
 			for (int k = 0; k < modelIds.length; k++)
 				flag1 &= model.method463(modelIds[k] & 0xffff);
 			return flag1;
 		}
-		Model model = (Model) mruNodes2.insertFromCache(type);
+		Model model = (Model) mruNodes2.insertFromCache(id);
 		for (int j = 0; j < models.length; j++)
 			if (models[j] == i)
 				return model.method463(modelIds[j] & 0xffff);
@@ -639,19 +639,20 @@ public final class ObjectDefinition {
 		return var3 == -1 ? null : forID(var3);
 	}
 
-	private Model method581(int j, int k, int l) {
+	private Model method581(int type, int frame, int orientation) {
 		Model model = null;
-		long l1;
+		long key;
 		if (models == null) {
-			if (j != 10)
+			if (type != 10)
 				return null;
-			l1 = (type << 6) + l + ((long) (k + 1) << 32);
-			Model model_1 = (Model) mruNodes2.insertFromCache(l1);
+
+			key = frame + 1L << 32 | ((inverted ? 1 : 0) << 16)| id << 6 | orientation;
+			Model model_1 = (Model) mruNodes2.insertFromCache(key);
 			if (model_1 != null)
 				return model_1;
 			if (modelIds == null)
 				return null;
-			boolean flag1 = aBoolean751 ^ (l > 3);
+			boolean flag1 = inverted ^ (orientation > 3);
 			int k1 = modelIds.length;
 			for (int i2 = 0; i2 < k1; i2++) {
 				int l2 = modelIds[i2];
@@ -673,22 +674,23 @@ public final class ObjectDefinition {
 			if (k1 > 1)
 				model = new Model(k1, aModelArray741s);
 		} else {
-			int i1 = -1;
+			int index = -1;
 			for (int j1 = 0; j1 < models.length; j1++) {
-				if (models[j1] != j)
+				if (models[j1] != type)
 					continue;
-				i1 = j1;
+				index = j1;
 				break;
 			}
 
-			if (i1 == -1)
+			if (index == -1)
 				return null;
-			l1 = (type << 8) + (i1 << 3) + l + ((long) (k + 1) << 32);
-			Model model_2 = (Model) mruNodes2.insertFromCache(l1);
+
+			key = frame + 1L << 32 | ((inverted ? 1 : 0) << 16) | id << 6 | index << 3 | orientation;
+			Model model_2 = (Model) mruNodes2.insertFromCache(key);
 			if (model_2 != null)
 				return model_2;
-			int j2 = modelIds[i1];
-			boolean flag3 = aBoolean751 ^ (l > 3);
+			int j2 = modelIds[index];
+			boolean flag3 = inverted ^ (orientation > 3);
 			if (flag3)
 				j2 += 0x10000;
 			model = (Model) mruNodes1.insertFromCache(j2);
@@ -705,16 +707,21 @@ public final class ObjectDefinition {
 		flag = thickness != 128 || height != 128 || width != 128;
 		boolean flag2;
 		flag2 = anInt738 != 0 || anInt745 != 0 || anInt783 != 0;
-		Model model_3 = new Model(modifiedModelColors == null && modifiedTexture == null, Class36.method532(k),
-				l == 0 && k == -1 && !flag && !flag2, model);
-		if (k != -1) {
+		Model model_3 = new Model(modifiedModelColors == null && modifiedTexture == null, Class36.method532(frame),
+				orientation == 0 && frame == -1 && !flag && !flag2, model);
+		if (frame != -1) {
 			model_3.method469();
-			model_3.method470(k);
+			model_3.method470(frame);
 			model_3.faceGroups = null;
 			model_3.vertexGroups = null;
 		}
-		while (l-- > 0)
-			model_3.method473();
+		if (type == 4 && orientation > 3) {
+			model_3.method4213(256);
+			model_3.changeOffset(45, 0, -45);
+		}
+		orientation &= 3;
+		while (orientation-- > 0)
+			model_3.rotateClockwise();
 		if (modifiedModelColors != null) {
 			for (int k2 = 0; k2 < modifiedModelColors.length; k2++) {
 				model_3.recolor(modifiedModelColors[k2], originalModelColors[k2]);
@@ -727,10 +734,10 @@ public final class ObjectDefinition {
 			}
 
 		}
-		if (flag)
-			model_3.method478(thickness, width, height);
+		if (this.interactType * 65536 >= 0)
+			model_3.scale(thickness, width, height);
 		if (flag2)
-			model_3.method475(anInt738, anInt745, anInt783);
+			model_3.translate(anInt738, anInt745, anInt783);
 		// model_3.method479(64 + aByte737, 768 + aByte742 * 5, -50, -10, -50,
 		// !aBoolean769);
 		// ORIGINAL^
@@ -739,7 +746,7 @@ public final class ObjectDefinition {
 
 		if (supportItems == 1)
 			model_3.itemDropHeight = model_3.modelHeight;
-		mruNodes2.removeFromCache(model_3, l1);
+		mruNodes2.removeFromCache(model_3, key);
 		return model_3;
 	}
 
@@ -750,17 +757,18 @@ public final class ObjectDefinition {
 			if (type == 0)
 				break;
 			if (type == 1) {
-				int len = stream.readUnsignedByte();
-				if (len > 0) {
-					if (modelIds == null || lowMem) {
-						models = new int[len];
-						modelIds = new int[len];
-						for (int k1 = 0; k1 < len; k1++) {
-							modelIds[k1] = stream.readUShort();
-							models[k1] = stream.readUnsignedByte();
-						}
+				int var3 = stream.readUnsignedByte();
+				if (var3 > 0) {
+					if (this.modelIds != null && !lowMem) {
+						stream.currentOffset += 3 * var3;
 					} else {
-						stream.currentOffset += len * 3;
+						this.models = new int[var3];
+						this.modelIds = new int[var3];
+
+						for(int var4 = 0; var4 < var3; ++var4) {
+							this.modelIds[var4] = stream.readUShort();
+							this.models[var4] = stream.readUnsignedByte();
+						}
 					}
 				}
 			} else if (type == 2)
@@ -768,17 +776,19 @@ public final class ObjectDefinition {
 			else if (type == 3)
 				description = stream.readString();
 			else if (type == 5) {
-				int len = stream.readUnsignedByte();
-				if (len > 0) {
-					if (modelIds == null || lowMem) {
-						models = null;
-						modelIds = new int[len];
-						for (int l1 = 0; l1 < len; l1++)
-							modelIds[l1] = stream.readUShort();
-					} else {
-						stream.currentOffset += len * 2;
+			int var3 = stream.readUnsignedByte();
+			if (var3 > 0) {
+				if (this.modelIds != null && !lowMem) {
+					stream.currentOffset += 2 * var3;
+				} else {
+					this.models = null;
+					this.modelIds = new int[var3];
+
+					for(int var4 = 0; var4 < var3; ++var4) {
+						this.modelIds[var4] = stream.readUShort();
 					}
 				}
+			}
 			} else if (type == 14)
 				xLength = stream.readUnsignedByte();
 			else if (type == 15)
@@ -833,7 +843,7 @@ public final class ObjectDefinition {
 			} else if (type == 61)
 					stream.readUShort();
 			else if (type == 62)
-				aBoolean751 = true;
+				inverted = true;
 			else if (type == 64)
 				clipped = false;
 			else if (type == 65)
@@ -884,9 +894,11 @@ public final class ObjectDefinition {
 				int len = stream.readUnsignedByte();
 				stream.currentOffset += len * 2;
 			} else if(type == 81) {
-				stream.readUnsignedByte();
+				interactType = stream.readUnsignedByte() * 256;
 			} else if(type == 82) {
 				mapFunctionId = stream.readUShort();
+			} else if (type == 89) {
+				this.boolean3 = false;
 			} else if (type == 249) {
 				int length = stream.readUnsignedByte();
 
@@ -908,15 +920,15 @@ public final class ObjectDefinition {
 				hasActions = true;
 		}
 		if (aBoolean766) {
-			aBoolean767 = false;
+			interactType = 0;
 			aBoolean757 = false;
 		}
 		if (supportItems == -1)
-			supportItems = aBoolean767 ? 1 : 0;
+			supportItems = interactType != 0 ? 1 : 0;
 	}
 
 	private ObjectDefinition() {
-		type = -1;
+		id = -1;
 	}
 
 	private short[] originalTexture;
@@ -928,6 +940,7 @@ public final class ObjectDefinition {
 	private byte aByte737;
 	private int anInt738;
 	public String name;
+	public boolean boolean3 = true;
 	private int width;
 	private static final Model[] aModelArray741s = new Model[4];
 	public int xLength;
@@ -936,10 +949,10 @@ public final class ObjectDefinition {
 	private int[] originalModelColors;
 	private int thickness;
 	public int configId;
-	private boolean aBoolean751;
+	private boolean inverted;
 	public static boolean lowMem;
 	private static Buffer stream;
-	public int type;
+	public int id;
 	public static int[] streamIndices;
 	public boolean aBoolean757;
 	public int mapSceneId;
