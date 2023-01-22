@@ -14,7 +14,7 @@ public final class IDK {
 			if (cache[j] == null)
 				cache[j] = new IDK();
 			cache[j].readValues(stream);
-			cache[j].colourToFind[0] = 55232;
+			cache[j].colourToFind[0] = (short) 55232;
 			cache[j].colourToReplace[0] = 6798;
 		}
 	}
@@ -33,37 +33,27 @@ public final class IDK {
 					modelIds[k] = stream.readUShort();
 			} else if (i == 3)
 				nonSelectable = true;
-
-			// 317 stuff
-			else if (i >= 40 && i < 50)
-				colourToFind[i - 40] = stream.readUShort();
-			else if (i >= 50 && i < 60)
-				colourToReplace[i - 50] = stream.readUShort();
-			else if (i >= 60 && i < 70)
+			else if (i == 40) {
+				int length = stream.readUnsignedByte();
+				colourToFind = new short[length];
+				colourToReplace = new short[length];
+				for(int idx = 0;idx<length;idx++) {
+					colourToFind[idx] = (short) stream.readUShort();
+					colourToReplace[idx] = (short) stream.readUShort();
+				}
+			} else if (i == 41) {
+				int length = stream.readUnsignedByte();
+				textureToFind = new short[length];
+				textureToReplace = new short[length];
+				for(int idx = 0;idx<length;idx++) {
+					textureToFind[idx] = (short) stream.readUShort();
+					textureToReplace[idx] = (short) stream.readUShort();
+				}
+			} else if (i >= 60 && i < 70) {
 				models[i - 60] = stream.readUShort();
-
-			// OSRS STUFF
-//			else if (i == 40) {
-//				int length = stream.readUnsignedByte();
-//				colourToFind = new int[length];
-//				colourToReplace = new int[length];
-//				for(int idx = 0;idx<length;idx++) {
-//					colourToFind[idx] = stream.readUnsignedWord();
-//					colourToReplace[idx] = stream.readUnsignedWord();
-//				}
-//			} else if (i == 41) {
-//				int length = stream.readUnsignedByte();
-//				textureToFind = new int[length];
-//				textureToReplace = new int[length];
-//				for(int idx = 0;idx<length;idx++) {
-//					textureToFind[idx] = stream.readUnsignedWord();
-//					textureToReplace[idx] = stream.readUnsignedWord();
-//				}
-//			} else if (i >= 60 && i < 70) {
-//				models[i - 60] = stream.readUnsignedWord();
-//				if(models[i - 60] == 65535)
-//					models[i - 60] = -1;
-//			}
+				if(models[i - 60] == 65535)
+					models[i - 60] = -1;
+			}
 			else
 				System.out.println("Error unrecognised config code: " + i);
 		} while (true);
@@ -93,11 +83,16 @@ public final class IDK {
 		else
 			model = new Model(aclass30_sub2_sub4_sub6s.length,
 					aclass30_sub2_sub4_sub6s);
-		if(colourToFind != null)
-		for (int j = 0; j < colourToFind.length; j++) {
-			model.recolor(colourToFind[j], colourToReplace[j]);
+		if(colourToFind != null) {
+			for (int j = 0; j < colourToFind.length; j++) {
+				model.recolor(colourToFind[j], colourToReplace[j]);
+			}
 		}
-
+		if(textureToFind != null){
+			for(int j = 0; j < textureToFind.length; j++){
+				model.retexture(textureToFind[j], textureToReplace[j]);
+			}
+		}
 
 		return model;
 	}
@@ -120,10 +115,16 @@ public final class IDK {
 						.method462(models[k]);
 
 		Model model = new Model(j, aclass30_sub2_sub4_sub6s);
-		if(colourToFind != null)
-			for (int l = 0; l < colourToFind.length; l++) {
-				model.recolor(colourToFind[l], colourToReplace[l]);
+		if(colourToFind != null) {
+			for (int j3 = 0; j3 < colourToFind.length; j3++) {
+				model.recolor(colourToFind[j3], colourToReplace[j3]);
 			}
+		}
+		if(textureToFind != null){
+			for(int j2 = 0; j2 < textureToFind.length; j2++){
+				model.retexture(textureToFind[j2], textureToReplace[j2]);
+			}
+		}
 
 		return model;
 	}
@@ -131,18 +132,16 @@ public final class IDK {
 	private IDK() {
 		bodyPartId = -1;
 		nonSelectable = false;
-
-		// these aren't set when loading osrs idk
-		colourToFind = new int[6];
-		colourToReplace = new int[6];
+		colourToFind = new short[6];
+		colourToReplace = new short[6];
 	}
 
 	public static int length;
 	public static IDK cache[];
 	public int bodyPartId;
 	private int[] modelIds;
-	private int[] colourToFind;
-	private int[] colourToReplace;
+	private short[] colourToFind;
+	private short[] colourToReplace;
 	private short[] textureToFind;
 	private short[] textureToReplace;
 	private final int[] models = { -1, -1, -1, -1, -1 };

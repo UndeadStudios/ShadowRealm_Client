@@ -15904,7 +15904,7 @@ public class Client extends RSApplet {
 				if (j1 == 0) {
 					worldController.method291(i1, j, i, (byte) -119);
 					ObjectDefinition class46 = ObjectDefinition.forID(j2);
-					if (class46.aBoolean767)
+					if (class46.interactType != 0)
 						aClass11Array1230[j].method215(l2, k2, class46.aBoolean757, i1, i);
 				}
 				if (j1 == 1)
@@ -15915,14 +15915,14 @@ public class Client extends RSApplet {
 					if (i1 + class46_1.xLength > 103 || i + class46_1.xLength > 103 || i1 + class46_1.yLength > 103
 							|| i + class46_1.yLength > 103)
 						return;
-					if (class46_1.aBoolean767)
+					if (class46_1.interactType != 0)
 						aClass11Array1230[j].method216(l2, class46_1.xLength, i1, i, class46_1.yLength,
 								class46_1.aBoolean757);
 				}
 				if (j1 == 3) {
 					worldController.method294(j, i, i1);
 					ObjectDefinition class46_2 = ObjectDefinition.forID(j2);
-					if (class46_2.aBoolean767 && class46_2.hasActions)
+					if (class46_2.interactType == 1 && class46_2.hasActions)
 						aClass11Array1230[j].method218(i, i1);
 				}
 			}

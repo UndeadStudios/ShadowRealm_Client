@@ -2284,7 +2284,7 @@ public class Model extends Renderable {
         }
     }
 
-    public void method473() {
+    public void rotateClockwise() {
         for (int j = 0; j < verticesCount; j++) {
             int k = verticesX[j];
             verticesX[j] = verticesZ[j];
@@ -2302,7 +2302,7 @@ public class Model extends Renderable {
         }
     }
 
-    public void method475(int i, int j, int l) {
+    public void translate(int i, int j, int l) {
         for (int i1 = 0; i1 < verticesCount; i1++) {
             verticesX[i1] += i;
             verticesY[i1] += j;
@@ -2335,7 +2335,7 @@ public class Model extends Renderable {
         }
     }
 
-    public void method478(int i, int j, int l) {
+    public void scale(int i, int j, int l) {
         for (int i1 = 0; i1 < verticesCount; i1++) {
             verticesX[i1] = verticesX[i1] * i / 128;
             verticesY[i1] = verticesY[i1] * l / 128;
@@ -3585,4 +3585,27 @@ public class Model extends Renderable {
                     materials[face] = replace;
     }
 
+    public void method4213(int var1) {
+        int var2 = SINE[var1];
+        int var3 = COSINE[var1];
+
+        for(int var4 = 0; var4 < this.verticesCount; ++var4) {
+            int var5 = var2 * this.verticesZ[var4] + var3 * this.verticesX[var4] >> 16;
+            this.verticesZ[var4] = var3 * this.verticesZ[var4] - var2 * this.verticesX[var4] >> 16;
+            this.verticesX[var4] = var5;
+        }
+
+    }
+
+    public void changeOffset(int var1, int var2, int var3) {
+        for(int var4 = 0; var4 < this.verticesCount; ++var4) {
+            int[] var10000 = this.verticesX;
+            var10000[var4] += var1;
+            var10000 = this.verticesY;
+            var10000[var4] += var2;
+            var10000 = this.verticesZ;
+            var10000[var4] += var3;
+        }
+
+    }
 }
