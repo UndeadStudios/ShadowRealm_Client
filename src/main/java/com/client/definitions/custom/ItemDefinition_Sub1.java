@@ -12,7 +12,7 @@ public class ItemDefinition_Sub1
     public static ItemDefinition itemDef(int i, ItemDefinition itemDef)
     {
         if(i == 28213)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -41,7 +41,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Orange abyssal whip";
         }
         if(i == 28347)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[5];
@@ -66,7 +66,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Death Cape! ";
         }
         if(i == 28214)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -95,7 +95,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Purple abyssal whip";
         }
         if(i == 29090) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "198078's Platebody"; //Name
@@ -144,7 +144,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29091)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -174,7 +174,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of moderators platelegs.";
         }
         if(i == 29092)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -202,7 +202,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "198087's boots";
         }
         if(i == 29093)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -232,7 +232,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an 198087's kiteshield.";
         }
         if(i == 29094) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "198078's Crown"; //Name
@@ -265,7 +265,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29095) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Epic's Platebody"; //Name
@@ -314,7 +314,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29096)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -345,7 +345,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of Epic's platelegs.";
         }
         if(i == 29097)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -374,7 +374,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Epic's boots";
         }
         if(i == 29098)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -405,7 +405,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an Epic's kiteshield.";
         }
         if(i == 29099) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Epic's Crown"; //Name
@@ -439,7 +439,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28215)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -468,7 +468,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Unknown Color abyssal whip";
         }
         if(i == 28216)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -497,7 +497,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Red abyssal whip";
         }
         if(i == 28217)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -526,7 +526,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Blue abyssal whip";
         }
         if(i == 28218)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -555,7 +555,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Barrows abyssal whip";
         }
         if(i == 28219)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -584,7 +584,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Gold abyssal whip";
         }
         if(i == 28220)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -613,7 +613,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a White abyssal whip";
         }
         if(i == 28221)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -644,7 +644,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Purple santa hat.";
         }
         if(i == 28222)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -675,7 +675,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black santa hat.";
         }
         if(i == 28223)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -706,7 +706,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Mithril santa hat.";
         }
         if(i == 28224)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -737,7 +737,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Rune santa hat.";
         }
         if(i == 28225)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -768,7 +768,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Dragon santa hat.";
         }
         if(i == 28226)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -799,7 +799,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Addy santa hat.";
         }
         if(i == 28227)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -830,7 +830,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Gold santa hat.";
         }
         if(i == 28228)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -861,7 +861,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Barrows santa hat.";
         }
         if(i == 28229)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -892,7 +892,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Blue santa hat.";
         }
         if(i == 28230)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -923,7 +923,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Purple santa hat.";
         }
         if(i == 28231)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -950,7 +950,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "An Black partyhat.";
         }
         if(i == 28232)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -977,7 +977,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "An Orange partyhat.";
         }
         if(i == 28233)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1004,7 +1004,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Gold partyhat.";
         }
         if(i == 28234)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1032,7 +1032,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Grey partyhat.";
         }
         if(i == 28235)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1060,7 +1060,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Bronze partyhat.";
         }
         if(i == 28236)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1088,7 +1088,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Steel partyhat.";
         }
         if(i == 28237)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1116,7 +1116,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Mithril partyhat.";
         }
         if(i == 28238)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1144,7 +1144,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "An Addy partyhat.";
         }
         if(i == 28239)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1172,7 +1172,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Rune partyhat.";
         }
         if(i == 28240)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1200,7 +1200,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Dragon partyhat.";
         }
         if(i == 28241)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1228,7 +1228,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A partyhat worn by the Barrows Brothers.";
         }
         if(i == 28242)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wield";
             itemDef.modifiedModelColors = new int[1];
@@ -1259,7 +1259,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A defensive weapon.";
         }
         if(i == 28243)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -1290,7 +1290,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The 2008 Halloween event boots.";
         }
         if(i == 28244)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -1318,7 +1318,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The 2008 Halloween event platelegs.";
         }
         if(i == 28245)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -1347,7 +1347,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The 2008 Halloween event Platebody...";
         }
         if(i == 28246)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -1375,7 +1375,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "2008 Halloween event gloves.";
         }
         if(i == 28247)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1404,7 +1404,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The 2008 Halloween event abyssal whip.";
         }
         if(i == 28248)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -1439,7 +1439,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A dragon platebody (T) by Traxxas.";
         }
         if(i == 28249)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -1474,7 +1474,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A dragon platebody by Traxxas.";
         }
         if(i == 28250) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Admin Platebody"; //Name
@@ -1520,7 +1520,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28251)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -1551,7 +1551,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of administrators platelegs.";
         }
         if(i == 28252) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Admin Crown"; //Name
@@ -1585,7 +1585,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 28253) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "G-mod Crown"; //Name
@@ -1621,7 +1621,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 28254) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Mod Crown"; //Name
@@ -1657,7 +1657,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 28255) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "SB-mod Crown"; //Name
@@ -1692,7 +1692,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28256)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -1721,7 +1721,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Admin boots";
         }
         if(i == 28257)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -1752,7 +1752,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an administrator kiteshield.";
         }
         if(i == 28258)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1781,7 +1781,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A abyssal whip for admins.";
         }
         if(i == 28259) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Mod Platebody"; //Name
@@ -1827,7 +1827,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28260)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -1858,7 +1858,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of moderators platelegs.";
         }
         if(i == 28261)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -1887,7 +1887,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Mod boots";
         }
         if(i == 28262)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -1918,7 +1918,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an moderator kiteshield.";
         }
         if(i == 28263)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -1947,7 +1947,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A abyssal whip for mods.";
         }
         if(i == 28264)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -1980,7 +1980,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an admin skirt";
         }
         if(i == 28265)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -2013,7 +2013,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a mod skirt";
         }
         if(i == 28266) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Owners Platebody"; //Name
@@ -2060,7 +2060,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28267)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -2091,7 +2091,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of owners platelegs.";
         }
         if(i == 28268)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -2120,7 +2120,7 @@ public class ItemDefinition_Sub1
             itemDef.notedId = -1;
         }
         if(i == 28269)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2151,7 +2151,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an owners kiteshield.";
         }
         if(i == 28270) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Owners Crown"; //Name
@@ -2186,7 +2186,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28271)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -2213,7 +2213,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A gift from santa";
         }
         if(i == 28272)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2244,7 +2244,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Golden body of 100% dragon hide. Did this come from a golden dragon?";
         }
         if(i == 28273)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2275,7 +2275,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Golden chaps of 100% dragon hide. Did this come from a golden dragon?";
         }
         if(i == 28274)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2306,7 +2306,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's Black Platelegs (R)";
         }
         if(i == 28275)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2340,7 +2340,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Platebody (R)";
         }
         if(i == 28276)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -2369,7 +2369,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Helm (R)";
         }
         if(i == 28277)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2400,7 +2400,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Kiteshield (R)";
         }
         if(i == 28278)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -2433,7 +2433,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Plateskirt (R)";
         }
         if(i == 28279)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2464,7 +2464,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's Black Platelegs (White)";
         }
         if(i == 28280)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2498,7 +2498,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Platebody (White)";
         }
         if(i == 28281)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -2527,7 +2527,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Helm (White)";
         }
         if(i == 28282)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2558,7 +2558,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Kiteshield (White)";
         }
         if(i == 28283)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -2591,7 +2591,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Plateskirt (White)";
         }
         if(i == 28284)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2622,7 +2622,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's Black Platelegs (Blue)";
         }
         if(i == 28285)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2656,7 +2656,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Platebody (Blue)";
         }
         if(i == 28286)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -2685,7 +2685,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Helm (Blue)";
         }
         if(i == 28287)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2716,7 +2716,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Kiteshield (Blue)";
         }
         if(i == 28288)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -2749,7 +2749,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Plateskirt (Blue)";
         }
         if(i == 28289)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2780,7 +2780,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's Black Platelegs (Green)";
         }
         if(i == 28290)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2814,7 +2814,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Platebody (Green)";
         }
         if(i == 28291)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -2843,7 +2843,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Helm (Green)";
         }
         if(i == 28292)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2874,7 +2874,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Kiteshield (Green)";
         }
         if(i == 28293)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -2907,7 +2907,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Plateskirt (Green)";
         }
         if(i == 28294)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2938,7 +2938,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's Black Platelegs (Purple)";
         }
         if(i == 28295)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -2972,7 +2972,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Platebody (Purple)";
         }
         if(i == 28296)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3001,7 +3001,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Helm (Purple)";
         }
         if(i == 28297)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -3032,7 +3032,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Kiteshield (Purple)";
         }
         if(i == 28298)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -3065,7 +3065,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Black Plateskirt (Purple)";
         }
         if(i == 28299)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Summon from the";
             itemDef.modifiedModelColors = new int[1];
@@ -3092,7 +3092,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Wear a monkey for FREE!";
         }
         if(i == 28300)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3123,7 +3123,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Lava helm";
         }
         if(i == 28301)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3154,7 +3154,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Ivandis helm";
         }
         if(i == 28302)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3185,7 +3185,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ladies platelegs";
         }
         if(i == 28303)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3216,7 +3216,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Stride through enemies territory in a heart beat.";
         }
         if(i == 28304)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3247,7 +3247,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Lava platelegs";
         }
         if(i == 28305)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3278,7 +3278,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Ladies helm";
         }
         if(i == 28306)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -3311,7 +3311,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Lava Gauntlets.";
         }
         if(i == 28307)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -3344,7 +3344,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ivandis Gauntlets.";
         }
         if(i == 28308)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3375,7 +3375,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A draconic Ahrims top.";
         }
         if(i == 28309)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3406,7 +3406,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A draconic Ahrims bottoms.";
         }
         if(i == 28310)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -3435,7 +3435,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A draconic Ahrims Hood.";
         }
         if(i == 28311)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wield";
             itemDef.modifiedModelColors = new int[1];
@@ -3464,7 +3464,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A Slayer sword by thedragon.";
         }
         if(i == 28312)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -3497,7 +3497,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ladies Gauntlets.";
         }
         if(i == 28313)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Equip";
             itemDef.modifiedModelColors = new int[1];
@@ -3525,7 +3525,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A demon tail.";
         }
         if(i == 28314)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Equip";
             itemDef.modifiedModelColors = new int[1];
@@ -3553,7 +3553,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Horns of a demon.";
         }
         if(i == 28315)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Equip";
             itemDef.modifiedModelColors = new int[1];
@@ -3581,7 +3581,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Horns of a demon.";
         }
         if(i == 28316)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Equip";
             itemDef.modifiedModelColors = new int[1];
@@ -3609,7 +3609,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The head of a demon.";
         }
         if(i == 28317)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Equip";
             itemDef.modifiedModelColors = new int[1];
@@ -3637,7 +3637,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The feet of a demon.";
         }
         if(i == 28318)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Equip";
             itemDef.modifiedModelColors = new int[1];
@@ -3665,7 +3665,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "The hands of a demon.";
         }
         if(i == 28319)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[5];
@@ -3702,7 +3702,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's a Lava chainbody";
         }
         if(i == 28320)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[5];
@@ -3739,7 +3739,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Its a Ivandis Chain";
         }
         if(i == 28321)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -3768,7 +3768,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ivandis boots";
         }
         if(i == 28322)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[5];
@@ -3805,7 +3805,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Its a Ladies Chain";
         }
         if(i == 28323)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -3836,7 +3836,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Lava shield";
         }
         if(i == 28324)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -3867,7 +3867,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ladies shield";
         }
         if(i == 28325)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -3896,7 +3896,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Lava boots";
         }
         if(i == 28326)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -3925,7 +3925,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ladies boots";
         }
         if(i == 28327)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modelId = 66033;
@@ -3950,7 +3950,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "";
         }
         if(i == 28328)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -3979,7 +3979,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "";
         }
         if(i == 28329)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -4010,7 +4010,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Blue Crystal shield";
         }
         if(i == 28330)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -4043,7 +4043,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Blue Crystal shield";
         }
         if(i == 28331)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -4074,7 +4074,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Ivandis shield";
         }
         if(i == 28332)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -4103,7 +4103,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Show no mercy, led anger rule your fury.";
         }
         if(i == 28333)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -4134,7 +4134,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black Crystal shield";
         }
         if(i == 28334)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4163,7 +4163,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28335)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4192,7 +4192,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 29395) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Rico's Platebody"; //Name
@@ -4239,7 +4239,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29396)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -4269,7 +4269,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of Rico's platelegs.";
         }
         if(i == 29397)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -4297,7 +4297,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Rico's boots";
         }
         if(i == 29398)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -4327,7 +4327,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an Rico's kiteshield.";
         }
         if(i == 29399) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Rico's Crown"; //Name
@@ -4361,7 +4361,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28347)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[5];
@@ -4386,7 +4386,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Death Cape made by death! ";
         }
         if(i == 28630)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4414,7 +4414,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Orange cavalier";
         }
         if(i == 28631)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4442,7 +4442,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Purple cavalier";
         }
         if(i == 28632)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4470,7 +4470,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Unknown Color cavalier";
         }
         if(i == 28633)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4498,7 +4498,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Red cavalier";
         }
         if(i == 28634)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4526,7 +4526,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Lime Green cavalier";
         }
         if(i == 28635)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4554,7 +4554,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Unknowed White cavalier";
         }
         if(i == 28636)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4582,7 +4582,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Deep Purple cavalier";
         }
         if(i == 28637)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4610,7 +4610,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Deeper Purple cavalier";
         }
         if(i == 28638)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4638,7 +4638,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Deep Green cavalier";
         }
         if(i == 28640)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4666,7 +4666,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Dull Orange cavalier";
         }
         if(i == 28641)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4694,7 +4694,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Bright Yellow cavalier";
         }
         if(i == 28642)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4722,7 +4722,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Bright Pink cavalier";
         }
         if(i == 28643)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4750,7 +4750,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Bright Blue cavalier";
         }
         if(i == 28644)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4778,7 +4778,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Bright Gray cavalier";
         }
         if(i == 28645)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4806,7 +4806,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Bright Sky Blue cavalier";
         }
         if(i == 28646)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4834,7 +4834,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Teal cavalier";
         }
         if(i == 28647)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4862,7 +4862,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "a Dark Gray cavalier";
         }
         if(i == 28648)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4890,7 +4890,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28649)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4918,7 +4918,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28650)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4946,7 +4946,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28651)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -4974,7 +4974,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28652)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5002,7 +5002,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28653)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5030,7 +5030,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28654)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5058,7 +5058,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28655)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5086,7 +5086,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28656)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5114,7 +5114,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28657)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5142,7 +5142,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28658)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5170,7 +5170,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28659)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5198,7 +5198,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28660)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5226,7 +5226,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Aaaarrrghhh... I'm a monster.";
         }
         if(i == 28715)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5254,7 +5254,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28716)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5282,7 +5282,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28717)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5310,7 +5310,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28718)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5338,7 +5338,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28719)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5366,7 +5366,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28720)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5394,7 +5394,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28721)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5422,7 +5422,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28722)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5451,7 +5451,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28723)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5480,7 +5480,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28724)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5509,7 +5509,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28725)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5538,7 +5538,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28726)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5567,7 +5567,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28727)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5596,7 +5596,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Trust me im a doctor";
         }
         if(i == 28673)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5624,7 +5624,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28674)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5652,7 +5652,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28675)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5680,7 +5680,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28676)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5708,7 +5708,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28677)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5736,7 +5736,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28678)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5764,7 +5764,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28679)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5792,7 +5792,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28680)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5820,7 +5820,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28681)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5848,7 +5848,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28682)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5876,7 +5876,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28683)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5904,7 +5904,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28684)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5932,7 +5932,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 28685)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -5960,7 +5960,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Parlez-voius francais?";
         }
         if(i == 29160) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Golden halo"; //Name
@@ -5997,7 +5997,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 150000;
         }
         if(i == 29161) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Golden Gnome scarf"; //Name
@@ -6032,7 +6032,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29162) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Golden Gloves"; //Name
@@ -6061,7 +6061,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 600;
         }
         if(i == 28472)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6089,7 +6089,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Lime Green abyssal whip";
         }
         if(i == 28473)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6117,7 +6117,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Unknowed White abyssal whip";
         }
         if(i == 28474)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6145,7 +6145,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Deep Purple abyssal whip";
         }
         if(i == 28475)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6173,7 +6173,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Deeper Purple abyssal whip";
         }
         if(i == 28476)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6201,7 +6201,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Deep Green abyssal whip";
         }
         if(i == 28477)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6229,7 +6229,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Dull Orange abyssal whip";
         }
         if(i == 28478)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6257,7 +6257,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Bright Yellow abyssal whip";
         }
         if(i == 28479)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6285,7 +6285,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Bright Pink abyssal whip";
         }
         if(i == 28480)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6313,7 +6313,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Bright Blue abyssal whip";
         }
         if(i == 28481)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6341,7 +6341,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Bright Gray abyssal whip";
         }
         if(i == 28482)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6369,7 +6369,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Bright Sky Blue abyssal whip";
         }
         if(i == 28483)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6397,7 +6397,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Teal abyssal whip";
         }
         if(i == 28484)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6425,7 +6425,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Dark Gray abyssal whip";
         }
         if(i == 28529)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6453,7 +6453,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Adam";
         }
         if(i == 28530)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6481,7 +6481,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Rune";
         }
         if(i == 28531)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6509,7 +6509,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Mithril";
         }
         if(i == 28532)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6537,7 +6537,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Black";
         }
         if(i == 28533)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6565,7 +6565,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Steel";
         }
         if(i == 28534)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6593,7 +6593,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Iron";
         }
         if(i == 28535)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6621,7 +6621,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "abyssal whip Made Of Bronze";
         }
         if(i == 28536)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6649,7 +6649,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A abyssal whip made of Dragon";
         }
         if(i == 28537)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -6677,7 +6677,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "hshsh";
         }
         if(i == 29163) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Bandos chestplate (g)"; //Name
@@ -6716,7 +6716,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 290010;
         }
         if(i == 29164) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Bandos tassets (g)"; //Name
@@ -6747,7 +6747,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 289910;
         }
         if(i == 29165) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Bandos boots (g)"; //Name
@@ -6776,7 +6776,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 289010;
         }
         if(i == 28544)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -6808,7 +6808,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black & Yellow platelegs";
         }
         if(i == 28545)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -6842,7 +6842,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black & Yellow platebody";
         }
         if(i == 28546)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -6874,7 +6874,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black & Yellow kiteshield";
         }
         if(i == 28547)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -6908,7 +6908,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black & Yellow cape";
         }
         if(i == 28548)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -6940,7 +6940,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black & Yellow Gloves";
         }
         if(i == 28549)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -6968,7 +6968,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Black & Yellow boots";
         }
         if(i == 29176) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "3rd age platelegs (g)"; //Name
@@ -7006,7 +7006,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 28816)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -7034,7 +7034,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Its a halo";
         }
         if(i == 28817)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -7062,7 +7062,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Its a halo";
         }
         if(i == 28818)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -7091,7 +7091,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28819)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -7120,7 +7120,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28820)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[1];
@@ -7148,7 +7148,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Its a halo";
         }
         if(i == 29177) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "3rd age platebody (g)"; //Name
@@ -7186,7 +7186,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29178) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "3rd age full helmet (g)"; //Name
@@ -7220,7 +7220,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = 20105;
         }
         if(i == 29179) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "3rd age kiteshield (g)"; //Name
@@ -7264,7 +7264,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29280) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, null, null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "<col=A67711>Halloween</col> <<col=0>token</col>"; //Name
@@ -7292,7 +7292,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29328) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Blue Ghostly boots"; //Name
@@ -7322,7 +7322,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29329) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Blue Ghostly robe top"; //Name
@@ -7352,7 +7352,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29330) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Blue Ghostly robe bottom"; //Name
@@ -7382,7 +7382,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29331) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Blue Ghostly hood"; //Name
@@ -7412,7 +7412,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29332) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Blue Ghostly gloves"; //Name
@@ -7442,7 +7442,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29333) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Blue Ghostly cloak"; //Name
@@ -7470,7 +7470,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29334) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Green Ghostly boots"; //Name
@@ -7500,7 +7500,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29335) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Green Ghostly robe top"; //Name
@@ -7530,7 +7530,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29336) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Green Ghostly robe bottom"; //Name
@@ -7560,7 +7560,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29337) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Green Ghostly hood"; //Name
@@ -7590,7 +7590,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29338) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Green Ghostly gloves"; //Name
@@ -7620,7 +7620,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29339) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Light Green Ghostly cloak"; //Name
@@ -7648,7 +7648,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29340) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Red Ghostly boots"; //Name
@@ -7678,7 +7678,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29341) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Red Ghostly robe top"; //Name
@@ -7708,7 +7708,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29342) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Red Ghostly robe bottom"; //Name
@@ -7738,7 +7738,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29343) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Red Ghostly hood"; //Name
@@ -7768,7 +7768,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29344) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Red Ghostly gloves"; //Name
@@ -7798,7 +7798,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29345) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Red Ghostly cloak"; //Name
@@ -7826,7 +7826,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29346) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Yellow Ghostly boots"; //Name
@@ -7856,7 +7856,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29347) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Yellow Ghostly robe top"; //Name
@@ -7886,7 +7886,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29348) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Yellow Ghostly robe bottom"; //Name
@@ -7916,7 +7916,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29349) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Yellow Ghostly hood"; //Name
@@ -7946,7 +7946,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29350) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Yellow Ghostly gloves"; //Name
@@ -7976,7 +7976,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29351) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Yellow Ghostly cloak"; //Name
@@ -8004,7 +8004,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29352) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Pink Ghostly boots"; //Name
@@ -8034,7 +8034,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29353) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Pink Ghostly robe top"; //Name
@@ -8064,7 +8064,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29354) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Pink Ghostly robe bottom"; //Name
@@ -8094,7 +8094,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29355) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Pink Ghostly hood"; //Name
@@ -8124,7 +8124,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29356) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Pink Ghostly gloves"; //Name
@@ -8154,7 +8154,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29357) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "Pink Ghostly cloak"; //Name
@@ -8182,7 +8182,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29358) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "White Ghostly boots"; //Name
@@ -8212,7 +8212,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29359) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "White Ghostly robe top"; //Name
@@ -8242,7 +8242,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29360) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "White Ghostly robe bottom"; //Name
@@ -8272,7 +8272,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29361) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "White Ghostly hood"; //Name
@@ -8302,7 +8302,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29362) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "White Ghostly gloves"; //Name
@@ -8332,7 +8332,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29363) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name  = "White Ghostly cloak"; //Name
@@ -8360,7 +8360,7 @@ public class ItemDefinition_Sub1
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 28971) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (purple)"; //Name
@@ -8403,7 +8403,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28972) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (purple)"; //Name
@@ -8442,7 +8442,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28973) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (purple)"; //Name
@@ -8481,7 +8481,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28974) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (yellow)"; //Name
@@ -8524,7 +8524,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28975) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (yellow)"; //Name
@@ -8563,7 +8563,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28976) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (yellow)"; //Name
@@ -8601,7 +8601,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28977) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (Dark blue)"; //Name
@@ -8644,7 +8644,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28978) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (Dark blue)"; //Name
@@ -8683,7 +8683,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28979) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (Dark blue)"; //Name
@@ -8721,7 +8721,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28980) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (Gold)"; //Name
@@ -8764,7 +8764,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28981) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (Gold)"; //Name
@@ -8803,7 +8803,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28982) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (Gold)"; //Name
@@ -8841,7 +8841,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28983) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (Teal)"; //Name
@@ -8884,7 +8884,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28984) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (Teal)"; //Name
@@ -8923,7 +8923,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 28985) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (Teal)"; //Name
@@ -8961,7 +8961,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29017) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (Gray)"; //Name
@@ -9004,7 +9004,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29018) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (Gray)"; //Name
@@ -9043,7 +9043,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29019) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (Gray)"; //Name
@@ -9081,7 +9081,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29392) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Hat of the eye (White)"; //Name
@@ -9124,7 +9124,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29393) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe top of the eye (White)"; //Name
@@ -9163,7 +9163,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29394) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (White)"; //Name
@@ -9202,7 +9202,7 @@ public class ItemDefinition_Sub1
         }
 
         if(i == 29394) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Robe bottoms of the eye (White)"; //Name
@@ -9240,7 +9240,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29137) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Mod Sgs Platebody V.3"; //Name
@@ -9290,7 +9290,7 @@ public class ItemDefinition_Sub1
 
 
         if(i == 29138)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[2];
@@ -9320,7 +9320,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "A set of Mod Sgs platelegs.";
         }
         if(i == 29139)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[4];
@@ -9348,7 +9348,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "Mod Sgs boots V.3";
         }
         if(i == 29140)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modifiedModelColors = new int[3];
@@ -9378,7 +9378,7 @@ public class ItemDefinition_Sub1
             itemDef.description = "It's an Mod Sgs kiteshield V.3.";
         }
         if(i == 29141) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Mod Sgs Crown V.3"; //Name
@@ -9412,7 +9412,7 @@ public class ItemDefinition_Sub1
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29326) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {"Open", null, null, null, null};
             itemDef.name = "Dr Cape Mystery box"; //Name
             itemDef.description = "Its an Dr Cape Mystery box"; //Description
@@ -9440,7 +9440,7 @@ public class ItemDefinition_Sub1
             itemDef.notedId = -1;
         }
         if(i == 29131) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Boxing gloves (Purple)"; //Name
@@ -9469,7 +9469,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 50;
         }
         if(i == 29132) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Boxing gloves (Green)"; //Name
@@ -9498,7 +9498,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 50;
         }
         if(i == 29133) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Boxing gloves (Neon Blue)"; //Name
@@ -9527,7 +9527,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 50;
         }
         if(i == 29134) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Boxing gloves (Black)"; //Name
@@ -9556,7 +9556,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 50;
         }
         if(i == 29135) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Boxing gloves (White)"; //Name
@@ -9585,7 +9585,7 @@ public class ItemDefinition_Sub1
             itemDef.value = 50;
         }
         if(i == 28728)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.primaryMaleModel = 56500;

@@ -2207,7 +2207,7 @@ public final class ItemDefinition {
 		return model;
 	}
 
-	private void setDefaults() {
+	public void setDefaults() {
 		// equipActions = new String[6];
 		customSpriteLocation = null;
 		customSmallSpriteLocation = null;

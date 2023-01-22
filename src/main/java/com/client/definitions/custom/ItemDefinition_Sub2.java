@@ -10,7 +10,7 @@ public class ItemDefinition_Sub2 {
     public static ItemDefinition itemDef(int i, ItemDefinition itemDef)
     {
         if(i == 29570) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", "Teleport", null, null};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Justin's Mythical cape"; //Name
@@ -46,7 +46,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 28821)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modelId = 52068;
@@ -205,7 +205,7 @@ public class ItemDefinition_Sub2 {
         itemDef.notedId = -1;
     }
         if(i == 28827) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {"Open", null, null, null, null};
             itemDef.name = "Money box"; //Name
             itemDef.description = "Its an Money box"; //Description
@@ -232,7 +232,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29020) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -266,7 +266,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29021) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -300,7 +300,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29022) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -335,7 +335,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29023) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -369,7 +369,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29024) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -399,7 +399,7 @@ public class ItemDefinition_Sub2 {
             itemDef.primaryFemaleHeadPiece = -1;
         }
         if(i == 29025) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -433,7 +433,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29026) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -467,7 +467,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29027) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -501,7 +501,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29028) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -535,7 +535,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29029) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -569,7 +569,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29030) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -603,7 +603,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29031) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -637,7 +637,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29032) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -671,7 +671,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29033) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -705,7 +705,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29034) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -739,7 +739,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29035) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -773,7 +773,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29036) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -807,7 +807,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29037) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -841,7 +841,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29038) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -875,7 +875,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29039) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -909,7 +909,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29040) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Flared trousers"; //Name
@@ -944,7 +944,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29041) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Twisted bow (Blue)"; //Name
@@ -981,7 +981,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 4000000;
         }
         if(i == 29042) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Twisted bow (Purple)"; //Name
@@ -1018,7 +1018,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 4000000;
         }
         if(i == 29043) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Twisted bow (Red)"; //Name
@@ -1055,7 +1055,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 4000000;
         }
         if(i == 29044) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Twisted bow (Green)"; //Name
@@ -1092,7 +1092,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 4000000;
         }
         if(i == 29045) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Twisted bow (Yellow)"; //Name
@@ -1129,7 +1129,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 4000000;
         }
         if(i == 29046)
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
             itemDef.itemActions[1] = "Wear";
             itemDef.modelId = 52635;
@@ -1153,7 +1153,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29048) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Lava sword"; //Name
@@ -1185,7 +1185,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29049) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.name = "Twisted bow dye (blue)"; //Name
             itemDef.description = "Its an Orange dye"; //Description
             itemDef.modifiedModelColors = new int[1];
@@ -1215,7 +1215,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29050) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.name = "Twisted bow dye (pruple)"; //Name
             itemDef.description = "Its an Orange dye"; //Description
             itemDef.modifiedModelColors = new int[1];
@@ -1245,7 +1245,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29051) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.name = "Twisted bow dye (red)"; //Name
             itemDef.description = "Its an Orange dye"; //Description
             itemDef.modifiedModelColors = new int[1];
@@ -1275,7 +1275,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29052) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.name = "Twisted bow dye (green)"; //Name
             itemDef.description = "Its an Orange dye"; //Description
             itemDef.modifiedModelColors = new int[1];
@@ -1305,7 +1305,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 29053) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.name = "Twisted bow dye (yellow)"; //Name
             itemDef.description = "Its an Orange dye"; //Description
             itemDef.modifiedModelColors = new int[1];
@@ -1335,7 +1335,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 27651) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, null, null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Vote Boss jr"; //Name
@@ -1363,7 +1363,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28020) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Frozen Ancestral hat"; //Name
@@ -1391,7 +1391,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28021) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, "null"};
             itemDef.name = "Frozen Ancestral robe top"; //Name
@@ -1419,7 +1419,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28022) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, "null"};
             itemDef.name = "Frozen Ancestral robe bottom"; //Name
@@ -1447,7 +1447,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28023) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, null, null,null, null,};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Berserker crystal"; //Name
@@ -1475,7 +1475,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28024) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, null, null,null, null,};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Galaxy stone"; //Name
@@ -1504,7 +1504,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 28025) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, null, null,null, null,};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Superior crystal"; //Name
@@ -1532,7 +1532,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28026) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Berserker boots"; //Name
@@ -1561,7 +1561,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 28027) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Galaxy boots"; //Name
@@ -1589,7 +1589,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28028) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Superior boots"; //Name
@@ -1617,7 +1617,7 @@ public class ItemDefinition_Sub2 {
             itemDef.placeholderTemplateId = -1;
         }
         if(i == 28993) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Guthan's helm"; //Name
@@ -1647,7 +1647,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 28994) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Guthan's warspear"; //Name
@@ -1683,7 +1683,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 28995) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Guthan's platebody"; //Name
@@ -1714,7 +1714,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 28996) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Guthan's chainskirt"; //Name
@@ -1747,7 +1747,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 28997) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Dharok's helm"; //Name
@@ -1777,7 +1777,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 28998) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Dharok's greataxe"; //Name
@@ -1809,7 +1809,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 28999) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Giled Dharok's platebody"; //Name
@@ -1840,7 +1840,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29000) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Dharok's platelegs"; //Name
@@ -1870,7 +1870,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29001) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Ahrim's hood"; //Name
@@ -1900,7 +1900,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29002) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Ahrim's staff"; //Name
@@ -1936,7 +1936,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29003) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Ahrim's robetop"; //Name
@@ -1976,7 +1976,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29004) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Ahrim's robeskirt"; //Name
@@ -2011,7 +2011,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29005) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Karil's coif"; //Name
@@ -2049,7 +2049,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29006) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Karil's crossbow"; //Name
@@ -2086,7 +2086,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29007) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Karil's leathertop"; //Name
@@ -2131,7 +2131,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29008) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Karil's leatherskirt"; //Name
@@ -2170,7 +2170,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29009) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Torag's helm"; //Name
@@ -2202,7 +2202,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29010) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Torag's hammers"; //Name
@@ -2235,7 +2235,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29011) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Torag's platebody"; //Name
@@ -2269,7 +2269,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29012) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Torag's platelegs"; //Name
@@ -2304,7 +2304,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29013) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Verac's helm"; //Name
@@ -2346,7 +2346,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29014) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Verac's flail"; //Name
@@ -2382,7 +2382,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29015) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Verac's brassard"; //Name
@@ -2419,7 +2419,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 280000;
         }
         if(i == 29016) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Gilded Verac's plateskirt"; //Name
@@ -2452,7 +2452,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29452) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Ahrim's hood"; //Name
@@ -2482,7 +2482,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29453) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Ahrim's staff"; //Name
@@ -2518,7 +2518,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29454) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Ahrim's robetop"; //Name
@@ -2556,7 +2556,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29455) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Ahrim's robeskirt"; //Name
@@ -2591,7 +2591,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29456) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Karil's coif"; //Name
@@ -2629,7 +2629,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29457) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Karil's crossbow"; //Name
@@ -2666,7 +2666,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29458) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Karil's leathertop"; //Name
@@ -2711,7 +2711,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29459) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Karil's leatherskirt"; //Name
@@ -2750,7 +2750,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29460) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Torag's helm"; //Name
@@ -2782,7 +2782,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29461) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Torag's hammers"; //Name
@@ -2815,7 +2815,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29462) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Torag's platebody"; //Name
@@ -2849,7 +2849,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29463) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Torag's platelegs"; //Name
@@ -2884,7 +2884,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29464) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Verac's helm"; //Name
@@ -2926,7 +2926,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29465) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Verac's flail"; //Name
@@ -2962,7 +2962,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29466) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Verac's brassard"; //Name
@@ -2999,7 +2999,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 280000;
         }
         if(i == 29467) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Verac's plateskirt"; //Name
@@ -3032,7 +3032,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29468) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Guthan's warspear"; //Name
@@ -3068,7 +3068,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29469) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Guthan's platebody"; //Name
@@ -3099,7 +3099,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29470) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Guthan's chainskirt"; //Name
@@ -3132,7 +3132,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29471) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Dharok's helm"; //Name
@@ -3162,7 +3162,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29472) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Dharok's greataxe"; //Name
@@ -3194,7 +3194,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29473) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Dharok's platebody"; //Name
@@ -3226,7 +3226,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29474) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Green Dharok's platelegs"; //Name
@@ -3256,7 +3256,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29475) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Ahrim's hood"; //Name
@@ -3286,7 +3286,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29476) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Ahrim's staff"; //Name
@@ -3322,7 +3322,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29477) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Ahrim's robetop"; //Name
@@ -3360,7 +3360,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29478) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Ahrim's robeskirt"; //Name
@@ -3397,7 +3397,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29479) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Karil's coif"; //Name
@@ -3435,7 +3435,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29480) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Karil's crossbow"; //Name
@@ -3472,7 +3472,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29481) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Karil's leathertop"; //Name
@@ -3517,7 +3517,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29482) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Karil's leatherskirt"; //Name
@@ -3556,7 +3556,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29483) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Torag's helm"; //Name
@@ -3588,7 +3588,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29484) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Torag's hammers"; //Name
@@ -3621,7 +3621,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29485) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Torag's platebody"; //Name
@@ -3655,7 +3655,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29486) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Torag's platelegs"; //Name
@@ -3690,7 +3690,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29487) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Verac's helm"; //Name
@@ -3732,7 +3732,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29488) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Verac's flail"; //Name
@@ -3768,7 +3768,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29489) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Verac's brassard"; //Name
@@ -3805,7 +3805,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 280000;
         }
         if(i == 29490) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Verac's plateskirt"; //Name
@@ -3838,7 +3838,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29491) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Guthan's warspear"; //Name
@@ -3874,7 +3874,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29492) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Guthan's platebody"; //Name
@@ -3905,7 +3905,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29493) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Guthan's chainskirt"; //Name
@@ -3938,7 +3938,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29494) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Dharok's helm"; //Name
@@ -3968,7 +3968,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29495) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Dharok's greataxe"; //Name
@@ -4000,7 +4000,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29496) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Dharok's platebody"; //Name
@@ -4032,7 +4032,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29497) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "Black Dharok's platelegs"; //Name
@@ -4062,7 +4062,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29498) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Ahrim's hood"; //Name
@@ -4092,7 +4092,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29499) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Ahrim's staff"; //Name
@@ -4128,7 +4128,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29500) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Ahrim's robetop"; //Name
@@ -4166,7 +4166,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29501) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Ahrim's robeskirt"; //Name
@@ -4201,7 +4201,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29502) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Karil's coif"; //Name
@@ -4239,7 +4239,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29503) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Karil's crossbow"; //Name
@@ -4276,7 +4276,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29504) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Karil's leathertop"; //Name
@@ -4321,7 +4321,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29505) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Karil's leatherskirt"; //Name
@@ -4360,7 +4360,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 47000;
         }
         if(i == 29506) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Torag's helm"; //Name
@@ -4392,7 +4392,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29507) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Torag's hammers"; //Name
@@ -4425,7 +4425,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29508) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Torag's platebody"; //Name
@@ -4459,7 +4459,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29509) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Torag's platelegs"; //Name
@@ -4494,7 +4494,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29510) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Verac's helm"; //Name
@@ -4536,7 +4536,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29511) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Verac's flail"; //Name
@@ -4572,7 +4572,7 @@ public class ItemDefinition_Sub2 {
 
 
         if(i == 29512) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Verac's brassard"; //Name
@@ -4609,7 +4609,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 280000;
         }
         if(i == 29513) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Verac's plateskirt"; //Name
@@ -4642,7 +4642,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 275000;
         }
         if(i == 29514) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Guthan's warspear"; //Name
@@ -4678,7 +4678,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29515) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Guthan's platebody"; //Name
@@ -4709,7 +4709,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29516) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Guthan's chainskirt"; //Name
@@ -4742,7 +4742,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29517) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Dharok's helm"; //Name
@@ -4772,7 +4772,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29518) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Dharok's greataxe"; //Name
@@ -4804,7 +4804,7 @@ public class ItemDefinition_Sub2 {
             itemDef.notedId = -1;
         }
         if(i == 29519) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Dharok's platebody"; //Name
@@ -4836,7 +4836,7 @@ public class ItemDefinition_Sub2 {
         }
 
         if(i == 29520) //ID
-        {
+        {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
             itemDef.name = "White Dharok's platelegs"; //Name
