@@ -4091,7 +4091,7 @@ public class ItemDefinition_Sub2 {
             itemDef.value = 13000;
         }
 
-        if(i == 29499) //ID
+        if(i == 29521) //ID
         {	itemDef.setDefaults();
             itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
             itemDef.groundActions = new String[] {null, null, "Take", null, null};
@@ -4847,6 +4847,860 @@ public class ItemDefinition_Sub2 {
             itemDef.modifiedModelColors[1] = 10388;
             itemDef.originalModelColors[0] = 100;
             itemDef.originalModelColors[1] = 109;
+            itemDef.modelId = 6581;
+            itemDef.spriteScale = 1660;
+            itemDef.spritePitch = 456;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 1;
+            itemDef.spriteTranslateY = 1;
+            itemDef.primaryMaleModel = 6660;
+            itemDef.primaryFemaleModel = 6692;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+        if(i == 28841)
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modelId =  55412;
+            itemDef.spriteScale =  840;
+            itemDef.spritePitch =  280;
+            itemDef.spriteCameraRoll =  0;
+            itemDef.spriteCameraYaw =  0;
+            itemDef.spriteTranslateX =  -2;
+            itemDef.spriteTranslateY =  56;
+            itemDef.primaryMaleModel =  55409;
+            itemDef.primaryFemaleModel =  55409;
+            itemDef.secondaryMaleModel =  -1;
+            itemDef.secondaryFemaleModel =  -1;
+            itemDef.primaryMaleHeadPiece =  -1;
+            itemDef.primaryFemaleHeadPiece =  -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Rainbow abyssal whip";
+            itemDef.description = "Happy Easter 2015! =)";
+        }
+        if(i == 28842)
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modelId = 55413;
+            itemDef.spriteScale = 2000;
+            itemDef.spritePitch = 308;
+            itemDef.spriteCameraRoll = 36;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -1;
+            itemDef.spriteTranslateY = 17;
+            itemDef.primaryMaleModel = 55410;
+            itemDef.primaryFemaleModel = 55410;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Rainbow maul";
+            itemDef.description = "Happy Easter 2015! =)";
+        }
+        if(i == 29524) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Ahrim's hood"; //Name
+            itemDef.description = "Its an Purple Ahrim's hood"; //Description
+            itemDef.modifiedModelColors = new int[1];
+            itemDef.originalModelColors = new int[1];
+            itemDef.modifiedModelColors[0] = 8741;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.modelId = 5419;
+            itemDef.spriteScale = 730;
+            itemDef.spritePitch = 0;
+            itemDef.spriteCameraRoll = 2036;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 5430;
+            itemDef.primaryFemaleModel = 5435;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = 5428;
+            itemDef.primaryFemaleHeadPiece = 5429;
+            itemDef.value = 13000;
+        }
+
+        if(i == 29525) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Ahrim's staff"; //Name
+            itemDef.description = "Its an Purple Ahrim's staff"; //Description
+            itemDef.modifiedModelColors = new int[4];
+            itemDef.originalModelColors = new int[4];
+            itemDef.modifiedModelColors[0] = 14503;
+            itemDef.modifiedModelColors[1] = 14499;
+            itemDef.modifiedModelColors[2] = 14494;
+            itemDef.modifiedModelColors[3] = 14490;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.modelId = 6590;
+            itemDef.spriteScale = 1550;
+            itemDef.spritePitch = 224;
+            itemDef.spriteCameraRoll = 116;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -4;
+            itemDef.spriteTranslateY = -19;
+            itemDef.primaryMaleModel = 6706;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleModel = 6706;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 85000;
+        }
+
+        if(i == 29526) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Ahrim's robetop"; //Name
+            itemDef.description = "Its an Purple Ahrim's robetop"; //Description
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modifiedModelColors[0] = 8741;
+            itemDef.modifiedModelColors[1] = 14490;
+            itemDef.modifiedModelColors[4] = 10396;
+            itemDef.modifiedModelColors[2] = 10512;
+            itemDef.modifiedModelColors[3] = 10388;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.originalModelColors[4] = 54194;
+            itemDef.modelId = 6578;
+            itemDef.spriteScale = 1250;
+            itemDef.spritePitch = 468;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 3;
+            itemDef.primaryMaleModel = 6669;
+            itemDef.primaryFemaleModel = 6697;
+            itemDef.secondaryMaleModel = 35817;
+            itemDef.secondaryFemaleModel = 35819;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 50000;
+        }
+
+        if(i == 29527) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Ahrim's robeskirt"; //Name
+            itemDef.description = "Its an Purple Ahrim's robeskirt"; //Description
+            itemDef.modifiedModelColors = new int[4];
+            itemDef.originalModelColors = new int[4];
+            itemDef.modifiedModelColors[0] = 14490;
+            itemDef.modifiedModelColors[1] = -20068;
+            itemDef.modifiedModelColors[2] = 10388;
+            itemDef.modifiedModelColors[3] = 10396;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.modelId = 6577;
+            itemDef.spriteScale = 1730;
+            itemDef.spritePitch = 504;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -4;
+            itemDef.primaryMaleModel = 6659;
+            itemDef.primaryFemaleModel = 6691;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 47000;
+        }
+        if(i == 29528) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Karil's coif"; //Name
+            itemDef.description = "Its an Purple Karil's coif"; //Description
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10388;
+            itemDef.modifiedModelColors[2] = 10514;
+            itemDef.modifiedModelColors[3] = 10638;
+            itemDef.modifiedModelColors[4] = 10762;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.originalModelColors[4] = 54194;
+            itemDef.modelId = 6587;
+            itemDef.spriteScale = 690;
+            itemDef.spritePitch = 144;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.spriteTranslateY = -3;
+            itemDef.primaryMaleModel = 6655;
+            itemDef.primaryFemaleModel = 6688;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = 6571;
+            itemDef.primaryFemaleHeadPiece = 6571;
+            itemDef.value = 13000;
+        }
+
+        if(i == 29529) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Karil's crossbow"; //Name
+            itemDef.description = "Its an Purple Karil's crossbow"; //Description
+            itemDef.modifiedModelColors = new int[4];
+            itemDef.originalModelColors = new int[4];
+            itemDef.modifiedModelColors[0] = 10529;
+            itemDef.modifiedModelColors[1] = 8602;
+            itemDef.modifiedModelColors[2] = 10520;
+            itemDef.modifiedModelColors[3] = 8722;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.modelId = 6604;
+            itemDef.spriteScale = 1160;
+            itemDef.spritePitch = 288;
+            itemDef.spriteCameraRoll = 888;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -4;
+            itemDef.spriteTranslateY = 39;
+            itemDef.primaryMaleModel = 6712;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryFemaleModel = 6712;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 160000;
+        }
+
+
+        if(i == 29530) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Karil's leathertop"; //Name
+            itemDef.description = "Its an Purple Karil's leathertop"; //Description
+            itemDef.modifiedModelColors = new int[8];
+            itemDef.originalModelColors = new int[8];
+            itemDef.modifiedModelColors[0] = 10413;
+            itemDef.modifiedModelColors[1] = 10520;
+            itemDef.modifiedModelColors[2] = 10644;
+            itemDef.modifiedModelColors[3] = 10768;
+            itemDef.modifiedModelColors[4] = 908;
+            itemDef.modifiedModelColors[5] = 9096;
+            itemDef.modifiedModelColors[6] = 8472;
+            itemDef.modifiedModelColors[7] = 14490;
+            itemDef.originalModelColors[0] = 54169;
+            itemDef.originalModelColors[1] = 54194;
+            itemDef.originalModelColors[2] = 54169;
+            itemDef.originalModelColors[3] = 54194;
+            itemDef.originalModelColors[4] = 54169;
+            itemDef.originalModelColors[5] = 54194;
+            itemDef.originalModelColors[6] = 54169;
+            itemDef.originalModelColors[7] = 54194;
+            itemDef.modelId = 6588;
+            itemDef.spriteScale = 1380;
+            itemDef.spritePitch = 556;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 6674;
+            itemDef.primaryFemaleModel = 6700;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = 6643;
+            itemDef.secondaryFemaleModel = 6683;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 50000;
+        }
+
+
+        if(i == 29531) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Karil's leatherskirt"; //Name
+            itemDef.description = "Its an Purple Karil's leatherskirt"; //Description
+            itemDef.modifiedModelColors = new int[6];
+            itemDef.originalModelColors = new int[6];
+            itemDef.modifiedModelColors[0] = 10413;
+            itemDef.modifiedModelColors[1] = 14490;
+            itemDef.modifiedModelColors[2] = 10520;
+            itemDef.modifiedModelColors[3] = 10644;
+            itemDef.modifiedModelColors[4] = 10768;
+            itemDef.modifiedModelColors[5] = 10892;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.originalModelColors[4] = 54194;
+            itemDef.originalModelColors[5] = 54169;
+            itemDef.modelId = 6589;
+            itemDef.spriteScale = 1120;
+            itemDef.spritePitch = 512;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 6664;
+            itemDef.primaryFemaleModel = 6694;
+            itemDef.secondaryMaleModel = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 47000;
+        }
+        if(i == 29532) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Torag's helm"; //Name
+            itemDef.description = "Its an Purple Torag's helm"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 6020;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modelId = 6592;
+            itemDef.spriteScale = 660;
+            itemDef.spritePitch = 0;
+            itemDef.spriteCameraRoll = 212;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 11;
+            itemDef.spriteTranslateY = 0;
+            itemDef.primaryMaleModel = 6656;
+            itemDef.primaryFemaleModel = 6689;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = 6572;
+            itemDef.primaryFemaleHeadPiece = 6576;
+            itemDef.value = 103000;
+        }
+
+        if(i == 29533) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Torag's hammers"; //Name
+            itemDef.description = "Its an Purple Torag's hammers"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10514;
+            itemDef.modifiedModelColors[1] = 10291;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modelId = 6591;
+            itemDef.spriteScale = 1620;
+            itemDef.spritePitch = 272;
+            itemDef.spriteCameraRoll = 1212;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -16;
+            itemDef.spriteTranslateY = -9;
+            itemDef.primaryMaleModel = 6707;
+            itemDef.primaryFemaleModel = 6707;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 160000;
+        }
+
+
+        if(i == 29534) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Torag's platebody"; //Name
+            itemDef.description = "Its an Purple Torag's platebody"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10291;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modelId = 6594;
+            itemDef.spriteScale = 1310;
+            itemDef.spritePitch = 432;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 2;
+            itemDef.spriteTranslateY = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 6676;
+            itemDef.primaryFemaleModel = 6701;
+            itemDef.secondaryMaleModel = 6644;
+            itemDef.secondaryFemaleModel = 6684;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 280000;
+        }
+
+
+
+        if(i == 29535) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Torag's platelegs"; //Name
+            itemDef.description = "Its an Purple Torag's platelegs"; //Description
+            itemDef.modifiedModelColors = new int[4];
+            itemDef.originalModelColors = new int[4];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.modifiedModelColors[1] = 10388;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modifiedModelColors[2] = 6554;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.modifiedModelColors[2] = 10407;
+            itemDef.originalModelColors[2] = 54169;
+            itemDef.modelId = 6584;
+            itemDef.spriteScale = 1720;
+            itemDef.spritePitch = 468;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 6662;
+            itemDef.primaryFemaleModel = 6693;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 275000;
+        }
+        if(i == 29536) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Verac's helm"; //Name
+            itemDef.description = "Its an Purple Verac's helm"; //Description
+            itemDef.modifiedModelColors = new int[6];
+            itemDef.originalModelColors = new int[6];
+            itemDef.modifiedModelColors[0] = 10411;
+            itemDef.modifiedModelColors[1] = 10403;
+            itemDef.modifiedModelColors[2] = 10394;
+            itemDef.modifiedModelColors[3] = 10518;
+            itemDef.modifiedModelColors[4] = 10514;
+            itemDef.modifiedModelColors[5] = 10638;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.originalModelColors[4] = 54194;
+            itemDef.originalModelColors[5] = 54169;
+            itemDef.modelId = 6597;
+            itemDef.spriteScale = 810;
+            itemDef.spritePitch = 28;
+            itemDef.spriteCameraRoll = 208;
+            itemDef.spriteCameraYaw = 0;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = 1;
+            itemDef.primaryMaleModel = 6658;
+            itemDef.primaryFemaleModel = 6690;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = 6573;
+            itemDef.primaryFemaleHeadPiece = 6573;
+            itemDef.value = 103000;
+        }
+
+
+
+        if(i == 29537) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Verac's flail"; //Name
+            itemDef.description = "Its an Purple Verac's flail"; //Description
+            itemDef.modifiedModelColors = new int[3];
+            itemDef.originalModelColors = new int[3];
+            itemDef.modifiedModelColors[0] = 10514;
+            itemDef.modifiedModelColors[1] = 10291;
+            itemDef.modifiedModelColors[2] = 10304;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.modelId = 6585;
+            itemDef.spriteScale = 1440;
+            itemDef.spritePitch = 272;
+            itemDef.spriteCameraRoll = 352;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 32;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 6704;
+            itemDef.primaryFemaleModel = 6704;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 160000;
+        }
+
+
+
+        if(i == 29538) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Verac's brassard"; //Name
+            itemDef.description = "Its an Purple Verac's brassard"; //Description
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10518;
+            itemDef.modifiedModelColors[2] = 10388;
+            itemDef.modifiedModelColors[3] = 10514;
+            itemDef.modifiedModelColors[4] = 10508;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.originalModelColors[4] = 54194;
+            itemDef.modelId = 6596;
+            itemDef.spriteScale = 1210;
+            itemDef.spritePitch = 464;
+            itemDef.spriteCameraRoll = 36;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 3;
+            itemDef.spriteTranslateY = 1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.primaryMaleModel = 315;
+            itemDef.primaryFemaleModel = 478;
+            itemDef.secondaryMaleModel = 6646;
+            itemDef.secondaryFemaleModel = 6685;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 280000;
+        }
+        if(i == 29539) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Verac's plateskirt"; //Name
+            itemDef.description = "Its an Purple Verac's plateskirt"; //Description
+            itemDef.modifiedModelColors = new int[3];
+            itemDef.originalModelColors = new int[3];
+            itemDef.modifiedModelColors[0] = 10398;
+            itemDef.modifiedModelColors[1] = 10518;
+            itemDef.modifiedModelColors[2] = 10638;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.modelId = 6595;
+            itemDef.spriteScale = 1060;
+            itemDef.spritePitch = 504;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -1;
+            itemDef.spriteTranslateY = -1;
+            itemDef.primaryMaleModel = 6667;
+            itemDef.primaryFemaleModel = 6696;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 275000;
+        }
+        if(i == 29540) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Guthan's warspear"; //Name
+            itemDef.description = "Its an Purple Guthan's warspear"; //Description
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modifiedModelColors[0] = 14511;
+            itemDef.modifiedModelColors[1] = 14503;
+            itemDef.modifiedModelColors[2] = 14494;
+            itemDef.modifiedModelColors[3] = 21555;
+            itemDef.modifiedModelColors[4] = 21563;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.originalModelColors[3] = 54169;
+            itemDef.originalModelColors[4] = 54194;
+            itemDef.modelId = 6598;
+            itemDef.spriteScale = 1470;
+            itemDef.spritePitch = 176;
+            itemDef.spriteCameraRoll = 116;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = -16;
+            itemDef.primaryMaleModel = 6709;
+            itemDef.primaryFemaleModel = 6709;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+        if(i == 29541) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Guthan's platebody"; //Name
+            itemDef.description = "Its an Purple Guthans's platebody"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10291;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modelId = 6586;
+            itemDef.spriteScale = 960;
+            itemDef.spritePitch = 412;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 8;
+            itemDef.primaryMaleModel = 6672;
+            itemDef.primaryFemaleModel = 6699;
+            itemDef.secondaryMaleModel = 6641;
+            itemDef.secondaryFemaleModel = 6682;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+
+        if(i == 29542) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Guthan's chainskirt"; //Name
+            itemDef.description = "Its an Purple Guthan's chainskirt"; //Description
+            itemDef.modifiedModelColors = new int[3];
+            itemDef.originalModelColors = new int[3];
+            itemDef.modifiedModelColors[0] = 10407;
+            itemDef.modifiedModelColors[1] = 10394;
+            itemDef.modifiedModelColors[2] = 10388;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.modelId = 6593;
+            itemDef.spriteScale = 1720;
+            itemDef.spritePitch = 468;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 1;
+            itemDef.primaryMaleModel = 32937;
+            itemDef.primaryFemaleModel = 32938;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+
+        if(i == 29543) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Dharok's helm"; //Name
+            itemDef.description = "Its an Purple Dharok's helm"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10388;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modelId = 6580;
+            itemDef.spriteScale = 660;
+            itemDef.spritePitch = 96;
+            itemDef.spriteCameraRoll = 128;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 5;
+            itemDef.spriteTranslateY = -8;
+            itemDef.primaryMaleModel = 6651;
+            itemDef.primaryFemaleModel = 6686;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = 6569;
+            itemDef.primaryFemaleHeadPiece = 6574;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+        if(i == 29544) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Dharok's greataxe"; //Name
+            itemDef.description = "Its an Purple Dharok's greataxe"; //Description
+            itemDef.modifiedModelColors = new int[3];
+            itemDef.originalModelColors = new int[3];
+            itemDef.modifiedModelColors[0] = 10291;
+            itemDef.modifiedModelColors[1] = 10299;
+            itemDef.modifiedModelColors[2] = 10514;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.originalModelColors[2] = 54194;
+            itemDef.modelId = 6579;
+            itemDef.spriteScale = 1710;
+            itemDef.spritePitch = 280;
+            itemDef.spriteCameraRoll = 2004;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 51;
+            itemDef.primaryMaleModel = 6702;
+            itemDef.primaryFemaleModel = 6702;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+        if(i == 29545) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Dharok's platebody"; //Name
+            itemDef.description = "Its an Purple Dharok's platebody"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10291;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
+            itemDef.modelId = 6582;
+            itemDef.spriteScale = 1260;
+            itemDef.spritePitch = 464;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 1;
+            itemDef.spriteTranslateY = 4;
+            itemDef.primaryMaleModel = 6670;
+            itemDef.primaryFemaleModel = 6698;
+            itemDef.secondaryMaleModel = 6639;
+            itemDef.secondaryFemaleModel = 6681;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+        }
+
+        if(i == 29546) //ID
+        {itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.groundActions = new String[] {null, null, "Take", null, null};
+            itemDef.name = "Purple Dharok's platelegs"; //Name
+            itemDef.description = "Its an Purple Dharok's platelegs"; //Description
+            itemDef.modifiedModelColors = new int[2];
+            itemDef.originalModelColors = new int[2];
+            itemDef.modifiedModelColors[0] = 10394;
+            itemDef.modifiedModelColors[1] = 10388;
+            itemDef.originalModelColors[0] = 54194;
+            itemDef.originalModelColors[1] = 54169;
             itemDef.modelId = 6581;
             itemDef.spriteScale = 1660;
             itemDef.spritePitch = 456;

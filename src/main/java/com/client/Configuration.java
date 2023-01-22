@@ -60,7 +60,7 @@ public class Configuration {
 
 	public static boolean developerMode;
 	public static boolean loadExternalCacheArchives = false; // Always true because I can't seem to pack them correctly
-	public static boolean packIndexData = false;
+	public static boolean packIndexData = true;
 	public static boolean dumpMaps;
 	public static boolean dumpAnimationData = false;
 	public static boolean dumpDataLists = false;
