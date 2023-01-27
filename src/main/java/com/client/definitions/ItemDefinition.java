@@ -356,7 +356,7 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-				case 8814:
+			case 8814:
 				itemDef.setDefaults();
 				itemDef.id = 8814;
 				itemDef.modelId = 65130;
@@ -371,6 +371,71 @@ public final class ItemDefinition {
 				itemDef.itemActions = new String[5];
 				itemDef.primaryMaleModel = 65131;
 				itemDef.primaryFemaleModel = 65131;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 19498:
+				itemDef.setDefaults();
+				itemDef.id = 19498;
+				itemDef.modelId = 65145;
+				itemDef.name = "Mike's Torva Platebody";
+				itemDef.description = "Mike's plate.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 2042;
+				itemDef.spriteCameraRoll = 473;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = -1;
+
+				itemDef.primaryMaleModel = 65146;
+				itemDef.secondaryMaleModel = 65147;
+				itemDef.primaryFemaleModel = 65146;
+				itemDef.secondaryFemaleModel = 65147;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 19495:
+				itemDef.setDefaults();
+				itemDef.id = 19495;
+				itemDef.modelId = 65148;
+				itemDef.name = "Mike's Torva Platelegs";
+				itemDef.description = "Mike's Platelegs made from lava.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 2045;
+				itemDef.spriteCameraRoll = 474;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = 8;
+
+				itemDef.primaryMaleModel = 65149;
+				itemDef.primaryFemaleModel = 65149;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 19483:
+				itemDef.setDefaults();
+				itemDef.id = 19483;
+				itemDef.modelId = 65150;
+				itemDef.name = "Mike's Torva Full Helm";
+				itemDef.description = "Mike's Torva Full Helm.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 1867;
+				itemDef.spriteCameraRoll = 85;
+				itemDef.spriteCameraYaw = 1;
+				//itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = -2;
+				itemDef.itemActions = new String[5];
+				itemDef.primaryMaleModel = 65151;
+				itemDef.primaryFemaleModel = 65151;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];
