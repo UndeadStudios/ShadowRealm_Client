@@ -831,7 +831,11 @@ public final class ItemDefinition {
 				itemDef.itemActions = new String[] { "Read", null, null, null, "Drop" };
 				break;
 			case 6830:
-				itemDef.name = "@yel@BETA @blu@BOX";
+				itemDef.name = "@red@raids 2 mbox";
+				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
+				break;
+			case 10025:
+				itemDef.name = "@dre@raids 1 mbox";
 				itemDef.itemActions = new String[] { "Open", null, null, null, "Drop" };
 				break;
 			case 21079:

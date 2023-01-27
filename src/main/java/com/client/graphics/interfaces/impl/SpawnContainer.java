@@ -60,7 +60,7 @@ public class SpawnContainer extends RSInterface {
     public void update(String message) {
         RSInterface container = get(containerInterfaceId);
         List<Integer> matches = Lists.newArrayList();
-        for (int i = 0; i < 100_000; i++) {
+        for (int i = 0; i < 47590; i++) {// jesse do not touch this line!!!! you broke spawn menu
             ItemDefinition def = ItemDefinition.forID(i);
             if (def != null && def.name != null && def.name.length() > 0 && !def.name.contains("Dwarf remains")
                     && (message.length() == 0 || def.name.toLowerCase().contains(message))) {

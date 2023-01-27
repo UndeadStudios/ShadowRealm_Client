@@ -149,7 +149,7 @@ public class CacheDownloader {
 				float speedInBytes = 1000f * numWritten / elapsedTime;
 				int timeRemaining =  (int) ((fileSize - numWritten) / speedInBytes);
 
-				client.drawLoadingText(percentage, Configuration.CLIENT_TITLE + " - Downloading Cache " + percentage + "%");
+				client.drawLoadingText(percentage,  "Exilius by VG - Downloading Cache " + percentage + "%");
 			}
 		} finally {
 			try {

@@ -18,10 +18,10 @@ public class Configuration {
 	public static final int CACHE_VERSION = 6; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
 	// US Client Download
-	public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
+	//public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
 
 	// UK CLIENT DOWNLOAD:
-	//public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
+	public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
 
 	/**
 	 * New Link to new US Cache.
@@ -38,7 +38,7 @@ public class Configuration {
 	public static final int SERVER_VERSION = 3;
 
 
-	public static final String CLIENT_TITLE = "Exilius Repowered by + Endless-OS +";
+	public static final String CLIENT_TITLE = "Exilius By Vigilance Gaming";
 //	public static final String CLIENT_TITLE = "Exilius Dev";
 	public static final String WEBSITE = "exilius-osrs.com";
 	public static final String DEDICATED_SERVER_ADDRESS = "199.127.61.40";//51.222.245.179
@@ -47,7 +47,7 @@ public class Configuration {
 	public static final int PORT = 52777;
 	public static final int TEST_PORT = 43595;
 	public static final int CACHE_FOLDER_VERSION = 0;
-	public static final String CACHE_NAME = "." + CLIENT_TITLE.toLowerCase() + (CACHE_FOLDER_VERSION != 0 ? "_" + CACHE_FOLDER_VERSION : "") + "_v" + SERVER_VERSION;
+	public static final String CACHE_NAME = ".exilius" + (CACHE_FOLDER_VERSION != 0 ? "_" + CACHE_FOLDER_VERSION : "") + "_v" + SERVER_VERSION;
 	public static final String DEV_CACHE_NAME = "local_cache";
 	public static final String CACHE_NAME_DEV = CACHE_NAME + "_dev";
 
