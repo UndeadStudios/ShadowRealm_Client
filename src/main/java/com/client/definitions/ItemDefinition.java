@@ -400,6 +400,29 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
+			case 8467:
+				itemDef.setDefaults();
+				itemDef.id = 8467;
+				itemDef.modelId = 65248;
+				itemDef.name = "Godly Torva Platebody";
+				itemDef.description = "Godly plate.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 2042;
+				itemDef.spriteCameraRoll = 473;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = -1;
+
+				itemDef.primaryMaleModel = 65247;
+				itemDef.secondaryMaleModel = 65246;
+				itemDef.primaryFemaleModel = 65247;
+				itemDef.secondaryFemaleModel = 65246;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
 			case 19495:
 				itemDef.setDefaults();
 				itemDef.id = 19495;
@@ -421,6 +444,27 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
+			case 8469:
+				itemDef.setDefaults();
+				itemDef.id = 8469;
+				itemDef.modelId = 65249;
+				itemDef.name = "Godly Torva Platelegs";
+				itemDef.description = "Godly Platelegs made from lava.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 2045;
+				itemDef.spriteCameraRoll = 474;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = 8;
+
+				itemDef.primaryMaleModel = 65251;
+				itemDef.primaryFemaleModel = 65251;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
 			case 19483:
 				itemDef.setDefaults();
 				itemDef.id = 19483;
@@ -436,6 +480,27 @@ public final class ItemDefinition {
 				itemDef.itemActions = new String[5];
 				itemDef.primaryMaleModel = 65151;
 				itemDef.primaryFemaleModel = 65151;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 8465:
+				itemDef.setDefaults();
+				itemDef.id = 8465;
+				itemDef.modelId = 65255;
+				itemDef.name = "Godly Torva Full Helm";
+				itemDef.description = "Godly Torva Full Helm.";
+				itemDef.spriteScale = 1780;
+				itemDef.spritePitch = 1867;
+				itemDef.spriteCameraRoll = 85;
+				itemDef.spriteCameraYaw = 1;
+				//itemDef.spriteTranslateX = -1;
+				itemDef.spriteTranslateY = -2;
+				itemDef.itemActions = new String[5];
+				itemDef.primaryMaleModel = 65254;
+				itemDef.primaryFemaleModel = 65254;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];

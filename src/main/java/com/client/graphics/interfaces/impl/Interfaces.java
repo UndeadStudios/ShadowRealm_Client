@@ -2195,24 +2195,22 @@ public final class Interfaces extends RSInterface {
 
 	private static final void addGodwarsWidget(TextDrawingArea[] tda) {
 		RSInterface godwars = addInterface(16210);
-		setChildren(11, godwars);
+		setChildren(9, godwars);
 		addText(16211, "NPC Killcount", tda, 0, 0xFD851A, false, true);
 		addText(16212, "Armadyl", tda, 0, 0xFD851A, false, true);
 		addText(16213, "Bandos", tda, 0, 0xFD851A, false, true);
 		addText(16214, "Saradomin", tda, 0, 0xFD851A, false, true);
 		addText(16215, "Zamorak", tda, 0, 0xFD851A, false, true);
-		addText(16216, "Zaros", tda, 0, 0xFD851A, false, true);
+		addText(16216, "0", tda, 0, 0x66FFFF, false, true);
 		addText(16217, "0", tda, 0, 0x66FFFF, false, true);
 		addText(16218, "0", tda, 0, 0x66FFFF, false, true);
 		addText(16219, "0", tda, 0, 0x66FFFF, false, true);
-		addText(16220, "0", tda, 0, 0x66FFFF, false, true);
-		addText(16221, "0", tda, 0, 0x66FFFF, false, true);
 		setBounds(16211, 400, 20, 0, godwars);
-		for (int index = 1; index <= 5; index++) {
+		for (int index = 1; index <= 4; index++) {
 			setBounds(16211 + index, 400, 20 + index * 13, index, godwars);
 		}
-		for (int index = 1; index <= 5; index++) {
-			setBounds(16217 + index, 480, 20 + index * 13, index + 4, godwars);
+		for (int index = 1; index <= 4; index++) {
+			setBounds(16215 + index, 480, 20 + index * 13, index + 4, godwars);
 		}
 	}
 

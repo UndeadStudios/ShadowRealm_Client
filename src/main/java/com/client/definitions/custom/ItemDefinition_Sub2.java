@@ -153,8 +153,8 @@ public class ItemDefinition_Sub2 {
         if(i == 28825) //ID
     {
         itemDef.itemActions = new String[] {"Open", null, null, null, null};
-        itemDef.name = "Super Rare Mystery box"; //Name
-        itemDef.description = "Its an Super Rare Mystery box"; //Description
+        itemDef.name = "Nex Mystery box"; //Name
+        itemDef.description = "Its a Nex Mystery box"; //Description
         itemDef.modifiedModelColors = new int[1];
         itemDef.originalModelColors = new int[1];
         itemDef.modifiedModelColors[0] = 22410;
