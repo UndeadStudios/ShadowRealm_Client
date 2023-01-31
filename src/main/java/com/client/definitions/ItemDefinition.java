@@ -291,6 +291,7 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
+
 			case 29180:
 				itemDef.setDefaults();
 				itemDef.id = 29180;
@@ -513,14 +514,12 @@ public final class ItemDefinition {
 				itemDef.modelId = 56670;
 				itemDef.name = "Admin Cape";
 				itemDef.description = "A Cape for the finest.";
-
 				itemDef.spriteScale = 1385;
 				itemDef.spritePitch = 279;
 				itemDef.spriteCameraRoll = 948;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = 0;
 				itemDef.spriteTranslateY = 24;
-
 				itemDef.primaryMaleModel = 56670;
 				itemDef.primaryFemaleModel = 56670;
 				//itemDef.groundActions = new String[5];

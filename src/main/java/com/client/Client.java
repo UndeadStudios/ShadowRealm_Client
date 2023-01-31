@@ -3313,6 +3313,42 @@ public class Client extends RSApplet {
 				aByteArray912 = abyte2;
 				Rasterizer.requestTextureUpdate(40);
 			}
+			if (Rasterizer.textureLastUsed[25] >= j) {
+				Background background_2 = Rasterizer.textures[25];
+				int i1 = background_2.width * background_2.anInt1453 - 1;
+				int l1 = background_2.width * tickDelta * 2;
+				byte abyte2[] = background_2.palettePixels;
+				byte abyte5[] = aByteArray912;
+				for (int k2 = 0; k2 <= i1; k2++)
+					abyte5[k2] = abyte2[k2 - l1 & i1];
+				background_2.palettePixels = abyte5;
+				aByteArray912 = abyte2;
+				Rasterizer.requestTextureUpdate(25);
+			}
+			if (Rasterizer.textureLastUsed[56] >= j) {
+				Background background_2 = Rasterizer.textures[56];
+				int i1 = background_2.width * background_2.anInt1453 - 1;
+				int l1 = background_2.width * tickDelta * 2;
+				byte abyte2[] = background_2.palettePixels;
+				byte abyte5[] = aByteArray912;
+				for (int k2 = 0; k2 <= i1; k2++)
+					abyte5[k2] = abyte2[k2 - l1 & i1];
+				background_2.palettePixels = abyte5;
+				aByteArray912 = abyte2;
+				Rasterizer.requestTextureUpdate(56);
+			}
+			if (Rasterizer.textureLastUsed[54] >= j) {
+				Background background_2 = Rasterizer.textures[54];
+				int i1 = background_2.width * background_2.anInt1453 - 1;
+				int l1 = background_2.width * tickDelta * 2;
+				byte abyte2[] = background_2.palettePixels;
+				byte abyte5[] = aByteArray912;
+				for (int k2 = 0; k2 <= i1; k2++)
+					abyte5[k2] = abyte2[k2 - l1 & i1];
+				background_2.palettePixels = abyte5;
+				aByteArray912 = abyte2;
+				Rasterizer.requestTextureUpdate(54);
+			}
 			if (Rasterizer.textureLastUsed[91] >= j) {
 				Background background_2 = Rasterizer.textures[91];
 				int i1 = background_2.width * background_2.anInt1453 - 1;
@@ -13777,9 +13813,9 @@ public class Client extends RSApplet {
 			j %= 60;
 			int yPosition = currentScreenMode == ScreenMode.FIXED ? 329 : currentGameHeight - 165;
 			if (j < 10)
-				aTextDrawingArea_1271.method385(0xffff00, "Please log out to save your character - system update in:  " + l + ":0" + j, yPosition, 5);
+				aTextDrawingArea_1271.method385(0xffff00, "system update in:  " + l + ":0" + j, yPosition, 5);
 			else
-				aTextDrawingArea_1271.method385(0xffff00, "Please log out to save your character - system update in:  " + l + ":" + j, yPosition, 5);
+				aTextDrawingArea_1271.method385(0xffff00, "system update in:  " + l + ":" + j, yPosition, 5);
 
 			anInt849++;
 			if (anInt849 > 75) {
