@@ -11,6 +11,206 @@ public class ItemDefinition_Sub1
 
     public static ItemDefinition itemDef(int i, ItemDefinition itemDef)
     {
+
+        switch(i) {
+            case 28401:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "Superior Master Perk"; //Name
+                itemDef.description = "Its an Superior Master Perk"; //Description
+                itemDef.modelId = 52000;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+            case 28402:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "Master Looter Perk"; //Name
+                itemDef.description = "Its an Master Looter Perk"; //Description
+                itemDef.modelId = 52001;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+            case 28403:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "Investigator Perk"; //Name
+                itemDef.description = "Its an Investigator Perk"; //Description
+                itemDef.modelId = 52002;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+            case 28404:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "GWD BigWig Perk"; //Name
+                itemDef.description = "Its a BigWig Of GWD Perk"; //Description
+                itemDef.modelId = 52003;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+            case 28405:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "Speedster Perk"; //Name
+                itemDef.description = "Its a Speedster Perk"; //Description
+                itemDef.modelId = 52004;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+            case 28406:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "Devotee Perk"; //Name
+                itemDef.description = "Its a Devotee Perk"; //Description
+                itemDef.modelId = 52005;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+            case 28407:
+                itemDef.setDefaults();
+                itemDef.itemActions = new String[] {"Open", null, null, null, "Drop"};
+                itemDef.groundActions = new String[] {null, null, "Take", null, null};
+                itemDef.name = "PackkYakker Perk"; //Name
+                itemDef.description = "Its a PackkYakker Perk"; //Description
+                itemDef.modelId = 52006;
+                itemDef.spriteScale = 1010;
+                itemDef.spritePitch = 360;
+                itemDef.spriteCameraRoll = 672;
+                itemDef.spriteCameraYaw = 0;
+                itemDef.spriteTranslateX = 1;
+                itemDef.spriteTranslateY = 0;
+                itemDef.primaryMaleModel = -1;
+                itemDef.primaryFemaleModel = -1;
+                itemDef.secondaryMaleModel = -1;
+                itemDef.secondaryFemaleModel = -1;
+                itemDef.primaryMaleHeadPiece = -1;
+                itemDef.primaryFemaleHeadPiece = -1;
+                itemDef.value = 20;
+                itemDef.unnotedId = -1;
+                itemDef.notedId = -1;
+                itemDef.certID = -1;
+                itemDef.certTemplateID = -1;
+                itemDef.stackable = false;
+                itemDef.placeholderId = -1;
+                itemDef.placeholderTemplateId = -1;
+                break;
+
+        }
         if(i == 28213)
         {	itemDef.setDefaults();
             itemDef.itemActions = new String[5];
@@ -4409,6 +4609,31 @@ public class ItemDefinition_Sub1
             itemDef.notedId = -1;
             itemDef.name = "Godly Cape";
             itemDef.description = "Godly Cape made by the gods! ";
+        }
+        if(i == 29680)
+        {	itemDef.setDefaults();
+            itemDef.itemActions = new String[5];
+            itemDef.itemActions[1] = "Wear";
+            itemDef.modifiedModelColors = new int[5];
+            itemDef.originalModelColors = new int[5];
+            itemDef.modelId = 65157;
+            itemDef.spriteScale = 2992;
+            itemDef.spritePitch = 517;
+            itemDef.spriteCameraRoll = 1035;
+            itemDef.spriteTranslateX = 39;
+            itemDef.spriteTranslateY = 73;
+            itemDef.spriteCameraYaw = 14;
+            itemDef.primaryMaleModel = 65156;
+            itemDef.primaryFemaleModel = 65156;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.stackable = false;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.name = "Owner Cape";
+            itemDef.description = "Owner Cape made for owners only! ";
         }
         if(i == 28630)
         {	itemDef.setDefaults();

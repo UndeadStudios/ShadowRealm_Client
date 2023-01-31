@@ -15,13 +15,13 @@ public class Configuration {
 	 * Cache version is written to the cache folder inside a version file.
 	 * This is read on startup to tell if the cache is out of date or not.
 	 */
-	public static final int CACHE_VERSION = 10; // Set this to the same value, v0.030 = 30, v1.120 = 1120
+	public static final int CACHE_VERSION = 12; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
 	// US Client Download
-	//public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
+	public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
 
 	// UK CLIENT DOWNLOAD:
-	public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
+	//public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
 
 	/**
 	 * New Link to new US Cache.
@@ -60,7 +60,7 @@ public class Configuration {
 
 	public static boolean developerMode;
 	public static boolean loadExternalCacheArchives = false; // Always true because I can't seem to pack them correctly
-	public static boolean packIndexData = true;
+	public static boolean packIndexData = false;
 	public static boolean dumpMaps;
 	public static boolean dumpAnimationData = false;
 	public static boolean dumpDataLists = false;

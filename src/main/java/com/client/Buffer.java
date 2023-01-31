@@ -591,4 +591,17 @@ public final class Buffer extends NodeSub {
         currentOffset += 4;
         return ((buffer[currentOffset - 4] & 0xff) << 24) + ((buffer[currentOffset - 3] & 0xff) << 16) + ((buffer[currentOffset - 2] & 0xff) << 8) + (buffer[currentOffset - 1] & 0xff);
     }
+    public int readNullableLargeSmart() {
+        if (this.buffer[this.currentOffset] < 0) {
+            return this.readInt() & Integer.MAX_VALUE;
+        } else {
+            int var1 = this.readUShort();
+            return var1 == 32767 ? -1 : var1;
+        }
+    }
+
+    public int readShortSmartSub() {
+        int var1 = this.buffer[this.currentOffset] & 255;
+        return var1 < 128 ? this.readUnsignedByte() - 1 : this.readUShort() - 0x8000;
+    }
 }
