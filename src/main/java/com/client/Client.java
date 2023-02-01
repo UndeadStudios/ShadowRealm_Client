@@ -3349,6 +3349,18 @@ public class Client extends RSApplet {
 				aByteArray912 = abyte2;
 				Rasterizer.requestTextureUpdate(54);
 			}
+			if (Rasterizer.textureLastUsed[53] >= j) {
+				Background background_2 = Rasterizer.textures[53];
+				int i1 = background_2.width * background_2.anInt1453 - 1;
+				int l1 = background_2.width * tickDelta * 2;
+				byte abyte2[] = background_2.palettePixels;
+				byte abyte5[] = aByteArray912;
+				for (int k2 = 0; k2 <= i1; k2++)
+					abyte5[k2] = abyte2[k2 - l1 & i1];
+				background_2.palettePixels = abyte5;
+				aByteArray912 = abyte2;
+				Rasterizer.requestTextureUpdate(53);
+			}
 			if (Rasterizer.textureLastUsed[91] >= j) {
 				Background background_2 = Rasterizer.textures[91];
 				int i1 = background_2.width * background_2.anInt1453 - 1;

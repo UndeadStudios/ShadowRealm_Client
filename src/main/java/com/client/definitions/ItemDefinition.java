@@ -313,6 +313,28 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
+
+			case 8029:
+				itemDef.setDefaults();
+				itemDef.id = 8029;
+				itemDef.modelId = 65266;
+				itemDef.name = "Godly Twisted Bow";
+				itemDef.description = "Godly T'Bow.";
+				itemDef.spriteScale = 2105;
+				itemDef.spritePitch = 23;
+				itemDef.spriteCameraRoll = 327;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = 3;
+				itemDef.spriteTranslateY = 1;
+
+				itemDef.primaryMaleModel = 65267;
+				itemDef.primaryFemaleModel = 65267;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
 			case 8813:
 				itemDef.setDefaults();
 				itemDef.id = 8813;
