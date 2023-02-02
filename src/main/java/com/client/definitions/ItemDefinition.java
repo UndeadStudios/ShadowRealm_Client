@@ -320,10 +320,10 @@ public final class ItemDefinition {
 				itemDef.modelId = 65266;
 				itemDef.name = "Godly Twisted Bow";
 				itemDef.description = "Godly T'Bow.";
-				itemDef.spriteScale = 2105;
+				itemDef.spriteScale = 1814;
 				itemDef.spritePitch = 23;
-				itemDef.spriteCameraRoll = 327;
-				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteCameraRoll = 720;
+				itemDef.spriteCameraYaw = 1500;
 				itemDef.spriteTranslateX = 3;
 				itemDef.spriteTranslateY = 1;
 
