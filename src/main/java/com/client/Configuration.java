@@ -15,13 +15,13 @@ public class Configuration {
 	 * Cache version is written to the cache folder inside a version file.
 	 * This is read on startup to tell if the cache is out of date or not.
 	 */
-	public static final int CACHE_VERSION = 14; // Set this to the same value, v0.030 = 30, v1.120 = 1120
+	public static final int CACHE_VERSION = 17; // Set this to the same value, v0.030 = 30, v1.120 = 1120
 
 	// US Client Download
-	public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
+	//public static final String CACHE_LINK = "http://us.files-exilius.com/v0.049.zip";
 
 	// UK CLIENT DOWNLOAD:
-	//public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
+	public static final String CACHE_LINK = "http://uk.files-exilius.com/v0.049.zip";
 
 	/**
 	 * New Link to new US Cache.

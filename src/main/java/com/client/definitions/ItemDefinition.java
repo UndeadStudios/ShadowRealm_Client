@@ -423,9 +423,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-			case 8467:
+			case 29377:
 				itemDef.setDefaults();
-				itemDef.id = 8467;
+				itemDef.id = 29377;
 				itemDef.modelId = 65248;
 				itemDef.name = "Godly Torva Platebody";
 				itemDef.description = "Godly plate.";
@@ -467,9 +467,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-			case 8469:
+			case 29376:
 				itemDef.setDefaults();
-				itemDef.id = 8469;
+				itemDef.id = 29376;
 				itemDef.modelId = 65249;
 				itemDef.name = "Godly Torva Platelegs";
 				itemDef.description = "Godly Platelegs made from lava.";
@@ -482,6 +482,68 @@ public final class ItemDefinition {
 
 				itemDef.primaryMaleModel = 65251;
 				itemDef.primaryFemaleModel = 65251;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+			case 29380:
+				itemDef.setDefaults();
+				itemDef.id = 29380;
+				itemDef.modelId = 65350;
+				itemDef.name = "Godly Masori Chaps";
+				itemDef.description = "Godly Chaps made from the gods.";
+				itemDef.spriteScale = 1033;
+				itemDef.spritePitch = 102;
+				itemDef.spriteCameraRoll = 41;
+				itemDef.spriteCameraYaw = 0;
+				itemDef.spriteTranslateX = -2;
+				itemDef.spriteTranslateY = -3;
+
+				itemDef.primaryMaleModel = 65351;
+				itemDef.primaryFemaleModel = 65351;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 29382:
+				itemDef.setDefaults();
+				itemDef.id = 29382;
+				itemDef.modelId = 65352;
+				itemDef.name = "Godly Masori Body";
+				itemDef.description = "Godly Body made from the gods.";
+				itemDef.spriteScale = 1240;
+				itemDef.spritePitch = 102;
+				itemDef.spriteCameraRoll = 453;
+				itemDef.spriteCameraYaw = 0;
+				//itemDef.spriteTranslateX = -2;
+				itemDef.spriteTranslateY = 11;
+
+				itemDef.primaryMaleModel = 65353;
+				itemDef.primaryFemaleModel = 65353;
+				//itemDef.groundActions = new String[5];
+				//itemDef.groundActions[2] = "Take";
+				itemDef.itemActions = new String[5];
+				itemDef.itemActions[1] = "Wield";
+				itemDef.itemActions[4] = "Drop";
+				return itemDef;
+			case 29381:
+				itemDef.setDefaults();
+				itemDef.id = 29381;
+				itemDef.modelId = 65354;
+				itemDef.name = "Godly Masori Mask";
+				itemDef.description = "Godly Mask made from the gods.";
+			//	itemDef.spriteScale = 1240;
+				itemDef.spritePitch = 102;
+				itemDef.spriteCameraRoll = 555;
+				itemDef.spriteCameraYaw = 0;
+				//itemDef.spriteTranslateX = -2;
+				itemDef.spriteTranslateY = 4;
+
+				itemDef.primaryMaleModel = 65355;
+				itemDef.primaryFemaleModel = 65355;
 				//itemDef.groundActions = new String[5];
 				//itemDef.groundActions[2] = "Take";
 				itemDef.itemActions = new String[5];
@@ -509,9 +571,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-			case 8465:
+			case 29378:
 				itemDef.setDefaults();
-				itemDef.id = 8465;
+				itemDef.id = 29378;
 				itemDef.modelId = 65255;
 				itemDef.name = "Godly Torva Full Helm";
 				itemDef.description = "Godly Torva Full Helm.";
