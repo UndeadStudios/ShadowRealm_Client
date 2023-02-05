@@ -22,6 +22,7 @@ import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.definitions.custom.ItemDefinition_Sub1;
 import com.client.definitions.custom.ItemDefinition_Sub2;
+import com.client.definitions.custom.ItemDefinition_Sub3;
 import com.client.utilities.FieldGenerator;
 import com.client.utilities.FileOperations;
 import com.client.utilities.TempWriter;
@@ -106,6 +107,7 @@ public final class ItemDefinition {
 		int id = itemDef.id;
 		ItemDefinition_Sub1.itemDef(itemDef.id, itemDef);
 		ItemDefinition_Sub2.itemDef(itemDef.id, itemDef);
+		ItemDefinition_Sub3.itemDef(itemDef.id, itemDef);
 		customItems(itemDef.id);
 		itemDef.id = id; // Have to do this for some cases
 		return itemDef;
@@ -487,6 +489,7 @@ public final class ItemDefinition {
 				itemDef.itemActions = new String[5];
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
+				return itemDef;
 			case 29380:
 				itemDef.setDefaults();
 				itemDef.id = 29380;
@@ -614,9 +617,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[3] = "Features";
 				itemDef.itemActions[4] = "Drop";
 				return itemDef;
-			case 26230:
+			case 29230:
 				itemDef.setDefaults();
-				itemDef.id = 26230;
+				itemDef.id = 29230;
 				itemDef.modelId = 50500;
 				itemDef.name = "burning skeleteon boots";
 				itemDef.description = "spooky skeleton.";
@@ -636,9 +639,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wear";
 				itemDef.itemActions[2] = "Drop";
 				return itemDef;
-			case 26231:
+			case 29231:
 				itemDef.setDefaults();
-				itemDef.id = 26231;
+				itemDef.id = 29231;
 				itemDef.modelId = 50501;
 				itemDef.name = "Burning skeleteon Gloves";
 				itemDef.description = "spooky skeleton.";
@@ -658,9 +661,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wear";
 				itemDef.itemActions[2] = "Drop";
 				return itemDef;
-			case 26232:
+			case 29232:
 				itemDef.setDefaults();
-				itemDef.id = 26232;
+				itemDef.id = 29232;
 				itemDef.modelId = 50502;
 				itemDef.name = "Burning skeleteon mask";
 				itemDef.description = "spooky skeleton.";
@@ -680,9 +683,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wear";
 				itemDef.itemActions[2] = "Drop";
 				return itemDef;
-			case 26233:
+			case 29233:
 				itemDef.setDefaults();
-				itemDef.id = 26233;
+				itemDef.id = 29233;
 				itemDef.modelId = 50503;
 				itemDef.name = "Burning skeleteon leggings";
 				itemDef.description = "spooky skeleton.";
@@ -702,9 +705,9 @@ public final class ItemDefinition {
 				itemDef.itemActions[1] = "Wear";
 				itemDef.itemActions[2] = "Drop";
 				return itemDef;
-			case 26234:
+			case 29234:
 				itemDef.setDefaults();
-				itemDef.id = 26234;
+				itemDef.id = 29234;
 				itemDef.modelId = 50505;
 				itemDef.name = "Burning skeleteon Skirt";
 				itemDef.description = "spooky skeleton.";

@@ -8,10 +8,14 @@ public final class Class36 {
 
 	public static void load(int file, byte[] fileData){
 		try {
+			if (fileData.length == 0) {
+				return;
+			}
+
 			Buffer stream = new Buffer(fileData);
             Class18 class18 = new Class18(stream);
 			int k1 = stream.readUShort();
-			animationlist[file] = new Class36[(int)(k1*3)];
+			animationlist[file] = new Class36[k1*3];
 			int ai[] = new int[500];
 			int ai1[] = new int[500];
 			int ai2[] = new int[500];
@@ -91,22 +95,20 @@ public final class Class36 {
 
 	public static Class36 forId(int i) {
 		try {
-			String s = "";
-			int file = 0;
-			int k = 0;
-			s = Integer.toHexString(i);
-			file = Integer.parseInt(s.substring(0, s.length() - 4), 16);
-			k = Integer.parseInt(s.substring(s.length() - 4), 16);
-			if(animationlist[file].length == 0) {
-				System.out.println("Animation frame id: "+file);
+			int file = i >> 16;
+			int k = i & 0xffff;
+
+			if (animationlist[file].length == 0) {
 				clientInstance.onDemandFetcher.provide(1, file);
 				return null;
 			}
+
 			return animationlist[file][k];
-		} catch(Exception e) {
+		} catch (Exception e) {
+			System.out.println(i+" - failed");
 			e.printStackTrace();
-			return null;
 		}
+		return null;
 	}
 
 	public static void nullLoader() {
