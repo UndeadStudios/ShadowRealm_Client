@@ -1234,7 +1234,7 @@ public class Client extends RSApplet {
 	public void repackCacheAll() {
 		for (int index = 0; index < 10; index++) {
 			try {
-				repackCacheIndex(index);
+				//repackCacheIndex(index);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -3647,7 +3647,7 @@ public class Client extends RSApplet {
 			if (i1 > 15)
 				i1 -= 32;
 			int j1 = stream.readBits(1);
-			int npcId = stream.readBits(14);
+			int npcId = stream.readBits(16);
 			npc.npcPetType = stream.readBits(2);
 			npc.desc = NpcDefinition.forID(npcId);
 			int k1 = stream.readBits(1);
@@ -10432,6 +10432,7 @@ public class Client extends RSApplet {
 			if ((l & 4) != 0) {
 				npc.anInt1538 = stream.method434();
 				npc.anInt1539 = stream.method434();
+				npc.instant_facing = stream.readByte() == 1;
 			}
 		}
 	}
@@ -11588,7 +11589,7 @@ public class Client extends RSApplet {
 			k1 = 8;
 			entity.anInt1503--;
 		}
-		if (entity.aBooleanArray1553[entity.smallXYIndex - 1])
+		if (entity.aBooleanArray1553[entity.smallXYIndex - 1] == (byte)2)
 			k1 <<= 1;
 		if (k1 >= 8 && entity.anInt1517 == entity.anInt1554 && entity.anInt1505 != -1)
 			entity.anInt1517 = entity.anInt1505;
@@ -13981,17 +13982,22 @@ public class Client extends RSApplet {
 		}
 		if (k == 1) {
 			int l = stream.readBits(3);
-			myPlayer.moveInDir(false, l);
+			myPlayer.moveInDir((byte)1, l);
 			int k1 = stream.readBits(1);
 			if (k1 == 1)
 				anIntArray894[anInt893++] = maxPlayerCount;
 			return;
 		}
 		if (k == 2) {
+			if (stream.readBits(1) == 1) {
 			int i1 = stream.readBits(3);
-			myPlayer.moveInDir(true, i1);
+			myPlayer.moveInDir((byte)2, i1);
 			int l1 = stream.readBits(3);
-			myPlayer.moveInDir(true, l1);
+			myPlayer.moveInDir((byte)2, l1);
+			} else {
+				int l1 = stream.readBits(3);
+				myPlayer.moveInDir((byte)0, l1);
+			}
 			int j2 = stream.readBits(1);
 			if (j2 == 1)
 				anIntArray894[anInt893++] = maxPlayerCount;
@@ -15247,17 +15253,22 @@ public class Client extends RSApplet {
 					playerIndices[playerCount++] = i1;
 					player.anInt1537 = loopCycle;
 					int l1 = stream.readBits(3);
-					player.moveInDir(false, l1);
+					player.moveInDir((byte)1, l1);
 					int j2 = stream.readBits(1);
 					if (j2 == 1)
 						anIntArray894[anInt893++] = i1;
 				} else if (k1 == 2) {
 					playerIndices[playerCount++] = i1;
 					player.anInt1537 = loopCycle;
+					if(stream.readBits(1) == 1) {
 					int i2 = stream.readBits(3);
-					player.moveInDir(true, i2);
+					player.moveInDir((byte)2, i2);
 					int k2 = stream.readBits(3);
-					player.moveInDir(true, k2);
+					player.moveInDir((byte)2, k2);
+					} else {
+						int k2 = stream.readBits(3);
+						player.moveInDir((byte)0, k2);
+					}
 					int l2 = stream.readBits(1);
 					if (l2 == 1)
 						anIntArray894[anInt893++] = i1;
@@ -15747,17 +15758,23 @@ public class Client extends RSApplet {
 						npcIndices[npcCount++] = npcIndex;
 						npc.anInt1537 = loopCycle;
 						int i2 = stream.readBits(3);
-						npc.moveInDir(false, i2);
+						npc.moveInDir((byte)1, i2);
 						int k2 = stream.readBits(1);
 						if (k2 == 1)
 							anIntArray894[anInt893++] = npcIndex;
 					} else if (l1 == 2) {
 						npcIndices[npcCount++] = npcIndex;
 						npc.anInt1537 = loopCycle;
-						int j2 = stream.readBits(3);
-						npc.moveInDir(true, j2);
-						int l2 = stream.readBits(3);
-						npc.moveInDir(true, l2);
+						int dir;
+						if (stream.readBits(1) == 1) {
+							dir = stream.readBits(3);
+						npc.moveInDir((byte)2, dir);
+							dir = stream.readBits(3);
+						npc.moveInDir((byte)2, dir);
+						} else {
+							 dir = stream.readBits(3);
+							npc.moveInDir((byte)0, dir);
+						}
 						int i3 = stream.readBits(1);
 						if (i3 == 1)
 							anIntArray894[anInt893++] = npcIndex;

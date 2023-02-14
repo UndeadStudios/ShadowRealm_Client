@@ -6,6 +6,8 @@ import com.client.sound.SoundType;
 
 public class Entity extends Renderable {
 
+	public boolean instant_facing;
+
 	public boolean isLocalPlayer() {
 		return this == Client.myPlayer;
 	}
@@ -61,7 +63,7 @@ public class Entity extends Renderable {
 
 				pathX[0] = i;
 				pathY[0] = j;
-				aBooleanArray1553[0] = false;
+				aBooleanArray1553[0] = (byte)1;
 				return;
 			}
 		}
@@ -89,7 +91,7 @@ public class Entity extends Renderable {
 			}
 	}
 
-	public final void moveInDir(boolean flag, int i) {
+	public final void moveInDir(byte flag, int i) {
 		int j = pathX[0];
 		int k = pathY[0];
 		if (i == 0) {
@@ -156,7 +158,7 @@ public class Entity extends Renderable {
 		textCycle = 100;
 		anInt1540 = 1;
 		aBoolean1541 = false;
-		aBooleanArray1553 = new boolean[10];
+		aBooleanArray1553 = new byte[10];
 		anInt1554 = -1;
 		anInt1555 = -1;
 		anInt1556 = -1;
@@ -222,7 +224,7 @@ public class Entity extends Renderable {
 	public int x;
 	public int y;
 	int anInt1552;
-	final boolean[] aBooleanArray1553;
+	final byte[] aBooleanArray1553;
 	int anInt1554;
 	int anInt1555;
 	int anInt1556;

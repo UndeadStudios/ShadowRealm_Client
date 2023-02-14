@@ -44,7 +44,7 @@
 			switch(i){
 				case 11958:
 					//entityDef.models = new int[] { 7400 };
-					return copy(entityDef, 11958, 2205, "Vote boss",new int[] {57989, 27937, 57985, 57968, 27990}, 1000, null, "Attack", null, null, null);
+					return copy(entityDef, 11958, 2205, "Vote boss",new int[] {57989, 57937, 57985, 57968, 57990}, 1000, null, "Attack", null, null, null);
 				case 11959:
 					//entityDef.models = new int[] { 7400 };
 					return copy(entityDef, 11959, 8633, "Legendary boss",new int[] {57142}, 1000, null, "Attack", null, null, null);
