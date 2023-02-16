@@ -13,7 +13,7 @@ public class GroupIronmanBank extends InterfaceBuilder {
 
     @Override
     public void build() {
-        addSprite(nextInterface(), new Sprite("banktab/07/bank 12"));
+        addSprite(nextInterface(), new Sprite("banktab/07/bg 0"));
         child(14, 3);
 
         addText(nextInterface(), "Group Ironman Bank", 2, 0xE68A00, true, true);
@@ -41,29 +41,43 @@ public class GroupIronmanBank extends InterfaceBuilder {
         child(5384, 474, 10); // Close
         child(5380, 474, 10);
 
-        child(18929, 70, 306); // Swap items
-        child(18930, 70, 306);
+        child(18929, 70, 296); // Swap items
+        child(18930, 70, 296);
 
-        child(18933, 170, 306); // Noting
-        child(18934, 170, 306);
+        child(18933, 170, 296); // Noting
+        child(18934, 170, 296);
 
-        child(58002, 20, 306); // Rearrange mode
-        child(58003, 20, 306);
+        child(58002, 20, 296); // Rearrange mode
+        child(58003, 20, 296);
 
-        child(58010, 120, 306); // Noting
-        child(58011, 120, 306);
+        child(58010, 120, 296); // Noting
+        child(58011, 120, 296);
 
-        child(58018, 423, 292); // Deposit backpack
-        child(58019, 423, 292);
+        child(58018, 386, 282); // Deposit backpack
+//        child(58019, 423, 292);
 
-        child(58026, 460, 292); // Deposit worn items
+        child(58026, 423, 282); // Deposit worn items
 
-        child(18941, 22, 291); // Rearrange mode:
-        child(18942, 170, 291); // Withdraw as:
+        child(59018, 22, 276); // Rearrange mode:
+        child(59019, 140, 276); // Withdraw as:
 
-        child(18943, 45, 309); // Swap
-        child(18944, 95, 309); // Insert
-        child(18945, 145, 309); // Item
-        child(18946, 195, 309); // Note
+        child(59114, 45, 299); // Swap
+        child(59115, 95, 299); // Insert
+        child(59116, 145, 299); // Item
+        child(59117, 195, 299); // Note
+
+        child(58065, 255,276);
+        int subtract_x = 19;
+        int quantity_y = 296;
+        child(58066, 242 - subtract_x, quantity_y);
+        child(58067, 242 - subtract_x, quantity_y+3);
+        child(58068, 267 - subtract_x, quantity_y);
+        child(58069, 267 - subtract_x, quantity_y+3);
+        child(58070, 292 - subtract_x, quantity_y);
+        child(58071, 292 - subtract_x, quantity_y+3);
+        child(58072, 317 - subtract_x, quantity_y);
+        child(58073, 317 - subtract_x, quantity_y+3);
+        child(58074, 342 - subtract_x, quantity_y);
+        child(58075, 342 - subtract_x, quantity_y+3);
     }
 }
