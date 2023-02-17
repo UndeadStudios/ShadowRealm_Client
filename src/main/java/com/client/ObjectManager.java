@@ -18,8 +18,8 @@ final class ObjectManager {
 		regionSizeY = 104;
 		tileHeights = ai;
 		tileFlags = abyte0;
-		underlays = new byte[4][regionSizeX][regionSizeY];
-		overlays = new byte[4][regionSizeX][regionSizeY];
+		underlays = new short[4][regionSizeX][regionSizeY];
+		overlays = new short[4][regionSizeX][regionSizeY];
 		overlayTypes = new byte[4][regionSizeX][regionSizeY];
 		overlayOrientations = new byte[4][regionSizeX][regionSizeY];
 		anIntArrayArrayArray135 = new int[4][regionSizeX + 1][regionSizeY + 1];
@@ -135,7 +135,7 @@ final class ObjectManager {
 				for (int z = 0; z < regionSizeY; z++) {
 					int xForwardOffset = x + 5;
 					if (xForwardOffset < regionSizeX) {
-						int underlayId = underlays[l][xForwardOffset][z] & 0xff;
+						int underlayId = underlays[l][xForwardOffset][z] & 0x3FFF;
 						if (underlayId > 0) {
 							FloorUnderlayDefinition flo = FloorUnderlayDefinition.underlays[underlayId - 1];
 							hues[z] += flo.blendHue;
@@ -147,7 +147,7 @@ final class ObjectManager {
 					}
 					int xBackwardOffset = x - 5;
 					if (xBackwardOffset >= 0) {
-						int underlayId = underlays[l][xBackwardOffset][z] & 0xff;
+						int underlayId = underlays[l][xBackwardOffset][z] & 0x3FFF;
 						if (underlayId > 0) {
 							FloorUnderlayDefinition flo_1 = FloorUnderlayDefinition.underlays[underlayId - 1];
 							hues[z] -= flo_1.blendHue;
@@ -199,12 +199,12 @@ final class ObjectManager {
 						if (l < maximumPlane) {
 							maximumPlane = l;
 						}
-						int underlayA = underlays[l][x][z] & 0xff;
-						int underlayB = underlays[l][nextX][z] & 0xff;
-						int underlayC = underlays[l][nextX][nextZ] & 0xff;
-						int underlayD = underlays[l][x][nextZ] & 0xff;
+						int underlayA = underlays[l][x][z] & 0x3FFF;
+						int underlayB = underlays[l][nextX][z] & 0x3FFF;
+						int underlayC = underlays[l][nextX][nextZ] & 0x3FFF;
+						int underlayD = underlays[l][x][nextZ] & 0x3FFF;
 
-						int overlayA = overlays[l][x][z] & 0xff;
+						int overlayA = overlays[l][x][z] & 0x3FFF;
 						if (underlayA > 0 || overlayA > 0) {
 							int tileHeightA = tileHeights[l][x][z];
 							int tileHeightB = tileHeights[l][x + 1][z];
@@ -912,7 +912,7 @@ final class ObjectManager {
 				int absZ = (i1 + l);
 				tileFlags[l][k][i] = 0;
 				do {
-					int l1 = stream.readUnsignedByte();
+					int l1 = stream.readUShort();
 					if (l1 == 0)
 						if (l == 0) {
 							tileHeights[0][k][i] = -calculateVertexHeight(0xe3b7b + k + k1, 0x87cce + i + j) * 8;
@@ -934,17 +934,17 @@ final class ObjectManager {
 						}
 					}
 					if (l1 <= 49) {
-						overlays[l][k][i] = stream.readSignedByte();
+						overlays[l][k][i] = (short) stream.readSignedWord();
 						overlayTypes[l][k][i] = (byte) ((l1 - 2) / 4);
 						overlayOrientations[l][k][i] = (byte) ((l1 - 2) + i1 & 3);
 					} else if (l1 <= 81)
 						tileFlags[l][k][i] = (byte) (l1 - 49);
 					else
-						underlays[l][k][i] = (byte) (l1 - 81);
+						underlays[l][k][i] = (short) (l1 - 81);
 				} while (true);
 			}
 			do {
-				int i2 = stream.readUnsignedByte();
+				int i2 = stream.readUShort();
 				if (i2 == 0)
 					break;
 				if (i2 == 1) {
@@ -952,7 +952,7 @@ final class ObjectManager {
 					return;
 				}
 				if (i2 <= 49)
-					stream.readUnsignedByte();
+					stream.readSignedWord();
 			} while (true);
 		} catch (Exception e) {
 		}
@@ -1235,7 +1235,7 @@ final class ObjectManager {
 		Buffer stream = new Buffer(is);
 		int i_252_ = -1;
 		for (;;) {
-			int i_253_ = stream.readUnsignedIntSmartShortCompat();
+			int i_253_ = stream.method1606();
 			if (i_253_ == 0)
 				break;
 			i_252_ += i_253_;
@@ -1243,12 +1243,12 @@ final class ObjectManager {
 			boolean bool_255_ = false;
 			for (;;) {
 				if (bool_255_) {
-					int i_256_ = stream.readUSmart();
+					int i_256_ = stream.readUShortSmart();
 					if (i_256_ == 0)
 						break;
 					stream.readUnsignedByte();
 				} else {
-					int i_257_ = stream.readUSmart();
+					int i_257_ = stream.readUShortSmart();
 					if (i_257_ == 0)
 						break;
 					i_254_ += i_257_ - 1;
@@ -1275,20 +1275,20 @@ final class ObjectManager {
 			Buffer stream = new Buffer(abyte0);
 			int l = -1;
 			do {
-				int i1 = stream.readUnsignedIntSmartShortCompat();
+				int i1 = stream.method1606();
 				if (i1 == 0)
 					break label0;
 				l += i1;
 				int j1 = 0;
 				do {
-					int k1 = stream.readUSmart();
+					int k1 = stream.readUShortSmart();
 					if (k1 == 0)
 						break;
 					j1 += k1 - 1;
 					int l1 = j1 & 0x3f;
 					int i2 = j1 >> 6 & 0x3f;
 					int j2 = j1 >> 12;
-					int k2 = stream.readUnsignedByte();
+					int k2 = stream.readUShortSmart();
 					int l2 = k2 >> 2;
 					int i3 = k2 & 3;
 					int j3 = i2 + i;
@@ -1317,7 +1317,7 @@ final class ObjectManager {
 	private final int[] chromas;
 	private final int[] anIntArray128;
 	private final int[][][] tileHeights;
-	private final byte[][][] overlays;
+	private final short[][][] overlays;
 	static int anInt131;
 	private final byte[][][] shading;
 	private final int[][][] anIntArrayArrayArray135;
@@ -1325,7 +1325,7 @@ final class ObjectManager {
 	private static final int anIntArray137[] = { 1, 0, -1, 0 };
 	private final int[][] tileLighting;
 	private static final int anIntArray140[] = { 16, 32, 64, 128 };
-	private final byte[][][] underlays;
+	private final short[][][] underlays;
 	private static final int anIntArray144[] = { 0, -1, 0, 1 };
 	static int maximumPlane = 99; // anInt145
 	private final int regionSizeX;

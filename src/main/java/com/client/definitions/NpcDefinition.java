@@ -30,6 +30,8 @@
 
 		public boolean isClickable = true;
 		public boolean aBool2190 = false;
+		private int[] headIconArchiveIds;
+		private short[] headIconSpriteIndex;
 
 		public static NpcDefinition forID(int i) {
 			for (int j = 0; j < 20; j++)
@@ -1199,9 +1201,27 @@
 					anInt85 = stream.readSignedByte();
 				else if (opcode == 101)
 					anInt92 = stream.readSignedByte();
-				else if (opcode == 102)
-					anInt75 = stream.readUShort();
-				else if (opcode == 103)
+				else if (opcode == 102) {
+					int var3 = stream.readSignedByte();
+					int var4 = 0;
+
+					for(int var5 = var3; var5 != 0; var5 >>= 1) {
+						++var4;
+					}
+
+					this.headIconArchiveIds = new int[var4];
+					this.headIconSpriteIndex = new short[var4];
+
+					for(int var6 = 0; var6 < var4; ++var6) {
+						if ((var3 & 1 << var6) == 0) {
+							this.headIconArchiveIds[var6] = -1;
+							this.headIconSpriteIndex[var6] = -1;
+						} else {
+							this.headIconArchiveIds[var6] = stream.readNullableLargeSmart();
+							this.headIconSpriteIndex[var6] = (short)stream.readShortSmartSub();
+						}
+					}
+				} else if (opcode == 103)
 					getDegreesToTurn = stream.readUShort();
 				else if (opcode == 106 || opcode == 118) {
 					anInt57 = stream.readUShort();

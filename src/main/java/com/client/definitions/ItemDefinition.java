@@ -2353,9 +2353,9 @@ public final class ItemDefinition {
 			Model aclass30_sub2_sub4_sub6s[] = { model, model_1 };
 			model = new Model(2, aclass30_sub2_sub4_sub6s);
 		}
-		if (modifiedModelColors != null) {
-			for (int i1 = 0; i1 < modifiedModelColors.length; i1++)
-				model.recolor(modifiedModelColors[i1], originalModelColors[i1]);
+		if (originalModelColors != null) {
+			for (int i1 = 0; i1 < originalModelColors.length; i1++)
+				model.recolor(originalModelColors[i1], modifiedModelColors[i1]);
 
 		}
 		if (originalTextureColors != null) {
@@ -2414,9 +2414,9 @@ public final class ItemDefinition {
 			model.translate(0, maleTranslation, 0);
 		if (i == 1 && femaleTranslation != 0)
 			model.translate(0, femaleTranslation, 0);
-		if (modifiedModelColors != null) {
-			for (int i1 = 0; i1 < modifiedModelColors.length; i1++)
-				model.recolor(modifiedModelColors[i1], originalModelColors[i1]);
+		if (originalModelColors != null) {
+			for (int i1 = 0; i1 < originalModelColors.length; i1++)
+				model.recolor(originalModelColors[i1], modifiedModelColors[i1]);
 
 		}
 		if (originalTextureColors != null) {
@@ -3099,9 +3099,9 @@ public final class ItemDefinition {
 			return null;
 		if (groundScaleX != 128 || groundScaleY != 128 || groundScaleZ != 128)
 			model.scale(groundScaleX, groundScaleZ, groundScaleY);
-		if (modifiedModelColors != null) {
-			for (int l = 0; l < modifiedModelColors.length; l++)
-				model.recolor(modifiedModelColors[l], originalModelColors[l]);
+		if (originalModelColors != null) {
+			for (int l = 0; l < originalModelColors.length; l++)
+				model.recolor(originalModelColors[l], modifiedModelColors[l]);
 
 		}
 		if (originalTextureColors != null) {
@@ -3128,9 +3128,9 @@ public final class ItemDefinition {
 		Model model = Model.method462(modelId);
 		if (model == null)
 			return null;
-		if (modifiedModelColors != null) {
-			for (int l = 0; l < modifiedModelColors.length; l++)
-				model.recolor(modifiedModelColors[l], originalModelColors[l]);
+		if (originalModelColors != null) {
+			for (int l = 0; l < originalModelColors.length; l++)
+				model.recolor(originalModelColors[l], modifiedModelColors[l]);
 
 		}
 		if (originalTextureColors != null) {

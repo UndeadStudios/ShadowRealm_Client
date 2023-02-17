@@ -1234,7 +1234,7 @@ public class Client extends RSApplet {
 	public void repackCacheAll() {
 		for (int index = 0; index < 10; index++) {
 			try {
-				//repackCacheIndex(index);
+				repackCacheIndex(index);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
