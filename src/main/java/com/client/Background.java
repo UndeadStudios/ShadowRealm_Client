@@ -223,13 +223,11 @@ public final class Background extends DrawingArea {
 	public int anInt1456;
 	private int anInt1457;
 
-	public void setTransparency() {
+	public void setTransparency(int transRed, int transGreen, int transBlue) {
 		for (int index = 0; index < palettePixels.length; index++) {
 			int pixel = palette[palettePixels[index]];
-			switch (pixel) {
-				case 0xff00ff:
-					palettePixels[index] = 0;
-					break;
+			if(pixel == 0xff00ff) {
+				palettePixels[index] = 0;
 			}
 		}
 	}

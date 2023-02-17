@@ -3265,7 +3265,7 @@ public class Client extends RSApplet {
 			if (Rasterizer.textureLastUsed[24] >= j) {
 				Background background_1 = Rasterizer.textures[24];
 				int l = background_1.width * background_1.anInt1453 - 1;
-				int k1 = background_1.width * tickDelta * 2;
+				int k1 = (int) (background_1.width * tickDelta * 1);
 				byte abyte1[] = background_1.palettePixels;
 				byte abyte4[] = aByteArray912;
 				for (int j2 = 0; j2 <= l; j2++)
@@ -3291,7 +3291,7 @@ public class Client extends RSApplet {
 			if (Rasterizer.textureLastUsed[34] >= j) {
 				Background background_2 = Rasterizer.textures[34];
 				int i1 = background_2.width * background_2.anInt1453 - 1;
-				int l1 = background_2.width * tickDelta * 2;
+				int l1 = background_2.width * tickDelta * 1;
 				byte abyte2[] = background_2.palettePixels;
 				byte abyte5[] = aByteArray912;
 				for (int k2 = 0; k2 <= i1; k2++)
@@ -3316,7 +3316,8 @@ public class Client extends RSApplet {
 			if (Rasterizer.textureLastUsed[25] >= j) {
 				Background background_2 = Rasterizer.textures[25];
 				int i1 = background_2.width * background_2.anInt1453 - 1;
-				int l1 = background_2.width * tickDelta * 2;
+				//int l1 = (int) (background_2.width * tickDelta * 0.5);
+				int l1 = (int)(background_2.width * tickDelta * 1);
 				byte abyte2[] = background_2.palettePixels;
 				byte abyte5[] = aByteArray912;
 				for (int k2 = 0; k2 <= i1; k2++)
