@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 import com.client.Class36;
@@ -34,6 +35,14 @@ public class RSInterface {
 	public static final int WHITE_COLOR = 0xFFFFFF;
 	public static final int RED_COLOR = 0xE11010;
 
+	public int xAdjust;
+
+	public int yAdjust;
+	public AlignPolicy alignmentPolicy;
+	public BiConsumer<RSInterface, String> textChangeListener;
+	public enum AlignPolicy {
+		CENTER, LEFT, RIGHT;
+	}
 	public static int emptyInterface = 24_470;
 	public static boolean showIds = false;
 	public static RSFont[] newFonts;
@@ -58,6 +67,27 @@ public class RSInterface {
 				count = 0;
 			}
 		}
+	}	public static void addTextButton2(int i, String s, String tooltip, int color, int hoverColor, boolean l, boolean m, TextDrawingArea[] TDA, int j, int width, int height, int xAdjust, int yAdjust) {
+		RSInterface rsinterface = addInterface(i);
+		rsinterface.parentID = i;
+		rsinterface.id = i;
+		rsinterface.type = 4;
+		rsinterface.atActionType = 1;
+		rsinterface.width = width;
+		rsinterface.height = height;
+		rsinterface.contentType = 0;
+		rsinterface.opacity = (byte)hoverColor;
+		rsinterface.mOverInterToTrigger = i;
+		rsinterface.centerText = l;
+		rsinterface.textShadow = m;
+		rsinterface.textDrawingAreas = TDA[j];
+		rsinterface.message = s;
+		rsinterface.aString228 = s;
+		rsinterface.anInt216 = hoverColor;
+		rsinterface.textColor = color;
+		rsinterface.tooltip = tooltip;
+		rsinterface.xAdjust = xAdjust;
+		rsinterface.yAdjust = yAdjust;
 	}
 
 	public static void unpack(StreamLoader streamLoader, TextDrawingArea textDrawingAreas[],
