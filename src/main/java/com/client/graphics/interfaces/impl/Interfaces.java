@@ -818,7 +818,7 @@ public final class Interfaces extends RSInterface {
 		addSprite(claimID+1, 0, "Interfaces/CollectionLog/box");
 		addToItemGroup(claimID+2, 6, 20, 5, 6, false, "", "", "");
 		configHoverButton2(claimID+3, "Claim", "Interfaces/CollectionLog/claim", 0, 1, 0, 1, false);
-		addText(claimID+4, "@cr34@ Rewards for completing log:", tda, 0, 16750623, false, true);
+		addText(claimID+4, "Rewards for completing log:", tda, 0, 16750623, false, true);
 		addText(claimID+5, "Claim", tda, 2, 16750623, true, true);
 
 		claim.child(itemClaimFrame++, claimID+1, 2, 12);
