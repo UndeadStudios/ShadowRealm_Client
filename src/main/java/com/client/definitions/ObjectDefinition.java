@@ -1,6 +1,8 @@
 package com.client.definitions;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 
 import org.apache.commons.lang3.StringUtils;
@@ -142,11 +144,10 @@ public final class ObjectDefinition {
 			objectDef.actions = new String[] { "View", null, null, null, null };
 			break;
 		case 33320:
-			objectDef.name = "Fire of Exchange";
-			objectDef.actions = new String[] { "Burn", "Burn Rates", null, null, null };
-			break;
+				return copy(objectDef, 33320, 33321, "Fire of Exchange", new String[] { "Burn", "Burn Rates", null, null, null });
 		case 33318:
-			objectDef.name = "Fire of Destruction";
+			objectDef.name = "Fire of Domination";
+			objectDef.modelIds = new int[] { 65467, 65468, 65469 };
 			objectDef.actions = new String[] { "Sacrifice", null, null, null, null };
 			break;
 		case 32508:
@@ -749,7 +750,22 @@ public final class ObjectDefinition {
 		mruNodes2.removeFromCache(model_3, key);
 		return model_3;
 	}
-
+	public static ObjectDefinition copy(ObjectDefinition objectDefinition, int newId, int copyingobjId, String newName, String...actions) {
+		ObjectDefinition copyobjectDefinition = forID(copyingobjId);
+		objectDefinition.id = newId;
+		objectDefinition.name = newName;
+		objectDefinition.description = copyobjectDefinition.description;
+		objectDefinition.modifiedModelColors = copyobjectDefinition.modifiedModelColors;
+		objectDefinition.originalModelColors = copyobjectDefinition.originalModelColors;
+		objectDefinition.modelIds = copyobjectDefinition.modelIds;
+		objectDefinition.actions = new String[5];
+		if (actions != null) {
+			for (int index = 0; index < actions.length; index++) {
+				objectDefinition.actions[index] = actions[index];
+			}
+		}
+		return objectDefinition;
+	}
 	public void readValues(Buffer stream) {
 		int flag = -1;
 		do {

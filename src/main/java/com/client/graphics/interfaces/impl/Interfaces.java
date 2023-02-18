@@ -46,6 +46,7 @@ public final class Interfaces extends RSInterface {
 		clanChatTab(defaultTextDrawingAreas);
 		clanChatSetup(defaultTextDrawingAreas);
 		teleportInterface(defaultTextDrawingAreas);
+		discordSystem(defaultTextDrawingAreas);
 		SettingsTabWidget.widget(defaultTextDrawingAreas);
 		emoteTab();
 		bountyHunterWidget(defaultTextDrawingAreas);
@@ -1053,7 +1054,61 @@ public final class Interfaces extends RSInterface {
 		//icon
 		widget.child(frame++, additionChildId++, 281, 70);
 	}
-	
+	public static void discordSystem(TextDrawingArea[] tda) {
+		RSInterface tab = addInterface(37500);
+		tab.centerText = true;
+		tab.totalChildren(20);
+		int x = 114;
+		int y = 2;
+		addSprite(37501, 0, "Interfaces/discord/Interface");
+		tab.child(0, 37501, 10+x, y+ 2);
+		//exit
+		addHoverButton(37502, "Interfaces/Prestige/SPRITE", 1, 16, 16, "Close", -1, 37503, 1);
+		addHoveredButton(37503, "Interfaces/Prestige/SPRITE", 2, 16, 16, 39023);
+		tab.child(1, 37502, 260+x, y+ 9);
+		tab.child(2, 37503, 260+x, y+ 9);
+		//Disconnect
+		addButton(37504, 0, "Interfaces/discord/SPRITE", "Disconnect");
+		tab.child(3, 37504, 180+x, y+ 295);
+		//sync
+		addButton(37505, 2, "Interfaces/discord/SPRITE", "Sync");
+		tab.child(4, 37505, 25+x, y+ 295);
+		//Toggle
+		addButton(37506, 4, "Interfaces/discord/SPRITE", "Toggle");
+		tab.child(5, 37506, 103+x, y+ 295);
+
+		addText(37507,  0, 0xff0000, true, "Inactive");
+		tab.child(6, 37507, 147+x, y+ 62);
+		addText(37508, 0, 0xff0000, true, "Inactive");
+		tab.child(7, 37508, 147+x, y+ 112);
+		addText(37509, 0, 0xff0000, true, "Inactive");
+		tab.child(8, 37509, 147+x, y+ 162);
+		addText(37510, 0, 0xffb000, true, "");
+		tab.child(9, 37510, 147+x, y+ 213);
+		addText(37511, 0, 0x00ff00, true, "999999999");
+		tab.child(10, 37511, 147+x, y+ 262);
+
+		addText(37512, "Discord Status", tda, 0, 0xffb000);
+		tab.child(11, 37512, 110+x, y+ 47);
+		addText(37513, "Discord Notifications", tda, 0, 0xffb000);
+		tab.child(12, 37513, 95+x, y+ 97);
+		addText(37514, "Boosting Status", tda, 0, 0xffb000);
+		tab.child(13, 37514, 107+x, y+ 147);
+		addText(37515, "Discord Boosting Perk", tda, 0, 0xffb000);
+		tab.child(14, 37515, 92+x, y+ 197);
+		addText(37516, "Discord Points", tda, 0, 0xffb000);
+		tab.child(15, 37516, 111+x, y+ 247);
+
+		addText(37517, "Sync", tda, 0, 0xffb000);
+		tab.child(16, 37517, 50+x, y+ 302);
+		addText(37518, "Toggle", tda, 0, 0xffb000);
+		tab.child(17, 37518, 130+x, y+ 302);
+		addText(37519, "Disconnect", tda, 0, 0xffb000);
+		tab.child(18, 37519, 207+x, y+ 302);
+
+		addText(37520, "Discord Manager", tda, 2, 0xffb000);
+		tab.child(19, 37520, 95+x, y+ 9);
+	}
 	public static void equipmentScreen(TextDrawingArea[] wid) {
 		RSInterface Interface = RSInterface.interfaceCache[1644];
 		addButton(19144, 140, "Show Equipment Stats");
@@ -1159,40 +1214,40 @@ public final class Interfaces extends RSInterface {
 	}
 
 	public static void expLock(TextDrawingArea[] tda) {
-		RSInterface tab = addInterface(37500);
+		RSInterface tab = addInterface(37600);
 		String dir = "/Interfaces/Exp Lock/SPRITE";
 		String dir2 = "/Interfaces/Prestige/PlayerStats/skills/IMG";
-		addSprite(37501, 0, dir);
-		addHoverButton(37502, dir, 1, 16, 16, "Close", -1, 37503, 1);
-		addHoveredButton(37503, dir, 2, 16, 16, 37504);
-		addText(37505, "Exp Lock Manager", tda, 2, 0xFFA500, true, true);
+		addSprite(37601, 0, dir);
+		addHoverButton(37602, dir, 1, 16, 16, "Close", -1, 37603, 1);
+		addHoveredButton(37603, dir, 2, 16, 16, 37604);
+		addText(37605, "Exp Lock Manager", tda, 2, 0xFFA500, true, true);
 		int x = 150, y = 10;
 		tab.totalChildren(5);
-		tab.child(0, 37501, x, y);
-		tab.child(1, 37502, 180 + x, 4 + y);
-		tab.child(2, 37503, 180 + x, 4 + y);
-		tab.child(3, 37505, 100 + x, 5 + y);
-		tab.child(4, 37510, 10 + x, 30 + y);
+		tab.child(0, 37601, x, y);
+		tab.child(1, 37602, 180 + x, 4 + y);
+		tab.child(2, 37603, 180 + x, 4 + y);
+		tab.child(3, 37605, 100 + x, 5 + y);
+		tab.child(4, 37610, 10 + x, 30 + y);
 
 		final String[] skillNames = { "Attack", "Defence", "Strength", "Hitpoints", "Ranged", "Prayer", "Magic" };
 
-		RSInterface over = addInterface(37510);
-		addSprite(37527, 5, dir);
+		RSInterface over = addInterface(37610);
+		addSprite(37627, 5, dir);
 		int xx = 0, yy = 0;
 		over.totalChildren(42);
 		for (int i = 0; i < 7; i++) {
-			addButton(37511 + i, 3, dir, "Toggle @lre@" + skillNames[i]);
-			addSprite(37519 + i, i, dir2);
-			addText(37528 + i, Client.capitalize(skillNames[i]) + ":", tda, 0, 16748608, false, true);
-			addText(37536 + i, "@gre@Unlocked", tda, 0, 16777215, false, true);
-			addText(37544 + i, "@gre@99", tda, 0, 16777215, false, true);
-			int[] g = centerSkillSprite(interfaceCache[37519 + i].sprite1);
-			over.child(i, 37511 + i, xx, yy);
-			over.child(i + 7, 37519 + i, xx + g[0], yy + g[1]);
-			over.child(i + 14, 37527, xx + 32, yy + 7);
-			over.child(i + 21, 37528 + i, xx + 35, yy + 10);
-			over.child(i + 28, 37536 + i, xx + 125, yy + 10);
-			over.child(i + 35, 37544 + i, xx + 90, yy + 10);
+			addButton(37611 + i, 3, dir, "Toggle @lre@" + skillNames[i]);
+			addSprite(37619 + i, i, dir2);
+			addText(37628 + i, Client.capitalize(skillNames[i]) + ":", tda, 0, 16748608, false, true);
+			addText(37636 + i, "@gre@Unlocked", tda, 0, 16777215, false, true);
+			addText(37644 + i, "@gre@99", tda, 0, 16777215, false, true);
+			int[] g = centerSkillSprite(interfaceCache[37619 + i].sprite1);
+			over.child(i, 37611 + i, xx, yy);
+			over.child(i + 7, 37619 + i, xx + g[0], yy + g[1]);
+			over.child(i + 14, 37627, xx + 32, yy + 7);
+			over.child(i + 21, 37628 + i, xx + 35, yy + 10);
+			over.child(i + 28, 37636 + i, xx + 125, yy + 10);
+			over.child(i + 35, 37644 + i, xx + 90, yy + 10);
 			xx += 117;
 			if (xx == 117) {
 				xx = 0;
