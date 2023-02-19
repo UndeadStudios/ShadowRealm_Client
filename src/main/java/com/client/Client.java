@@ -1228,7 +1228,7 @@ public class Client extends RSApplet {
 	}
 
 	public String indexLocation(int cacheIndex, int index) {
-		return "D:\\models\\index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
+		return "C:\\Users\\cgx\\Desktop\\New folder (4)\\index" + cacheIndex + "/" + (index != -1 ? index + ".gz" : "");
 	}
 
 	public void repackCacheAll() {

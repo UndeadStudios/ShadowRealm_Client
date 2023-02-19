@@ -57,7 +57,7 @@ public final class ItemDefinition {
 			cache[index] = new ItemDefinition();
 		}
 		//dumpGameItemConfig();
-		//dumpItems2();
+		dumpItems2();
 		if (Configuration.dumpDataLists) {
 			TempWriter writer2 = new TempWriter("item_fields");
 			FieldGenerator generator = new FieldGenerator(writer2::writeLine);
@@ -155,6 +155,8 @@ public final class ItemDefinition {
 				bw.write("	if(i == "+i+") //ID");
 				bw.newLine();
 				bw.write("		{");
+				bw.newLine();
+				bw.write("			itemDef.setDefaults();");
 				bw.newLine();
 				bw.write("			itemDef.itemActions = new String[] {"+ Arrays.toString(itemDef.itemActions)+"};");
 				bw.newLine();

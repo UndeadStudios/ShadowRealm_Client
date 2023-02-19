@@ -467,6 +467,118 @@ public class ItemDefinition_Sub3 {
             itemDef.primaryMaleHeadPiece = -1;
             itemDef.primaryFemaleHeadPiece = -1;
         }
+        if(i == 29235) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.name = "Masori slayer mask"; //Name
+            itemDef.description = "Its an Masori mask (f)"; //Description
+            itemDef.modelId = 56466;
+            itemDef.spriteScale = 1033;
+            itemDef.spritePitch = 41;
+            itemDef.spriteCameraRoll = 102;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -2;
+            itemDef.spriteTranslateY = -3;
+            itemDef.primaryMaleModel = 55249;
+            itemDef.primaryFemaleModel = 55260;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = 56451;
+            itemDef.primaryFemaleHeadPiece = 56451;
+            itemDef.value = 900000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 29236) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.name = "Masori slayer body"; //Name
+            itemDef.description = "Its an Masori body (f)"; //Description
+            itemDef.modelId = 56469;
+            itemDef.spriteScale = 1240;
+            itemDef.spritePitch = 453;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 11;
+            itemDef.primaryMaleModel = 55258;
+            itemDef.primaryFemaleModel = 55271;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1600000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 29237) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.name = "Masori slayer chaps"; //Name
+            itemDef.description = "Its an Masori chaps (f)"; //Description
+            itemDef.modelId = 56475;
+            itemDef.spriteScale = 2000;
+            itemDef.spritePitch = 555;
+            itemDef.spriteCameraRoll = 2036;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 4;
+            itemDef.primaryMaleModel = 55255;
+            itemDef.primaryFemaleModel = 55268;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 1300000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 29238) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wield", null, null, "Drop"};
+            itemDef.name = "Masori blowpipe"; //Name
+            itemDef.description = "Its an Masori blowpipe"; //Description
+            itemDef.modelId = 59219;
+            itemDef.spriteScale = 1158;
+            itemDef.spritePitch = 768;
+            itemDef.spriteCameraRoll = 189;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = -7;
+            itemDef.spriteTranslateY = 4;
+            itemDef.primaryMaleModel = 54403;
+            itemDef.primaryFemaleModel = 54403;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 120000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
         return itemDef;
 }
 
