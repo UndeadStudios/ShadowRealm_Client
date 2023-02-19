@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
 import com.client.Configuration;
@@ -23,6 +24,7 @@ import com.client.StreamLoader;
 import com.client.definitions.custom.ItemDefinition_Sub1;
 import com.client.definitions.custom.ItemDefinition_Sub2;
 import com.client.definitions.custom.ItemDefinition_Sub3;
+import com.client.sign.Signlink;
 import com.client.utilities.FieldGenerator;
 import com.client.utilities.FileOperations;
 import com.client.utilities.TempWriter;
@@ -55,6 +57,7 @@ public final class ItemDefinition {
 			cache[index] = new ItemDefinition();
 		}
 		//dumpGameItemConfig();
+		//dumpItems2();
 		if (Configuration.dumpDataLists) {
 			TempWriter writer2 = new TempWriter("item_fields");
 			FieldGenerator generator = new FieldGenerator(writer2::writeLine);
@@ -135,6 +138,220 @@ public final class ItemDefinition {
 			}
 		}
 		return itemDef;
+	}
+	private int currentcolors;
+	private int currenttextures;
+	//Start item dump
+	public static void dumpItems2() {
+		for(int i = 0; i < totalItems; i++) {
+			ItemDefinition itemDef = forID(i);
+			BufferedWriter bw = null;
+
+			try {
+				itemDef.currentcolors = 0;
+				bw = new BufferedWriter(new FileWriter(Signlink.getCacheDirectory() + "/dumps/211itemdump.txt", true));
+
+				bw.newLine();
+				bw.write("	if(i == "+i+") //ID");
+				bw.newLine();
+				bw.write("		{");
+				bw.newLine();
+				bw.write("			itemDef.itemActions = new String[] {"+ Arrays.toString(itemDef.itemActions)+"};");
+				bw.newLine();
+				bw.write("			itemDef.groundActions = new String[] {"+Arrays.toString(itemDef.groundActions)+"};");
+				bw.newLine();
+				bw.write("			itemDef.name = \""+itemDef.name+"\"; //Name");
+				bw.newLine();
+				bw.write("			itemDef.description = \"Its an "+itemDef.name+"\"; //Description");
+				bw.newLine();
+				if(itemDef.originalModelColors != null) {
+					for(int i2 = 0; i2 < itemDef.originalModelColors.length; i2++) {
+						if(i2 == 0) {
+						}
+						if(i2 != itemDef.originalModelColors.length - 1) {
+							itemDef.currentcolors += 1;
+						} else {
+							itemDef.currentcolors += 1;                         									if(itemDef.currentcolors != 0)
+							{
+								bw.write("			itemDef.originalModelColors = new int["+itemDef.currentcolors+"];");
+								bw.newLine();
+								bw.write("			itemDef.modifiedModelColors = new int["+itemDef.currentcolors+"];");
+								bw.newLine();
+							}
+							itemDef.currentcolors = 0;
+						}
+					}
+				}
+				if(itemDef.originalModelColors != null) {
+					for(int i2 = 0; i2 < itemDef.originalModelColors.length; i2++) {
+						if(i2 == 0) {
+						}
+						if(i2 != itemDef.originalModelColors.length - 1) {                             	bw.write("			itemDef.originalModelColors["+itemDef.currentcolors+"] = " +itemDef.originalModelColors[i2]+";");
+							itemDef.currentcolors += 1;
+							bw.newLine();
+						} else {                            						bw.write("			itemDef.originalModelColors["+itemDef.currentcolors+"] = " +itemDef.originalModelColors[i2]+";");
+							itemDef.currentcolors = 0;
+							bw.newLine();
+						}
+					}
+				}
+				if(itemDef.modifiedModelColors != null) {
+					for(int i2 = 0; i2 < itemDef.modifiedModelColors.length; i2++) {
+						if(i2 == 0) {
+						}
+						if(i2 != itemDef.modifiedModelColors.length - 1) {                             	bw.write("			itemDef.modifiedModelColors["+itemDef.currentcolors+"] = " +itemDef.modifiedModelColors[i2]+";");
+							itemDef.currentcolors += 1;
+							bw.newLine();
+						} else {                            						bw.write("			itemDef.modifiedModelColors["+itemDef.currentcolors+"] = " +itemDef.modifiedModelColors[i2]+";");
+							itemDef.currentcolors = 0;
+							bw.newLine();
+						}
+					}
+					if(itemDef.modifiedTextureColors != null) {
+						for(int i2 = 0; i2 < itemDef.modifiedTextureColors.length; i2++) {
+							if(i2 == 0) {
+							}
+							if(i2 != itemDef.modifiedTextureColors.length - 1) {
+								itemDef.currenttextures += 1;
+							} else {
+								itemDef.currenttextures += 1;                         									if(itemDef.currenttextures != 0)
+								{
+									bw.write("			itemDef.originalTextureColors = new int["+itemDef.currenttextures+"];");
+									bw.newLine();
+									bw.write("			itemDef.modifiedTextureColors = new int["+itemDef.currenttextures+"];");
+									bw.newLine();
+								}
+								itemDef.currenttextures = 0;
+							}
+						}
+					}
+					if(itemDef.modifiedTextureColors != null) {
+						for(int i2 = 0; i2 < itemDef.modifiedTextureColors.length; i2++) {
+							if(i2 == 0) {
+							}
+							if(i2 != itemDef.modifiedTextureColors.length - 1) {                             	bw.write("			itemDef.modifiedTextureColors["+itemDef.currenttextures+"] = " +itemDef.modifiedTextureColors[i2]+";");
+								itemDef.currenttextures += 1;
+								bw.newLine();
+							} else {                            						bw.write("			itemDef.modifiedTextureColors["+itemDef.currenttextures+"] = " +itemDef.modifiedTextureColors[i2]+";");
+								itemDef.currenttextures = 0;
+								bw.newLine();
+							}
+						}
+					}
+					if(itemDef.originalTextureColors != null) {
+						for(int i2 = 0; i2 < itemDef.originalTextureColors.length; i2++) {
+							if(i2 == 0) {
+							}
+							if(i2 != itemDef.originalTextureColors.length - 1) {                             	bw.write("			itemDef.originalTextureColors["+itemDef.currenttextures+"] = " +itemDef.originalTextureColors[i2]+";");
+								itemDef.currenttextures += 1;
+								bw.newLine();
+							} else {                            						bw.write("			itemDef.originalTextureColors["+itemDef.currenttextures+"] = " +itemDef.originalTextureColors[i2]+";");
+								itemDef.currenttextures = 0;
+								bw.newLine();
+							}
+						}
+					}
+					if(itemDef.stackAmounts != null) {
+						for(int i2 = 0; i2 < itemDef.stackAmounts.length; i2++) {
+							if(i2 == 0) {
+							}
+							if(i2 != itemDef.stackAmounts.length - 1) {
+								itemDef.currentcolors += 1;
+							} else {
+								itemDef.currentcolors += 1;                         									if(itemDef.currentcolors != 0)
+								{
+									bw.write("			itemDef.stackAmounts = new int["+itemDef.currentcolors+"];");
+									bw.newLine();
+									bw.write("			itemDef.stackIds = new int["+itemDef.currentcolors+"];");
+									bw.newLine();
+								}
+								itemDef.currentcolors = 0;
+							}
+						}
+					}
+
+					if(itemDef.stackAmounts != null) {
+						for(int i2 = 0; i2 < itemDef.stackAmounts.length; i2++) {
+							if(i2 == 0) {
+							}
+							if(i2 != itemDef.stackAmounts.length - 1) {                             	bw.write("			itemDef.stackAmounts["+itemDef.currentcolors+"] = " +itemDef.stackAmounts[i2]+";");
+								itemDef.currentcolors += 1;
+								bw.newLine();
+							} else {                            						bw.write("			itemDef.stackAmounts["+itemDef.currentcolors+"] = " +itemDef.stackAmounts[i2]+";");
+								itemDef.currentcolors = 0;
+								bw.newLine();
+							}
+						}
+					}
+					if(itemDef.stackIDs != null) {
+						for(int i2 = 0; i2 < itemDef.stackIDs.length; i2++) {
+							if(i2 == 0) {
+							}
+							if(i2 != itemDef.stackIDs.length - 1) {                             	bw.write("			itemDef.stackIds["+itemDef.currentcolors+"] = " +itemDef.stackIDs[i2]+";");
+								itemDef.currentcolors += 1;
+								bw.newLine();
+							} else {                            						bw.write("			itemDef.stackIds["+itemDef.currentcolors+"] = " +itemDef.stackIDs[i2]+";");
+								itemDef.currentcolors = 0;
+								bw.newLine();
+							}
+						}
+					}
+				}
+				bw.write("			itemDef.modelId = "+itemDef.modelId+";");
+				bw.newLine();
+				bw.write("			itemDef.spriteScale = "+itemDef.spriteScale+";");
+				bw.newLine();
+				bw.write("			itemDef.spritePitch = "+itemDef.spritePitch+";");
+				bw.newLine();
+				bw.write("			itemDef.spriteCameraRoll = "+itemDef.spriteCameraRoll+";");
+				bw.newLine();
+				bw.write("			itemDef.spriteCameraYaw = "+itemDef.spriteCameraYaw+";");
+				bw.newLine();
+				bw.write("			itemDef.spriteTranslateX = "+itemDef.spriteTranslateX+";");
+				bw.newLine();
+				bw.write("			itemDef.spriteTranslateY = "+itemDef.spriteTranslateY+";");
+				bw.newLine();
+				bw.write("			itemDef.primaryMaleModel = "+itemDef.primaryMaleModel+";");
+				bw.newLine();
+				bw.write("			itemDef.primaryFemaleModel = "+itemDef.primaryFemaleModel+";");
+				bw.newLine();
+				bw.write("			itemDef.secondaryMaleModel = "+itemDef.secondaryMaleModel+";");
+				bw.newLine();
+				bw.write("			itemDef.secondaryFemaleModel = "+itemDef.secondaryFemaleModel+";");
+				bw.newLine();
+				bw.write("			itemDef.primaryMaleHeadPiece = "+itemDef.primaryMaleHeadPiece+";");
+				bw.newLine();
+				bw.write("			itemDef.primaryFemaleHeadPiece = "+itemDef.primaryFemaleHeadPiece+";");
+				bw.newLine();
+				bw.write("			itemDef.value = "+itemDef.value+";");
+				bw.newLine();
+				bw.write("			itemDef.unnotedId = " + itemDef.unnotedId + ";");
+				bw.newLine();
+				bw.write("			itemDef.notedId = " + itemDef.notedId + ";");
+				bw.newLine();
+				bw.write("			itemDef.certID = " + itemDef.certID + ";");
+				bw.newLine();
+				bw.write("			itemDef.certTemplateID = " + itemDef.certTemplateID + ";");
+				bw.newLine();
+				bw.write("			itemDef.stackable = " + itemDef.stackable + ";");
+				bw.newLine();
+				bw.write("			itemDef.placeholderId = " + itemDef.placeholderId + ";");
+				bw.newLine();
+				bw.write("			itemDef.placeholderTemplateId = " + itemDef.placeholderTemplateId + ";");
+				bw.newLine();
+				bw.write("		}");
+				bw.newLine();
+				bw.newLine();
+				bw.flush();
+			} catch (IOException ioe) {
+				ioe.printStackTrace();
+			} finally {
+				if (bw != null) try {
+					bw.close();
+				} catch (IOException ioe2) {
+				}
+			}
+		}
 	}
 	public static void dumpGameItemConfig() {
 		for(int i = 0; i < totalItems; i++) {
