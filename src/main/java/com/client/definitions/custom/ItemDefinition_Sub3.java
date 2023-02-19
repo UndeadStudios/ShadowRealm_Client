@@ -579,6 +579,91 @@ public class ItemDefinition_Sub3 {
             itemDef.placeholderId = -1;
             itemDef.placeholderTemplateId = -1;
         }
+        if(i == 29239) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.name = "Masori Slayer jordans"; //Name
+            itemDef.description = "Its an Slayer jordans"; //Description
+            itemDef.modelId = 58040;
+            itemDef.spriteScale = 724;
+            itemDef.spritePitch = 171;
+            itemDef.spriteCameraRoll = 0;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -7;
+            itemDef.primaryMaleModel = 57637;
+            itemDef.primaryFemaleModel = 59951;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 289010;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 29240) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", "Teleport", null, "Drop"};
+            itemDef.name = "Masori Slayer cape"; //Name
+            itemDef.description = "Its an Masori Slayer cape"; //Description
+            itemDef.modelId = 54418;
+            itemDef.spriteScale = 1960;
+            itemDef.spritePitch = 528;
+            itemDef.spriteCameraRoll = 1583;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = 2;
+            itemDef.primaryMaleModel = 54271;
+            itemDef.primaryFemaleModel = 54288;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 10000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = -1;
+            itemDef.placeholderTemplateId = -1;
+        }
+        if(i == 29241) //ID
+        {
+            itemDef.setDefaults();
+            itemDef.itemActions = new String[] {null, "Wear", null, null, "Drop"};
+            itemDef.name = "Masori Slayer gloves"; //Name
+            itemDef.description = "Its an Masori Slayer gloves"; //Description
+            itemDef.modelId = 53631;
+            itemDef.spriteScale = 789;
+            itemDef.spritePitch = 609;
+            itemDef.spriteCameraRoll = 111;
+            itemDef.spriteCameraYaw = 0;
+            itemDef.spriteTranslateX = 0;
+            itemDef.spriteTranslateY = -1;
+            itemDef.primaryMaleModel = 53307;
+            itemDef.primaryFemaleModel = 53319;
+            itemDef.secondaryMaleModel = -1;
+            itemDef.secondaryFemaleModel = -1;
+            itemDef.primaryMaleHeadPiece = -1;
+            itemDef.primaryFemaleHeadPiece = -1;
+            itemDef.value = 100000;
+            itemDef.unnotedId = -1;
+            itemDef.notedId = -1;
+            itemDef.certID = -1;
+            itemDef.certTemplateID = -1;
+            itemDef.stackable = false;
+            itemDef.placeholderId = 14369;
+            itemDef.placeholderTemplateId = -1;
+        }
+
         return itemDef;
 }
 

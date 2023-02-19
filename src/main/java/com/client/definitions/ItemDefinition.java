@@ -57,7 +57,7 @@ public final class ItemDefinition {
 			cache[index] = new ItemDefinition();
 		}
 		//dumpGameItemConfig();
-		dumpItems2();
+		//dumpItems2();
 		if (Configuration.dumpDataLists) {
 			TempWriter writer2 = new TempWriter("item_fields");
 			FieldGenerator generator = new FieldGenerator(writer2::writeLine);
