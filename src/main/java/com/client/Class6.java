@@ -240,16 +240,16 @@ final class Class6 {
 			aClass29_105.method325(stream);
 		}
 		for (int j = 0; j < 10; j++) {
-			int k = stream.readSmart();
+			int k = stream.get_smart_byteorshort();
 			if (k == 0)
 				break;
 			anIntArray106[j] = k;
 			anIntArray107[j] = stream.method421();
-			anIntArray108[j] = stream.readSmart();
+			anIntArray108[j] = stream.get_smart_byteorshort();
 		}
 
-		anInt109 = stream.readSmart();
-		anInt110 = stream.readSmart();
+		anInt109 = stream.get_smart_byteorshort();
+		anInt110 = stream.get_smart_byteorshort();
 		anInt113 = stream.readUShort();
 		anInt114 = stream.readUShort();
 		aClass39_111 = new Class39();

@@ -23,43 +23,52 @@ final class Animable_Sub3 extends Renderable {
 		Model model = aSpotAnim_1568.getModel();
 		if (model == null)
 			return null;
-		int j = aSpotAnim_1568.aAnimation_407.anIntArray353[anInt1569];
-		Model model_1 = new Model(true, Class36.method532(j), false, model);
+		int j = aSpotAnim_1568.seqtype.frames[cur_frameindex];
+		Model model_1 = new Model(true, AnimFrame.noAnimationInProgress(j), false, model);
 		if (!aBoolean1567) {
-			model_1.method469();
-			model_1.method470(j);
-			model_1.faceGroups = null;
-			model_1.vertexGroups = null;
+			model_1.apply_label_groups();
+			model_1.animate_either(aSpotAnim_1568.seqtype, j);
+			model_1.face_label_groups = null;
+			model_1.vertex_label_groups = null;
 		}
-		if (aSpotAnim_1568.anInt410 != 128 || aSpotAnim_1568.anInt411 != 128)
-			model_1.scale(aSpotAnim_1568.anInt410, aSpotAnim_1568.anInt410,
-					aSpotAnim_1568.anInt411);
-		if (aSpotAnim_1568.anInt412 != 0) {
-			if (aSpotAnim_1568.anInt412 == 90)
-				model_1.rotateClockwise();
-			if (aSpotAnim_1568.anInt412 == 180) {
-				model_1.rotateClockwise();
-				model_1.rotateClockwise();
+		if (aSpotAnim_1568.resizeXY != 128 || aSpotAnim_1568.resizeZ != 128)
+			model_1.scale(aSpotAnim_1568.resizeXY, aSpotAnim_1568.resizeXY,
+					aSpotAnim_1568.resizeZ);
+		if (aSpotAnim_1568.rotation != 0) {
+			if (aSpotAnim_1568.rotation == 90)
+				model_1.rotate90Degrees();
+			if (aSpotAnim_1568.rotation == 180) {
+				model_1.rotate90Degrees();
+				model_1.rotate90Degrees();
 			}
-			if (aSpotAnim_1568.anInt412 == 270) {
-				model_1.rotateClockwise();
-				model_1.rotateClockwise();
-				model_1.rotateClockwise();
+			if (aSpotAnim_1568.rotation == 270) {
+				model_1.rotate90Degrees();
+				model_1.rotate90Degrees();
+				model_1.rotate90Degrees();
 			}
 		}
-		model_1.light(64 + aSpotAnim_1568.anInt413,
-				850 + aSpotAnim_1568.anInt414, -30, -50, -30, true);
+		model_1.light(64 + aSpotAnim_1568.modelBrightness,
+				850 + aSpotAnim_1568.modelShadow, -30, -50, -30, true);
 		return model_1;
 	}
 
 	public void method454(int i) {
-		for (anInt1570 += i; anInt1570 > aSpotAnim_1568.aAnimation_407.method258(anInt1569); ) {
-			anInt1570 -= aSpotAnim_1568.aAnimation_407.method258(anInt1569) + 1;
-			anInt1569++;
-			if (anInt1569 >= aSpotAnim_1568.aAnimation_407.anInt352
-					&& (anInt1569 < 0 || anInt1569 >= aSpotAnim_1568.aAnimation_407.anInt352)) {
-				anInt1569 = 0;
-				aBoolean1567 = true;
+		if(aSpotAnim_1568.seqtype.using_keyframes()) {
+			frame_loop += i;//is this a mistake in jagex client?
+			this.cur_frameindex += i;
+			if (this.cur_frameindex >= aSpotAnim_1568.seqtype.get_keyframe_duration()) {
+				this.aBoolean1567 = true;
+			}
+		} else {
+
+			for (frame_loop += i; frame_loop > aSpotAnim_1568.seqtype.frame_durations[cur_frameindex]; ) {
+				frame_loop -= aSpotAnim_1568.seqtype.frame_durations[cur_frameindex] + 1;
+				cur_frameindex++;
+				if (cur_frameindex >= aSpotAnim_1568.seqtype.framecount
+						&& (cur_frameindex < 0 || cur_frameindex >= aSpotAnim_1568.seqtype.framecount)) {
+					cur_frameindex = 0;
+					aBoolean1567 = true;
+				}
 			}
 		}
 
@@ -72,6 +81,6 @@ final class Animable_Sub3 extends Renderable {
 	public final int anInt1564;
 	public boolean aBoolean1567;
 	private final GraphicsDefinition aSpotAnim_1568;
-	private int anInt1569;
-	private int anInt1570;
+	private int cur_frameindex;
+	private int frame_loop;
 }

@@ -44,7 +44,7 @@ public final class GraphicsDefinition {
 				fw.write("case " + i + ":");
 				fw.write(System.getProperty("line.separator"));
 
-				fw.write("gfx.anIntArray409 = \"" + Arrays.toString(item.anIntArray409) + "\";");
+				fw.write("gfx.anIntArray409 = \"" + Arrays.toString(item.recolorToReplace) + "\";");
 				fw.write(System.getProperty("line.separator"));
 
 				fw.write("gfx.modelId = \"" + item.modelId + "\";");
@@ -59,38 +59,47 @@ public final class GraphicsDefinition {
 			e.printStackTrace();
 		}
 	}
-
+	public short[] textureReplace;
+	public short[] textureFind;
 	private void readValues(Buffer stream) {
 		while(true) {
-			int i = stream.readUnsignedByte();
-			if (i == 0) {
+			int opcode = stream.readUnsignedByte();
+			if (opcode == 0) {
 				return;
 			}
-			if (i == 1) {
+			if (opcode == 1) {
 				modelId = stream.readUShort();
-			} else if (i == 2) {
-				anInt406 = stream.readUShort();
+			} else if (opcode == 2) {
+				animationId = stream.readUShort();
 				if (AnimationDefinition.anims != null) {
-					aAnimation_407 = AnimationDefinition.anims[anInt406];
+					seqtype = AnimationDefinition.anims[animationId];
 				}
-			} else if (i == 4) {
-				anInt410 = stream.readUShort();
-			} else if (i == 5) {
-				anInt411 = stream.readUShort();
-			} else if (i == 6) {
-				anInt412 = stream.readUShort();
-			} else if (i == 7) {
-				anInt413 = stream.readUnsignedByte();
-			} else if (i == 8) {
-				anInt414 = stream.readUnsignedByte();
-			} else if (i == 40) {
+			} else if (opcode == 4) {
+				resizeXY = stream.readUShort();
+			} else if (opcode == 5) {
+				resizeZ = stream.readUShort();
+			} else if (opcode == 6) {
+				rotation = stream.readUShort();
+			} else if (opcode == 7) {
+				modelBrightness = stream.readUnsignedByte();
+			} else if (opcode == 8) {
+				modelShadow = stream.readUnsignedByte();
+			} else if (opcode == 40) {
 				int j = stream.readUnsignedByte();
 				for (int k = 0; k < j; k++) {
-					anIntArray408[k] = stream.readUShort();
-					anIntArray409[k] = stream.readUShort();
+					recolorToFind[k] = stream.readUShort();
+					recolorToReplace[k] = stream.readUShort();
+				}
+			} else if (opcode == 41) { // re-texture
+				int len = stream.readUnsignedByte();
+				textureFind = new short[len];
+				textureReplace = new short[len];
+				for (int i = 0; i < len; i++) {
+					textureFind[i] = (short) stream.readUShort();
+					textureReplace[i] = (short) stream.readUShort();
 				}
 			} else {
-				System.out.println("Error unrecognised spotanim config code: " + i);
+				System.out.println("Error unrecognised spotanim config code: " + opcode);
 			}
 		}
 	}
@@ -109,39 +118,85 @@ public final class GraphicsDefinition {
 	}
 
 	public Model getModel() {
-		Model model = (Model) aMRUNodes_415.insertFromCache(index);
+		Model model = (Model) recent_models.insertFromCache(index);
 		if (model != null)
 			return model;
-		model = Model.method462(modelId);
+		model = Model.getModel(modelId);
 		if (model == null)
 			return null;
-		for (int i = 0; i < anIntArray408.length; i++)
-			if (anIntArray408[0] != 0) //default frame id
-				model.replaceColor(anIntArray408[i], anIntArray409[i]);
+		for (int i = 0; i < recolorToFind.length; i++)
+			if (recolorToFind[0] != 0) //default frame id
+				model.recolor(recolorToFind[i], recolorToReplace[i]);
 
-		aMRUNodes_415.removeFromCache(model, index);
+		recent_models.removeFromCache(model, index);
 		return model;
 	}
-	
+	public Model get_transformed_model(int frameindex) {
+		Model model = (Model) recent_models.insertFromCache(index);
+		if(model == null) {
+			model = Model.getModel(modelId);
+			if (model == null)
+				return null;
+			for (int i = 0; i < recolorToFind.length; i++)
+				if (recolorToFind[0] != 0) //default frame id
+					model.recolor(recolorToFind[i], recolorToReplace[i]);
+			if (textureReplace != null) {
+				for (int i1 = 0; i1 < textureReplace.length; i1++)
+					model.retexture(textureReplace[i1], textureFind[i1]);
+			}
+			recent_models.removeFromCache(model, index);
+		}
+		Model var6;
+		if (animationId != -1 && frameindex != -1) {
+			var6 = seqtype.bake_and_animate_spotanim(model, frameindex);
+		} else {
+			var6 = model.bake_shared_model(true);
+		}
+
+		//new_model.animate_either(seqtype, frameindex);
+		var6.face_label_groups = null;
+		var6.vertex_label_groups = null;
+		if (resizeXY != 128 || resizeZ != 128)
+			var6.scale(resizeXY, resizeXY, resizeZ);
+		var6.light(64 + modelBrightness, 850 + modelShadow, -30, -50, -30, true);
+
+//		if (this.rotation != 0) {
+//			if (this.rotation == 90) {
+//				var6.rotate90Degrees();
+//			}
+//
+//			if (this.rotation == 180) {
+//				var6.rotate90Degrees();
+//				var6.rotate90Degrees();
+//			}
+//
+//			if (this.rotation == 270) {
+//				var6.rotate90Degrees();
+//				var6.rotate90Degrees();
+//				var6.rotate90Degrees();
+//			}
+//		}
+		return var6;
+	}
 	private void setDefault() {
 		modelId = -1;
-		anInt406 = -1;
-		anIntArray408 = new int[6];
-		anIntArray409 = new int[6];
-		anInt410 = 128;
-		anInt411 = 128;
-		anInt412 = 0;
-		anInt413 = 0;
-		anInt414 = 0;
+		animationId = -1;
+		recolorToFind = new int[6];
+		recolorToReplace = new int[6];
+		resizeXY = 128;
+		resizeZ = 128;
+		rotation = 0;
+		modelBrightness = 0;
+		modelShadow = 0;
 	}
 
 	public GraphicsDefinition() {
 		anInt400 = 9;
-		anInt406 = -1;
-		anIntArray408 = new int[6];
-		anIntArray409 = new int[6];
-		anInt410 = 128;
-		anInt411 = 128;
+		animationId = -1;
+		recolorToFind = new int[6];
+		recolorToReplace = new int[6];
+		resizeXY = 128;
+		resizeZ = 128;
 	}
 	
 	public int getModelId() {
@@ -156,15 +211,15 @@ public final class GraphicsDefinition {
 	public static GraphicsDefinition cache[];
 	private int index;
 	private int modelId;
-	public int anInt406;
-	public AnimationDefinition aAnimation_407;
-	public int[] anIntArray408;
-	public int[] anIntArray409;
-	public int anInt410;
-	public int anInt411;
-	public int anInt412;
-	public int anInt413;
-	public int anInt414;
-	public static MRUNodes aMRUNodes_415 = new MRUNodes(30);
+	public int animationId;
+	public AnimationDefinition seqtype;
+	public int[] recolorToFind;
+	public int[] recolorToReplace;
+	public int resizeXY;
+	public int resizeZ;
+	public int rotation;
+	public int modelBrightness;
+	public int modelShadow;
+	public static MRUNodes recent_models = new MRUNodes(30);
 
 }

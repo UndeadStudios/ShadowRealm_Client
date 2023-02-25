@@ -570,7 +570,7 @@ final class ObjectManager {
 				return;
 			Object obj;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj = definition.modelAt(22, orientation, k1, l1, i2, j2, -1);
+				obj = definition.modelAt(22, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj = new Animable_Sub5(id, orientation, 22, l1, i2, k1, j2, definition.animation, true);
 			worldController.method280(z, k2, y, ((Renderable) (obj)), byte0, key, x);
@@ -581,7 +581,7 @@ final class ObjectManager {
 		if (type == 10 || type == 11) {
 			Object obj1;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj1 = definition.modelAt(10, orientation, k1, l1, i2, j2, -1);
+				obj1 = definition.modelAt(10, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj1 = new Animable_Sub5(id, orientation, 10, l1, i2, k1, j2, definition.animation, true);
 			if (obj1 != null) {
@@ -603,11 +603,11 @@ final class ObjectManager {
 					if (obj1 instanceof Model)
 						model = (Model) obj1;
 					else
-						model = definition.modelAt(10, orientation, k1, l1, i2, j2, -1);
+						model = definition.modelAt(10, orientation, k1, l1, i2, j2, -1, null);
 					if (model != null) {
 						for (int j5 = 0; j5 <= j4; j5++) {
 							for (int k5 = 0; k5 <= l4; k5++) {
-								int l5 = model.XYZMag / 4;
+								int l5 = model.diagonal2DAboveOrigin / 4;
 								if (l5 > 30)
 									l5 = 30;
 								if (l5 > shading[z][x + j5][y + k5])
@@ -626,7 +626,7 @@ final class ObjectManager {
 		if (type >= 12) {
 			Object obj2;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj2 = definition.modelAt(type, orientation, k1, l1, i2, j2, -1);
+				obj2 = definition.modelAt(type, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj2 = new Animable_Sub5(id, orientation, type, l1, i2, k1, j2, definition.animation, true);
 			worldController.method284(key, byte0, k2, 1, ((Renderable) (obj2)), 1, z, 0, y, x);
@@ -639,7 +639,7 @@ final class ObjectManager {
 		if (type == 0) {
 			Object obj3;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj3 = definition.modelAt(0, orientation, k1, l1, i2, j2, -1);
+				obj3 = definition.modelAt(0, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj3 = new Animable_Sub5(id, orientation, 0, l1, i2, k1, j2, definition.animation, true);
 			worldController.method282(anIntArray152[orientation], ((Renderable) (obj3)), key, y, byte0, x, null, k2, 0, z);
@@ -681,7 +681,7 @@ final class ObjectManager {
 		if (type == 1) {
 			Object obj4;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj4 = definition.modelAt(1, orientation, k1, l1, i2, j2, -1);
+				obj4 = definition.modelAt(1, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj4 = new Animable_Sub5(id, orientation, 1, l1, i2, k1, j2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj4)), key, y, byte0, x, null, k2, 0, z);
@@ -703,8 +703,8 @@ final class ObjectManager {
 			Object obj11;
 			Object obj12;
 			if (definition.animation == -1 && definition.childrenIDs == null) {
-				obj11 = definition.modelAt(2, 4 + orientation, k1, l1, i2, j2, -1);
-				obj12 = definition.modelAt(2, i3, k1, l1, i2, j2, -1);
+				obj11 = definition.modelAt(2, 4 + orientation, k1, l1, i2, j2, -1, null);
+				obj12 = definition.modelAt(2, i3, k1, l1, i2, j2, -1, null);
 			} else {
 				obj11 = new Animable_Sub5(id, 4 + orientation, 2, l1, i2, k1, j2, definition.animation, true);
 				obj12 = new Animable_Sub5(id, i3, 2, l1, i2, k1, j2, definition.animation, true);
@@ -734,7 +734,7 @@ final class ObjectManager {
 		if (type == 3) {
 			Object obj5;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj5 = definition.modelAt(3, orientation, k1, l1, i2, j2, -1);
+				obj5 = definition.modelAt(3, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj5 = new Animable_Sub5(id, orientation, 3, l1, i2, k1, j2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj5)), key, y, byte0, x, null, k2, 0, z);
@@ -754,7 +754,7 @@ final class ObjectManager {
 		if (type == 9) {
 			Object obj6;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj6 = definition.modelAt(type, orientation, k1, l1, i2, j2, -1);
+				obj6 = definition.modelAt(type, orientation, k1, l1, i2, j2, -1, null);
 			else
 				obj6 = new Animable_Sub5(id, orientation, type, l1, i2, k1, j2, definition.animation, true);
 			worldController.method284(key, byte0, k2, 1, ((Renderable) (obj6)), 1, z, 0, y, x);
@@ -786,7 +786,7 @@ final class ObjectManager {
 		if (type == 4) {
 			Object obj7;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj7 = definition.modelAt(4, 0, k1, l1, i2, j2, -1);
+				obj7 = definition.modelAt(4, 0, k1, l1, i2, j2, -1, null);
 			else
 				obj7 = new Animable_Sub5(id, 0, 4, l1, i2, k1, j2, definition.animation, true);
 			worldController.method283(key, y, orientation * 512, z, 0, k2, ((Renderable) (obj7)), x, byte0, 0,
@@ -800,7 +800,7 @@ final class ObjectManager {
 				i4 = ObjectDefinition.forID(ObjectKey.getObjectId(k4)).anInt775;
 			Object obj13;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj13 = definition.modelAt(4, 0, k1, l1, i2, j2, -1);
+				obj13 = definition.modelAt(4, 0, k1, l1, i2, j2, -1, null);
 			else
 				obj13 = new Animable_Sub5(id, 0, 4, l1, i2, k1, j2, definition.animation, true);
 			worldController.method283(key, y, orientation * 512, z, anIntArray137[orientation] * i4, k2, ((Renderable) (obj13)), x, byte0,
@@ -810,7 +810,7 @@ final class ObjectManager {
 		if (type == 6) {
 			Object obj8;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj8 = definition.modelAt(4, 0, k1, l1, i2, j2, -1);
+				obj8 = definition.modelAt(4, 0, k1, l1, i2, j2, -1, null);
 			else
 				obj8 = new Animable_Sub5(id, 0, 4, l1, i2, k1, j2, definition.animation, true);
 			worldController.method283(key, y, orientation, z, 0, k2, ((Renderable) (obj8)), x, byte0, 0, 256);
@@ -819,7 +819,7 @@ final class ObjectManager {
 		if (type == 7) {
 			Object obj9;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj9 = definition.modelAt(4, 0, k1, l1, i2, j2, -1);
+				obj9 = definition.modelAt(4, 0, k1, l1, i2, j2, -1, null);
 			else
 				obj9 = new Animable_Sub5(id, 0, 4, l1, i2, k1, j2, definition.animation, true);
 			worldController.method283(key, y, orientation, z, 0, k2, ((Renderable) (obj9)), x, byte0, 0, 512);
@@ -828,7 +828,7 @@ final class ObjectManager {
 		if (type == 8) {
 			Object obj10;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj10 = definition.modelAt(4, 0, k1, l1, i2, j2, -1);
+				obj10 = definition.modelAt(4, 0, k1, l1, i2, j2, -1, null);
 			else
 				obj10 = new Animable_Sub5(id, 0, 4, l1, i2, k1, j2, definition.animation, true);
 			worldController.method283(key, y, orientation, z, 0, k2, ((Renderable) (obj10)), x, byte0, 0, 768);
@@ -1053,7 +1053,7 @@ final class ObjectManager {
 		if (type == 22) {
 			Object obj;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj = definition.modelAt(22, orientation, l1, i2, j2, k2, -1);
+				obj = definition.modelAt(22, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj = new Animable_Sub5(id, orientation, 22, i2, j2, l1, k2, definition.animation, true);
 			worldController.method280(k1, l2, y, ((Renderable) (obj)), byte1, key, x);
@@ -1064,7 +1064,7 @@ final class ObjectManager {
 		if (type == 10 || type == 11) {
 			Object obj1;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj1 = definition.modelAt(10, orientation, l1, i2, j2, k2, -1);
+				obj1 = definition.modelAt(10, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj1 = new Animable_Sub5(id, orientation, 10, i2, j2, l1, k2, definition.animation, true);
 			if (obj1 != null) {
@@ -1089,7 +1089,7 @@ final class ObjectManager {
 		if (type >= 12) {
 			Object obj2;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj2 = definition.modelAt(type, orientation, l1, i2, j2, k2, -1);
+				obj2 = definition.modelAt(type, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj2 = new Animable_Sub5(id, orientation, type, i2, j2, l1, k2, definition.animation, true);
 			worldController.method284(key, byte1, l2, 1, ((Renderable) (obj2)), 1, k1, 0, y, x);
@@ -1100,7 +1100,7 @@ final class ObjectManager {
 		if (type == 0) {
 			Object obj3;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj3 = definition.modelAt(0, orientation, l1, i2, j2, k2, -1);
+				obj3 = definition.modelAt(0, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj3 = new Animable_Sub5(id, orientation, 0, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray152[orientation], ((Renderable) (obj3)), key, y, byte1, x, null, l2, 0, k1);
@@ -1111,7 +1111,7 @@ final class ObjectManager {
 		if (type == 1) {
 			Object obj4;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj4 = definition.modelAt(1, orientation, l1, i2, j2, k2, -1);
+				obj4 = definition.modelAt(1, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj4 = new Animable_Sub5(id, orientation, 1, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj4)), key, y, byte1, x, null, l2, 0, k1);
@@ -1124,8 +1124,8 @@ final class ObjectManager {
 			Object obj11;
 			Object obj12;
 			if (definition.animation == -1 && definition.childrenIDs == null) {
-				obj11 = definition.modelAt(2, 4 + orientation, l1, i2, j2, k2, -1);
-				obj12 = definition.modelAt(2, j3, l1, i2, j2, k2, -1);
+				obj11 = definition.modelAt(2, 4 + orientation, l1, i2, j2, k2, -1, null);
+				obj12 = definition.modelAt(2, j3, l1, i2, j2, k2, -1, null);
 			} else {
 				obj11 = new Animable_Sub5(id, 4 + orientation, 2, i2, j2, l1, k2, definition.animation, true);
 				obj12 = new Animable_Sub5(id, j3, 2, i2, j2, l1, k2, definition.animation, true);
@@ -1139,7 +1139,7 @@ final class ObjectManager {
 		if (type == 3) {
 			Object obj5;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj5 = definition.modelAt(3, orientation, l1, i2, j2, k2, -1);
+				obj5 = definition.modelAt(3, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj5 = new Animable_Sub5(id, orientation, 3, i2, j2, l1, k2, definition.animation, true);
 			worldController.method282(anIntArray140[orientation], ((Renderable) (obj5)), key, y, byte1, x, null, l2, 0, k1);
@@ -1150,7 +1150,7 @@ final class ObjectManager {
 		if (type == 9) {
 			Object obj6;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj6 = definition.modelAt(type, orientation, l1, i2, j2, k2, -1);
+				obj6 = definition.modelAt(type, orientation, l1, i2, j2, k2, -1, null);
 			else
 				obj6 = new Animable_Sub5(id, orientation, type, i2, j2, l1, k2, definition.animation, true);
 			worldController.method284(key, byte1, l2, 1, ((Renderable) (obj6)), 1, k1, 0, y, x);
@@ -1182,7 +1182,7 @@ final class ObjectManager {
 		if (type == 4) {
 			Object obj7;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj7 = definition.modelAt(4, 0, l1, i2, j2, k2, -1);
+				obj7 = definition.modelAt(4, 0, l1, i2, j2, k2, -1, null);
 			else
 				obj7 = new Animable_Sub5(id, 0, 4, i2, j2, l1, k2, definition.animation, true);
 			worldController.method283(key, y, orientation * 512, k1, 0, l2, ((Renderable) (obj7)), x, byte1, 0, anIntArray152[orientation]);
@@ -1195,7 +1195,7 @@ final class ObjectManager {
 				j4 = ObjectDefinition.forID(ObjectKey.getObjectId(l4)).anInt775;
 			Object obj13;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj13 = definition.modelAt(4, 0, l1, i2, j2, k2, -1);
+				obj13 = definition.modelAt(4, 0, l1, i2, j2, k2, -1, null);
 			else
 				obj13 = new Animable_Sub5(id, 0, 4, i2, j2, l1, k2, definition.animation, true);
 			worldController.method283(key, y, orientation * 512, k1, anIntArray137[orientation] * j4, l2, ((Renderable) (obj13)), x, byte1,
@@ -1205,7 +1205,7 @@ final class ObjectManager {
 		if (type == 6) {
 			Object obj8;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj8 = definition.modelAt(4, 0, l1, i2, j2, k2, -1);
+				obj8 = definition.modelAt(4, 0, l1, i2, j2, k2, -1, null);
 			else
 				obj8 = new Animable_Sub5(id, 0, 4, i2, j2, l1, k2, definition.animation, true);
 			worldController.method283(key, y, orientation, k1, 0, l2, ((Renderable) (obj8)), x, byte1, 0, 256);
@@ -1214,7 +1214,7 @@ final class ObjectManager {
 		if (type == 7) {
 			Object obj9;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj9 = definition.modelAt(4, 0, l1, i2, j2, k2, -1);
+				obj9 = definition.modelAt(4, 0, l1, i2, j2, k2, -1, null);
 			else
 				obj9 = new Animable_Sub5(id, 0, 4, i2, j2, l1, k2, definition.animation, true);
 			worldController.method283(key, y, orientation, k1, 0, l2, ((Renderable) (obj9)), x, byte1, 0, 512);
@@ -1223,7 +1223,7 @@ final class ObjectManager {
 		if (type == 8) {
 			Object obj10;
 			if (definition.animation == -1 && definition.childrenIDs == null)
-				obj10 = definition.modelAt(4, 0, l1, i2, j2, k2, -1);
+				obj10 = definition.modelAt(4, 0, l1, i2, j2, k2, -1, null);
 			else
 				obj10 = new Animable_Sub5(id, 0, 4, i2, j2, l1, k2, definition.animation, true);
 			worldController.method283(key, y, orientation, k1, 0, l2, ((Renderable) (obj10)), x, byte1, 0, 768);

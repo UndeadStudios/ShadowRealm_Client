@@ -1,10 +1,6 @@
 package com.client;
 
 
-import java.awt.*;
-import java.awt.geom.Arc2D;
-import java.awt.image.Raster;
-
 public class DrawingArea extends NodeSub {
 
 	public static void initDrawingArea(int i, int j, int[] ai, float[] depth) {
@@ -398,8 +394,8 @@ public class DrawingArea extends NodeSub {
 		topY = 0;
 		bottomX = width;
 		bottomY = height;
-		centerX = bottomX;
-		centerY = bottomX / 2;
+		lastX = bottomX;
+		viewportCenterX = bottomX / 2;
 	}
 
 	public void drawAlphaGradientOnSprite(Sprite sprite, int x, int y, int gradientWidth,
@@ -457,9 +453,9 @@ public class DrawingArea extends NodeSub {
 		topY = _topY;
 		bottomX = _width;
 		bottomY = _height;
-		centerX = bottomX;
-		centerY = bottomX / 2;
-		anInt1387 = bottomY / 2;
+		lastX = bottomX;
+		viewportCenterX = bottomX / 2;
+		viewportCenterY = bottomY / 2;
 	}
 
 	public static void setAllPixelsToZero() {
@@ -593,8 +589,8 @@ public class DrawingArea extends NodeSub {
 	public static int bottomY;
 	public static int topX;
 	public static int bottomX;
-	public static int centerX;
-	public static int centerY;
-	public static int anInt1387;
+	public static int lastX;
+	public static int viewportCenterX;
+	public static int viewportCenterY;
 
 }

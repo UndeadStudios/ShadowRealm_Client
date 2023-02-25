@@ -73,7 +73,7 @@ public class DevConsole {
         {
             DrawingArea.drawPixelsWithOpacity2(4, 4, 512, 334, 5320850, 80);
             DrawingArea.drawPixels(1, 315, 4, 0xFFFFFF, 512);
-            client().newBoldFont.drawBasicString("--> " + console_input + (client().loopCycle % 20 < 10 ? "|" : ""), 11, 330, 0xFFFFFF, 0);// client().newSmallFont.drawToLeft("Build: " + 317, 505, 0xFFFFFF, 330, 256, 1);//505, 312 above the divider
+            client().newBoldFont.drawBasicString("--> " + console_input + (client().update_tick % 20 < 10 ? "|" : ""), 11, 330, 0xFFFFFF, 0);// client().newSmallFont.drawToLeft("Build: " + 317, 505, 0xFFFFFF, 330, 256, 1);//505, 312 above the divider
             client().newSmallFont.drawString(Configuration.CLIENT_TITLE, 4, 12, 0xFFFFFF, 0, 256);
         }
         draw_console_messages();

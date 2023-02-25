@@ -5,14 +5,15 @@ public final class Rasterizer extends DrawingArea {
     public static boolean saveDepth;
     public static float[] depthBuffer;
     private static int mipMapLevel;
-    public static int textureAmount = 97;
-    static boolean aBoolean1462;
+    public static int textureAmount = 119;
+    static boolean textureOutOfDrawingBounds;
     private static boolean aBoolean1463;
     public static boolean lowMem = false;
     public static boolean aBoolean1464 = true;
-    public static int anInt1465;
+    public static int alpha;
     public static int textureInt1;
     public static int textureInt2;
+    public static int fieldOfView = 512;
     public static int textureInt3;
     public static int textureInt4;
     private static int[] anIntArray1468;
@@ -1041,9 +1042,9 @@ public final class Rasterizer extends DrawingArea {
         }
         int texPos = 0;
         int rgb = 0;
-        if (aBoolean1462) {
-            if (x2 > DrawingArea.centerX) {
-                x2 = DrawingArea.centerX;
+        if (textureOutOfDrawingBounds) {
+            if (x2 > DrawingArea.lastX) {
+                x2 = DrawingArea.lastX;
             }
             if (x1 < 0) {
                 x1 = 0;
@@ -1715,14 +1716,14 @@ public final class Rasterizer extends DrawingArea {
         int div;
         int dhsl;
         if (aBoolean1464) {
-            if (aBoolean1462) {
+            if (textureOutOfDrawingBounds) {
                 if (x2 - x1 > 3) {
                     dhsl = (hsl2 - hsl1) / (x2 - x1);
                 } else {
                     dhsl = 0;
                 }
-                if (x2 > DrawingArea.centerX) {
-                    x2 = DrawingArea.centerX;
+                if (x2 > DrawingArea.lastX) {
+                    x2 = DrawingArea.lastX;
                 }
                 if (x1 < 0) {
                     hsl1 -= x1 * dhsl;
@@ -1748,7 +1749,7 @@ public final class Rasterizer extends DrawingArea {
                     dhsl = 0;
                 }
             }
-            if (anInt1465 == 0) {
+            if (alpha == 0) {
                 while (--div >= 0) {
                     rgb = hslToRgb[hsl1 >> 8];
                     hsl1 += dhsl;
@@ -1791,8 +1792,8 @@ public final class Rasterizer extends DrawingArea {
                     return;
                 }
             } else {
-                int a1 = anInt1465;
-                int a2 = 256 - anInt1465;
+                int a1 = alpha;
+                int a2 = 256 - alpha;
                 while (--div >= 0) {
                     rgb = hslToRgb[hsl1 >> 8];
                     hsl1 += dhsl;
@@ -1847,9 +1848,9 @@ public final class Rasterizer extends DrawingArea {
             return;
         }
         int dhsl2 = (hsl2 - hsl1) / (x2 - x1);
-        if (aBoolean1462) {
-            if (x2 > DrawingArea.centerX) {
-                x2 = DrawingArea.centerX;
+        if (textureOutOfDrawingBounds) {
+            if (x2 > DrawingArea.lastX) {
+                x2 = DrawingArea.lastX;
             }
             if (x1 < 0) {
                 hsl1 -= x1 * dhsl2;
@@ -1861,7 +1862,7 @@ public final class Rasterizer extends DrawingArea {
         }
         offset += x1;
         div = x2 - x1;
-        if (anInt1465 == 0) {
+        if (alpha == 0) {
             do {
                 dest[offset] = hslToRgb[hsl1 >> 8];
                 if (saveDepth) {
@@ -1873,8 +1874,8 @@ public final class Rasterizer extends DrawingArea {
             } while (--div > 0);
             return;
         }
-        int a1 = anInt1465;
-        int a2 = 256 - anInt1465;
+        int a1 = alpha;
+        int a2 = 256 - alpha;
         do {
             rgb = hslToRgb[hsl1 >> 8];
             hsl1 += dhsl2;
@@ -2530,10 +2531,10 @@ public final class Rasterizer extends DrawingArea {
         r2 = (r2 - r1) / n;
         g2 = (g2 - g1) / n;
         b2 = (b2 - b1) / n;
-        if (aBoolean1462) {
-            if (x2 > DrawingArea.centerX) {
-                n -= x2 - DrawingArea.centerX;
-                x2 = DrawingArea.centerX;
+        if (textureOutOfDrawingBounds) {
+            if (x2 > DrawingArea.lastX) {
+                n -= x2 - DrawingArea.lastX;
+                x2 = DrawingArea.lastX;
             }
             if (x1 < 0) {
                 n = x2;
@@ -2546,7 +2547,7 @@ public final class Rasterizer extends DrawingArea {
         if (x1 < x2) {
             offset += x1;
             z1 += z2 * x1;
-            if (anInt1465 == 0) {
+            if (alpha == 0) {
                 while (--n >= 0) {
                     dest[offset] = (r1 & 0xff0000) | (g1 >> 8 & 0xff00) | (b1 >> 16 & 0xff);
                     if (saveDepth) {
@@ -2559,8 +2560,8 @@ public final class Rasterizer extends DrawingArea {
                     offset++;
                 }
             } else {
-                final int a1 = anInt1465;
-                final int a2 = 256 - anInt1465;
+                final int a1 = alpha;
+                final int a2 = 256 - alpha;
                 int rgb;
                 while (--n >= 0) {
                     rgb = r1 & 0xff0000 | g1 >> 8 & 0xff00 | b1 >> 16 & 0xff;
@@ -2933,9 +2934,9 @@ public final class Rasterizer extends DrawingArea {
         if (x1 >= x2) {
             return;
         }
-        if (aBoolean1462) {
-            if (x2 > DrawingArea.centerX) {
-                x2 = DrawingArea.centerX;
+        if (textureOutOfDrawingBounds) {
+            if (x2 > DrawingArea.lastX) {
+                x2 = DrawingArea.lastX;
             }
             if (x1 < 0) {
                 x1 = 0;
@@ -2947,7 +2948,7 @@ public final class Rasterizer extends DrawingArea {
         offset += x1;
         z1 += z2 * x1;
         int n = x2 - x1;
-        if (anInt1465 == 0) {
+        if (alpha == 0) {
             while (--n >= 0) {
                 dest[offset] = rgb;
                 if (saveDepth) {
@@ -2957,8 +2958,8 @@ public final class Rasterizer extends DrawingArea {
                 offset++;
             }
         } else {
-            final int a1 = anInt1465;
-            final int a2 = 256 - anInt1465;
+            final int a1 = alpha;
+            final int a2 = 256 - alpha;
             rgb = ((rgb & 0xff00ff) * a2 >> 8 & 0xff00ff) + ((rgb & 0xff00) * a2 >> 8 & 0xff00);
             while (--n >= 0) {
                 dest[offset] = rgb + ((dest[offset] & 0xff00ff) * a1 >> 8 & 0xff00ff)
@@ -3584,10 +3585,10 @@ public final class Rasterizer extends DrawingArea {
         }
         int rotation;
         int n;
-        if (aBoolean1462) {
+        if (textureOutOfDrawingBounds) {
             rotation = (hsl2 - hsl1) / (x2 - x1);
-            if (x2 > DrawingArea.centerX) {
-                x2 = DrawingArea.centerX;
+            if (x2 > DrawingArea.lastX) {
+                x2 = DrawingArea.lastX;
             }
             if (x1 < 0) {
                 x1 -= 0;
@@ -4475,9 +4476,9 @@ public final class Rasterizer extends DrawingArea {
     }
 
     static void drawTexturedLine(int[] var0, int[] var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14) {
-        if(aBoolean1462) {
-            if(var6 > DrawingArea.centerX) {
-                var6 = DrawingArea.centerX;
+        if(textureOutOfDrawingBounds) {
+            if(var6 > DrawingArea.lastX) {
+                var6 = DrawingArea.lastX;
             }
 
             if(var5 < 0) {
@@ -5502,9 +5503,9 @@ public final class Rasterizer extends DrawingArea {
         }
         int dl = (hsl2 - hsl1) / (x2 - x1);
         int n;
-        if (aBoolean1462) {
-            if (x2 > DrawingArea.centerX) {
-                x2 = DrawingArea.centerX;
+        if (textureOutOfDrawingBounds) {
+            if (x2 > DrawingArea.lastX) {
+                x2 = DrawingArea.lastX;
             }
             if (x1 < 0) {
                 hsl1 -= x1 * dl;
@@ -5809,5 +5810,21 @@ public final class Rasterizer extends DrawingArea {
     }
 
     public static void drawArc(int x, int y, int width, int height, int strokeWidth, double v, double arcLength, int i, int alpha, int closure, boolean fill) {
+    }
+
+    public static final int method4025(int var0, int var1, int var2, int var3) {
+        return var0 * var2 - var3 * var1 >> 16; // L: 2666
+    }
+
+    public static final int method4044(int var0, int var1, int var2, int var3) {
+        return var3 * var0 + var2 * var1 >> 16; // L: 2670
+    }
+
+    public static final int method4045(int var0, int var1, int var2, int var3) {
+        return var0 * var2 + var3 * var1 >> 16; // L: 2674
+    }
+
+    public static final int method4046(int var0, int var1, int var2, int var3) {
+        return var2 * var1 - var3 * var0 >> 16; // L: 2678
     }
 }

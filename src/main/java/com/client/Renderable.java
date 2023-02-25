@@ -2,6 +2,8 @@ package com.client;
 
 public class Renderable extends NodeSub {
 
+    public boolean hidden = false;
+
     public void renderAtPoint(int i, int j, int k, int l, int i1, int j1, int k1,
                               int l1, long uid) {
         Model model = getRotatedModel();
@@ -19,6 +21,6 @@ public class Renderable extends NodeSub {
         modelHeight = 1000;
     }
 
-    VertexNormal aClass33Array1425[];
+    VertexNormal normals[];
     public int modelHeight; // modelHeight
 }

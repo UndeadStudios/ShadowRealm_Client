@@ -64,7 +64,7 @@ public final class IDK {
 			return true;
 		boolean flag = true;
 		for (int j = 0; j < modelIds.length; j++)
-			if (!Model.method463(modelIds[j]))
+			if (!Model.isCached(modelIds[j]))
 				flag = false;
 
 		return flag;
@@ -75,7 +75,7 @@ public final class IDK {
 			return null;
 		Model aclass30_sub2_sub4_sub6s[] = new Model[modelIds.length];
 		for (int i = 0; i < modelIds.length; i++)
-			aclass30_sub2_sub4_sub6s[i] = Model.method462(modelIds[i]);
+			aclass30_sub2_sub4_sub6s[i] = Model.getModel(modelIds[i]);
 
 		Model model;
 		if (aclass30_sub2_sub4_sub6s.length == 1)
@@ -100,7 +100,7 @@ public final class IDK {
 	public boolean method539() {
 		boolean flag1 = true;
 		for (int i = 0; i < 5; i++)
-			if (models[i] != -1 && !Model.method463(models[i]))
+			if (models[i] != -1 && !Model.isCached(models[i]))
 				flag1 = false;
 
 		return flag1;
@@ -112,7 +112,7 @@ public final class IDK {
 		for (int k = 0; k < 5; k++)
 			if (models[k] != -1)
 				aclass30_sub2_sub4_sub6s[j++] = Model
-						.method462(models[k]);
+						.getModel(models[k]);
 
 		Model model = new Model(j, aclass30_sub2_sub4_sub6s);
 		if(colourToFind != null) {

@@ -419,7 +419,8 @@ public final class OnDemandFetcher extends OnDemandFetcherParent implements Runn
 		try (GZIPInputStream gzipinputstream = new GZIPInputStream(new ByteArrayInputStream(onDemandData.buffer))) {
 			do {
 				if (i == gzipInputBuffer.length)
-					throw new RuntimeException("buffer overflow!");
+//					throw new RuntimeException("buffer overflow!");
+					break;
 				int k = gzipinputstream.read(gzipInputBuffer, i, gzipInputBuffer.length - i);
 				if (k == -1)
 					break;
@@ -604,7 +605,7 @@ public final class OnDemandFetcher extends OnDemandFetcherParent implements Runn
 		running = true;
 		waiting = false;
 		aClass19_1358 = new NodeList();
-		gzipInputBuffer = new byte[9999999];
+		gzipInputBuffer = new byte[400000000];
 		nodeSubList = new NodeSubList();
 		versions = new int[4][];
 		aClass19_1368 = new NodeList();

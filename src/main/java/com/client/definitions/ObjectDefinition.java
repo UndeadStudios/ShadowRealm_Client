@@ -1,13 +1,11 @@
 package com.client.definitions;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Arrays;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.client.Class36;
+import com.client.AnimFrame;
 import com.client.Client;
 import com.client.MRUNodes;
 import com.client.Model;
@@ -580,25 +578,25 @@ public final class ObjectDefinition {
 			boolean flag1 = true;
 			Model model = (Model) mruNodes2.insertFromCache(id);
 			for (int k = 0; k < modelIds.length; k++)
-				flag1 &= model.method463(modelIds[k] & 0xffff);
+				flag1 &= model.isCached(modelIds[k]);
 			return flag1;
 		}
 		Model model = (Model) mruNodes2.insertFromCache(id);
 		for (int j = 0; j < models.length; j++)
 			if (models[j] == i)
-				return model.method463(modelIds[j] & 0xffff);
+				return model.isCached(modelIds[j]);
 		return true;
 	}
 
-	public Model modelAt(int i, int j, int k, int l, int i1, int j1, int k1) {
-		Model model = method581(i, k1, j);
+	public Model modelAt(int i, int j, int k, int l, int i1, int j1, int k1, AnimationDefinition seqtype) {
+		Model model = model(i, k1, j, seqtype);
 		if (model == null)
 			return null;
 		if (aBoolean762 || aBoolean769)
 			model = new Model(aBoolean762, aBoolean769, model);
 		if (aBoolean762) {
 			int l1 = (k + l + i1 + j1) / 4;
-			for (int i2 = 0; i2 < model.verticesCount; i2++) {
+			for (int i2 = 0; i2 < model.vertex_count; i2++) {
 				int j2 = model.verticesX[i2];
 				int k2 = model.verticesZ[i2];
 				int l2 = k + ((l - k) * (j2 + 64)) / 128;
@@ -606,8 +604,8 @@ public final class ObjectDefinition {
 				int j3 = l2 + ((i3 - l2) * (k2 + 64)) / 128;
 				model.verticesY[i2] += j3 - l1;
 			}
-
-			model.method467();
+			model.normalise();
+			model.resetBounds();
 		}
 		return model;
 	}
@@ -617,7 +615,7 @@ public final class ObjectDefinition {
 			return true;
 		boolean flag1 = true;
 		for (int i = 0; i < modelIds.length; i++)
-			flag1 &= Model.method463(modelIds[i] & 0xffff);
+			flag1 &= Model.isCached(modelIds[i]);
 		return flag1;
 	}
 
@@ -640,7 +638,7 @@ public final class ObjectDefinition {
 		return var3 == -1 ? null : forID(var3);
 	}
 
-	private Model method581(int type, int frame, int orientation) {
+	private Model model(int type, int frame, int orientation, AnimationDefinition seqtype) {
 		Model model = null;
 		long key;
 		if (models == null) {
@@ -649,8 +647,9 @@ public final class ObjectDefinition {
 
 			key = frame + 1L << 32 | ((inverted ? 1 : 0) << 16)| id << 6 | orientation;
 			Model model_1 = (Model) mruNodes2.insertFromCache(key);
-			if (model_1 != null)
+			if (model_1 != null) {
 				return model_1;
+			}
 			if (modelIds == null)
 				return null;
 			boolean flag1 = inverted ^ (orientation > 3);
@@ -661,11 +660,11 @@ public final class ObjectDefinition {
 					l2 += 0x10000;
 				model = (Model) mruNodes1.insertFromCache(l2);
 				if (model == null) {
-					model = Model.method462(l2 & 0xffff);
+					model = Model.getModel(l2 & 0xffff);
 					if (model == null)
 						return null;
 					if (flag1)
-						model.method477();
+						model.mirror();
 					mruNodes1.removeFromCache(model, l2);
 				}
 				if (k1 > 1)
@@ -696,11 +695,11 @@ public final class ObjectDefinition {
 				j2 += 0x10000;
 			model = (Model) mruNodes1.insertFromCache(j2);
 			if (model == null) {
-				model = Model.method462(j2 & 0xffff);
+				model = Model.getModel(j2 & 0xffff);
 				if (model == null)
 					return null;
 				if (flag3)
-					model.method477();
+					model.mirror();
 				mruNodes1.removeFromCache(model, j2);
 			}
 		}
@@ -708,21 +707,18 @@ public final class ObjectDefinition {
 		flag = thickness != 128 || height != 128 || width != 128;
 		boolean flag2;
 		flag2 = anInt738 != 0 || anInt745 != 0 || anInt783 != 0;
-		Model model_3 = new Model(modifiedModelColors == null && modifiedTexture == null, Class36.method532(frame),
-				orientation == 0 && frame == -1 && !flag && !flag2, model);
+		Model model_3 = new Model(modifiedModelColors == null,
+				AnimFrame.noAnimationInProgress(frame), orientation == 0 && frame == -1 && !flag
+				&& !flag2, modifiedTexture == null, model);
 		if (frame != -1) {
-			model_3.method469();
-			model_3.method470(frame);
-			model_3.faceGroups = null;
-			model_3.vertexGroups = null;
+			model_3.apply_label_groups();
+			model_3.animate_either(seqtype, frame);
+			model_3.face_label_groups = null;
+			model_3.vertex_label_groups = null;
 		}
-		if (type == 4 && orientation > 3) {
-			model_3.method4213(256);
-			model_3.changeOffset(45, 0, -45);
-		}
-		orientation &= 3;
 		while (orientation-- > 0)
-			model_3.rotateClockwise();
+			model_3.rotate90Degrees();
+
 		if (modifiedModelColors != null) {
 			for (int k2 = 0; k2 < modifiedModelColors.length; k2++) {
 				model_3.recolor(modifiedModelColors[k2], originalModelColors[k2]);
@@ -735,13 +731,10 @@ public final class ObjectDefinition {
 			}
 
 		}
-		if (this.interactType * 65536 >= 0)
+		if (flag)
 			model_3.scale(thickness, width, height);
 		if (flag2)
-			model_3.translate(anInt738, anInt745, anInt783);
-		// model_3.method479(64 + aByte737, 768 + aByte742 * 5, -50, -10, -50,
-		// !aBoolean769);
-		// ORIGINAL^
+			model_3.offsetBy(anInt738, anInt745, anInt783);
 
 		model_3.light(85 + aByte737, 768 + aByte742 * 25, -50, -10, -50, !aBoolean769);
 

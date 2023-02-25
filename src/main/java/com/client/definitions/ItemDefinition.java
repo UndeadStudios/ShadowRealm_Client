@@ -559,22 +559,29 @@ public final class ItemDefinition {
 			case 8813:
 				itemDef.setDefaults();
 				itemDef.id = 8813;
-				itemDef.modelId = 65132;
 				itemDef.name = "Lava Torva Platebody";
 				itemDef.description = "A body from lava.";
-				itemDef.spriteScale = 1780;
-				itemDef.spritePitch = 2042;
-				itemDef.spriteCameraRoll = 473;
+				itemDef.modelId = 53227;
+				itemDef.spriteScale = 1480;
+				itemDef.spritePitch = 518;
+				itemDef.spriteCameraRoll = 0;
 				itemDef.spriteCameraYaw = 0;
 				itemDef.spriteTranslateX = -1;
 				itemDef.spriteTranslateY = -1;
-
-				itemDef.primaryMaleModel = 65133;
-				itemDef.secondaryMaleModel = 65129;
-				itemDef.primaryFemaleModel = 65133;
-				itemDef.secondaryFemaleModel = 65129;
-				//itemDef.groundActions = new String[5];
-				//itemDef.groundActions[2] = "Take";
+				itemDef.primaryMaleModel = 53135;
+				itemDef.primaryFemaleModel = 53165;
+				itemDef.secondaryMaleModel = 53145;
+				itemDef.secondaryFemaleModel = 53167;
+				itemDef.primaryMaleHeadPiece = -1;
+				itemDef.primaryFemaleHeadPiece = -1;
+				itemDef.value = 600000;
+				itemDef.unnotedId = -1;
+				itemDef.notedId = -1;
+				itemDef.certID = -1;
+				itemDef.certTemplateID = -1;
+				itemDef.stackable = false;
+				itemDef.placeholderId = -1;
+				itemDef.placeholderTemplateId = -1;
 				itemDef.itemActions = new String[5];
 				itemDef.itemActions[1] = "Wield";
 				itemDef.itemActions[4] = "Drop";
@@ -2550,9 +2557,9 @@ public final class ItemDefinition {
 		if (k == -1)
 			return true;
 		boolean flag = true;
-		if (!Model.method463(k))
+		if (!Model.isCached(k))
 			flag = false;
-		if (l != -1 && !Model.method463(l))
+		if (l != -1 && !Model.isCached(l))
 			flag = false;
 		return flag;
 	}
@@ -2566,9 +2573,9 @@ public final class ItemDefinition {
 		}
 		if (k == -1)
 			return null;
-		Model model = Model.method462(k);
+		Model model = Model.getModel(k);
 		if (l != -1) {
-			Model model_1 = Model.method462(l);
+			Model model_1 = Model.getModel(l);
 			Model aclass30_sub2_sub4_sub6s[] = { model, model_1 };
 			model = new Model(2, aclass30_sub2_sub4_sub6s);
 		}
@@ -2597,11 +2604,11 @@ public final class ItemDefinition {
 		if (k == -1)
 			return true;
 		boolean flag = true;
-		if (!Model.method463(k))
+		if (!Model.isCached(k))
 			flag = false;
-		if (l != -1 && !Model.method463(l))
+		if (l != -1 && !Model.isCached(l))
 			flag = false;
-		if (i1 != -1 && !Model.method463(i1))
+		if (i1 != -1 && !Model.isCached(i1))
 			flag = false;
 		return flag;
 	}
@@ -2617,22 +2624,22 @@ public final class ItemDefinition {
 		}
 		if (j == -1)
 			return null;
-		Model model = Model.method462(j);
+		Model model = Model.getModel(j);
 		if (k != -1)
 			if (l != -1) {
-				Model model_1 = Model.method462(k);
-				Model model_3 = Model.method462(l);
+				Model model_1 = Model.getModel(k);
+				Model model_3 = Model.getModel(l);
 				Model aclass30_sub2_sub4_sub6_1s[] = { model, model_1, model_3 };
 				model = new Model(3, aclass30_sub2_sub4_sub6_1s);
 			} else {
-				Model model_2 = Model.method462(k);
+				Model model_2 = Model.getModel(k);
 				Model aclass30_sub2_sub4_sub6s[] = { model, model_2 };
 				model = new Model(2, aclass30_sub2_sub4_sub6s);
 			}
 		if (i == 0 && maleTranslation != 0)
-			model.translate(0, maleTranslation, 0);
+			model.offsetBy(0, maleTranslation, 0);
 		if (i == 1 && femaleTranslation != 0)
-			model.translate(0, femaleTranslation, 0);
+			model.offsetBy(0, femaleTranslation, 0);
 		if (originalModelColors != null) {
 			for (int i1 = 0; i1 < originalModelColors.length; i1++)
 				model.recolor(originalModelColors[i1], modifiedModelColors[i1]);
@@ -3152,7 +3159,7 @@ public final class ItemDefinition {
 		int k3 = (int) (itemDef.spriteScale * 1.6D);
 		int sin = Rasterizer.anIntArray1470[itemDef.spritePitch] * k3 >> 16;
 		int i4 = Rasterizer.anIntArray1471[itemDef.spritePitch] * k3 >> 16;
-		model.render(itemDef.spriteCameraRoll, itemDef.spriteCameraYaw, itemDef.spritePitch, itemDef.spriteTranslateX,
+		model.renderModel(itemDef.spriteCameraRoll, itemDef.spriteCameraYaw, itemDef.spritePitch, itemDef.spriteTranslateX,
 				sin + model.modelHeight / 2 + itemDef.spriteTranslateY, i4 + itemDef.spriteTranslateY);
 		if (itemDef.certTemplateID != -1) {
 			int l5 = sprite1.maxWidth;
@@ -3249,7 +3256,7 @@ public final class ItemDefinition {
 		int l3 = Rasterizer.anIntArray1470[itemDef.spritePitch] * var16 >> 16;
 		int i4 = Rasterizer.anIntArray1471[itemDef.spritePitch] * var16 >> 16;
 		try {
-			model.render(itemDef.spriteCameraRoll, itemDef.spriteCameraYaw, itemDef.spritePitch, itemDef.spriteTranslateX,
+			model.renderModel(itemDef.spriteCameraRoll, itemDef.spriteCameraYaw, itemDef.spritePitch, itemDef.spriteTranslateX,
 					l3 + model.modelHeight / 2 + itemDef.spriteTranslateY, i4 + itemDef.spriteTranslateY);
 		}  catch (ArrayIndexOutOfBoundsException ignored) {
 		}  catch (Exception e) {
@@ -3313,7 +3320,7 @@ public final class ItemDefinition {
 		Model model = (Model) mruNodes2.insertFromCache(id);
 		if (model != null)
 			return model;
-		model = Model.method462(modelId);
+		model = Model.getModel(modelId);
 		if (model == null)
 			return null;
 		if (groundScaleX != 128 || groundScaleY != 128 || groundScaleZ != 128)
@@ -3329,7 +3336,7 @@ public final class ItemDefinition {
 
 		}
 		model.light(64 + ambient, 768 + contrast, -50, -10, -50, true);
-		model.fits_on_single_square = true;
+		model.singleTile = true;
 		mruNodes2.removeFromCache(model, id);
 		return model;
 	}
@@ -3344,7 +3351,7 @@ public final class ItemDefinition {
 			if (j != -1)
 				return forID(j).method202(1);
 		}
-		Model model = Model.method462(modelId);
+		Model model = Model.getModel(modelId);
 		if (model == null)
 			return null;
 		if (originalModelColors != null) {
@@ -3396,7 +3403,7 @@ public final class ItemDefinition {
 	private static int cacheIndex;
 	public int spriteScale;
 	private static Buffer stream;
-	private int contrast;
+	public int contrast;
 	private int tertiaryMaleEquipmentModel;
 	public int secondaryMaleModel;
 	public String itemActions[];
@@ -3407,7 +3414,7 @@ public final class ItemDefinition {
 	private int[] stackIDs;
 	public int spriteTranslateY; // modelOffset2
 	private static int[] streamIndices;
-	private int ambient;
+	public int ambient;
 	public int primaryFemaleHeadPiece;
 	public int spriteCameraRoll; // modelRotation2
 	public int primaryFemaleModel;

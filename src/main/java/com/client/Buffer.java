@@ -604,4 +604,31 @@ public final class Buffer extends NodeSub {
         int var1 = this.buffer[this.currentOffset] & 255;
         return var1 < 128 ? this.readUnsignedByte() - 1 : this.readUShort() - 0x8000;
     }
+    public int get_smart_byteorshort() {
+        int value = buffer[currentOffset] & 0xFF;
+        if (value < 128) {
+            return readUnsignedByte() - 0x40;
+        } else {
+            return readUShort() - 0xc000;
+        }
+    }
+    public float get_float() {
+        return Float.intBitsToFloat(this.readInt());
+    }
+
+    public int get_short() {
+        currentOffset += 2;
+        int i = ((buffer[currentOffset - 2] & 0xff) << 8)
+                + (buffer[currentOffset - 1] & 0xff);
+        if (i > 0x7fff) {
+            i -= 0x10000;
+        }
+        return i;
+
+    }
+
+    public int get_unsignedbyte() {
+        return buffer[currentOffset++] & 0xff;
+    }
+
 }

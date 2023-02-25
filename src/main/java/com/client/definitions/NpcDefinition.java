@@ -15,7 +15,7 @@
 	//
 	//import org.apache.commons.io.FileUtils;
 
-	import com.client.Class36;
+	import com.client.AnimFrame;
 	import com.client.Client;
 	import com.client.Configuration;
 	import com.client.MRUNodes;
@@ -1288,14 +1288,14 @@
 			}
 			boolean flag1 = false;
 			for (int i = 0; i < dialogueModels.length; i++)
-				if (!Model.method463(dialogueModels[i]))
+				if (!Model.isCached(dialogueModels[i]))
 					flag1 = true;
 
 			if (flag1)
 				return null;
 			Model aclass30_sub2_sub4_sub6s[] = new Model[dialogueModels.length];
 			for (int j = 0; j < dialogueModels.length; j++)
-				aclass30_sub2_sub4_sub6s[j] = Model.method462(dialogueModels[j]);
+				aclass30_sub2_sub4_sub6s[j] = Model.getModel(dialogueModels[j]);
 
 			Model model;
 			if (aclass30_sub2_sub4_sub6s.length == 1)
@@ -1334,26 +1334,26 @@
 			return var3 == -1 ? null : forID(var3);
 		}
 
-		public Model method164(int j, int k, int ai[]) {
+		public Model method164(int primary_index, AnimationDefinition primary_seq, int[] ai, int secondary_index, AnimationDefinition secondary_seq) {
 			if (childrenIDs != null) {
 				NpcDefinition entityDef = method161();
 				if (entityDef == null)
 					return null;
 				else
-					return entityDef.method164(j, k, ai);
+					return entityDef.method164(primary_index, primary_seq, ai, secondary_index, secondary_seq);
 			}
 			Model model = (Model) mruNodes.insertFromCache(npcId);
 			if (model == null) {
 				boolean flag = false;
 				for (int i1 = 0; i1 < models.length; i1++)
-					if (!Model.method463(models[i1]))
+					if (!Model.isCached(models[i1]))
 						flag = true;
 
 				if (flag)
 					return null;
 				Model aclass30_sub2_sub4_sub6s[] = new Model[models.length];
 				for (int j1 = 0; j1 < models.length; j1++)
-					aclass30_sub2_sub4_sub6s[j1] = Model.method462(models[j1]);
+					aclass30_sub2_sub4_sub6s[j1] = Model.getModel(models[j1]);
 
 				if (aclass30_sub2_sub4_sub6s.length == 1)
 					model = aclass30_sub2_sub4_sub6s[0];
@@ -1370,24 +1370,27 @@
 					}
 
 				}
-				model.method469();
 				model.light(64 + anInt85, 850 + anInt92, -30, -50, -30, true);
 				// model.method479(84 + anInt85, 1000 + anInt92, -90, -580, -90, true);
 				mruNodes.removeFromCache(model, npcId);
 			}
-			Model model_1 = Model.EMPTY_MODEL;
-			model_1.method464(model, Class36.method532(k) & Class36.method532(j));
-			if (k != -1 && j != -1)
-				model_1.method471(ai, j, k);
-			else if (k != -1)
-				model_1.method470(k);
+			Model model_1;
+			if (primary_seq != null && secondary_seq != null) {
+				model_1 = primary_seq.animate_multiple(model, primary_index, secondary_seq, secondary_index);
+			} else if (primary_seq != null) {
+				model_1 = primary_seq.animate_either(model, primary_index);
+			} else if (secondary_seq != null) {
+				model_1 = secondary_seq.animate_either(model, secondary_index);
+			} else {
+				model_1 = model.bake_shared_animation_model(true);
+			}
 			if (anInt91 != 128 || anInt86 != 128)
 				model_1.scale(anInt91, anInt91, anInt86);
-			model_1.calculateDistances();
-			model_1.faceGroups = null;
-			model_1.vertexGroups = null;
+			model_1.calculateBoundsCylinder();
+			model_1.face_label_groups = null;
+			model_1.vertex_label_groups = null;
 			if (size == 1)
-				model_1.fits_on_single_square = true;
+				model_1.singleTile = true;
 			return model_1;
 		}
 

@@ -8,52 +8,52 @@ import com.client.definitions.GraphicsDefinition;
 final class Animable_Sub4 extends Renderable {
 
 	public void method455(int i, int j, int k, int l) {
-		if (!aBoolean1579) {
+		if (!is_moving) {
 			double d = l - anInt1580;
 			double d2 = j - anInt1581;
 			double d3 = Math.sqrt(d * d + d2 * d2);
-			aDouble1585 = anInt1580 + (d * anInt1589) / d3;
-			aDouble1586 = anInt1581 + (d2 * anInt1589) / d3;
-			aDouble1587 = anInt1582;
+			x = anInt1580 + (d * anInt1589) / d3;
+			y = anInt1581 + (d2 * anInt1589) / d3;
+			z = anInt1582;
 		}
 		double d1 = (anInt1572 + 1) - i;
-		aDouble1574 = (l - aDouble1585) / d1;
-		aDouble1575 = (j - aDouble1586) / d1;
-		aDouble1576 = Math.sqrt(aDouble1574 * aDouble1574 + aDouble1575
-				* aDouble1575);
-		if (!aBoolean1579)
-			aDouble1577 = -aDouble1576 * Math.tan(anInt1588 * 0.02454369D);
-		aDouble1578 = (2D * (k - aDouble1587 - aDouble1577 * d1)) / (d1 * d1);
+		x_speed = (l - x) / d1;
+		y_speed = (j - y) / d1;
+		speed = Math.sqrt(x_speed * x_speed + y_speed
+				* y_speed);
+		if (!is_moving)
+			z_speed = -speed * Math.tan(anInt1588 * 0.02454369D);
+		z_acceleration = (2D * (k - z - z_speed * d1)) / (d1 * d1);
 	}
 
 	@Override
 	public Model getRotatedModel() {
-		Model model = aSpotAnim_1592.getModel();
+		Model model = spotanim.getModel();
 		if (model == null)
 			return null;
 		int j = -1;
-		if (aSpotAnim_1592.aAnimation_407 != null)
-			j = aSpotAnim_1592.aAnimation_407.anIntArray353[anInt1593];
-		Model model_1 = new Model(true, Class36.method532(j), false, model);
+		if (spotanim.seqtype != null)
+			j = cur_frameindex;
+		Model model_1 = new Model(true, AnimFrame.noAnimationInProgress(j), false, model);
 		if (j != -1) {
-			model_1.method469();
-			model_1.method470(j);
-			model_1.faceGroups = null;
-			model_1.vertexGroups = null;
+			model_1.apply_label_groups();
+			model_1.animate_either(spotanim.seqtype, j);
+			model_1.face_label_groups = null;
+			model_1.vertex_label_groups = null;
 		}
-		if (aSpotAnim_1592.anInt410 != 128 || aSpotAnim_1592.anInt411 != 128)
-			model_1.scale(aSpotAnim_1592.anInt410, aSpotAnim_1592.anInt410,
-					aSpotAnim_1592.anInt411);
-		model_1.method474(anInt1596);
-		model_1.light(64 + aSpotAnim_1592.anInt413,
-				850 + aSpotAnim_1592.anInt414, -30, -50, -30, true);
+		if (spotanim.resizeXY != 128 || spotanim.resizeZ != 128)
+			model_1.scale(spotanim.resizeXY, spotanim.resizeXY,
+					spotanim.resizeZ);
+		model_1.rotateZ(anInt1596);
+		model_1.light(64 + spotanim.modelBrightness,
+				850 + spotanim.modelShadow, -30, -50, -30, true);
 		return model_1;
 	}
 
 	public Animable_Sub4(int i, int j, int l, int i1, int j1, int k1, int l1,
 			int i2, int j2, int k2, int l2) {
-		aBoolean1579 = false;
-		aSpotAnim_1592 = GraphicsDefinition.cache[l2];
+		is_moving = false;
+		spotanim = GraphicsDefinition.cache[l2];
 		anInt1597 = k1;
 		anInt1580 = j2;
 		anInt1581 = i2;
@@ -64,49 +64,56 @@ final class Animable_Sub4 extends Renderable {
 		anInt1589 = j1;
 		anInt1590 = k2;
 		anInt1583 = j;
-		aBoolean1579 = false;
+		is_moving = false;
 	}
 
 	public void method456(int i) {
-		aBoolean1579 = true;
-		aDouble1585 += aDouble1574 * i;
-		aDouble1586 += aDouble1575 * i;
-		aDouble1587 += aDouble1577 * i + 0.5D * aDouble1578 * i * i;
-		aDouble1577 += aDouble1578 * i;
-		anInt1595 = (int) (Math.atan2(aDouble1574, aDouble1575) * 325.94900000000001D) + 1024 & 0x7ff;
-		anInt1596 = (int) (Math.atan2(aDouble1577, aDouble1576) * 325.94900000000001D) & 0x7ff;
-		if (aSpotAnim_1592.aAnimation_407 != null)
-			for (anInt1594 += i; anInt1594 > aSpotAnim_1592.aAnimation_407
-					.method258(anInt1593);) {
-				anInt1594 -= aSpotAnim_1592.aAnimation_407.method258(anInt1593) + 1;
-				anInt1593++;
-				if (anInt1593 >= aSpotAnim_1592.aAnimation_407.anInt352)
-					anInt1593 = 0;
+		is_moving = true;
+		x += x_speed * i;
+		y += y_speed * i;
+		z += z_speed * i + 0.5D * z_acceleration * i * i;
+		z_speed += z_acceleration * i;
+		anInt1595 = (int) (Math.atan2(x_speed, y_speed) * 325.94900000000001D) + 1024 & 0x7ff;
+		anInt1596 = (int) (Math.atan2(z_speed, speed) * 325.94900000000001D) & 0x7ff;
+		if (spotanim.seqtype != null)
+			if (spotanim.seqtype.using_keyframes()) {
+				this.cur_frameindex += i;
+				int var3 = spotanim.seqtype.get_keyframe_duration();
+				if (this.cur_frameindex >= var3) {
+					this.cur_frameindex = var3 - spotanim.seqtype.loop_delay;
+				}
+			} else {
+				for (frame_loop += i; frame_loop > spotanim.seqtype.frame_durations[cur_frameindex]; ) {
+					frame_loop -= spotanim.seqtype.frame_durations[cur_frameindex] + 1;
+					cur_frameindex++;
+					if (cur_frameindex >= spotanim.seqtype.framecount)
+						cur_frameindex = 0;
+				}
 			}
 
 	}
 
 	public final int anInt1571;
 	public final int anInt1572;
-	private double aDouble1574;
-	private double aDouble1575;
-	private double aDouble1576;
-	private double aDouble1577;
-	private double aDouble1578;
-	private boolean aBoolean1579;
+	private double x_speed;
+	private double y_speed;
+	private double speed;
+	private double z_speed;
+	private double z_acceleration;
+	private boolean is_moving;
 	private final int anInt1580;
 	private final int anInt1581;
 	private final int anInt1582;
 	public final int anInt1583;
-	public double aDouble1585;
-	public double aDouble1586;
-	public double aDouble1587;
+	public double x;
+	public double y;
+	public double z;
 	private final int anInt1588;
 	private final int anInt1589;
 	public final int anInt1590;
-	private final GraphicsDefinition aSpotAnim_1592;
-	private int anInt1593;
-	private int anInt1594;
+	private final GraphicsDefinition spotanim;
+	private int cur_frameindex;
+	private int frame_loop;
 	public int anInt1595;
 	private int anInt1596;
 	public final int anInt1597;

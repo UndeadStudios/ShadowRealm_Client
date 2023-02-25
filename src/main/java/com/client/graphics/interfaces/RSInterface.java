@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-import com.client.Class36;
+import com.client.AnimFrame;
 import com.client.Client;
 import com.client.Configuration;
 import com.client.DrawingArea;
@@ -20,6 +20,7 @@ import com.client.Buffer;
 import com.client.StreamLoader;
 import com.client.StringUtils;
 import com.client.TextDrawingArea;
+import com.client.definitions.AnimationDefinition;
 import com.client.definitions.ItemDefinition;
 import com.client.definitions.NpcDefinition;
 import com.client.graphics.interfaces.impl.DropdownMenu;
@@ -262,14 +263,14 @@ public class RSInterface {
 					}
 					l = stream.readUnsignedByte();
 					if (l != 0)
-						rsInterface.anInt257 = (l - 1 << 8) + stream.readUnsignedByte();
+						rsInterface.seq_id = (l - 1 << 8) + stream.readUnsignedByte();
 					else
-						rsInterface.anInt257 = -1;
+						rsInterface.seq_id = -1;
 					l = stream.readUnsignedByte();
 					if (l != 0)
-						rsInterface.anInt258 = (l - 1 << 8) + stream.readUnsignedByte();
+						rsInterface.active_seq_id = (l - 1 << 8) + stream.readUnsignedByte();
 					else
-						rsInterface.anInt258 = -1;
+						rsInterface.active_seq_id = -1;
 					rsInterface.modelZoom = stream.readUShort();
 					rsInterface.modelRotation1 = stream.readUShort();
 					rsInterface.modelRotation2 = stream.readUShort();
@@ -674,8 +675,8 @@ public class RSInterface {
 		RSInterface tab = addInterface(59800);
 		String dir = "Interfaces/DropViewer/SPRITE";
 		addSprite(59801, 16, dir);
-		addHoverButton(59802, dir, 17, 17, anInt208, "Close", 250, 59803, 3);
-		addHoveredButton(59803, dir, 17, 17, 59804, anInt208);
+		addHoverButton(59802, dir, 17, 17, iftype_loops_remaining, "Close", 250, 59803, 3);
+		addHoveredButton(59803, dir, 17, 17, 59804, iftype_loops_remaining);
 		addText(59805, "Monster Drop Guide", 0xff9933, true, true, -1, tda, 2);
 		addText(59806, "Name:", 0xff9933, true, false, -1, tda, 0);
 		addText(59807, "Level:", 0xff9933, true, false, -1, tda, 0);
@@ -3122,8 +3123,8 @@ public class RSInterface {
 		t.modelZoom = 580;
 		t.modelRotation1 = 150;
 		t.modelRotation2 = 0;
-		t.anInt257 = -1;
-		t.anInt258 = -1;
+		t.seq_id = -1;
+		t.active_seq_id = -1;
 	}
 
 	public static void addBox(int id, int byte1, boolean filled, int color, String text) {
@@ -3735,16 +3736,26 @@ public class RSInterface {
 		Model model = (Model) aMRUNodes_264.insertFromCache((i << 16) + j);
 		if (model != null)
 			return model;
-		if (i == 1)
-			model = Model.method462(j);
-		if (i == 2)
+		if (i == 1) {
+			model = Model.getModel(j);
+			if (model != null)
+				model.light(64, 768, -50, -10, -50, true);
+		} else if (i == 2) {
 			model = NpcDefinition.forID(j).method160();
-		if (i == 3)
+		if(model != null)
+			model.light(64, 768, -50, -10, -50, true);
+		} else if (i == 3) {
 			model = Client.myPlayer.method453();
-		if (i == 4)
-			model = ItemDefinition.forID(j).method202(50);
-		if (i == 5)
+		if(model != null)
+			model.light(64, 768, -50, -10, -50, true);
+	} else if (i == 4) {
+			ItemDefinition objtype = ItemDefinition.forID(j);
+		model = objtype.method201(50);
+		if(model != null)
+			model.light(64 + objtype.ambient, 768 + objtype.contrast, -50, -10, -50, true);
+	} else if (i == 5) {
 			model = null;
+		}
 		if (model != null)
 			aMRUNodes_264.removeFromCache(model, (i << 16) + j);
 		return model;
@@ -3774,25 +3785,19 @@ public class RSInterface {
 			aMRUNodes_264.removeFromCache(model, (j << 16) + i);
 	}
 
-	public Model method209(int j, int k, boolean flag) {
+	public Model get_if_model(AnimationDefinition seq, int primary_index, boolean active) {
 		Model model;
-		if (flag)
+		if (active)
 			model = method206(anInt255, anInt256);
 		else
 			model = method206(anInt233, mediaID);
 		if (model == null)
 			return null;
-		if (k == -1 && j == -1 && model.colors == null)
-			return model;
-		Model model_1 = new Model(true, Class36.method532(k) & Class36.method532(j), false, model);
-		if (k != -1 || j != -1)
-			model_1.method469();
-		if (k != -1)
-			model_1.method470(k);
-		if (j != -1)
-			model_1.method470(j);
-		model_1.method479(64, 768, -50, -10, -50, true);
-		return model_1;
+		if(seq != null) {
+			model = seq.animate_iftype_model(model, primary_index);
+		}
+
+		return model;
 	}
 
 	public RSInterface() {
@@ -3824,7 +3829,7 @@ public class RSInterface {
 	public boolean newButtonClicking;
 	public boolean drawsTransparent;
 	public Sprite sprite1;
-	public static int anInt208;
+	public static int iftype_loops_remaining;
 	public Sprite sprites[];
 	public static RSInterface interfaceCache[];
 	public int anIntArray212[];
@@ -3863,7 +3868,7 @@ public class RSInterface {
 	public TextDrawingArea textDrawingAreas;
 	public int invSpritePadY;
 	public int anIntArray245[];
-	public int anInt246;
+	public int iftype_frameindex;
 	public int spritesY[];
 	public String message;
 	public boolean isInventoryInterface;
@@ -3881,8 +3886,8 @@ public class RSInterface {
 	public byte aByte254;
 	private int anInt255;
 	private int anInt256;
-	public int anInt257;
-	public int anInt258;
+	public int seq_id;
+	public int active_seq_id;
 	public boolean aBoolean259;
 	public Sprite sprite2;
 	public int scrollMax;
